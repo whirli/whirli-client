@@ -1,6 +1,5 @@
 import ApiOptions from './Interfaces/ApiOptions';
 import HttpClient from './Interfaces/HttpClient';
-import packageJson from '../package.json';
 import resources from './Resources';
 import AbstractResource from './Resources/AbstractResource';
 
@@ -15,7 +14,7 @@ export default class Client {
             apiVersion: 'v1',
             baseUrl: '/api',
             debug: false,
-            version: packageJson.version,
+            version: '0.0.1',
         };
         this.httpClient = httpClient;
         this.loadResources();
