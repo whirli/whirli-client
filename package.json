@@ -35,7 +35,7 @@
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
   },
   "lint-staged": {
-    "*.{ts,js,vue}": "eslint"
+    "*.{ts,js}": "eslint"
   },
   "husky": {
     "hooks": {
