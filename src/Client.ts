@@ -20,15 +20,15 @@ export default class Client {
         this.loadResources();
     }
 
-    loadResources() {
+    loadResources(): void {
         this.search = new resources.Search(this);
     }
 
-    getBasePath() {
+    getBasePath(): string {
         return `${this.apiOptions.baseUrl}/${this.apiOptions.apiVersion}`;
     }
 
-    setDebug(flag: boolean) {
+    setDebug(flag: boolean): void {
         this.apiOptions.debug = flag;
     }
 }

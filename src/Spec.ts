@@ -12,7 +12,7 @@ export default class Spec {
      */
     constructor(resourcePath: string, partialSpec: PartialSpec) {
         this.path = `/${resourcePath}${partialSpec.path}`;
-        this.requestMethod = (partialSpec.method || 'GET');
+        this.requestMethod = partialSpec.method || 'GET';
         this.urlParams = extractUrlParams(this.path);
     }
 
@@ -26,7 +26,7 @@ export default class Spec {
      */
     mapValuesToPathSymbols(values: Array<string>): UrlData {
         return this.urlParams.reduce((urlData: UrlData, param: string) => {
-            const value: string|undefined = values.shift();
+            const value: string | undefined = values.shift();
 
             if (typeof value !== 'string') {
                 throw new Error(
@@ -44,9 +44,6 @@ export default class Spec {
      * for the resource request, e.g. /resource/{id} becomes /resource/10.
      */
     replacePathSymbolsWithUrlData(urlData: UrlData): string {
-        return this.path.replace(
-            /{([\s\S]+?)}/g,
-            ($0: string, $1: string) => encodeURIComponent(urlData[$1] || '')
-        );
+        return this.path.replace(/{([\s\S]+?)}/g, ($0: string, $1: string) => encodeURIComponent(urlData[$1] || ''));
     }
 }

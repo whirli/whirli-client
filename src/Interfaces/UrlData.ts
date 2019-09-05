@@ -1,3 +1,3 @@
 export default interface UrlData {
-    [key: string]: string,
+    [key: string]: string;
 }

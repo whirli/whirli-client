@@ -3,7 +3,7 @@ module.exports = {
     plugins: ['@typescript-eslint'],
     parserOptions:  {
         parser:  '@typescript-eslint/parser',
-        ecmaVersion: 2018,
+        ecmaVersion: 6,
         sourceType: 'module',  // Allows for the use of imports
         ecmaFeatures: {
             legacyDecorators: true,

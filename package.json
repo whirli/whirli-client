@@ -27,7 +27,7 @@
   "main": "dist/Client.js",
   "types": "dist/Client.d.ts",
   "scripts": {
-    "lint": "eslint --ext .ts,.js --ignore-path .gitignore .",
+    "lint": "eslint --ext .ts,.js .",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "build": "npm run build:types && npm run build:js",
