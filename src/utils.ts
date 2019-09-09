@@ -1,5 +1,6 @@
 /** Shorthand for a safer hasOwnProperty call */
-export function hasOwnProp(object: Object, key: string): boolean {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function hasOwnProp(object: Record<string, any>, key: string): boolean {
     return {}.hasOwnProperty.call(object, key);
 }
 
@@ -21,7 +22,7 @@ export function pascalToCamelCase(name: string): string {
  * E.G. /api/v1/user/{id} will return ['id'].
  */
 export function extractUrlParams(path: string): Array<string> {
-    const params: RegExpMatchArray|null = path.match(/{\w+}/g);
+    const params: RegExpMatchArray | null = path.match(/{\w+}/g);
     if (!params) return [];
 
     return params.map((param: string) => param.replace(/[{}]/g, ''));

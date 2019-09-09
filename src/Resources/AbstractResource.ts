@@ -5,7 +5,7 @@ import UrlData from '../Interfaces/UrlData';
 
 export default class AbstractResource {
     protected api: Client;
-    protected resourcePath: string = '';
+    protected resourcePath = '';
 
     constructor(api: Client) {
         this.api = api;
@@ -26,9 +26,11 @@ export default class AbstractResource {
     createMethodFromPartialSpec(partialSpec: PartialSpec): Function {
         const spec = new Spec(this.resourcePath, partialSpec);
 
-        return function makeResourceRequest(...args: Array<string|Function>) {
-            const callback: Function|false = typeof args[args.length - 1] === 'function' && args.pop() as Function;
+        return function makeResourceRequest(...args: Array<string | Function>): void {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            const callback: Function | false = typeof args[args.length - 1] === 'function' && (args.pop() as Function);
             const urlData: UrlData = spec.mapValuesToPathSymbols(args as Array<string>);
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const path: string = spec.replacePathSymbolsWithUrlData(urlData);
 
             // @todo makeRequest()
