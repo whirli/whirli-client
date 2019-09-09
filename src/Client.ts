@@ -28,7 +28,7 @@ export default class Client {
         return `${this.apiOptions.baseUrl}/${this.apiOptions.apiVersion}`;
     }
 
-    setDebug(flag: boolean): void {
+    setDebug(flag: boolean) {
         this.apiOptions.debug = flag;
     }
 }
