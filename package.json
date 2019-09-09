@@ -25,7 +25,6 @@
     "dist"
   ],
   "main": "dist/Client.js",
-  "types": "dist/Client.d.ts",
   "scripts": {
     "lint": "eslint --ext .ts,.js --ignore-path .gitignore .",
     "type-check": "tsc --noEmit",
