@@ -27,15 +27,11 @@ export default class AbstractResource {
         const spec = new Spec(this.resourcePath, partialSpec);
 
         return function makeResourceRequest(...args: Array<string | Function>): void {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            const callback: Function | false = typeof args[args.length - 1] === 'function' && (args.pop() as Function);
             const urlData: UrlData = spec.mapValuesToPathSymbols(args as Array<string>);
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const path: string = spec.replacePathSymbolsWithUrlData(urlData);
 
             // @todo makeRequest()
-
-            // @todo Run callback
 
             // @todo Maybe we can handle something to do with pagination here, if it's a paginated resource
         };
