@@ -46,4 +46,8 @@ export default class Spec {
     replacePathSymbolsWithUrlData(urlData: UrlData): string {
         return this.path.replace(/{([\s\S]+?)}/g, ($0: string, $1: string) => encodeURIComponent(urlData[$1] || ''));
     }
+
+    getMethod() {
+        return this.requestMethod;
+    }
 }
