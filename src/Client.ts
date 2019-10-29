@@ -5,6 +5,7 @@ import AbstractResource from './Resources/AbstractResource';
 
 export default class Client {
     public search!: AbstractResource;
+    public auth!: AbstractResource;
 
     protected apiOptions: ApiOptions;
     protected httpClient: HttpClient;
@@ -20,8 +21,13 @@ export default class Client {
         this.loadResources();
     }
 
+    getHttpClient(): HttpClient {
+        return this.httpClient;
+    }
+
     loadResources(): void {
         this.search = new resources.Search(this);
+        this.auth = new resources.Auth(this);
     }
 
     getBasePath(): string {
