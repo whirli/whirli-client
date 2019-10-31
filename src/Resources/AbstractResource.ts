@@ -2,6 +2,7 @@ import Spec from '../Spec';
 import Client from '../Client';
 import PartialSpec from '../Interfaces/PartialSpec';
 import UrlData from '../Interfaces/UrlData';
+import HttpClient from '../Interfaces/HttpClient';
 
 export default class AbstractResource {
     protected api: Client;
@@ -24,18 +25,19 @@ export default class AbstractResource {
      * @returns {Function}
      */
     createMethodFromPartialSpec(partialSpec: PartialSpec): Function {
+        const api = this.api;
         const spec = new Spec(this.resourcePath, partialSpec);
 
         return function makeResourceRequest(...args: Array<string | Function>): void {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            const callback: Function | false = typeof args[args.length - 1] === 'function' && (args.pop() as Function);
             const urlData: UrlData = spec.mapValuesToPathSymbols(args as Array<string>);
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const path: string = spec.replacePathSymbolsWithUrlData(urlData);
 
-            // @todo makeRequest()
+            const requestBody: Record<string, any> =
+                typeof args[args.length - 1] === 'object' ? (args.pop() as Record<string, any>) : {};
 
-            // @todo Run callback
+            const httpClient: HttpClient = api.getHttpClient();
+
+            return httpClient[`$${spec.getMethod().toLowerCase()}`](path, requestBody);
 
             // @todo Maybe we can handle something to do with pagination here, if it's a paginated resource
         };
