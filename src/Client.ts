@@ -1,11 +1,12 @@
 import ApiOptions from './Interfaces/ApiOptions';
 import HttpClient from './Interfaces/HttpClient';
 import resources from './Resources';
-import AbstractResource from './Resources/AbstractResource';
+import Auth from './Resources/Auth/auth';
+import Search from './Resources/Search/Search';
 
 export default class Client {
-    public search!: AbstractResource;
-    public auth!: AbstractResource;
+    public search!: Search;
+    public auth!: Auth;
 
     protected apiOptions: ApiOptions;
     protected httpClient: HttpClient;
