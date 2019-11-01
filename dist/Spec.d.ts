@@ -7,4 +7,5 @@ export default class Spec {
     constructor(resourcePath: string, partialSpec: PartialSpec);
     mapValuesToPathSymbols(values: Array<string>): UrlData;
     replacePathSymbolsWithUrlData(urlData: UrlData): string;
+    getMethod(): string;
 }

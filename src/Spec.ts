@@ -47,7 +47,7 @@ export default class Spec {
         return this.path.replace(/{([\s\S]+?)}/g, ($0: string, $1: string) => encodeURIComponent(urlData[$1] || ''));
     }
 
-    getMethod() {
+    getMethod(): string {
         return this.requestMethod;
     }
 }
