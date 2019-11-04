@@ -7,30 +7,28 @@ export default class Auth extends AbstractResource {
         this.resourcePath = 'auth';
     }
 
-    login(loginBody: LoginBody): Function {
+    login(body: LoginBody): Function {
         const spec: PartialSpec = {
             method: 'POST',
             path: '/login',
-            requestBody: loginBody,
+            requestBody: body,
         };
-        return this.createMethodFromPartialSpec(spec);
+        return this.createMethodFromPartialSpec(spec)();
     }
 
-    logout(loginBody: LoginBody): Function {
+    logout(): Function {
         const spec: PartialSpec = {
             method: 'GET',
             path: '/logout',
-            requestBody: loginBody,
         };
-        return this.createMethodFromPartialSpec(spec);
+        return this.createMethodFromPartialSpec(spec)();
     }
 
-    register(loginBody: LoginBody): Function {
+    register(): Function {
         const spec: PartialSpec = {
             method: 'POST',
             path: '/register',
-            requestBody: loginBody,
         };
-        return this.createMethodFromPartialSpec(spec);
+        return this.createMethodFromPartialSpec(spec)();
     }
 }
