@@ -37,6 +37,8 @@ export default class AbstractResource {
 
             const httpClient: HttpClient = api.getHttpClient();
 
+            console.log('$$', httpClient[`$${spec.getMethod().toLowerCase()}`]);
+
             return httpClient[`$${spec.getMethod().toLowerCase()}`](path, requestBody);
 
             // @todo Maybe we can handle something to do with pagination here, if it's a paginated resource
