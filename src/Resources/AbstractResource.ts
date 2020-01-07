@@ -32,8 +32,7 @@ export default class AbstractResource {
             const urlData: UrlData = spec.mapValuesToPathSymbols(args as Array<string>);
             const path: string = spec.replacePathSymbolsWithUrlData(urlData);
 
-            const requestBody: Record<string, any> =
-                typeof args[args.length - 1] === 'object' ? (args.pop() as Record<string, any>) : {};
+            const requestBody: object = typeof args[args.length - 1] === 'object' ? (args.pop() as object) : {};
 
             const httpClient: HttpClient = api.getHttpClient();
 
