@@ -26,7 +26,7 @@ import Client from 'whirli-client';
 ...
 
 const api = new Client(axios);
-const products = api.search.products();
+const all = api.search.all();
 ```
 
 ### Usage with Typescript

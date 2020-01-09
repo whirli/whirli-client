@@ -5,9 +5,9 @@ export default class Search extends AbstractResource {
         this.resourcePath = 'search';
     }
 
-    public products: Function = this.createMethodFromPartialSpec({
+    public all: Function = this.createMethodFromPartialSpec({
         method: 'GET',
         // methodType: 'list', // @todo Add this once auto-pagination is complete
-        path: '/products',
+        path: '/',
     });
 }
