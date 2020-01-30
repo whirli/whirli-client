@@ -4,11 +4,13 @@ import resources from './Resources';
 import Auth from './Resources/Auth/auth';
 import Search from './Resources/Search/Search';
 import ReturnOrders from './Resources/Returns/returnOrders';
+import Users from './Resources/Users/users';
 
 export default class Client {
     public search!: Search;
     public auth!: Auth;
     public returnOrders!: ReturnOrders;
+    public users!: Users;
 
     protected apiOptions: ApiOptions;
     protected httpClient: HttpClient;
@@ -32,6 +34,7 @@ export default class Client {
         this.search = new resources.Search(this);
         this.auth = new resources.Auth(this);
         this.returnOrders = new resources.ReturnOrders(this);
+        this.users = new resources.Users(this);
     }
 
     getBasePath(): string {
