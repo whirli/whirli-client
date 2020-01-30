@@ -1,6 +1,4 @@
-import ProductVariant from '../product/ProductVariant';
-import ReturnOrderLine from '../return/ReturnOrderLine';
-import User from '../user/User';
+import StockInterface from '../../Interfaces/stock/Stock';
 export default class Stock {
-    constructor(id?: string, createdAt?: Date, updatedAt?: Date, statusId?: number, productVariant?: ProductVariant, user?: User, returnOrderLines?: ReturnOrderLine[]);
+    constructor(parameters: StockInterface);
 }

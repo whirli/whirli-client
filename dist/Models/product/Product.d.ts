@@ -1,4 +1,4 @@
-import ProductVariant from './ProductVariant';
+import ProductInterface from '../../Interfaces/product/Product';
 export default class Product {
-    constructor(id?: string, createdAt?: Date, updatedAt?: Date, name?: string, brand?: string, tokens?: number, features?: string, pageTitle?: string, popularity?: string, description?: string, recentRank?: string, manufacturer?: string, metaKeywords?: string, recommendedAge?: string, metaDescription?: string, shortDescription?: string, variants?: ProductVariant[]);
+    constructor(parameters: ProductInterface);
 }

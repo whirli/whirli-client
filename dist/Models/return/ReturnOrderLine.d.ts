@@ -1,5 +1,4 @@
-import Stock from '../stock/Stock';
-import ReturnOrder from './ReturnOrder';
+import ReturnOrderLineInterface from '../../Interfaces/return/ReturnOrderLine';
 export default class ReturnOrderLine {
-    constructor(id?: string, createdAt?: Date, updatedAt?: Date, statusId?: number, isManual?: number, isDamaged?: number, meta?: string, rtrn?: ReturnOrder, stock?: Stock);
+    constructor(parameters: ReturnOrderLineInterface);
 }
