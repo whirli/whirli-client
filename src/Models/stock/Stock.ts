@@ -1,27 +1,7 @@
-import ProductVariant from '../product/ProductVariant';
-import ReturnOrderLine from '../return/ReturnOrderLine';
-import User from '../user/User';
+import StockInterface from '../../Interfaces/stock/Stock';
 
 export default class Stock {
-    constructor(
-        id?: string,
-        createdAt?: Date,
-        updatedAt?: Date,
-        statusId?: number,
-        // belongs to
-        productVariant?: ProductVariant,
-        user?: User,
-        // has many
-        returnOrderLines?: ReturnOrderLine[],
-    ) {
-        Object.assign(this, {
-            id,
-            createdAt,
-            updatedAt,
-            statusId,
-            productVariant,
-            user,
-            returnOrderLines,
-        });
+    constructor(parameters: StockInterface) {
+        Object.assign(this, parameters);
     }
 }

@@ -1,30 +1,7 @@
-import Stock from '../stock/Stock';
-import ReturnOrder from './ReturnOrder';
+import ReturnOrderLineInterface from '../../Interfaces/return/ReturnOrderLine';
 
 export default class ReturnOrderLine {
-    constructor(
-        id?: string,
-        createdAt?: Date,
-        updatedAt?: Date,
-        statusId?: number,
-        isManual?: number,
-        isDamaged?: number,
-        meta?: string,
-        // belongs to
-        rtrn?: ReturnOrder,
-        stock?: Stock,
-    ) {
-        Object.assign(this, {
-            id,
-            createdAt,
-            updatedAt,
-            statusId,
-            isManual,
-            isDamaged,
-            meta,
-            // belongs to
-            rtrn,
-            stock,
-        });
+    constructor(parameters: ReturnOrderLineInterface) {
+        Object.assign(this, parameters);
     }
 }
