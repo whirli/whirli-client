@@ -1,32 +1,65 @@
 import Product from './Product';
 
 export default class ProductVariant {
-    id?: string;
-    createdAt?: Date;
-    updatedAt?: Date;
-    sku?: string;
-    options?: string;
-    price?: number;
-    unitQty?: number;
-    minQty?: number;
-    minBatch?: number;
-    maxQty?: number;
-    stock?: number;
-    incoming?: number;
-    backorder?: string;
-    requiresShipping?: number;
-    weightValue?: number;
-    weightUnit?: string;
-    heightValue?: number;
-    heightUnit?: string;
-    widthValue?: number;
-    widthUnit?: string;
-    depthValue?: number;
-    depthUnit?: string;
-    volumeValue?: number;
-    volumeUnit?: string;
-    taxId?: number;
-    groupPricing?: number;
-    // belongs to
-    product?: Product;
+    constructor(
+        id?: string,
+        createdAt?: Date,
+        updatedAt?: Date,
+        sku?: string,
+        options?: string,
+        price?: number,
+        unitQty?: number,
+        minQty?: number,
+        minBatch?: number,
+        maxQty?: number,
+        stock?: number,
+        incoming?: number,
+        backorder?: string,
+        requiresShipping?: number,
+        weightValue?: number,
+        weightUnit?: string,
+        heightValue?: number,
+        heightUnit?: string,
+        widthValue?: number,
+        widthUnit?: string,
+        depthValue?: number,
+        depthUnit?: string,
+        volumeValue?: number,
+        volumeUnit?: string,
+        taxId?: number,
+        groupPricing?: number,
+        // belongs to
+        product?: Product,
+    ) {
+        Object.assign(this, {
+            id,
+            createdAt,
+            updatedAt,
+            sku,
+            options,
+            price,
+            unitQty,
+            minQty,
+            minBatch,
+            maxQty,
+            stock,
+            incoming,
+            backorder,
+            requiresShipping,
+            weightValue,
+            weightUnit,
+            heightValue,
+            heightUnit,
+            widthValue,
+            widthUnit,
+            depthValue,
+            depthUnit,
+            volumeValue,
+            volumeUnit,
+            taxId,
+            groupPricing,
+            // belongs to
+            product,
+        });
+    }
 }

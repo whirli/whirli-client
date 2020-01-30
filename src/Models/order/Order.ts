@@ -2,48 +2,97 @@ import User from '../user/User';
 import OrderLine from './OrderLine';
 
 export default class Order {
-    id?: string;
-    createdAt?: Date;
-    updatedAt?: Date;
-    shippingMethod?: string;
-    shippingPreference?: string;
-    notes?: string;
-    currency?: string;
-    billingPhone?: string;
-    billingEmail?: string;
-    billingFirstname?: string;
-    billingLastname?: string;
-    billingAddress?: string;
-    billingAddressTwo?: string;
-    billingAddressThree?: string;
-    billingCity?: string;
-    billingCounty?: string;
-    billingState?: string;
-    billingCountry?: string;
-    billingZip?: string;
-    shippingPhone?: string;
-    shippingEmail?: string;
-    shippingFirstname?: string;
-    shippingLastname?: string;
-    shippingAddress?: string;
-    shippingAddressTwo?: string;
-    shippingAddressThree?: string;
-    shippingCity?: string;
-    shippingCounty?: string;
-    shippingState?: string;
-    shippingCountry?: string;
-    shippingZip?: string;
-    contactEmail?: string;
-    contactPhone?: string;
-    trackingNo?: string;
-    dispatchedAt?: string;
-    reference?: string;
-    placedAt?: Date;
-    meta?: string;
-    orderStatus?: number;
-    resourceType = 'orders';
-    // belongs to
-    user?: User;
-    // has many
-    lines?: OrderLine[];
+    constructor(
+        id?: string,
+        createdAt?: Date,
+        updatedAt?: Date,
+        shippingMethod?: string,
+        shippingPreference?: string,
+        notes?: string,
+        currency?: string,
+        billingPhone?: string,
+        billingEmail?: string,
+        billingFirstname?: string,
+        billingLastname?: string,
+        billingAddress?: string,
+        billingAddressTwo?: string,
+        billingAddressThree?: string,
+        billingCity?: string,
+        billingCounty?: string,
+        billingState?: string,
+        billingCountry?: string,
+        billingZip?: string,
+        shippingPhone?: string,
+        shippingEmail?: string,
+        shippingFirstname?: string,
+        shippingLastname?: string,
+        shippingAddress?: string,
+        shippingAddressTwo?: string,
+        shippingAddressThree?: string,
+        shippingCity?: string,
+        shippingCounty?: string,
+        shippingState?: string,
+        shippingCountry?: string,
+        shippingZip?: string,
+        contactEmail?: string,
+        contactPhone?: string,
+        trackingNo?: string,
+        dispatchedAt?: string,
+        reference?: string,
+        placedAt?: Date,
+        meta?: string,
+        orderStatus?: number,
+        resourceType = 'orders',
+        // belongs to
+        user?: User,
+        // has many
+        lines?: OrderLine[],
+    ) {
+        Object.assign(this, {
+            id,
+            createdAt,
+            updatedAt,
+            shippingMethod,
+            shippingPreference,
+            notes,
+            currency,
+            billingPhone,
+            billingEmail,
+            billingFirstname,
+            billingLastname,
+            billingAddress,
+            billingAddressTwo,
+            billingAddressThree,
+            billingCity,
+            billingCounty,
+            billingState,
+            billingCountry,
+            billingZip,
+            shippingPhone,
+            shippingEmail,
+            shippingFirstname,
+            shippingLastname,
+            shippingAddress,
+            shippingAddressTwo,
+            shippingAddressThree,
+            shippingCity,
+            shippingCounty,
+            shippingState,
+            shippingCountry,
+            shippingZip,
+            contactEmail,
+            contactPhone,
+            trackingNo,
+            dispatchedAt,
+            reference,
+            placedAt,
+            meta,
+            orderStatus,
+            resourceType,
+            // belongs to
+            user,
+            // has many
+            lines,
+        });
+    }
 }
