@@ -1,6 +1,6 @@
 import Product from './Product';
 
-export default class ProductVariant {
+export default interface ProductVariant {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;

@@ -1,7 +1,7 @@
 import ProductVariant from '../product/ProductVariant';
 import Order from './Order';
 
-export default class OrderLine {
+export default interface OrderLine {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
