@@ -1,16 +1,16 @@
 import User from '../User';
-import OrderTransformer from '../../order/Transformers/OrderTransformer';
 import UserInterface from '../../../Interfaces/user/User';
+import OrderInterface from '../../../Interfaces/order/Order';
+import OrderTransformer from '../../order/Transformers/OrderTransformer';
 import BaseTransformer from '../../../BaseTransformer';
-// import OrderLineTransformer from '../Basket/OrderLineTransformer';
 
 export default class UserTransformer extends BaseTransformer {
     /**
-     * Map an order response
+     * Map an user response
      *
-     * @param order
+     * @param user
      */
-    mapData(user: UserInterface) {
+    mapData(user: UserInterface): User {
         return new User({
             id: user.id,
             createdAt: user.createdAt,
@@ -28,16 +28,11 @@ export default class UserTransformer extends BaseTransformer {
             orderStatus: user.orderStatus,
             resourceType: user.resourceType,
             // has many
-            orders: this.includeOrder(user),
-            stock: this.includeStock(user),
+            orders: this.includeOrdersCollection(user.orders || []),
         });
     }
 
-    includeOrder(order: object) {
-        return this.collection(order, 'orders', new OrderTransformer());
-    }
-
-    includeStock(stock: object) {
-        return this.collection(stock, 'stock', new StockTransformer());
+    includeOrdersCollection(user: UserInterface[]): OrderInterface[] {
+        return this.collection(user, 'orders', new OrderTransformer());
     }
 }
