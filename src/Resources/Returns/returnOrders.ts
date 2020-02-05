@@ -7,12 +7,17 @@ export default class ReturnOrders extends AbstractResource {
 
     public all: Function = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/',
+        path: '',
     });
 
     public get: Function = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/{id}',
+    });
+
+    public create: Function = this.createMethodFromPartialSpec({
+        method: 'POST',
+        path: '',
     });
 
     public complete: Function = this.createMethodFromPartialSpec({

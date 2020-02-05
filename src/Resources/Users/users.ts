@@ -7,7 +7,7 @@ export default class Users extends AbstractResource {
 
     public all: Function = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/',
+        path: '',
     });
 
     public get: Function = this.createMethodFromPartialSpec({
@@ -17,7 +17,7 @@ export default class Users extends AbstractResource {
 
     public create: Function = this.createMethodFromPartialSpec({
         method: 'POST',
-        path: '/',
+        path: '',
     });
 
     public update: Function = this.createMethodFromPartialSpec({
