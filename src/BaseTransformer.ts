@@ -7,7 +7,7 @@ class BaseTransformer {
      * @param data
      * @param args
      */
-    mapData(data: object, ...args: Array<any>) {
+    mapData(data: object, args: Array<any> = []): object {
         return {
             data,
             ...args,
@@ -35,11 +35,11 @@ class BaseTransformer {
      * @param includeName
      * @param transformer
      */
-    collection(data: Record<string, any>, includeName: string, transformer: BaseTransformer) {
+    collection(data: Record<string, any>, includeName: string, transformer: BaseTransformer): any[] {
         if (data[includeName]) {
             return transformCollection(data[includeName], transformer);
         }
-        return null;
+        return [];
     }
 }
 
