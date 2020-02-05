@@ -8,8 +8,8 @@ export default interface Stock {
     updatedAt?: Date;
     statusId?: number;
     // belongs to
-    productVariant?: ProductVariant;
-    user?: User;
+    productVariant?: ProductVariant | null;
+    user?: User | null;
     // has many
     returnOrderLines?: ReturnOrderLine[];
 }

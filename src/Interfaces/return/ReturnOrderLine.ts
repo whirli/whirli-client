@@ -10,6 +10,6 @@ export default interface ReturnOrderLine {
     isDamaged?: number;
     meta?: string;
     // belongs to
-    rtrn?: ReturnOrder;
-    stock?: Stock;
+    rtrn?: ReturnOrder | null;
+    stock?: Stock | null;
 }

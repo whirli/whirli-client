@@ -28,5 +28,5 @@ export default interface ProductVariant {
     taxId?: number;
     groupPricing?: number;
     // belongs to
-    product?: Product;
+    product?: Product | null;
 }

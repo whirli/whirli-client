@@ -43,7 +43,7 @@ export default interface Order {
     orderStatus?: number;
     resourceType?: string;
     // belongs to
-    user?: User;
+    user?: User | null;
     // has many
     lines?: OrderLine[];
 }

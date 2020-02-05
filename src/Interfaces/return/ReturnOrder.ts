@@ -27,7 +27,7 @@ export default interface ReturnOrder {
     receivedAt?: Date;
     resourceType?: string;
     // belongs to
-    user?: User;
+    user?: User | null;
     // has many
     returnOrderLines?: ReturnOrderLine[];
 }

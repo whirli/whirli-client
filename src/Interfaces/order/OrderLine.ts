@@ -21,6 +21,6 @@ export default interface OrderLine {
     deletedAt?: Date;
     meta?: string;
     // belongs to
-    order?: Order;
-    productVariant?: ProductVariant;
+    order?: Order | null;
+    productVariant?: ProductVariant | null;
 }
