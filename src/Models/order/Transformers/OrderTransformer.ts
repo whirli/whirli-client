@@ -1,9 +1,10 @@
 import Order from '../Order';
-import OrderLine from '../OrderLine';
-import UserTransformer from '../../user/Transformers/UserTransformer';
 import OrderInterface from '../../../Interfaces/order/Order';
+import OrderLineInterface from '../../../Interfaces/order/OrderLine';
+import UserInterface from '../../../Interfaces/user/User';
+import UserTransformer from '../../user/Transformers/UserTransformer';
+import OrderLineTransformer from '../../order/Transformers/OrderLineTransformer';
 import BaseTransformer from '../../../BaseTransformer';
-// import OrderLineTransformer from '../Basket/OrderLineTransformer';
 
 export default class OrderTransformer extends BaseTransformer {
     /**
@@ -11,7 +12,7 @@ export default class OrderTransformer extends BaseTransformer {
      *
      * @param order
      */
-    mapData(order: OrderInterface) {
+    mapData(order: OrderInterface): Order {
         return new Order({
             id: order.id,
             createdAt: order.createdAt,
@@ -56,14 +57,15 @@ export default class OrderTransformer extends BaseTransformer {
             // belongs to
             user: this.includeUser(order),
             // has many
-            lines: OrderLine,
-
-            // basket: this.includeBasket(order), --> @TODO to come later
+            lines: this.includeOrderLines(order.lines || []),
         });
     }
 
-    // @todo Implement order lines model, transformer and factory
-    includeUser(user: object) {
-        return this.collection(user, 'user', new UserTransformer());
+    includeUser(order: OrderInterface): UserInterface | null {
+        return this.item(order, 'user', new UserTransformer());
+    }
+
+    includeOrderLines(order: OrderInterface[]): OrderLineInterface[] {
+        return this.collection(order, 'lines', new OrderLineTransformer());
     }
 }
