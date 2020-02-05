@@ -7,8 +7,8 @@ import BaseTransformer from '../BaseTransformer';
  * @param transformer
  * @param args
  */
-export function transform(data: object, transformer: BaseTransformer, ...args: Array<any>) {
-    return transformer.mapData(data, ...args);
+export function transform(data: object, transformer: BaseTransformer, args: Array<any> = []) {
+    return transformer.mapData(data, args);
 }
 
 /**
@@ -18,8 +18,8 @@ export function transform(data: object, transformer: BaseTransformer, ...args: A
  * @param transformer
  * @param args
  */
-export function transformCollection(collection: Array<any>, transformer: BaseTransformer, ...args: Array<any>) {
-    return collection.map(data => transformer.mapData(data, ...args));
+export function transformCollection(collection: Array<any>, transformer: BaseTransformer, args: Array<any> = []) {
+    return collection.map(data => transformer.mapData(data, args));
 }
 
 export default {
