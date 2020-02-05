@@ -1,6 +1,6 @@
 import User from '../user/User';
 import OrderLine from './OrderLine';
-export default class Order {
+export default interface Order {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
@@ -40,7 +40,7 @@ export default class Order {
     placedAt?: Date;
     meta?: string;
     orderStatus?: number;
-    resourceType: string;
-    user?: User;
+    resourceType?: string;
+    user?: User | null;
     lines?: OrderLine[];
 }

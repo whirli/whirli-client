@@ -1,5 +1,5 @@
 import ProductVariant from './ProductVariant';
-export default class Product {
+export default interface Product {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
