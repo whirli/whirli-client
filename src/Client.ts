@@ -2,7 +2,7 @@ import ApiOptions from './Interfaces/ApiOptions';
 import HttpClient from './Interfaces/HttpClient';
 import resources from './Resources';
 import Auth from './Resources/Auth/auth';
-import Search from './Resources/Search/Search';
+import Search from './Resources/Search/search';
 import ReturnOrders from './Resources/Returns/returnOrders';
 import Users from './Resources/Users/users';
 import Orders from './Resources/Orders/orders';
