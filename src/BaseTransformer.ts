@@ -21,7 +21,7 @@ class BaseTransformer {
      * @param includeName
      * @param transformer
      */
-    item(data: Record<string, any>, includeName: string, transformer: BaseTransformer) {
+    item(data: Record<string, any>, includeName: string, transformer: BaseTransformer): object | null {
         if (data[includeName]) {
             return transform(data[includeName], transformer);
         }
