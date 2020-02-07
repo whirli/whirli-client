@@ -57,7 +57,7 @@ export default class OrderTransformer extends BaseTransformer {
             // belongs to
             user: this.includeUser(order),
             // has many
-            lines: this.includeOrderLines(order.lines || []),
+            lines: this.includeOrderLines(order),
         });
     }
 
@@ -65,7 +65,7 @@ export default class OrderTransformer extends BaseTransformer {
         return this.item(order, 'user', new UserTransformer());
     }
 
-    includeOrderLines(order: OrderInterface[]): OrderLineInterface[] {
+    includeOrderLines(order: OrderInterface): OrderLineInterface[] {
         return this.collection(order, 'lines', new OrderLineTransformer());
     }
 }

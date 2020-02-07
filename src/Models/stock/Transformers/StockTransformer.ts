@@ -24,7 +24,7 @@ export default class StockTransformer extends BaseTransformer {
             productVariant: this.includeProductVariant(stock),
             user: this.includeUser(stock),
             // has many
-            returnOrderLines: this.includeReturnOrderLines(stock.returnOrderLines || []),
+            returnOrderLines: this.includeReturnOrderLines(stock),
         });
     }
 
@@ -34,7 +34,7 @@ export default class StockTransformer extends BaseTransformer {
     includeUser(stock: StockInterface): UserInterface | null {
         return this.item(stock, 'user', new UserTransformer());
     }
-    includeReturnOrderLines(stock: StockInterface[]): ReturnOrderLineInterface[] {
+    includeReturnOrderLines(stock: StockInterface): ReturnOrderLineInterface[] {
         return this.collection(stock, 'returnOrderLines', new ReturnOrderLineTransformer());
     }
 }

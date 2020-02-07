@@ -41,7 +41,7 @@ export default class ReturnOrderTransformer extends BaseTransformer {
             // belongs to
             user: this.includeUser(returnOrder),
             // has many
-            returnOrderLines: this.includeOrderLines(returnOrder.returnOrderLines || []),
+            returnOrderLines: this.includeOrderLines(returnOrder),
         });
     }
 
@@ -49,7 +49,7 @@ export default class ReturnOrderTransformer extends BaseTransformer {
         return this.item(returnOrder, 'user', new UserTransformer());
     }
 
-    includeOrderLines(returnOrder: ReturnOrderInterface[]): ReturnOrderLineInterface[] {
+    includeOrderLines(returnOrder: ReturnOrderInterface): ReturnOrderLineInterface[] {
         return this.collection(returnOrder, 'returnOrderLines', new ReturnOrderLineTransformer());
     }
 }
