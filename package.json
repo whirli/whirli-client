@@ -32,10 +32,14 @@
     "type-check:watch": "npm run type-check -- --watch",
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "test": "jest"
   },
   "lint-staged": {
-    "*.{ts,js}": "eslint"
+    "*.{ts,js}": [
+      "eslint --fix",
+      "jest --bail --findRelatedTests"
+    ]
   },
   "husky": {
     "hooks": {
@@ -50,14 +54,18 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.0",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.17.0",
     "eslint": "^6.2.2",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^3.0.5",
+    "jest": "^25.1.0",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
+    "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"
   }
 }
