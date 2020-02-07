@@ -28,7 +28,7 @@ export default class AbstractResource {
         const api = this.api;
         const spec = new Spec(this.resourcePath, partialSpec);
 
-        return function makeResourceRequest(...args: Array<string | Function>): void {
+        return function makeResourceRequest(...args: Array<string | object | Function>): void {
             const urlData: UrlData = spec.mapValuesToPathSymbols(args as Array<string>);
             const path: string = spec.replacePathSymbolsWithUrlData(urlData);
 
