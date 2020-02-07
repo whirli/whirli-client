@@ -6,5 +6,5 @@ import BaseTransformer from '../../../BaseTransformer';
 export default class ReturnOrderTransformer extends BaseTransformer {
     mapData(returnOrder: ReturnOrderInterface): ReturnOrder;
     includeUser(returnOrder: ReturnOrderInterface): UserInterface | null;
-    includeOrderLines(returnOrder: ReturnOrderInterface[]): ReturnOrderLineInterface[];
+    includeOrderLines(returnOrder: ReturnOrderInterface): ReturnOrderLineInterface[];
 }

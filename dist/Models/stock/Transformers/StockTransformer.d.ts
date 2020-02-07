@@ -8,5 +8,5 @@ export default class StockTransformer extends BaseTransformer {
     mapData(stock: StockInterface): Stock;
     includeProductVariant(stock: StockInterface): ProductVariantInterface | null;
     includeUser(stock: StockInterface): UserInterface | null;
-    includeReturnOrderLines(stock: StockInterface[]): ReturnOrderLineInterface[];
+    includeReturnOrderLines(stock: StockInterface): ReturnOrderLineInterface[];
 }

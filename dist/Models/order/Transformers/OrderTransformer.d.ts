@@ -6,5 +6,5 @@ import BaseTransformer from '../../../BaseTransformer';
 export default class OrderTransformer extends BaseTransformer {
     mapData(order: OrderInterface): Order;
     includeUser(order: OrderInterface): UserInterface | null;
-    includeOrderLines(order: OrderInterface[]): OrderLineInterface[];
+    includeOrderLines(order: OrderInterface): OrderLineInterface[];
 }
