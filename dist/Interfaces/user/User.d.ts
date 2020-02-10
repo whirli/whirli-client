@@ -1,6 +1,6 @@
 import Order from '../order/Order';
 import Stock from '../stock/Stock';
-export default class User {
+export default interface User {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
@@ -15,7 +15,7 @@ export default class User {
     subscriptionCancellationCharges?: boolean;
     verifiedAt?: Date;
     orderStatus?: number;
-    resourceType: string;
+    resourceType?: string;
     orders?: Order[];
     stock?: Stock[];
 }

@@ -1,6 +1,6 @@
 import Stock from '../stock/Stock';
 import ReturnOrder from './ReturnOrder';
-export default class ReturnOrderLine {
+export default interface ReturnOrderLine {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
@@ -8,6 +8,6 @@ export default class ReturnOrderLine {
     isManual?: number;
     isDamaged?: number;
     meta?: string;
-    rtrn?: ReturnOrder;
-    stock?: Stock;
+    rtrn?: ReturnOrder | null;
+    stock?: Stock | null;
 }

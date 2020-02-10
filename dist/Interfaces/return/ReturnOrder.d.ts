@@ -1,6 +1,6 @@
 import User from '../user/User';
 import ReturnOrderLine from './ReturnOrderLine';
-export default class ReturnOrder {
+export default interface ReturnOrder {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
@@ -24,7 +24,7 @@ export default class ReturnOrder {
     placedAt?: Date;
     dispatchedAt?: Date;
     receivedAt?: Date;
-    resourceType: string;
-    user?: User;
+    resourceType?: string;
+    user?: User | null;
     returnOrderLines?: ReturnOrderLine[];
 }

@@ -1,6 +1,6 @@
 import Product from './Product';
 
-export default class ProductVariant {
+export default interface ProductVariant {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
@@ -28,5 +28,5 @@ export default class ProductVariant {
     taxId?: number;
     groupPricing?: number;
     // belongs to
-    product?: Product;
+    product?: Product | null;
 }

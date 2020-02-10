@@ -1,5 +1,5 @@
 import Product from './Product';
-export default class ProductVariant {
+export default interface ProductVariant {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
@@ -26,5 +26,5 @@ export default class ProductVariant {
     volumeUnit?: string;
     taxId?: number;
     groupPricing?: number;
-    product?: Product;
+    product?: Product | null;
 }
