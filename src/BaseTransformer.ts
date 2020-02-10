@@ -5,13 +5,9 @@ class BaseTransformer {
      * Perform the data mapping - this should be overridden by each specific Transformer
      *
      * @param data
-     * @param args
      */
-    mapData(data: object, args: Array<any> = []): object {
-        return {
-            data,
-            ...args,
-        };
+    mapData(data: object): object {
+        return data;
     }
 
     /**

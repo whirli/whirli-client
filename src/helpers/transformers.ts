@@ -5,10 +5,9 @@ import BaseTransformer from '../BaseTransformer';
  *
  * @param data
  * @param transformer
- * @param args
  */
-export function transform(data: object, transformer: BaseTransformer, args: Array<any> = []) {
-    return transformer.mapData(data, args);
+export function transform(data: object, transformer: BaseTransformer) {
+    return transformer.mapData(data);
 }
 
 /**
@@ -16,10 +15,9 @@ export function transform(data: object, transformer: BaseTransformer, args: Arra
  *
  * @param collection
  * @param transformer
- * @param args
  */
-export function transformCollection(collection: Array<any>, transformer: BaseTransformer, args: Array<any> = []) {
-    return collection.map(data => transformer.mapData(data, args));
+export function transformCollection(collection: Array<any>, transformer: BaseTransformer) {
+    return collection.map(data => transformer.mapData(data));
 }
 
 export default {
