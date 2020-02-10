@@ -29,11 +29,11 @@ export default class ProductTransformer extends BaseTransformer {
             metaDescription: product.metaDescription,
             shortDescription: product.shortDescription,
             // has many
-            variants: this.includeProductVariant(product),
+            variants: this.includeProductVariants(product),
         });
     }
 
-    includeProductVariant(product: ProductInterface): ProductVariantInterface[] {
+    includeProductVariants(product: ProductInterface): ProductVariantInterface[] {
         return this.collection(product, 'variants', new ProductVariantTransformer());
     }
 }

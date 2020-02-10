@@ -28,11 +28,11 @@ export default class UserTransformer extends BaseTransformer {
             orderStatus: user.orderStatus,
             resourceType: user.resourceType,
             // has many
-            orders: this.includeOrdersCollection(user),
+            orders: this.includeOrders(user),
         });
     }
 
-    includeOrdersCollection(user: UserInterface): OrderInterface[] {
+    includeOrders(user: UserInterface): OrderInterface[] {
         return this.collection(user, 'orders', new OrderTransformer());
     }
 }
