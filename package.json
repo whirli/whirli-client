@@ -38,12 +38,14 @@
   "lint-staged": {
     "*.{ts,js}": [
       "eslint --fix",
-      "jest --bail --findRelatedTests"
+      "jest --bail --findRelatedTests",
+      "yarn build",
+      "git add"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "echo Linting and Building && lint-staged && echo Linting and Building complete"
     }
   },
   "devDependencies": {
