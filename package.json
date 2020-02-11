@@ -39,7 +39,8 @@
     "*.{ts,js}": [
       "eslint --fix",
       "jest --bail --findRelatedTests",
-      "yarn build"
+      "yarn build",
+      "git add dist"
     ]
   },
   "husky": {
