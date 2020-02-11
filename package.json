@@ -39,8 +39,7 @@
     "*.{ts,js}": [
       "eslint --fix",
       "jest --bail --findRelatedTests",
-      "yarn build",
-      "git add"
+      "yarn build"
     ]
   },
   "husky": {
@@ -63,9 +62,9 @@
     "eslint": "^6.2.2",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "husky": "^3.0.5",
+    "husky": "^4.0.0",
     "jest": "^25.1.0",
-    "lint-staged": "^9.2.5",
+    "lint-staged": "^10.0.0",
     "prettier": "^1.18.2",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"
