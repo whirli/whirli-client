@@ -16,6 +16,10 @@ export default class Spec {
         this.urlParams = extractUrlParams(this.path);
     }
 
+    pathSymbolCount(): number {
+        return this.urlParams.length;
+    }
+
     /**
      * Map values to the urlParams defined in this spec, sequentially.
      *

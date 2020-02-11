@@ -5,6 +5,7 @@ export default class Spec {
     protected readonly requestMethod: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'OPTIONS' | 'DELETE';
     protected readonly urlParams: Array<string>;
     constructor(resourcePath: string, partialSpec: PartialSpec);
+    pathSymbolCount(): number;
     mapValuesToPathSymbols(values: Array<string>): UrlData;
     replacePathSymbolsWithUrlData(urlData: UrlData): string;
     getMethod(): string;
