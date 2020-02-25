@@ -1,18 +1,12 @@
 import AbstractResource from '../AbstractResource';
 
-export default class Users extends AbstractResource {
+export default class Subscriptions extends AbstractResource {
     initialise(): void {
-        this.resourcePath = 'users';
+        this.resourcePath = 'user-subscriptions';
     }
 
-    public get: Function = this.createMethodFromPartialSpec({
-        access: 'member',
-        method: 'GET',
-        path: '/{id}',
-    });
-
     public create: Function = this.createMethodFromPartialSpec({
-        access: 'guest',
+        access: 'member',
         method: 'POST',
         path: '',
     });
@@ -23,9 +17,9 @@ export default class Users extends AbstractResource {
         path: '/{id}',
     });
 
-    public delete: Function = this.createMethodFromPartialSpec({
+    public pay: Function = this.createMethodFromPartialSpec({
         access: 'member',
-        method: 'DELETE',
-        path: '/{id}',
+        method: 'PUT',
+        path: '/{id}/pay',
     });
 }

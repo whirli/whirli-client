@@ -1,6 +1,6 @@
 import AbstractResource from '../../AbstractResource';
 
-export default class Auth extends AbstractResource {
+export default class WACCAuth extends AbstractResource {
     initialise(): void {
         this.resourcePath = 'auth';
     }

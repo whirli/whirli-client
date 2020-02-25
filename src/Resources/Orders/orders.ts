@@ -2,7 +2,7 @@ import AbstractResource from '../AbstractResource';
 
 export default class Orders extends AbstractResource {
     initialise(): void {
-        this.resourcePath = 'wacc/orders';
+        this.resourcePath = 'orders';
     }
 
     public all: Function = this.createMethodFromPartialSpec({

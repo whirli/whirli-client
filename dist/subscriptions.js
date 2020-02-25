@@ -29,32 +29,26 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Users =
+var Subscriptions =
 /*#__PURE__*/
 function (_AbstractResource) {
-  _inherits(Users, _AbstractResource);
+  _inherits(Subscriptions, _AbstractResource);
 
-  function Users() {
+  function Subscriptions() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, Users);
+    _classCallCheck(this, Subscriptions);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Users)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "get", _this.createMethodFromPartialSpec({
-      access: 'member',
-      method: 'GET',
-      path: '/{id}'
-    }));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Subscriptions)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_this), "create", _this.createMethodFromPartialSpec({
-      access: 'guest',
+      access: 'member',
       method: 'POST',
       path: ''
     }));
@@ -65,24 +59,24 @@ function (_AbstractResource) {
       path: '/{id}'
     }));
 
-    _defineProperty(_assertThisInitialized(_this), "delete", _this.createMethodFromPartialSpec({
+    _defineProperty(_assertThisInitialized(_this), "pay", _this.createMethodFromPartialSpec({
       access: 'member',
-      method: 'DELETE',
-      path: '/{id}'
+      method: 'PUT',
+      path: '/{id}/pay'
     }));
 
     return _this;
   }
 
-  _createClass(Users, [{
+  _createClass(Subscriptions, [{
     key: "initialise",
     value: function initialise() {
-      this.resourcePath = 'users';
+      this.resourcePath = 'user-subscriptions';
     }
   }]);
 
-  return Users;
+  return Subscriptions;
 }(_AbstractResource2["default"]);
 
-exports["default"] = Users;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvVXNlcnMvdXNlcnMudHMiXSwibmFtZXMiOlsiVXNlcnMiLCJjcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMiLCJhY2Nlc3MiLCJtZXRob2QiLCJwYXRoIiwicmVzb3VyY2VQYXRoIiwiQWJzdHJhY3RSZXNvdXJjZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFFcUJBLEs7Ozs7Ozs7Ozs7Ozs7Ozs7OzswREFLTSxNQUFLQywyQkFBTCxDQUFpQztBQUNwREMsTUFBQUEsTUFBTSxFQUFFLFFBRDRDO0FBRXBEQyxNQUFBQSxNQUFNLEVBQUUsS0FGNEM7QUFHcERDLE1BQUFBLElBQUksRUFBRTtBQUg4QyxLQUFqQyxDOzs2REFNRyxNQUFLSCwyQkFBTCxDQUFpQztBQUN2REMsTUFBQUEsTUFBTSxFQUFFLE9BRCtDO0FBRXZEQyxNQUFBQSxNQUFNLEVBQUUsTUFGK0M7QUFHdkRDLE1BQUFBLElBQUksRUFBRTtBQUhpRCxLQUFqQyxDOzs2REFNQSxNQUFLSCwyQkFBTCxDQUFpQztBQUN2REMsTUFBQUEsTUFBTSxFQUFFLFFBRCtDO0FBRXZEQyxNQUFBQSxNQUFNLEVBQUUsS0FGK0M7QUFHdkRDLE1BQUFBLElBQUksRUFBRTtBQUhpRCxLQUFqQyxDOzs2REFNQSxNQUFLSCwyQkFBTCxDQUFpQztBQUN2REMsTUFBQUEsTUFBTSxFQUFFLFFBRCtDO0FBRXZEQyxNQUFBQSxNQUFNLEVBQUUsUUFGK0M7QUFHdkRDLE1BQUFBLElBQUksRUFBRTtBQUhpRCxLQUFqQyxDOzs7Ozs7O2lDQXRCUDtBQUNmLFdBQUtDLFlBQUwsR0FBb0IsT0FBcEI7QUFDSDs7OztFQUg4QkMsNkIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQWJzdHJhY3RSZXNvdXJjZSBmcm9tICcuLi9BYnN0cmFjdFJlc291cmNlJztcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgVXNlcnMgZXh0ZW5kcyBBYnN0cmFjdFJlc291cmNlIHtcbiAgICBpbml0aWFsaXNlKCk6IHZvaWQge1xuICAgICAgICB0aGlzLnJlc291cmNlUGF0aCA9ICd1c2Vycyc7XG4gICAgfVxuXG4gICAgcHVibGljIGdldDogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIGFjY2VzczogJ21lbWJlcicsXG4gICAgICAgIG1ldGhvZDogJ0dFVCcsXG4gICAgICAgIHBhdGg6ICcve2lkfScsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgY3JlYXRlOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgYWNjZXNzOiAnZ3Vlc3QnLFxuICAgICAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICAgICAgcGF0aDogJycsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgdXBkYXRlOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgYWNjZXNzOiAnbWVtYmVyJyxcbiAgICAgICAgbWV0aG9kOiAnUFVUJyxcbiAgICAgICAgcGF0aDogJy97aWR9JyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyBkZWxldGU6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBhY2Nlc3M6ICdtZW1iZXInLFxuICAgICAgICBtZXRob2Q6ICdERUxFVEUnLFxuICAgICAgICBwYXRoOiAnL3tpZH0nLFxuICAgIH0pO1xufVxuIl19
+exports["default"] = Subscriptions;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9SZXNvdXJjZXMvU3Vic2NyaXB0aW9ucy9zdWJzY3JpcHRpb25zLnRzIl0sIm5hbWVzIjpbIlN1YnNjcmlwdGlvbnMiLCJjcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMiLCJhY2Nlc3MiLCJtZXRob2QiLCJwYXRoIiwicmVzb3VyY2VQYXRoIiwiQWJzdHJhY3RSZXNvdXJjZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFFcUJBLGE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs2REFLUyxNQUFLQywyQkFBTCxDQUFpQztBQUN2REMsTUFBQUEsTUFBTSxFQUFFLFFBRCtDO0FBRXZEQyxNQUFBQSxNQUFNLEVBQUUsTUFGK0M7QUFHdkRDLE1BQUFBLElBQUksRUFBRTtBQUhpRCxLQUFqQyxDOzs2REFNQSxNQUFLSCwyQkFBTCxDQUFpQztBQUN2REMsTUFBQUEsTUFBTSxFQUFFLFFBRCtDO0FBRXZEQyxNQUFBQSxNQUFNLEVBQUUsS0FGK0M7QUFHdkRDLE1BQUFBLElBQUksRUFBRTtBQUhpRCxLQUFqQyxDOzswREFNSCxNQUFLSCwyQkFBTCxDQUFpQztBQUNwREMsTUFBQUEsTUFBTSxFQUFFLFFBRDRDO0FBRXBEQyxNQUFBQSxNQUFNLEVBQUUsS0FGNEM7QUFHcERDLE1BQUFBLElBQUksRUFBRTtBQUg4QyxLQUFqQyxDOzs7Ozs7O2lDQWhCSjtBQUNmLFdBQUtDLFlBQUwsR0FBb0Isb0JBQXBCO0FBQ0g7Ozs7RUFIc0NDLDZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFic3RyYWN0UmVzb3VyY2UgZnJvbSAnLi4vQWJzdHJhY3RSZXNvdXJjZSc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIFN1YnNjcmlwdGlvbnMgZXh0ZW5kcyBBYnN0cmFjdFJlc291cmNlIHtcbiAgICBpbml0aWFsaXNlKCk6IHZvaWQge1xuICAgICAgICB0aGlzLnJlc291cmNlUGF0aCA9ICd1c2VyLXN1YnNjcmlwdGlvbnMnO1xuICAgIH1cblxuICAgIHB1YmxpYyBjcmVhdGU6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBhY2Nlc3M6ICdtZW1iZXInLFxuICAgICAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICAgICAgcGF0aDogJycsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgdXBkYXRlOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgYWNjZXNzOiAnbWVtYmVyJyxcbiAgICAgICAgbWV0aG9kOiAnUFVUJyxcbiAgICAgICAgcGF0aDogJy97aWR9JyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyBwYXk6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBhY2Nlc3M6ICdtZW1iZXInLFxuICAgICAgICBtZXRob2Q6ICdQVVQnLFxuICAgICAgICBwYXRoOiAnL3tpZH0vcGF5JyxcbiAgICB9KTtcbn1cbiJdfQ==

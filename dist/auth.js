@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _AbstractResource2 = _interopRequireDefault(require("../AbstractResource"));
+var _AbstractResource2 = _interopRequireDefault(require("../../AbstractResource"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -29,56 +29,51 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var ReturnOrders =
+var WACCAuth =
 /*#__PURE__*/
 function (_AbstractResource) {
-  _inherits(ReturnOrders, _AbstractResource);
+  _inherits(WACCAuth, _AbstractResource);
 
-  function ReturnOrders() {
+  function WACCAuth() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, ReturnOrders);
+    _classCallCheck(this, WACCAuth);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ReturnOrders)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(WACCAuth)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_this), "all", _this.createMethodFromPartialSpec({
-      method: 'GET',
-      path: ''
-    }));
-
-    _defineProperty(_assertThisInitialized(_this), "get", _this.createMethodFromPartialSpec({
-      method: 'GET',
-      path: '/{id}'
-    }));
-
-    _defineProperty(_assertThisInitialized(_this), "create", _this.createMethodFromPartialSpec({
+    _defineProperty(_assertThisInitialized(_this), "login", _this.createMethodFromPartialSpec({
       method: 'POST',
-      path: ''
+      path: '/login'
     }));
 
-    _defineProperty(_assertThisInitialized(_this), "complete", _this.createMethodFromPartialSpec({
-      method: 'PUT',
-      path: '/{id}/complete'
+    _defineProperty(_assertThisInitialized(_this), "logout", _this.createMethodFromPartialSpec({
+      method: 'GET',
+      path: '/logout'
+    }));
+
+    _defineProperty(_assertThisInitialized(_this), "register", _this.createMethodFromPartialSpec({
+      method: 'POST',
+      path: '/register'
     }));
 
     return _this;
   }
 
-  _createClass(ReturnOrders, [{
+  _createClass(WACCAuth, [{
     key: "initialise",
     value: function initialise() {
-      this.resourcePath = 'return-orders';
+      this.resourcePath = 'auth';
     }
   }]);
 
-  return ReturnOrders;
+  return WACCAuth;
 }(_AbstractResource2["default"]);
 
-exports["default"] = ReturnOrders;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvUmV0dXJucy9yZXR1cm5PcmRlcnMudHMiXSwibmFtZXMiOlsiUmV0dXJuT3JkZXJzIiwiY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjIiwibWV0aG9kIiwicGF0aCIsInJlc291cmNlUGF0aCIsIkFic3RyYWN0UmVzb3VyY2UiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBRXFCQSxZOzs7Ozs7Ozs7Ozs7Ozs7Ozs7MERBS00sTUFBS0MsMkJBQUwsQ0FBaUM7QUFDcERDLE1BQUFBLE1BQU0sRUFBRSxLQUQ0QztBQUVwREMsTUFBQUEsSUFBSSxFQUFFO0FBRjhDLEtBQWpDLEM7OzBEQUtBLE1BQUtGLDJCQUFMLENBQWlDO0FBQ3BEQyxNQUFBQSxNQUFNLEVBQUUsS0FENEM7QUFFcERDLE1BQUFBLElBQUksRUFBRTtBQUY4QyxLQUFqQyxDOzs2REFLRyxNQUFLRiwyQkFBTCxDQUFpQztBQUN2REMsTUFBQUEsTUFBTSxFQUFFLE1BRCtDO0FBRXZEQyxNQUFBQSxJQUFJLEVBQUU7QUFGaUQsS0FBakMsQzs7K0RBS0UsTUFBS0YsMkJBQUwsQ0FBaUM7QUFDekRDLE1BQUFBLE1BQU0sRUFBRSxLQURpRDtBQUV6REMsTUFBQUEsSUFBSSxFQUFFO0FBRm1ELEtBQWpDLEM7Ozs7Ozs7aUNBbkJUO0FBQ2YsV0FBS0MsWUFBTCxHQUFvQixlQUFwQjtBQUNIOzs7O0VBSHFDQyw2QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBBYnN0cmFjdFJlc291cmNlIGZyb20gJy4uL0Fic3RyYWN0UmVzb3VyY2UnO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBSZXR1cm5PcmRlcnMgZXh0ZW5kcyBBYnN0cmFjdFJlc291cmNlIHtcbiAgICBpbml0aWFsaXNlKCk6IHZvaWQge1xuICAgICAgICB0aGlzLnJlc291cmNlUGF0aCA9ICdyZXR1cm4tb3JkZXJzJztcbiAgICB9XG5cbiAgICBwdWJsaWMgYWxsOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnR0VUJyxcbiAgICAgICAgcGF0aDogJycsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgZ2V0OiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnR0VUJyxcbiAgICAgICAgcGF0aDogJy97aWR9JyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyBjcmVhdGU6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICAgICAgcGF0aDogJycsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgY29tcGxldGU6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQVVQnLFxuICAgICAgICBwYXRoOiAnL3tpZH0vY29tcGxldGUnLFxuICAgIH0pO1xufVxuIl19
+exports["default"] = WACCAuth;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9SZXNvdXJjZXMvd2FjYy9BdXRoL2F1dGgudHMiXSwibmFtZXMiOlsiV0FDQ0F1dGgiLCJjcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMiLCJtZXRob2QiLCJwYXRoIiwicmVzb3VyY2VQYXRoIiwiQWJzdHJhY3RSZXNvdXJjZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFFcUJBLFE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs0REFLUSxNQUFLQywyQkFBTCxDQUFpQztBQUN0REMsTUFBQUEsTUFBTSxFQUFFLE1BRDhDO0FBRXREQyxNQUFBQSxJQUFJLEVBQUU7QUFGZ0QsS0FBakMsQzs7NkRBS0MsTUFBS0YsMkJBQUwsQ0FBaUM7QUFDdkRDLE1BQUFBLE1BQU0sRUFBRSxLQUQrQztBQUV2REMsTUFBQUEsSUFBSSxFQUFFO0FBRmlELEtBQWpDLEM7OytEQUtFLE1BQUtGLDJCQUFMLENBQWlDO0FBQ3pEQyxNQUFBQSxNQUFNLEVBQUUsTUFEaUQ7QUFFekRDLE1BQUFBLElBQUksRUFBRTtBQUZtRCxLQUFqQyxDOzs7Ozs7O2lDQWRUO0FBQ2YsV0FBS0MsWUFBTCxHQUFvQixNQUFwQjtBQUNIOzs7O0VBSGlDQyw2QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBBYnN0cmFjdFJlc291cmNlIGZyb20gJy4uLy4uL0Fic3RyYWN0UmVzb3VyY2UnO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBXQUNDQXV0aCBleHRlbmRzIEFic3RyYWN0UmVzb3VyY2Uge1xuICAgIGluaXRpYWxpc2UoKTogdm9pZCB7XG4gICAgICAgIHRoaXMucmVzb3VyY2VQYXRoID0gJ2F1dGgnO1xuICAgIH1cblxuICAgIHB1YmxpYyBsb2dpbjogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIG1ldGhvZDogJ1BPU1QnLFxuICAgICAgICBwYXRoOiAnL2xvZ2luJyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyBsb2dvdXQ6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdHRVQnLFxuICAgICAgICBwYXRoOiAnL2xvZ291dCcsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgcmVnaXN0ZXI6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICAgICAgcGF0aDogJy9yZWdpc3RlcicsXG4gICAgfSk7XG59XG4iXX0=
