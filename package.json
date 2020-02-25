@@ -39,6 +39,9 @@
     "*.{ts,js}": [
       "eslint --fix",
       "jest --bail --findRelatedTests",
+      "echo 'Removing old dist directory'",
+      "rm -r dist",
+      "echo 'Building new dist directory'",
       "yarn build",
       "git add dist"
     ]
