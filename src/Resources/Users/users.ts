@@ -1,14 +1,9 @@
-import AbstractResource from '../AbstractResource';
+import AbstractResource from '../../AbstractResource';
 
 export default class Users extends AbstractResource {
     initialise(): void {
-        this.resourcePath = 'wacc/users';
+        this.resourcePath = '';
     }
-
-    public all: Function = this.createMethodFromPartialSpec({
-        method: 'GET',
-        path: '',
-    });
 
     public get: Function = this.createMethodFromPartialSpec({
         method: 'GET',
@@ -17,12 +12,12 @@ export default class Users extends AbstractResource {
 
     public create: Function = this.createMethodFromPartialSpec({
         method: 'POST',
-        path: '',
+        path: '/guest/users',
     });
 
     public update: Function = this.createMethodFromPartialSpec({
         method: 'PUT',
-        path: '/{id}',
+        path: '/member/users/{id}',
     });
 
     public delete: Function = this.createMethodFromPartialSpec({

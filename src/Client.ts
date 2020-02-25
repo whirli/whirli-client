@@ -1,19 +1,32 @@
 import ApiOptions from './Interfaces/ApiOptions';
 import HttpClient from './Interfaces/HttpClient';
 import resources from './Resources';
-import Auth from './Resources/Auth/auth';
-import Search from './Resources/Search/search';
-import ReturnOrders from './Resources/Returns/returnOrders';
-import WACCUsers from './Resources/Users/wacc/users';
-import Users from './Resources/Users/uwa/users';
-import Orders from './Resources/Orders/orders';
+import Auth from './Resources/wacc/Auth/auth';
+import Search from './Resources/wacc/Search/search';
+import ReturnOrders from './Resources/wacc/Returns/returnOrders';
+import Users from './Resources/Users/users';
+import Orders from './Resources/wacc/Orders/orders';
+import WACCAuth from './Resources/wacc/Auth/auth';
+import WACCSearch from './Resources/wacc/Search/search';
+import WACCReturnOrders from './Resources/wacc/Returns/returnOrders';
+import WACCUsers from './Resources/wacc/Users/users';
+import WACCOrders from './Resources/wacc/Orders/orders';
+
+interface WACC {
+    users: WACCUsers;
+    auth: WACCAuth;
+    orders: WACCOrders;
+    returnOrders: WACCReturnOrders;
+    search: WACCSearch;
+}
 
 export default class Client {
     public search!: Search;
     public auth!: Auth;
     public returnOrders!: ReturnOrders;
     public users!: Users;
-    public WACCUsers!: WACCUsers;
+    public wacc!: WACC;
+
     public orders!: Orders;
 
     protected apiOptions: ApiOptions;
@@ -35,12 +48,18 @@ export default class Client {
     }
 
     loadResources(): void {
-        this.search = new resources.Search(this);
         this.auth = new resources.Auth(this);
-        this.returnOrders = new resources.ReturnOrders(this);
-        this.WACCUsers = new resources.WACCUsers(this);
-        this.users = new resources.Users(this);
         this.orders = new resources.Orders(this);
+        this.returnOrders = new resources.ReturnOrders(this);
+        this.search = new resources.Search(this);
+        this.users = new resources.Users(this);
+        this.wacc = {
+            auth: new resources.WACCAuth(this),
+            orders: new resources.WACCOrders(this),
+            returnOrders: new resources.WACCReturnOrders(this),
+            search: new resources.WACCSearch(this),
+            users: new resources.WACCUsers(this),
+        };
     }
 
     getBasePath(): string {

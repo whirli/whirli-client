@@ -1,11 +1,11 @@
 import HttpClient from '../interfaces/HttpClient';
 import Client from '../Client';
-import Auth from '../Resources/Auth/auth';
-import Search from '../Resources/Search/search';
-import ReturnOrders from '../Resources/Returns/returnOrders';
-import WACCUsers from '../Resources/Users/wacc/users';
-import Users from '../Resources/Users/uwa/users';
-import Orders from '../Resources/Orders/orders';
+import Auth from '../Resources/wacc/Auth/auth';
+import Search from '../Resources/wacc/Search/search';
+import ReturnOrders from '../Resources/wacc/Returns/returnOrders';
+import WACCUsers from '../Resources/wacc/Users/wacc/users';
+import Users from '../Resources/wacc/Users/uwa/users';
+import Orders from '../Resources/wacc/Orders/orders';
 
 describe('Client.ts', () => {
     const httpClient: HttpClient = { $get: () => ({}), $post: () => ({}) };
