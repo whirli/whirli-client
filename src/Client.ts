@@ -4,6 +4,7 @@ import resources from './Resources';
 import Auth from './Resources/wacc/Auth/auth';
 import Search from './Resources/wacc/Search/search';
 import ReturnOrders from './Resources/wacc/Returns/returnOrders';
+import Products from './Resources/Products/products';
 import Users from './Resources/Users/users';
 import Orders from './Resources/wacc/Orders/orders';
 import WACCAuth from './Resources/wacc/Auth/auth';
@@ -21,13 +22,13 @@ interface WACC {
 }
 
 export default class Client {
-    public search!: Search;
     public auth!: Auth;
+    public orders!: Orders;
+    public products!: Products;
     public returnOrders!: ReturnOrders;
+    public search!: Search;
     public users!: Users;
     public wacc!: WACC;
-
-    public orders!: Orders;
 
     protected apiOptions: ApiOptions;
     protected httpClient: HttpClient;
@@ -50,16 +51,17 @@ export default class Client {
     loadResources(): void {
         this.auth = new resources.Auth(this);
         this.orders = new resources.Orders(this);
+        this.products = new resources.Products(this);
         this.returnOrders = new resources.ReturnOrders(this);
         this.search = new resources.Search(this);
         this.users = new resources.Users(this);
-        this.wacc = {
-            auth: new resources.WACCAuth(this),
-            orders: new resources.WACCOrders(this),
-            returnOrders: new resources.WACCReturnOrders(this),
-            search: new resources.WACCSearch(this),
-            users: new resources.WACCUsers(this),
-        };
+        // this.wacc = {
+        //     auth: new resources.WACCAuth(this),
+        //     orders: new resources.WACCOrders(this),
+        //     returnOrders: new resources.WACCReturnOrders(this),
+        //     search: new resources.WACCSearch(this),
+        //     users: new resources.WACCUsers(this),
+        // };
     }
 
     getBasePath(): string {

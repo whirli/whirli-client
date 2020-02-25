@@ -1,11 +1,11 @@
 import HttpClient from '../interfaces/HttpClient';
 import Client from '../Client';
-import Auth from '../Resources/wacc/Auth/auth';
-import Search from '../Resources/wacc/Search/search';
-import ReturnOrders from '../Resources/wacc/Returns/returnOrders';
-import WACCUsers from '../Resources/wacc/Users/wacc/users';
-import Users from '../Resources/wacc/Users/uwa/users';
-import Orders from '../Resources/wacc/Orders/orders';
+import Auth from '../Resources/Auth/auth';
+import Orders from '../Resources/Orders/orders';
+import Products from '../Resources/Products/products';
+import ReturnOrders from '../Resources/Returns/returnOrders';
+import Search from '../Resources/Search/search';
+import Users from '../Resources/Users/users';
 
 describe('Client.ts', () => {
     const httpClient: HttpClient = { $get: () => ({}), $post: () => ({}) };
@@ -21,12 +21,12 @@ describe('Client.ts', () => {
 
     it('can access all resources', () => {
         // @todo We could probably turn this in to a loop to make it easier
-        expect(client.search).toBeInstanceOf(Search);
         expect(client.auth).toBeInstanceOf(Auth);
-        expect(client.returnOrders).toBeInstanceOf(ReturnOrders);
-        expect(client.users).toBeInstanceOf(Users);
-        expect(client.WACCUsers).toBeInstanceOf(WACCUsers);
         expect(client.orders).toBeInstanceOf(Orders);
+        expect(client.products).toBeInstanceOf(Products);
+        expect(client.returnOrders).toBeInstanceOf(ReturnOrders);
+        expect(client.search).toBeInstanceOf(Search);
+        expect(client.users).toBeInstanceOf(Users);
     });
 
     it('can return the base path for the API', () => {

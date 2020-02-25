@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _AbstractResource2 = _interopRequireDefault(require("../AbstractResource"));
+var _AbstractResource2 = _interopRequireDefault(require("../../AbstractResource"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -29,56 +29,51 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Users =
+var Auth =
 /*#__PURE__*/
 function (_AbstractResource) {
-  _inherits(Users, _AbstractResource);
+  _inherits(Auth, _AbstractResource);
 
-  function Users() {
+  function Auth() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, Users);
+    _classCallCheck(this, Auth);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Users)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Auth)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_this), "get", _this.createMethodFromPartialSpec({
-      method: 'GET',
-      path: '/{id}'
-    }));
-
-    _defineProperty(_assertThisInitialized(_this), "create", _this.createMethodFromPartialSpec({
+    _defineProperty(_assertThisInitialized(_this), "login", _this.createMethodFromPartialSpec({
       method: 'POST',
-      path: '/guest/users'
+      path: '/login'
     }));
 
-    _defineProperty(_assertThisInitialized(_this), "update", _this.createMethodFromPartialSpec({
-      method: 'PUT',
-      path: '/member/users/{id}'
+    _defineProperty(_assertThisInitialized(_this), "logout", _this.createMethodFromPartialSpec({
+      method: 'GET',
+      path: '/logout'
     }));
 
-    _defineProperty(_assertThisInitialized(_this), "delete", _this.createMethodFromPartialSpec({
-      method: 'DELETE',
-      path: '/{id}'
+    _defineProperty(_assertThisInitialized(_this), "register", _this.createMethodFromPartialSpec({
+      method: 'POST',
+      path: '/register'
     }));
 
     return _this;
   }
 
-  _createClass(Users, [{
+  _createClass(Auth, [{
     key: "initialise",
     value: function initialise() {
-      this.resourcePath = '';
+      this.resourcePath = 'auth';
     }
   }]);
 
-  return Users;
+  return Auth;
 }(_AbstractResource2["default"]);
 
-exports["default"] = Users;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9SZXNvdXJjZXMvVXNlcnMvdXNlcnMudHMiXSwibmFtZXMiOlsiVXNlcnMiLCJjcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMiLCJtZXRob2QiLCJwYXRoIiwicmVzb3VyY2VQYXRoIiwiQWJzdHJhY3RSZXNvdXJjZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFFcUJBLEs7Ozs7Ozs7Ozs7Ozs7Ozs7OzswREFLTSxNQUFLQywyQkFBTCxDQUFpQztBQUNwREMsTUFBQUEsTUFBTSxFQUFFLEtBRDRDO0FBRXBEQyxNQUFBQSxJQUFJLEVBQUU7QUFGOEMsS0FBakMsQzs7NkRBS0csTUFBS0YsMkJBQUwsQ0FBaUM7QUFDdkRDLE1BQUFBLE1BQU0sRUFBRSxNQUQrQztBQUV2REMsTUFBQUEsSUFBSSxFQUFFO0FBRmlELEtBQWpDLEM7OzZEQUtBLE1BQUtGLDJCQUFMLENBQWlDO0FBQ3ZEQyxNQUFBQSxNQUFNLEVBQUUsS0FEK0M7QUFFdkRDLE1BQUFBLElBQUksRUFBRTtBQUZpRCxLQUFqQyxDOzs2REFLQSxNQUFLRiwyQkFBTCxDQUFpQztBQUN2REMsTUFBQUEsTUFBTSxFQUFFLFFBRCtDO0FBRXZEQyxNQUFBQSxJQUFJLEVBQUU7QUFGaUQsS0FBakMsQzs7Ozs7OztpQ0FuQlA7QUFDZixXQUFLQyxZQUFMLEdBQW9CLEVBQXBCO0FBQ0g7Ozs7RUFIOEJDLDZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFic3RyYWN0UmVzb3VyY2UgZnJvbSAnLi4vQWJzdHJhY3RSZXNvdXJjZSc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIFVzZXJzIGV4dGVuZHMgQWJzdHJhY3RSZXNvdXJjZSB7XG4gICAgaW5pdGlhbGlzZSgpOiB2b2lkIHtcbiAgICAgICAgdGhpcy5yZXNvdXJjZVBhdGggPSAnJztcbiAgICB9XG5cbiAgICBwdWJsaWMgZ2V0OiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnR0VUJyxcbiAgICAgICAgcGF0aDogJy97aWR9JyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyBjcmVhdGU6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICAgICAgcGF0aDogJy9ndWVzdC91c2VycycsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgdXBkYXRlOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnUFVUJyxcbiAgICAgICAgcGF0aDogJy9tZW1iZXIvdXNlcnMve2lkfScsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgZGVsZXRlOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnREVMRVRFJyxcbiAgICAgICAgcGF0aDogJy97aWR9JyxcbiAgICB9KTtcbn1cbiJdfQ==
+exports["default"] = Auth;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvd2FjYy9BdXRoL2F1dGgudHMiXSwibmFtZXMiOlsiQXV0aCIsImNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyIsIm1ldGhvZCIsInBhdGgiLCJyZXNvdXJjZVBhdGgiLCJBYnN0cmFjdFJlc291cmNlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQUVxQkEsSTs7Ozs7Ozs7Ozs7Ozs7Ozs7OzREQUtRLE1BQUtDLDJCQUFMLENBQWlDO0FBQ3REQyxNQUFBQSxNQUFNLEVBQUUsTUFEOEM7QUFFdERDLE1BQUFBLElBQUksRUFBRTtBQUZnRCxLQUFqQyxDOzs2REFLQyxNQUFLRiwyQkFBTCxDQUFpQztBQUN2REMsTUFBQUEsTUFBTSxFQUFFLEtBRCtDO0FBRXZEQyxNQUFBQSxJQUFJLEVBQUU7QUFGaUQsS0FBakMsQzs7K0RBS0UsTUFBS0YsMkJBQUwsQ0FBaUM7QUFDekRDLE1BQUFBLE1BQU0sRUFBRSxNQURpRDtBQUV6REMsTUFBQUEsSUFBSSxFQUFFO0FBRm1ELEtBQWpDLEM7Ozs7Ozs7aUNBZFQ7QUFDZixXQUFLQyxZQUFMLEdBQW9CLE1BQXBCO0FBQ0g7Ozs7RUFINkJDLDZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFic3RyYWN0UmVzb3VyY2UgZnJvbSAnLi4vLi4vQWJzdHJhY3RSZXNvdXJjZSc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEF1dGggZXh0ZW5kcyBBYnN0cmFjdFJlc291cmNlIHtcbiAgICBpbml0aWFsaXNlKCk6IHZvaWQge1xuICAgICAgICB0aGlzLnJlc291cmNlUGF0aCA9ICdhdXRoJztcbiAgICB9XG5cbiAgICBwdWJsaWMgbG9naW46IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICAgICAgcGF0aDogJy9sb2dpbicsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgbG9nb3V0OiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnR0VUJyxcbiAgICAgICAgcGF0aDogJy9sb2dvdXQnLFxuICAgIH0pO1xuXG4gICAgcHVibGljIHJlZ2lzdGVyOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnUE9TVCcsXG4gICAgICAgIHBhdGg6ICcvcmVnaXN0ZXInLFxuICAgIH0pO1xufVxuIl19

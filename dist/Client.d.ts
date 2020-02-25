@@ -1,18 +1,31 @@
 import ApiOptions from './Interfaces/ApiOptions';
 import HttpClient from './Interfaces/HttpClient';
-import Auth from './Resources/Auth/auth';
-import Search from './Resources/Search/search';
-import ReturnOrders from './Resources/Returns/returnOrders';
-import WACCUsers from './Resources/Users/wacc/users';
-import Users from './Resources/Users/uwa/users';
-import Orders from './Resources/Orders/orders';
+import Auth from './Resources/wacc/Auth/auth';
+import Search from './Resources/wacc/Search/search';
+import ReturnOrders from './Resources/wacc/Returns/returnOrders';
+import Products from './Resources/Products/products';
+import Users from './Resources/Users/users';
+import Orders from './Resources/wacc/Orders/orders';
+import WACCAuth from './Resources/wacc/Auth/auth';
+import WACCSearch from './Resources/wacc/Search/search';
+import WACCReturnOrders from './Resources/wacc/Returns/returnOrders';
+import WACCUsers from './Resources/wacc/Users/users';
+import WACCOrders from './Resources/wacc/Orders/orders';
+interface WACC {
+    users: WACCUsers;
+    auth: WACCAuth;
+    orders: WACCOrders;
+    returnOrders: WACCReturnOrders;
+    search: WACCSearch;
+}
 export default class Client {
-    search: Search;
     auth: Auth;
-    returnOrders: ReturnOrders;
-    users: Users;
-    WACCUsers: WACCUsers;
     orders: Orders;
+    products: Products;
+    returnOrders: ReturnOrders;
+    search: Search;
+    users: Users;
+    wacc: WACC;
     protected apiOptions: ApiOptions;
     protected httpClient: HttpClient;
     constructor(httpClient: HttpClient);
@@ -21,3 +34,4 @@ export default class Client {
     getBasePath(): string;
     setDebug(flag: boolean): void;
 }
+export {};
