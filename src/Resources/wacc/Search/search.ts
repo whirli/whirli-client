@@ -3,11 +3,11 @@ import AbstractResource from '../../AbstractResource';
 export default class Search extends AbstractResource {
     initialise(): void {
         this.resourcePath = 'search';
+        this.defaultAccess = 'wacc';
     }
 
     public all: Function = this.createMethodFromPartialSpec({
-        access: 'wacc',
         method: 'GET',
-        path: '',
+        path: '/',
     });
 }

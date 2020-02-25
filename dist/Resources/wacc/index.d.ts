@@ -1,17 +1,12 @@
-import WACCAuth from './Auth/auth';
-import WACCSearch from './Search/search';
-import WACCProducts from './Products/products';
-import WACCReturnOrders from './Returns/returnOrders';
-import WACCUsers from './Users/users';
-import WACCOrders from './Orders/orders';
 import Client from '../../Client';
-export interface WACC {
-    users: WACCUsers;
-    auth: WACCAuth;
-    products: WACCProducts;
+import WACCOrders from './Orders/Orders';
+import WACCReturnOrders from './ReturnOrders/ReturnOrders';
+import WACCSearch from './Search/Search';
+import WACCUsers from './Users/Users';
+export interface WaccResources {
     orders: WACCOrders;
     returnOrders: WACCReturnOrders;
     search: WACCSearch;
+    users: WACCUsers;
 }
-declare const _default: (client: Client) => WACC;
-export default _default;
+export declare function loadWaccResources(client: Client): WaccResources;

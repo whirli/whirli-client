@@ -1,25 +1,21 @@
-import WACCAuth from './Auth/auth';
-import WACCSearch from './Search/search';
-import WACCProducts from './Products/products';
-import WACCReturnOrders from './Returns/returnOrders';
-import WACCUsers from './Users/users';
-import WACCOrders from './Orders/orders';
 import Client from '../../Client';
+import WACCOrders from './Orders/Orders';
+import WACCReturnOrders from './ReturnOrders/ReturnOrders';
+import WACCSearch from './Search/Search';
+import WACCUsers from './Users/Users';
 
-export interface WACC {
-    users: WACCUsers;
-    auth: WACCAuth;
-    products: WACCProducts;
+export interface WaccResources {
     orders: WACCOrders;
     returnOrders: WACCReturnOrders;
     search: WACCSearch;
+    users: WACCUsers;
 }
 
-export default (client: Client): WACC => ({
-    auth: new WACCAuth(client),
-    orders: new WACCOrders(client),
-    products: new WACCProducts(client),
-    returnOrders: new WACCReturnOrders(client),
-    search: new WACCSearch(client),
-    users: new WACCUsers(client),
-});
+export function loadWaccResources(client: Client): WaccResources {
+    return {
+        orders: new WACCOrders(client),
+        returnOrders: new WACCReturnOrders(client),
+        search: new WACCSearch(client),
+        users: new WACCUsers(client),
+    };
+}

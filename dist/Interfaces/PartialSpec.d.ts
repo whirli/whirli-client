@@ -1,6 +1,8 @@
+import { HttpMethod } from './HttpMethod';
+import { AccessType } from './AccessType';
 export default interface PartialSpec {
-    method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'OPTIONS' | 'DELETE';
-    access?: 'guest' | 'member' | 'wacc';
+    method: HttpMethod;
+    access?: AccessType;
     methodType?: string;
     path?: string;
 }
