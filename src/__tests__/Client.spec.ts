@@ -3,7 +3,8 @@ import Client from '../Client';
 import Auth from '../Resources/Auth/auth';
 import Search from '../Resources/Search/search';
 import ReturnOrders from '../Resources/Returns/returnOrders';
-import Users from '../Resources/Users/users';
+import WACCUsers from '../Resources/Users/wacc/users';
+import Users from '../Resources/Users/uwa/users';
 import Orders from '../Resources/Orders/orders';
 
 describe('Client.ts', () => {
@@ -24,6 +25,7 @@ describe('Client.ts', () => {
         expect(client.auth).toBeInstanceOf(Auth);
         expect(client.returnOrders).toBeInstanceOf(ReturnOrders);
         expect(client.users).toBeInstanceOf(Users);
+        expect(client.WACCUsers).toBeInstanceOf(WACCUsers);
         expect(client.orders).toBeInstanceOf(Orders);
     });
 

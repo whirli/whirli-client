@@ -4,7 +4,8 @@ import resources from './Resources';
 import Auth from './Resources/Auth/auth';
 import Search from './Resources/Search/search';
 import ReturnOrders from './Resources/Returns/returnOrders';
-import Users from './Resources/Users/users';
+import WACCUsers from './Resources/Users/wacc/users';
+import Users from './Resources/Users/uwa/users';
 import Orders from './Resources/Orders/orders';
 
 export default class Client {
@@ -12,6 +13,7 @@ export default class Client {
     public auth!: Auth;
     public returnOrders!: ReturnOrders;
     public users!: Users;
+    public WACCUsers!: WACCUsers;
     public orders!: Orders;
 
     protected apiOptions: ApiOptions;
@@ -36,6 +38,7 @@ export default class Client {
         this.search = new resources.Search(this);
         this.auth = new resources.Auth(this);
         this.returnOrders = new resources.ReturnOrders(this);
+        this.WACCUsers = new resources.WACCUsers(this);
         this.users = new resources.Users(this);
         this.orders = new resources.Orders(this);
     }
