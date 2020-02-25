@@ -5,13 +5,15 @@ import { extractUrlParams } from './utils';
 export default class Spec {
     protected readonly path: string;
     protected readonly requestMethod: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'OPTIONS' | 'DELETE';
+    protected readonly access: 'guest' | 'member' | 'wacc';
     protected readonly urlParams: Array<string>;
 
     /**
      * Create a complete spec from a partial spec.
      */
     constructor(resourcePath: string, partialSpec: PartialSpec) {
-        this.path = `/${resourcePath}${partialSpec.path}`;
+        this.access = partialSpec.access || 'guest';
+        this.path = `${this.access}/${resourcePath}${partialSpec.path}`;
         this.requestMethod = partialSpec.method || 'GET';
         this.urlParams = extractUrlParams(this.path);
     }
