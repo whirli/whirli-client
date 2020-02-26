@@ -1,31 +1,29 @@
-import ApiOptions from './Interfaces/ApiOptions';
+import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfaces/ClientOptions';
 import HttpClient from './Interfaces/HttpClient';
-import resources from './Resources';
-import Auth from './Resources/Auth/auth';
-import Orders from './Resources/Orders/orders';
-import Products from './Resources/Products/products';
-import ReturnOrders from './Resources/Returns/returnOrders';
-import Search from './Resources/Search/search';
-import Users from './Resources/Users/users';
+import Auth from './Resources/Auth/Auth';
+import Users from './Resources/Users/Users';
+import UserSubscriptions from './Resources/UserSubscriptions/UserSubscriptions';
+import { loadWaccResources, WaccResources } from './Resources/Wacc';
 
 export default class Client {
     public auth!: Auth;
-    public orders!: Orders;
-    public products!: Products;
-    public returnOrders!: ReturnOrders;
-    public search!: Search;
     public users!: Users;
+    public userSubscriptions!: UserSubscriptions;
+    public wacc!: WaccResources;
 
-    protected apiOptions: ApiOptions;
     protected httpClient: HttpClient;
+    protected options: ClientAllOptions = {
+        apiVersion: 'v1',
+        baseUrl: '/api',
+        debug: false,
+        version: '0.0.1',
+        features: {
+            trimTrailingSlash: true,
+        },
+    };
 
-    constructor(httpClient: HttpClient) {
-        this.apiOptions = {
-            apiVersion: 'v1',
-            baseUrl: '/api',
-            debug: false,
-            version: '0.0.1',
-        };
+    constructor(httpClient: HttpClient, opts: ClientOptions = {}) {
+        this.options = Object.assign(this.options, opts);
         this.httpClient = httpClient;
         this.loadResources();
     }
@@ -35,19 +33,21 @@ export default class Client {
     }
 
     loadResources(): void {
-        this.auth = new resources.Auth(this);
-        this.orders = new resources.Orders(this);
-        this.products = new resources.Products(this);
-        this.returnOrders = new resources.ReturnOrders(this);
-        this.search = new resources.Search(this);
-        this.users = new resources.Users(this);
+        this.auth = new Auth(this);
+        this.users = new Users(this);
+        this.userSubscriptions = new UserSubscriptions(this);
+        this.wacc = loadWaccResources(this);
     }
 
     getBasePath(): string {
-        return `${this.apiOptions.baseUrl}/${this.apiOptions.apiVersion}`;
+        return `${this.options.baseUrl}/${this.options.apiVersion}`;
+    }
+
+    features(): ClientFeatureOptions {
+        return this.options.features;
     }
 
     setDebug(flag: boolean): void {
-        this.apiOptions.debug = flag;
+        this.options.debug = flag;
     }
 }

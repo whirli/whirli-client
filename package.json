@@ -35,14 +35,6 @@
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
     "test": "jest"
   },
-  "lint-staged": {
-    "*.{ts,js}": [
-      "eslint --fix",
-      "jest --bail --findRelatedTests",
-      "yarn build",
-      "git add dist"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "echo Linting and Building && lint-staged && echo Linting and Building complete"

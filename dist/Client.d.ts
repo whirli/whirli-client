@@ -1,23 +1,20 @@
-import ApiOptions from './Interfaces/ApiOptions';
+import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfaces/ClientOptions';
 import HttpClient from './Interfaces/HttpClient';
-import Auth from './Resources/Auth/auth';
-import Orders from './Resources/Orders/orders';
-import Products from './Resources/Products/products';
-import ReturnOrders from './Resources/Returns/returnOrders';
-import Search from './Resources/Search/search';
-import Users from './Resources/Users/users';
+import Auth from './Resources/Auth/Auth';
+import Users from './Resources/Users/Users';
+import UserSubscriptions from './Resources/UserSubscriptions/UserSubscriptions';
+import { WaccResources } from './Resources/Wacc';
 export default class Client {
     auth: Auth;
-    orders: Orders;
-    products: Products;
-    returnOrders: ReturnOrders;
-    search: Search;
     users: Users;
-    protected apiOptions: ApiOptions;
+    userSubscriptions: UserSubscriptions;
+    wacc: WaccResources;
     protected httpClient: HttpClient;
-    constructor(httpClient: HttpClient);
+    protected options: ClientAllOptions;
+    constructor(httpClient: HttpClient, opts?: ClientOptions);
     getHttpClient(): HttpClient;
     loadResources(): void;
     getBasePath(): string;
+    features(): ClientFeatureOptions;
     setDebug(flag: boolean): void;
 }
