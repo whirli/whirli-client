@@ -18,7 +18,7 @@ export default class Spec {
         const { defaultAccess, resourcePath } = resourceOptions;
 
         this.access = partialSpec.access || defaultAccess;
-        this.path = `${this.access}/${resourcePath}${partialSpec.path || '/'}`;
+        this.path = `${this.access}${resourcePath}${partialSpec.path || '/'}`;
         this.requestMethod = partialSpec.method || 'GET';
         this.urlParams = extractUrlParams(this.path);
     }
