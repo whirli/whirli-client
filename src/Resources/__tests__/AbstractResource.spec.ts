@@ -38,8 +38,6 @@ describe('AbstractResource.ts', () => {
 
                 expect(resourceRequestFn).toBeInstanceOf(Function);
                 expect(argsReceivedByMock[0]).toBe(result.route);
-
-                httpClient[result.method].mockClear();
             });
         });
     }
