@@ -2,7 +2,7 @@ import AbstractResource from '../../AbstractResource';
 
 export default class Search extends AbstractResource {
     initialise(): void {
-        this.resourcePath = 'search';
+        this.resourcePath = '/search';
         this.defaultAccess = 'wacc';
     }
 

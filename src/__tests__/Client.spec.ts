@@ -1,4 +1,4 @@
-import HttpClient from '../interfaces/HttpClient';
+import { httpClient } from '../../test/mocks/HttpClient';
 import Client from '../Client';
 import Auth from '../Resources/Auth/Auth';
 import Users from '../Resources/Users/Users';
@@ -9,11 +9,14 @@ import WACCSearch from '../Resources/Wacc/Search/Search';
 import WACCUsers from '../Resources/Wacc/Users/Users';
 
 describe('Client.ts', () => {
-    const httpClient: HttpClient = { $get: () => ({}), $post: () => ({}) };
     let client: Client;
 
     beforeEach(() => {
         client = new Client(httpClient, {});
+    });
+
+    it('can be instantiated', () => {
+        expect(client).toBeInstanceOf(Client);
     });
 
     it('can return a HttpClient', () => {
