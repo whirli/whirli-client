@@ -1,8 +1,8 @@
 import AbstractResource from '../../AbstractResource';
 
-export default class Orders extends AbstractResource {
+export default class ReturnOrders extends AbstractResource {
     initialise(): void {
-        this.resourcePath = 'orders';
+        this.resourcePath = 'return-orders';
         this.defaultAccess = 'wacc';
     }
 
@@ -21,13 +21,8 @@ export default class Orders extends AbstractResource {
         path: '/',
     });
 
-    public update: Function = this.createMethodFromPartialSpec({
+    public complete: Function = this.createMethodFromPartialSpec({
         method: 'PUT',
-        path: '/{id}',
-    });
-
-    public delete: Function = this.createMethodFromPartialSpec({
-        method: 'DELETE',
-        path: '/{id}',
+        path: '/{id}/complete',
     });
 }

@@ -1,19 +1,24 @@
 import PartialSpec from './Interfaces/PartialSpec';
 import UrlData from './Interfaces/UrlData';
+import { ResourceOptions } from './Interfaces/ResourceOptions';
+import { HttpMethod } from './Interfaces/HttpMethod';
+import { AccessType } from './Interfaces/AccessType';
 import { extractUrlParams } from './utils';
 
 export default class Spec {
     protected readonly path: string;
-    protected readonly requestMethod: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'OPTIONS' | 'DELETE';
-    protected readonly access: 'guest' | 'member' | 'wacc';
+    protected readonly requestMethod: HttpMethod;
+    protected readonly access: AccessType;
     protected readonly urlParams: Array<string>;
 
     /**
      * Create a complete spec from a partial spec.
      */
-    constructor(resourcePath: string, partialSpec: PartialSpec) {
-        this.access = partialSpec.access || 'guest';
-        this.path = `${this.access}/${resourcePath}${partialSpec.path}`;
+    constructor(resourceOptions: ResourceOptions, partialSpec: PartialSpec) {
+        const { defaultAccess, resourcePath } = resourceOptions;
+
+        this.access = partialSpec.access || defaultAccess;
+        this.path = `${this.access}/${resourcePath}${partialSpec.path || '/'}`;
         this.requestMethod = partialSpec.method || 'GET';
         this.urlParams = extractUrlParams(this.path);
     }

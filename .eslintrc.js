@@ -16,5 +16,12 @@ module.exports = {
     ],
     rules: {
         '@typescript-eslint/no-unused-vars': 'error',
+        '@typescript-eslint/no-this-alias': [
+            'error',
+            {
+                allowDestructuring: true, // Allow `const { props, state } = this`; false by default
+                allowedNames: ['self'], // Allow `const self = this`; `[]` by default
+            },
+        ],
     },
 };
