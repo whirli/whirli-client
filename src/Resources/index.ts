@@ -3,6 +3,7 @@ import Search from './Search/search';
 import ReturnOrders from './Returns/returnOrders';
 import Users from './Users/users';
 import Orders from './Orders/orders';
+import OrderLines from './Orders/orders';
 
 export default {
     Auth,
@@ -10,4 +11,5 @@ export default {
     ReturnOrders,
     Users,
     Orders,
+    OrderLines
 };

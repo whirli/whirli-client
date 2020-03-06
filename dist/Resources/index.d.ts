@@ -9,5 +9,6 @@ declare const _default: {
     ReturnOrders: typeof ReturnOrders;
     Users: typeof Users;
     Orders: typeof Orders;
+    OrderLines: typeof Orders;
 };
 export default _default;
