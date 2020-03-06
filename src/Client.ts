@@ -6,6 +6,7 @@ import Search from './Resources/Search/search';
 import ReturnOrders from './Resources/Returns/returnOrders';
 import Users from './Resources/Users/users';
 import Orders from './Resources/Orders/orders';
+import OrderLines from './Resources/Orders/orderLines';
 
 export default class Client {
     public search!: Search;
@@ -13,6 +14,7 @@ export default class Client {
     public returnOrders!: ReturnOrders;
     public users!: Users;
     public orders!: Orders;
+    public orderLines!: OrderLines;
 
     protected apiOptions: ApiOptions;
     protected httpClient: HttpClient;

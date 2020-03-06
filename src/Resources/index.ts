@@ -11,5 +11,5 @@ export default {
     ReturnOrders,
     Users,
     Orders,
-    OrderLines
+    OrderLines,
 };
