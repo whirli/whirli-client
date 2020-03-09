@@ -33,11 +33,18 @@ describe('AbstractResource.ts', () => {
             });
 
             it('can create a request method for a resource', () => {
-                resourceRequestFn(...(test.args as string[]));
-                const argsReceivedByMock = httpClient[result.method].mock.calls[0];
+                const request = { data: 'test' };
+                const args = test.args || [];
+
+                resourceRequestFn(...args, request);
+
+                const argsReceivedByMethod = httpClient[result.method].mock.calls[0];
+                const requestPath = argsReceivedByMethod[0];
+                const requestBody = argsReceivedByMethod[1];
 
                 expect(resourceRequestFn).toBeInstanceOf(Function);
-                expect(argsReceivedByMock[0]).toBe(result.route);
+                expect(requestPath).toBe(result.route);
+                expect(requestBody).toBe(request);
             });
         });
     }
