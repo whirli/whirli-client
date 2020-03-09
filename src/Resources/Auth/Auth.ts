@@ -8,10 +8,20 @@ export default class Auth extends AbstractResource {
 
     public login: Function = this.createMethodFromPartialSpec({
         method: 'POST',
+        path: '/login',
+    });
+
+    public logout: Function = this.createMethodFromPartialSpec({
+        method: 'POST',
+        path: '/logout',
+    });
+
+    public forgotPassword: Function = this.createMethodFromPartialSpec({
+        method: 'POST',
         path: '/password/forgot',
     });
 
-    public register: Function = this.createMethodFromPartialSpec({
+    public resetPassword: Function = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/password/reset',
     });
