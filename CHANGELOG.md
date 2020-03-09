@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 🐛 Bug Fixes
+- Update the forgot and reset password endpoints to match the changed API endpoints (no more /auth prefix) [#81](https://github.com/whirli/whirli-client/pull/81)
+
 ## [0.0.4] - 2020-03-09
 ### 🐛 Bug Fixes
 - Fix the method names for forgot and reset password [#74](https://github.com/whirli/whirli-client/pull/74)
