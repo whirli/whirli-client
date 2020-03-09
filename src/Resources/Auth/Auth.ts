@@ -2,7 +2,6 @@ import AbstractResource from '../AbstractResource';
 
 export default class Auth extends AbstractResource {
     initialise(): void {
-        this.resourcePath = '/auth';
         this.defaultAccess = 'guest';
     }
 
