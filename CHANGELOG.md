@@ -5,12 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.0.4] - 2020-03-09
 ### 🐛 Bug Fixes
 - Fix the method names for forgot and reset password [#74](https://github.com/whirli/whirli-client/pull/74)
 
 ## [0.0.3] - 2020-02-26
 ### 🐛 Bug Fixes
-- Fix a bug that was resulting in two slashes after the access section of the route when a non-empty path was provided [#72](https://github.com/whirli/whirli-client/pull/72) 
+- Fix a bug that was resulting in two slashes after the access section of the route when a non-empty path was provided [#72](https://github.com/whirli/whirli-client/pull/72)
 
 ### 👓 Tests
 - Add tests for the AbstractResource class [#72](https://github.com/whirli/whirli-client/pull/72)
