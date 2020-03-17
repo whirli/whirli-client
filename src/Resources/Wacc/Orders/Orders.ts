@@ -30,4 +30,9 @@ export default class Orders extends AbstractResource {
         method: 'DELETE',
         path: '/{id}',
     });
+
+    public print: Function = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/{id}/print',
+    });
 }
