@@ -43,4 +43,7 @@ export default interface Order {
     resourceType?: string;
     user?: User | null;
     lines?: OrderLine[];
+    onFirstOrder?: boolean;
+    deliveryMethod?: string;
+    expectedDeliveryDate?: string;
 }
