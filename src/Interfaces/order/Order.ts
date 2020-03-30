@@ -46,4 +46,7 @@ export default interface Order {
     user?: User | null;
     // has many
     lines?: OrderLine[];
+    onFirstOrder?: boolean;
+    deliveryMethod?: string;
+    expectedDeliveryDate?: string;
 }
