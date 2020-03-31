@@ -6,7 +6,7 @@ import TypeTransformer from './TypeTransformer';
 
 export default class CodeTransformer extends BaseTransformer {
     /**
-     * Map an order response
+     * Map an code response
      *
      * @param code
      */
