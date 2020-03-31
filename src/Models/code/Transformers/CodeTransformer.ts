@@ -1,15 +1,10 @@
 import Code from '../Code';
 import CodeInterface from '../../../Interfaces/code/Code';
 import BaseTransformer from '../../../BaseTransformer';
-import TypeInterface from '../../../Interfaces/code/Type';
 import TypeTransformer from './TypeTransformer';
+import Type from '../Type';
 
 export default class CodeTransformer extends BaseTransformer {
-    /**
-     * Map an code response
-     *
-     * @param code
-     */
     mapData(code: CodeInterface): Code {
         return new Code({
             name: code.name,
@@ -22,7 +17,7 @@ export default class CodeTransformer extends BaseTransformer {
         });
     }
 
-    includeType(code: CodeInterface): TypeInterface | null {
+    includeType(code: CodeInterface): Type | null {
         return this.item(code, 'type', new TypeTransformer());
     }
 }
