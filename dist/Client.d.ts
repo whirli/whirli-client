@@ -3,11 +3,15 @@ import HttpClient from './Interfaces/HttpClient';
 import Auth from './Resources/Auth/Auth';
 import Users from './Resources/Users/Users';
 import UserSubscriptions from './Resources/UserSubscriptions/UserSubscriptions';
+import Subscriptions from './Resources/Subscriptions/Subscriptions';
+import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
 import { WaccResources } from './Resources/Wacc';
 export default class Client {
     auth: Auth;
     users: Users;
     userSubscriptions: UserSubscriptions;
+    subscriptions: Subscriptions;
+    subscriptionAddons: SubscriptionAddons;
     wacc: WaccResources;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
