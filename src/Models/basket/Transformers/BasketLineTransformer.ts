@@ -1,4 +1,5 @@
 import BasketLine from '../BasketLine';
+import ProductVariant from '../../product/ProductVariant';
 import { APIBasketLine as APIBasketLineInterface } from '../../../Interfaces/basket/BasketLine';
 import ProductVariantTransformer from '../../product/Transformers/ProductVariantTransformer';
 import BaseTransformer from '../../../BaseTransformer';
@@ -18,7 +19,7 @@ export default class BasketLineTransformer extends BaseTransformer {
             productVariant: this.includeProductVariant(basketLine),
         });
     }
-    includeProductVariant(basketLine: APIBasketLineInterface): Array<BasketLine> {
+    includeProductVariant(basketLine: APIBasketLineInterface): ProductVariant {
         return this.collection(basketLine, 'product_variant', new ProductVariantTransformer());
     }
 }
