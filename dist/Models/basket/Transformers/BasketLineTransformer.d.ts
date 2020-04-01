@@ -4,5 +4,5 @@ import { APIBasketLine as APIBasketLineInterface } from '../../../Interfaces/bas
 import BaseTransformer from '../../../BaseTransformer';
 export default class BasketLineTransformer extends BaseTransformer {
     mapData(basketLine: APIBasketLineInterface): BasketLine;
-    includeProductVariant(basketLine: APIBasketLineInterface): ProductVariant;
+    includeProductVariant(basketLine: APIBasketLineInterface): ProductVariant | null;
 }

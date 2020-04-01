@@ -4,6 +4,8 @@ import Auth from './Resources/Auth/Auth';
 import Users from './Resources/Users/Users';
 import UserSubscriptions from './Resources/UserSubscriptions/UserSubscriptions';
 import Basket from './Resources/Basket/Basket';
+import Subscriptions from './Resources/Subscriptions/Subscriptions';
+import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
 
 export default class Client {
@@ -11,6 +13,8 @@ export default class Client {
     public users!: Users;
     public userSubscriptions!: UserSubscriptions;
     public basket!: Basket;
+    public subscriptions!: Subscriptions;
+    public subscriptionAddons!: SubscriptionAddons;
     public wacc!: WaccResources;
 
     protected httpClient: HttpClient;
@@ -39,6 +43,8 @@ export default class Client {
         this.users = new Users(this);
         this.userSubscriptions = new UserSubscriptions(this);
         this.basket = new Basket(this);
+        this.subscriptions = new Subscriptions(this);
+        this.subscriptionAddons = new SubscriptionAddons(this);
         this.wacc = loadWaccResources(this);
     }
 

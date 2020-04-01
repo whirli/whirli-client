@@ -19,7 +19,7 @@ export default class BasketLineTransformer extends BaseTransformer {
             productVariant: this.includeProductVariant(basketLine),
         });
     }
-    includeProductVariant(basketLine: APIBasketLineInterface): ProductVariant {
-        return this.collection(basketLine, 'product_variant', new ProductVariantTransformer());
+    includeProductVariant(basketLine: APIBasketLineInterface): ProductVariant | null {
+        return this.item(basketLine, 'product_variant', new ProductVariantTransformer());
     }
 }

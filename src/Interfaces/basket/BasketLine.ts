@@ -5,7 +5,7 @@ export interface APIBasketLine {
     quantity?: number;
     created_at?: Date;
     updated_at?: Date;
-    product_variant?: ProductVariant;
+    product_variant?: ProductVariant | null;
 }
 
 export interface BasketLine {
@@ -13,5 +13,5 @@ export interface BasketLine {
     quantity?: number;
     createdAt?: Date;
     updatedAt?: Date;
-    productVariant?: ProductVariant;
+    productVariant?: ProductVariant | null;
 }
