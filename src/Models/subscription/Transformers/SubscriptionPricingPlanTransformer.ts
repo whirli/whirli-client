@@ -4,7 +4,7 @@ import BaseTransformer from '../../../BaseTransformer';
 
 export default class SubscriptionPricingPlanTransformer extends BaseTransformer {
     /**
-     * Map an subscription pricing plan response
+     * Map a subscription pricing plan response
      *
      * @param subscriptionPricingPlan
      */
