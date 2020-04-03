@@ -50,6 +50,7 @@ export default class Client {
         this.basketLine = new BasketLine(this);
         this.subscriptions = new Subscriptions(this);
         this.subscriptionAddons = new SubscriptionAddons(this);
+        this.codes = new Codes(this);
         this.wacc = loadWaccResources(this);
     }
 

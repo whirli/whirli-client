@@ -7,6 +7,9 @@ import WACCOrders from '../Resources/Wacc/Orders/Orders';
 import WACCReturnOrders from '../Resources/Wacc/ReturnOrders/ReturnOrders';
 import WACCSearch from '../Resources/Wacc/Search/Search';
 import WACCUsers from '../Resources/Wacc/Users/Users';
+import Subscriptions from '../Resources/Subscriptions/Subscriptions';
+import SubscriptionAddons from '../Resources/SubscriptionAddons/SubscriptionAddons';
+import Codes from '../Resources/Codes/Codes';
 
 describe('Client.ts', () => {
     let client: Client;
@@ -28,6 +31,9 @@ describe('Client.ts', () => {
         expect(client.auth).toBeInstanceOf(Auth);
         expect(client.users).toBeInstanceOf(Users);
         expect(client.userSubscriptions).toBeInstanceOf(UserSubscriptions);
+        expect(client.subscriptions).toBeInstanceOf(Subscriptions);
+        expect(client.subscriptionAddons).toBeInstanceOf(SubscriptionAddons);
+        expect(client.codes).toBeInstanceOf(Codes);
         expect(client.wacc.orders).toBeInstanceOf(WACCOrders);
         expect(client.wacc.returnOrders).toBeInstanceOf(WACCReturnOrders);
         expect(client.wacc.search).toBeInstanceOf(WACCSearch);
