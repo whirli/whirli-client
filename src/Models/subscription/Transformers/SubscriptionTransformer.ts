@@ -6,7 +6,7 @@ import BaseTransformer from '../../../BaseTransformer';
 
 export default class SubscriptionTransformer extends BaseTransformer {
     /**
-     * Map an subscription response
+     * Map a subscription response
      *
      * @param subscription
      */
