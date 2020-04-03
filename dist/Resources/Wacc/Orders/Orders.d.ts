@@ -6,4 +6,5 @@ export default class Orders extends AbstractResource {
     create: Function;
     update: Function;
     delete: Function;
+    print: Function;
 }
