@@ -8,6 +8,6 @@ export default class Codes extends AbstractResource {
 
     public get: Function = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/{name}',
+        path: '/{id}',
     });
 }
