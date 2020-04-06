@@ -9,6 +9,7 @@ import Subscriptions from './Resources/Subscriptions/Subscriptions';
 import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
 import Codes from './Resources/Codes/Codes';
 import { WaccResources } from './Resources/Wacc';
+import Password from './Resources/Password/Password';
 export default class Client {
     auth: Auth;
     users: Users;
@@ -19,6 +20,7 @@ export default class Client {
     subscriptionAddons: SubscriptionAddons;
     codes: Codes;
     wacc: WaccResources;
+    password: Password;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
     constructor(httpClient: HttpClient, opts?: ClientOptions);

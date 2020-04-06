@@ -9,6 +9,7 @@ import Subscriptions from './Resources/Subscriptions/Subscriptions';
 import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
 import Codes from './Resources/Codes/Codes';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
+import Password from './Resources/Password/Password';
 
 export default class Client {
     public auth!: Auth;
@@ -20,6 +21,7 @@ export default class Client {
     public subscriptionAddons!: SubscriptionAddons;
     public codes!: Codes;
     public wacc!: WaccResources;
+    public password!: Password;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -52,6 +54,7 @@ export default class Client {
         this.subscriptionAddons = new SubscriptionAddons(this);
         this.codes = new Codes(this);
         this.wacc = loadWaccResources(this);
+        this.password = new Password(this);
     }
 
     getBasePath(): string {
