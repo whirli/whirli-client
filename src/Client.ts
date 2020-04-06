@@ -7,6 +7,7 @@ import Basket from './Resources/Basket/Basket';
 import BasketLine from './Resources/Basket/BasketLine';
 import Subscriptions from './Resources/Subscriptions/Subscriptions';
 import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
+import Codes from './Resources/Codes/Codes';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
 
 export default class Client {
@@ -17,6 +18,7 @@ export default class Client {
     public basketLine!: BasketLine;
     public subscriptions!: Subscriptions;
     public subscriptionAddons!: SubscriptionAddons;
+    public codes!: Codes;
     public wacc!: WaccResources;
 
     protected httpClient: HttpClient;
@@ -48,6 +50,7 @@ export default class Client {
         this.basketLine = new BasketLine(this);
         this.subscriptions = new Subscriptions(this);
         this.subscriptionAddons = new SubscriptionAddons(this);
+        this.codes = new Codes(this);
         this.wacc = loadWaccResources(this);
     }
 

@@ -7,6 +7,7 @@ import Basket from './Resources/Basket/Basket';
 import BasketLine from './Resources/Basket/BasketLine';
 import Subscriptions from './Resources/Subscriptions/Subscriptions';
 import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
+import Codes from './Resources/Codes/Codes';
 import { WaccResources } from './Resources/Wacc';
 export default class Client {
     auth: Auth;
@@ -16,6 +17,7 @@ export default class Client {
     basketLine: BasketLine;
     subscriptions: Subscriptions;
     subscriptionAddons: SubscriptionAddons;
+    codes: Codes;
     wacc: WaccResources;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
