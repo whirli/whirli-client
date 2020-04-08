@@ -12,7 +12,7 @@ export default class UserSubscriptions extends AbstractResource {
     });
 
     public update: Function = this.createMethodFromPartialSpec({
-        method: 'PUT',
+        method: 'PATCH',
         path: '/{id}',
     });
 
