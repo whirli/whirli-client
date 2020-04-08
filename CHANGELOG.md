@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 2020-04-08
+### 🚀 Features and changes
+- Add validateResetPasswordToken method to auth resources.
+- Change update userSubscription HTTP method from PATCH to PUT.
+
 ## [0.0.6] - 2020-04-03
 ### 🚀 Features
 - Add Basket, BasketLine, Subscriptions, SubscriptionAddons and Codes resources, models, transformers and interfaces.
