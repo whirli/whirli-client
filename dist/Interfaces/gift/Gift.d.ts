@@ -57,5 +57,5 @@ export default class Gift {
     order?: Order;
     user?: User;
     redeemedBy?: User;
-    giftStatusId?: string;
+    giftStatusId?: number;
 }

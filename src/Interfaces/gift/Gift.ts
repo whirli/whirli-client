@@ -60,5 +60,5 @@ export default class Gift {
     user?: User;
     redeemedBy?: User;
     // acessors
-    giftStatusId?: string;
+    giftStatusId?: number;
 }
