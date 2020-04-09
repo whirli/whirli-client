@@ -1,5 +1,6 @@
 import User from '../user/User';
 import Order from '../order/Order';
+import { Basket } from '../basket/Basket';
 
 export default class Gift {
     id?: string;
@@ -54,7 +55,7 @@ export default class Gift {
     withBasket?: boolean;
     guest?: string;
     // belongs to
-    giftBasket?: number;
+    giftBasket?: Basket;
     order?: Order;
     user?: User;
     redeemedBy?: User;

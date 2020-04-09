@@ -1,5 +1,6 @@
 import User from '../user/User';
 import Order from '../order/Order';
+import { Basket } from '../basket/Basket';
 export default class Gift {
     id?: string;
     createdAt?: Date;
@@ -52,7 +53,7 @@ export default class Gift {
     stripeCustomerId?: string;
     withBasket?: boolean;
     guest?: string;
-    giftBasket?: number;
+    giftBasket?: Basket;
     order?: Order;
     user?: User;
     redeemedBy?: User;
