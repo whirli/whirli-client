@@ -38,27 +38,24 @@ export default class Gift {
     shippingZip?: string;
     contactEmail?: string;
     contactPhone?: string;
-    trackingNo?: string;
     dispatchedAt?: string;
     redeemedAt?: Date;
     packedAt?: Date;
     placedAt?: Date;
-    reference?: string;
     meta?: string;
     message?: string;
-    orderStatus?: number;
     resourceType?: string;
     value?: number;
     allowEmailDiscountOffers?: boolean;
     toGiftRecipient?: boolean;
     stripeCustomerId?: string;
     withBasket?: boolean;
-    guest?: string;
+    guest?: boolean;
     // belongs to
-    giftBasket?: Basket;
-    order?: Order;
-    user?: User;
-    redeemedBy?: User;
+    giftBasket?: Basket | null;
+    order?: Order | null;
+    user?: User | null;
+    redeemedBy?: User | null;
     // acessors
     giftStatusId?: number;
 }
