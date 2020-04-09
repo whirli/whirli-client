@@ -14,4 +14,9 @@ export default class Auth extends AbstractResource {
         method: 'POST',
         path: '/password/reset',
     });
+
+    public validateResetPasswordToken: Function = this.createMethodFromPartialSpec({
+        method: 'POST',
+        path: '/password/validate',
+    });
 }
