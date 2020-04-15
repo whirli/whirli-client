@@ -39,11 +39,12 @@ export default interface Order {
     reference?: string;
     placedAt?: Date;
     meta?: string;
-    orderStatus?: number;
+    statusId?: number;
     resourceType?: string;
-    user?: User | null;
-    lines?: OrderLine[];
     onFirstOrder?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
+    hasReusablePackagingOptIn?: boolean;
+    user?: User | null;
+    lines?: OrderLine[];
 }
