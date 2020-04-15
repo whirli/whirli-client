@@ -9,6 +9,7 @@ export default class Gift {
     code?: string;
     deletedAt?: Date;
     updatedAt?: Date;
+    statusId?: number;
     shippingMethod?: string;
     shippingPreference?: string;
     notes?: string;
@@ -51,6 +52,8 @@ export default class Gift {
     stripeCustomerId?: string;
     withBasket?: boolean;
     guest?: boolean;
+    deliveryMethod?: string;
+    expectedDeliveryDate?: string;
     // belongs to
     giftBasket?: Basket | null;
     order?: Order | null;

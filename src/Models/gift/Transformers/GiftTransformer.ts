@@ -21,6 +21,7 @@ export default class GiftTransformer extends BaseTransformer {
             completedAt: gift.completedAt,
             deletedAt: gift.deletedAt,
             updatedAt: gift.updatedAt,
+            statusId: gift.statusId,
             shippingMethod: gift.shippingMethod,
             shippingPreference: gift.shippingPreference,
             notes: gift.notes,
@@ -63,6 +64,8 @@ export default class GiftTransformer extends BaseTransformer {
             stripeCustomerId: gift.stripeCustomerId,
             withBasket: gift.withBasket,
             guest: gift.guest,
+            deliveryMethod: gift.deliveryMethod,
+            expectedDeliveryDate: gift.expectedDeliveryDate,
             // belongs to
             giftBasket: this.includeGiftBasket(gift),
             order: this.includeOrder(gift),
