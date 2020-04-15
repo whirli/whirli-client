@@ -6,4 +6,5 @@ export default class Gifts extends AbstractResource {
     create: Function;
     update: Function;
     delete: Function;
+    print: Function;
 }
