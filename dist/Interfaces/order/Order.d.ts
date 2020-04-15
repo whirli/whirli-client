@@ -41,10 +41,10 @@ export default interface Order {
     meta?: string;
     statusId?: number;
     resourceType?: string;
-    user?: User | null;
-    lines?: OrderLine[];
     onFirstOrder?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
     hasReusablePackagingOptIn?: boolean;
+    user?: User | null;
+    lines?: OrderLine[];
 }

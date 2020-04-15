@@ -54,14 +54,14 @@ export default class OrderTransformer extends BaseTransformer {
             contactPhone: order.contactPhone,
             meta: order.meta,
             resourceType: order.resourceType,
-            // belongs to
-            user: this.includeUser(order),
-            // has many
-            lines: this.includeOrderLines(order),
             onFirstOrder: order.onFirstOrder,
             deliveryMethod: order.deliveryMethod,
             expectedDeliveryDate: order.expectedDeliveryDate,
             hasReusablePackagingOptIn: order.hasReusablePackagingOptIn,
+            // belongs to
+            user: this.includeUser(order),
+            // has many
+            lines: this.includeOrderLines(order),
         });
     }
 

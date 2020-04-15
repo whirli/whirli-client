@@ -42,12 +42,12 @@ export default interface Order {
     meta?: string;
     statusId?: number;
     resourceType?: string;
-    // belongs to
-    user?: User | null;
-    // has many
-    lines?: OrderLine[];
     onFirstOrder?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
     hasReusablePackagingOptIn?: boolean;
+    // belongs to
+    user?: User | null;
+    // has many
+    lines?: OrderLine[];
 }
