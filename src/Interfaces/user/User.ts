@@ -15,7 +15,6 @@ export default interface User {
     subscriptionCancellationTerms?: boolean;
     subscriptionCancellationCharges?: boolean;
     verifiedAt?: Date;
-    orderStatus?: number;
     resourceType?: string;
     // has many
     orders?: Order[];

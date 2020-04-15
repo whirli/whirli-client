@@ -39,7 +39,7 @@ export default interface Order {
     reference?: string;
     placedAt?: Date;
     meta?: string;
-    orderStatus?: number;
+    statusId?: number;
     resourceType?: string;
     user?: User | null;
     lines?: OrderLine[];
