@@ -46,4 +46,5 @@ export default interface Order {
     onFirstOrder?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
+    hasReusablePackagingOptIn?: boolean;
 }
