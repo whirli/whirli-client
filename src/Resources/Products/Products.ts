@@ -18,7 +18,7 @@ export default class Products extends AbstractResource {
      * @param {string} from - Anything equal or large than column:number, for example `tokens:1`.
      */
     public get: Function = this.createMethodFromPartialSpec({
-        method: 'POST',
+        method: 'GET',
         path: '/',
     });
 }
