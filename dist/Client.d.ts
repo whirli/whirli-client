@@ -8,7 +8,9 @@ import BasketLine from './Resources/Basket/BasketLine';
 import Subscriptions from './Resources/Subscriptions/Subscriptions';
 import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
 import Codes from './Resources/Codes/Codes';
+import Toybox from './Resources/Toybox/Toybox';
 import { WaccResources } from './Resources/Wacc';
+import Products from './Resources/Products/Products';
 export default class Client {
     auth: Auth;
     users: Users;
@@ -18,6 +20,8 @@ export default class Client {
     subscriptions: Subscriptions;
     subscriptionAddons: SubscriptionAddons;
     codes: Codes;
+    toybox: Toybox;
+    products: Products;
     wacc: WaccResources;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
