@@ -1,9 +1,14 @@
 import User from '../user/User';
-import OrderLine from './OrderLine';
-export default interface Order {
+import Order from '../order/Order';
+import { Basket } from '../basket/Basket';
+export default class Gift {
     id?: string;
     createdAt?: Date;
+    completedAt?: Date;
+    code?: string;
+    deletedAt?: Date;
     updatedAt?: Date;
+    statusId?: number;
     shippingMethod?: string;
     shippingPreference?: string;
     notes?: string;
@@ -26,7 +31,6 @@ export default interface Order {
     shippingLastname?: string;
     shippingAddress?: string;
     shippingAddressTwo?: string;
-    shippingAddressThree?: string;
     shippingCity?: string;
     shippingCounty?: string;
     shippingState?: string;
@@ -34,17 +38,24 @@ export default interface Order {
     shippingZip?: string;
     contactEmail?: string;
     contactPhone?: string;
-    trackingNo?: string;
     dispatchedAt?: string;
-    reference?: string;
+    redeemedAt?: Date;
+    packedAt?: Date;
     placedAt?: Date;
     meta?: string;
-    statusId?: number;
+    message?: string;
     resourceType?: string;
-    onFirstOrder?: boolean;
+    value?: number;
+    allowEmailDiscountOffers?: boolean;
+    toGiftRecipient?: boolean;
+    stripeCustomerId?: string;
+    withBasket?: boolean;
+    guest?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
-    hasReusablePackagingOptIn?: boolean;
+    giftBasket?: Basket | null;
+    order?: Order | null;
     user?: User | null;
-    lines?: OrderLine[];
+    redeemedBy?: User | null;
+    giftStatusId?: number;
 }

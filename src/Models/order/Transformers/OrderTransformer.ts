@@ -23,7 +23,7 @@ export default class OrderTransformer extends BaseTransformer {
             trackingNo: order.trackingNo,
             dispatchedAt: order.dispatchedAt,
             currency: order.currency,
-            orderStatus: order.orderStatus,
+            statusId: order.statusId,
             placedAt: order.placedAt,
             notes: order.notes,
             billingPhone: order.billingPhone,
@@ -54,6 +54,10 @@ export default class OrderTransformer extends BaseTransformer {
             contactPhone: order.contactPhone,
             meta: order.meta,
             resourceType: order.resourceType,
+            onFirstOrder: order.onFirstOrder,
+            deliveryMethod: order.deliveryMethod,
+            expectedDeliveryDate: order.expectedDeliveryDate,
+            hasReusablePackagingOptIn: order.hasReusablePackagingOptIn,
             // belongs to
             user: this.includeUser(order),
             // has many
