@@ -3,7 +3,7 @@ interface TestCase {
     result: any;
 }
 
-export const testCaseProvider = (): TestCase[] => [
+export const partialSpecTestCaseProvider = (): TestCase[] => [
     {
         test: { name: 'Standard GET', partialSpec: { method: 'GET', path: '/' } },
         result: {
@@ -110,6 +110,61 @@ export const testCaseProvider = (): TestCase[] => [
         result: {
             method: '$get',
             route: 'guest/1/2/3/4',
+        },
+    },
+];
+
+export const requestTestCaseProvider = (): TestCase[] => [
+    {
+        test: {
+            name: 'no path variables and no configuration and a GET method',
+            partialSpec: { method: 'GET', path: '/' },
+            requestArguments: [],
+        },
+        result: {
+            method: '$get',
+            route: 'guest',
+            body: undefined,
+            config: undefined,
+        },
+    },
+    {
+        test: {
+            name: 'no path variables, a request config and a GET method',
+            partialSpec: { method: 'GET', path: '/' },
+            requestArguments: [{ params: { id: '1' } }],
+        },
+        result: {
+            method: '$get',
+            route: 'guest',
+            body: { params: { id: '1' } },
+            config: undefined,
+        },
+    },
+    {
+        test: {
+            name: 'no path variables, a request body, a request config and a POST method',
+            partialSpec: { method: 'POST', path: '/' },
+            requestArguments: [{ params: { id: '1' } }, { headers: { fake: 'header' } }],
+        },
+        result: {
+            method: '$post',
+            route: 'guest',
+            body: { params: { id: '1' } },
+            config: { headers: { fake: 'header' } },
+        },
+    },
+    {
+        test: {
+            name: 'one path variable, a request body, a request config and a POST method',
+            partialSpec: { method: 'POST', path: '/{id}' },
+            requestArguments: ['1', { params: { id: '1' } }, { headers: { fake: 'header' } }],
+        },
+        result: {
+            method: '$post',
+            route: 'guest/1',
+            body: { params: { id: '1' } },
+            config: { headers: { fake: 'header' } },
         },
     },
 ];
