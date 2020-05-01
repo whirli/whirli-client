@@ -22,6 +22,7 @@ export default class GiftTransformer extends BaseTransformer {
             deletedAt: gift.deletedAt,
             updatedAt: gift.updatedAt,
             statusId: gift.statusId,
+            hasToys: gift.hasToys,
             shippingMethod: gift.shippingMethod,
             shippingPreference: gift.shippingPreference,
             notes: gift.notes,
