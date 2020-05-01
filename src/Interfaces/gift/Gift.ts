@@ -10,6 +10,7 @@ export default class Gift {
     deletedAt?: Date;
     updatedAt?: Date;
     statusId?: number;
+    hasToys?: boolean;
     shippingMethod?: string;
     shippingPreference?: string;
     notes?: string;
