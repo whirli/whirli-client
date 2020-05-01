@@ -11,5 +11,6 @@ export default class AbstractResource {
     initialise(): void;
     createMethodFromPartialSpec(partialSpec: PartialSpec): Function;
     getRequestPath(spec: Spec, requestArgs: RequestArguments): string;
+    getRequestConfig(requestArgs: RequestArguments): Array<object>;
 }
 export {};

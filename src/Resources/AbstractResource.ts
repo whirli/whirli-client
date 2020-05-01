@@ -40,9 +40,9 @@ export default class AbstractResource {
 
         return function makeResourceRequest(...args: RequestArguments): void {
             const requestPath = self.getRequestPath(spec, args);
-            const requestBody: object = typeof args[args.length - 1] === 'object' ? (args.pop() as object) : {};
+            const requestConfig: Array<object> = self.getRequestConfig(args);
 
-            return api.getHttpClient()[`$${spec.getMethod().toLowerCase()}`](requestPath, requestBody);
+            return api.getHttpClient()[`$${spec.getMethod().toLowerCase()}`](requestPath, ...requestConfig);
 
             // @todo Maybe we can handle something to do with pagination here, if it's a paginated resource
         };
@@ -60,5 +60,27 @@ export default class AbstractResource {
         }
 
         return path;
+    }
+
+    /**
+     * Get the request config to give to axios to make a request.
+     *
+     * Axios request methods have one or two parameters for data and config. E.G.
+     * axios.get(url[, config])
+     * or
+     * axios.post(url[, data[, config]])
+     *
+     * This method returns request config as an array of 0, 1 or 2 parameters, based on what was passed in.
+     * @param requestArgs
+     */
+    getRequestConfig(requestArgs: RequestArguments): Array<object> {
+        const lastArg = requestArgs.pop() as object;
+        const penultimateArg = requestArgs.pop() as object;
+
+        if (typeof lastArg !== 'object') return [];
+
+        if (typeof penultimateArg !== 'object') return [lastArg];
+
+        return [penultimateArg, lastArg];
     }
 }
