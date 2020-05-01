@@ -33,11 +33,17 @@
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
-    "test": "jest"
+    "test": "jest",
+    "release": "lint && test && build && standard-version && git push --follow-tags"
   },
   "husky": {
     "hooks": {
       "pre-commit": "echo Linting and Building && lint-staged && echo Linting and Building complete"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
     }
   },
   "devDependencies": {
@@ -59,6 +65,7 @@
     "jest": "^25.1.0",
     "lint-staged": "^10.0.0",
     "prettier": "^1.18.2",
+    "standard-version": "^7.1.0",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"
   }

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### 🚀 Features
 - Add support for the config variable in axios calls such as axios.post(url, data, config)
+### 🏡 Chore
+- Add standard-version and a release script for easier releasing
 
 ## [0.0.8] - 2020-04-28
 ### 🚀 Features
