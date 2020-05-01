@@ -1,6 +1,6 @@
 {
   "name": "whirli-client",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Whirli API wrapper",
   "keywords": [
     "whirli",
@@ -34,7 +34,7 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
     "test": "jest",
-    "release": "lint && test && build && standard-version && git push --follow-tags"
+    "release": "yarn lint && yarn test && yarn build && standard-version && git push --follow-tags"
   },
   "husky": {
     "hooks": {
