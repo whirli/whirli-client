@@ -3,17 +3,22 @@ import AbstractResource from '../AbstractResource';
 export default class Users extends AbstractResource {
     initialise(): void {
         this.resourcePath = '/users';
-        this.defaultAccess = 'guest';
+        this.defaultAccess = 'member';
     }
 
     public create: Function = this.createMethodFromPartialSpec({
+        access: 'guest',
         method: 'POST',
         path: '/',
     });
 
     public update: Function = this.createMethodFromPartialSpec({
-        access: 'member',
         method: 'POST',
+        path: '/{id}',
+    });
+
+    public updateDetails: Function = this.createMethodFromPartialSpec({
+        method: 'PATCH',
         path: '/{id}',
     });
 }
