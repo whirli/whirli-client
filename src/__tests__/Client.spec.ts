@@ -12,6 +12,8 @@ import SubscriptionAddons from '../Resources/SubscriptionAddons/SubscriptionAddo
 import Codes from '../Resources/Codes/Codes';
 import Toybox from '../Resources/Toybox/Toybox';
 import Products from '../Resources/Products/Products';
+import GuestBasket from '../Resources/Guest/Basket/Basket';
+import UserBasket from '../Resources/User/Basket/Basket';
 
 describe('Client.ts', () => {
     let client: Client;
@@ -42,6 +44,8 @@ describe('Client.ts', () => {
         expect(client.wacc.returnOrders).toBeInstanceOf(WACCReturnOrders);
         expect(client.wacc.search).toBeInstanceOf(WACCSearch);
         expect(client.wacc.users).toBeInstanceOf(WACCUsers);
+        expect(client.guest.basket).toBeInstanceOf(GuestBasket);
+        expect(client.user.basket).toBeInstanceOf(UserBasket);
     });
 
     it('can return the currently set feature options', () => {
