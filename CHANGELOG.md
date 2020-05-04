@@ -5,8 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Adding resource for users to update user details.
-- Changed the default access on the users resource to be 'member' because it's now the majority of use cases.
+### 🚀 Features
+- Add resource for users to update user details. [#132](https://github.com/whirli/whirli-client/pull/132)
+### 🏡 Chore
+- Changed the default access on the users resource to be 'member'. [#132](https://github.com/whirli/whirli-client/pull/132)
 
 ## [0.0.9] - 2020-05-01
 ### 🚀 Features
