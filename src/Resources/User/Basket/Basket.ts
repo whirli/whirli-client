@@ -3,7 +3,7 @@ import AbstractResource from '../../AbstractResource';
 /**
  * _Used for **member's** baskets only._
  * - Getting a user's basket: `$whirli.user.basket.getActive();`
- * - Adding a basketLine : `$whirli.user.basket.addLine({ productVariantId, quantity });`
+ * - Adding a basketLine: `$whirli.user.basket.addLine({ productVariantId, quantity });`
  * - Updating a basketLine: `$whirli.user.basket.updateLine({ basketLineId, quantity });`
  * - Deleting a basketLine: `$whirli.user.basket.removeLine(basketLineId);`
  */
