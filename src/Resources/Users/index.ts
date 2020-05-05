@@ -1,32 +1,32 @@
 import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
-import Basket from './Basket';
-import Subscription from './Subscription';
-import Toybox from './Toybox';
+import Baskets from './Baskets';
+import Subscriptions from './Subscriptions';
+import Toybox from './Toyboxs';
 import Details from './Details';
 
 /**
  * _Resources connected to a user._
  *
- * - `$whirli.user.create();`
- * - `$whirli.user.basket...;`
- * - `$whirli.user.subscription...;`
- * - `$whirli.user.toybox...;`
- * - `$whirli.user.details...;`
+ * - `client.users.create();`
+ * - `client.users.baskets...;`
+ * - `client.users.subscriptions...;`
+ * - `client.users.toybox...;`
+ * - `client.users.details...;`
  */
-export default class User extends AbstractResource {
-    public basket: Basket;
+export default class Users extends AbstractResource {
+    public baskets: Baskets;
     public details: Details;
-    public subscription: Subscription;
+    public subscriptions: Subscriptions;
     public toybox: Toybox;
 
     constructor(api: Client) {
         super(api);
         this.api = api;
         this.initialise();
-        this.basket = new Basket(api);
+        this.baskets = new Baskets(api);
         this.details = new Details(api);
-        this.subscription = new Subscription(api);
+        this.subscriptions = new Subscriptions(api);
         this.toybox = new Toybox(api);
     }
 

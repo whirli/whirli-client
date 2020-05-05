@@ -2,12 +2,12 @@ import AbstractResource from '../AbstractResource';
 
 /**
  * _Used for **member's** baskets only._
- * - Getting a user's basket: `$whirli.user.basket.getActive();`
- * - Adding a basketLine: `$whirli.user.basket.addLine({ productVariantId, quantity });`
- * - Updating a basketLine: `$whirli.user.basket.updateLine({ basketLineId, quantity });`
- * - Deleting a basketLine: `$whirli.user.basket.removeLine(basketLineId);`
+ * - Getting a user's basket: `client.user.basket.getActive();`
+ * - Adding a basketLine: `client.user.basket.addLine({ productVariantId, quantity });`
+ * - Updating a basketLine: `client.user.basket.updateLine({ basketLineId, quantity });`
+ * - Deleting a basketLine: `client.user.basket.removeLine(basketLineId);`
  */
-export default class Basket extends AbstractResource {
+export default class Baskets extends AbstractResource {
     initialise(): void {
         this.resourcePath = '';
         this.defaultAccess = 'member';

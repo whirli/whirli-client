@@ -30,58 +30,52 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /**
- * _Creating/updating a user's subscription._
+ * _Updating a user's toybox_
  *
- * - `$whirli.user.subscription.create();`
- * - `$whirli.user.subscription.update();`
- * - `$whirli.user.subscription.pay();`
+ * - `client.user.toybox.designateToyForReturn(stockId);`
+ * - `client.user.toybox.undesignateToyForReturn(stockId);`
  */
-var Subscription =
+var Toybox =
 /*#__PURE__*/
 function (_AbstractResource) {
-  _inherits(Subscription, _AbstractResource);
+  _inherits(Toybox, _AbstractResource);
 
-  function Subscription() {
+  function Toybox() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, Subscription);
+    _classCallCheck(this, Toybox);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Subscription)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Toybox)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_this), "create", _this.createMethodFromPartialSpec({
-      method: 'POST',
-      path: '/'
+    _defineProperty(_assertThisInitialized(_this), "designateToyForReturn", _this.createMethodFromPartialSpec({
+      method: 'PATCH',
+      path: '/{id}/designate-for-return'
     }));
 
-    _defineProperty(_assertThisInitialized(_this), "update", _this.createMethodFromPartialSpec({
+    _defineProperty(_assertThisInitialized(_this), "undesignateToyForReturn", _this.createMethodFromPartialSpec({
       method: 'PATCH',
-      path: '/{id}'
-    }));
-
-    _defineProperty(_assertThisInitialized(_this), "pay", _this.createMethodFromPartialSpec({
-      method: 'PATCH',
-      path: '/{id}/pay'
+      path: '/{id}/add-to-toybox'
     }));
 
     return _this;
   }
 
-  _createClass(Subscription, [{
+  _createClass(Toybox, [{
     key: "initialise",
     value: function initialise() {
-      this.resourcePath = '/user-subscriptions';
+      this.resourcePath = '/stock';
       this.defaultAccess = 'member';
     }
   }]);
 
-  return Subscription;
+  return Toybox;
 }(_AbstractResource2["default"]);
 
-exports["default"] = Subscription;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvVXNlci9TdWJzY3JpcHRpb24udHMiXSwibmFtZXMiOlsiU3Vic2NyaXB0aW9uIiwiY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjIiwibWV0aG9kIiwicGF0aCIsInJlc291cmNlUGF0aCIsImRlZmF1bHRBY2Nlc3MiLCJBYnN0cmFjdFJlc291cmNlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUVBOzs7Ozs7O0lBT3FCQSxZOzs7Ozs7Ozs7Ozs7Ozs7Ozs7NkRBTVMsTUFBS0MsMkJBQUwsQ0FBaUM7QUFDdkRDLE1BQUFBLE1BQU0sRUFBRSxNQUQrQztBQUV2REMsTUFBQUEsSUFBSSxFQUFFO0FBRmlELEtBQWpDLEM7OzZEQUtBLE1BQUtGLDJCQUFMLENBQWlDO0FBQ3ZEQyxNQUFBQSxNQUFNLEVBQUUsT0FEK0M7QUFFdkRDLE1BQUFBLElBQUksRUFBRTtBQUZpRCxLQUFqQyxDOzswREFLSCxNQUFLRiwyQkFBTCxDQUFpQztBQUNwREMsTUFBQUEsTUFBTSxFQUFFLE9BRDRDO0FBRXBEQyxNQUFBQSxJQUFJLEVBQUU7QUFGOEMsS0FBakMsQzs7Ozs7OztpQ0FmSjtBQUNmLFdBQUtDLFlBQUwsR0FBb0IscUJBQXBCO0FBQ0EsV0FBS0MsYUFBTCxHQUFxQixRQUFyQjtBQUNIOzs7O0VBSnFDQyw2QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBBYnN0cmFjdFJlc291cmNlIGZyb20gJy4uL0Fic3RyYWN0UmVzb3VyY2UnO1xuXG4vKipcbiAqIF9DcmVhdGluZy91cGRhdGluZyBhIHVzZXIncyBzdWJzY3JpcHRpb24uX1xuICpcbiAqIC0gYCR3aGlybGkudXNlci5zdWJzY3JpcHRpb24uY3JlYXRlKCk7YFxuICogLSBgJHdoaXJsaS51c2VyLnN1YnNjcmlwdGlvbi51cGRhdGUoKTtgXG4gKiAtIGAkd2hpcmxpLnVzZXIuc3Vic2NyaXB0aW9uLnBheSgpO2BcbiAqL1xuZXhwb3J0IGRlZmF1bHQgY2xhc3MgU3Vic2NyaXB0aW9uIGV4dGVuZHMgQWJzdHJhY3RSZXNvdXJjZSB7XG4gICAgaW5pdGlhbGlzZSgpOiB2b2lkIHtcbiAgICAgICAgdGhpcy5yZXNvdXJjZVBhdGggPSAnL3VzZXItc3Vic2NyaXB0aW9ucyc7XG4gICAgICAgIHRoaXMuZGVmYXVsdEFjY2VzcyA9ICdtZW1iZXInO1xuICAgIH1cblxuICAgIHB1YmxpYyBjcmVhdGU6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICAgICAgcGF0aDogJy8nLFxuICAgIH0pO1xuXG4gICAgcHVibGljIHVwZGF0ZTogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIG1ldGhvZDogJ1BBVENIJyxcbiAgICAgICAgcGF0aDogJy97aWR9JyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyBwYXk6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQQVRDSCcsXG4gICAgICAgIHBhdGg6ICcve2lkfS9wYXknLFxuICAgIH0pO1xufVxuIl19
+exports["default"] = Toybox;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvVXNlcnMvVG95Ym94cy50cyJdLCJuYW1lcyI6WyJUb3lib3giLCJjcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMiLCJtZXRob2QiLCJwYXRoIiwicmVzb3VyY2VQYXRoIiwiZGVmYXVsdEFjY2VzcyIsIkFic3RyYWN0UmVzb3VyY2UiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBRUE7Ozs7OztJQU1xQkEsTTs7Ozs7Ozs7Ozs7Ozs7Ozs7OzRFQU13QixNQUFLQywyQkFBTCxDQUFpQztBQUN0RUMsTUFBQUEsTUFBTSxFQUFFLE9BRDhEO0FBRXRFQyxNQUFBQSxJQUFJLEVBQUU7QUFGZ0UsS0FBakMsQzs7OEVBS0UsTUFBS0YsMkJBQUwsQ0FBaUM7QUFDeEVDLE1BQUFBLE1BQU0sRUFBRSxPQURnRTtBQUV4RUMsTUFBQUEsSUFBSSxFQUFFO0FBRmtFLEtBQWpDLEM7Ozs7Ozs7aUNBVnhCO0FBQ2YsV0FBS0MsWUFBTCxHQUFvQixRQUFwQjtBQUNBLFdBQUtDLGFBQUwsR0FBcUIsUUFBckI7QUFDSDs7OztFQUorQkMsNkIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQWJzdHJhY3RSZXNvdXJjZSBmcm9tICcuLi9BYnN0cmFjdFJlc291cmNlJztcblxuLyoqXG4gKiBfVXBkYXRpbmcgYSB1c2VyJ3MgdG95Ym94X1xuICpcbiAqIC0gYGNsaWVudC51c2VyLnRveWJveC5kZXNpZ25hdGVUb3lGb3JSZXR1cm4oc3RvY2tJZCk7YFxuICogLSBgY2xpZW50LnVzZXIudG95Ym94LnVuZGVzaWduYXRlVG95Rm9yUmV0dXJuKHN0b2NrSWQpO2BcbiAqL1xuZXhwb3J0IGRlZmF1bHQgY2xhc3MgVG95Ym94IGV4dGVuZHMgQWJzdHJhY3RSZXNvdXJjZSB7XG4gICAgaW5pdGlhbGlzZSgpOiB2b2lkIHtcbiAgICAgICAgdGhpcy5yZXNvdXJjZVBhdGggPSAnL3N0b2NrJztcbiAgICAgICAgdGhpcy5kZWZhdWx0QWNjZXNzID0gJ21lbWJlcic7XG4gICAgfVxuXG4gICAgcHVibGljIGRlc2lnbmF0ZVRveUZvclJldHVybjogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIG1ldGhvZDogJ1BBVENIJyxcbiAgICAgICAgcGF0aDogJy97aWR9L2Rlc2lnbmF0ZS1mb3ItcmV0dXJuJyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyB1bmRlc2lnbmF0ZVRveUZvclJldHVybjogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIG1ldGhvZDogJ1BBVENIJyxcbiAgICAgICAgcGF0aDogJy97aWR9L2FkZC10by10b3lib3gnLFxuICAgIH0pO1xufVxuIl19

@@ -5,8 +5,8 @@ import Addons from './Addons';
 /**
  * _Resources connected to subscriptions._
  *
- * - `$whirli.subscriptions.all();`
- * - `$whirli.subscriptions.addons.all();`
+ * - `client.subscriptions.all();`
+ * - `client.subscriptions.addons.all();`
  */
 export default class Subscriptions extends AbstractResource {
     public addons: Addons;

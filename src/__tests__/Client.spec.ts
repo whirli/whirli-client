@@ -9,11 +9,11 @@ import Subscriptions from '../Resources/Subscriptions';
 import SubscriptionAddons from '../Resources/Subscriptions/Addons';
 import Codes from '../Resources/Codes/Codes';
 import Products from '../Resources/Products/Products';
-import GuestBasket from '../Resources/Guest/Basket/Basket';
-import User from '../Resources/User';
-import UserBasket from '../Resources/User/Basket';
-import UserToybox from '../Resources/User/Toybox';
-import UserSubscription from '../Resources/User/Subscription';
+import GuestsBaskets from '../Resources/Guests/Baskets';
+import Users from '../Resources/Users';
+import UsersBaskets from '../Resources/Users/Baskets';
+import UsersToybox from '../Resources/Users/Toyboxs';
+import UsersSubscriptions from '../Resources/Users/Subscriptions';
 
 describe('Client.ts', () => {
     let client: Client;
@@ -41,11 +41,11 @@ describe('Client.ts', () => {
         expect(client.wacc.returnOrders).toBeInstanceOf(WACCReturnOrders);
         expect(client.wacc.search).toBeInstanceOf(WACCSearch);
         expect(client.wacc.users).toBeInstanceOf(WACCUsers);
-        expect(client.guest.basket).toBeInstanceOf(GuestBasket);
-        expect(client.user).toBeInstanceOf(User);
-        expect(client.user.basket).toBeInstanceOf(UserBasket);
-        expect(client.user.subscription).toBeInstanceOf(UserSubscription);
-        expect(client.user.toybox).toBeInstanceOf(UserToybox);
+        expect(client.guests.baskets).toBeInstanceOf(GuestsBaskets);
+        expect(client.users).toBeInstanceOf(Users);
+        expect(client.users.baskets).toBeInstanceOf(UsersBaskets);
+        expect(client.users.subscriptions).toBeInstanceOf(UsersSubscriptions);
+        expect(client.users.toybox).toBeInstanceOf(UsersToybox);
     });
 
     it('can return the currently set feature options', () => {

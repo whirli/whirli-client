@@ -1,13 +1,13 @@
 import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
-import Basket from './Basket';
-import Subscription from './Subscription';
-import Toybox from './Toybox';
+import Baskets from './Baskets';
+import Subscriptions from './Subscriptions';
+import Toybox from './Toyboxs';
 import Details from './Details';
-export default class User extends AbstractResource {
-    basket: Basket;
+export default class Users extends AbstractResource {
+    baskets: Baskets;
     details: Details;
-    subscription: Subscription;
+    subscriptions: Subscriptions;
     toybox: Toybox;
     constructor(api: Client);
     initialise(): void;

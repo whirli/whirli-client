@@ -4,8 +4,8 @@ import Auth from './Resources/Auth/Auth';
 import Codes from './Resources/Codes/Codes';
 import Subscriptions from './Resources/Subscriptions';
 import { WaccResources } from './Resources/Wacc';
-import { GuestResources } from './Resources/Guest';
-import User from './Resources/User';
+import { GuestsResources } from './Resources/Guests';
+import Users from './Resources/Users';
 import Products from './Resources/Products/Products';
 export default class Client {
     auth: Auth;
@@ -13,8 +13,8 @@ export default class Client {
     products: Products;
     subscriptions: Subscriptions;
     wacc: WaccResources;
-    guest: GuestResources;
-    user: User;
+    guests: GuestsResources;
+    users: Users;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
     constructor(httpClient: HttpClient, opts?: ClientOptions);

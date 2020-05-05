@@ -3,7 +3,7 @@ import AbstractResource from '../AbstractResource';
 /**
  * _Updating a user's details_
  *
- * `$whirli.user.details.update();`
+ * `client.user.details.update();`
  */
 export default class Details extends AbstractResource {
     initialise(): void {

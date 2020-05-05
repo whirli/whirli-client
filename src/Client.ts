@@ -4,8 +4,8 @@ import Auth from './Resources/Auth/Auth';
 import Codes from './Resources/Codes/Codes';
 import Subscriptions from './Resources/Subscriptions';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
-import { loadGuestResources, GuestResources } from './Resources/Guest';
-import User from './Resources/User';
+import { loadGuestsResources, GuestsResources } from './Resources/Guests';
+import Users from './Resources/Users';
 import Products from './Resources/Products/Products';
 
 export default class Client {
@@ -14,8 +14,8 @@ export default class Client {
     public products!: Products;
     public subscriptions!: Subscriptions;
     public wacc!: WaccResources;
-    public guest!: GuestResources;
-    public user!: User;
+    public guests!: GuestsResources;
+    public users!: Users;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -44,8 +44,8 @@ export default class Client {
         this.products = new Products(this);
         this.subscriptions = new Subscriptions(this);
         this.wacc = loadWaccResources(this);
-        this.guest = loadGuestResources(this);
-        this.user = new User(this);
+        this.guests = loadGuestsResources(this);
+        this.users = new Users(this);
     }
 
     getBasePath(): string {

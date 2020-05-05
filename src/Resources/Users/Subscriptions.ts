@@ -3,9 +3,9 @@ import AbstractResource from '../AbstractResource';
 /**
  * _Creating/updating a user's subscription._
  *
- * - `$whirli.user.subscription.create();`
- * - `$whirli.user.subscription.update();`
- * - `$whirli.user.subscription.pay();`
+ * - `client.user.subscription.create();`
+ * - `client.user.subscription.update();`
+ * - `client.user.subscription.pay();`
  */
 export default class Subscription extends AbstractResource {
     initialise(): void {
