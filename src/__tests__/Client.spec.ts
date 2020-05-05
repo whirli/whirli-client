@@ -13,7 +13,7 @@ import GuestBasket from '../Resources/Guest/Basket/Basket';
 import User from '../Resources/User';
 import UserBasket from '../Resources/User/Basket';
 import UserToybox from '../Resources/User/Toybox';
-import UserSubscriptions from '../Resources/User/Subscription';
+import UserSubscription from '../Resources/User/Subscription';
 
 describe('Client.ts', () => {
     let client: Client;
@@ -44,7 +44,7 @@ describe('Client.ts', () => {
         expect(client.guest.basket).toBeInstanceOf(GuestBasket);
         expect(client.user).toBeInstanceOf(User);
         expect(client.user.basket).toBeInstanceOf(UserBasket);
-        expect(client.user.subscriptions).toBeInstanceOf(UserSubscriptions);
+        expect(client.user.subscription).toBeInstanceOf(UserSubscription);
         expect(client.user.toybox).toBeInstanceOf(UserToybox);
     });
 

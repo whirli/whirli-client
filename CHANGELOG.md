@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🚨 Breaking changes
+- Move the User calls to a user resource. This is accessible under `client.user`, e.g. `client.user.create()`, `client.user.basket.getActive()`.
+- Move the Subscriptions calls to a subscriptions resource. This is accessible under `client.subscriptions`, e.g. `client.subscriptions.all()`.
+
+### ⛳️ Migration Guide
+1) All calls that need to go to a User route have been moved out of the root namespace for the Client. Simply add this user property in the call chain for all the User access calls to migrate.
+    - For example `client.basketLines.addLine` should change to: `client.user.basket.addLine()`.
+2) All calls to `client.subscriptionAddons` should be changed to `client.subscriptions.addons`.
+
 
 ## [0.0.9] - 2020-05-01
 ### 🚀 Features

@@ -1,7 +1,7 @@
 import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
 import Basket from './Basket';
-import Subscriptions from './Subscription';
+import Subscription from './Subscription';
 import Toybox from './Toybox';
 import Details from './Details';
 
@@ -10,14 +10,14 @@ import Details from './Details';
  *
  * - `$whirli.user.create();`
  * - `$whirli.user.basket...;`
- * - `$whirli.user.subscriptions...;`
+ * - `$whirli.user.subscription...;`
  * - `$whirli.user.toybox...;`
  * - `$whirli.user.details...;`
  */
 export default class User extends AbstractResource {
     public basket: Basket;
     public details: Details;
-    public subscriptions: Subscriptions;
+    public subscription: Subscription;
     public toybox: Toybox;
 
     constructor(api: Client) {
@@ -26,7 +26,7 @@ export default class User extends AbstractResource {
         this.initialise();
         this.basket = new Basket(api);
         this.details = new Details(api);
-        this.subscriptions = new Subscriptions(api);
+        this.subscription = new Subscription(api);
         this.toybox = new Toybox(api);
     }
 
