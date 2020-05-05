@@ -1,7 +1,7 @@
 import ProductHazard from '../ProductHazard';
-import ProductHazardInterface from '../../../Interfaces/product/ProductHazard';
+import ProductHazardInterface from '../../../Interfaces/association/ProductHazard';
 import ProductInterface from '../../../Interfaces/product/Product';
-import ProductAssociationInterface from '../../../Interfaces/product/ProductAssociation';
+import ProductAssociationInterface from '../../../Interfaces/association/ProductAssociation';
 import BaseTransformer from '../../../BaseTransformer';
 export default class ProductHazardTransformer extends BaseTransformer {
     mapData(productHazard: ProductHazardInterface): ProductHazard;

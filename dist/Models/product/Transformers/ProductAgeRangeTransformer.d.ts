@@ -1,7 +1,7 @@
 import ProductAgeRange from '../ProductAgeRange';
-import ProductAgeRangeInterface from '../../../Interfaces/product/ProductAgeRange';
+import ProductAgeRangeInterface from '../../../Interfaces/association/ProductAgeRange';
 import ProductInterface from '../../../Interfaces/product/Product';
-import ProductAssociationInterface from '../../../Interfaces/product/ProductAssociation';
+import ProductAssociationInterface from '../../../Interfaces/association/ProductAssociation';
 import BaseTransformer from '../../../BaseTransformer';
 export default class ProductAgeRangeTransformer extends BaseTransformer {
     mapData(productAgeRange: ProductAgeRangeInterface): ProductAgeRange;

@@ -1,4 +1,4 @@
-import ProductCollectionInterface from '../../Interfaces/product/ProductCollection';
+import ProductCollectionInterface from '../../Interfaces/association/ProductCollection';
 
 export default class ProductCollection {
     constructor(parameters: ProductCollectionInterface) {

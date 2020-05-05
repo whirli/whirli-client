@@ -1,6 +1,7 @@
-import Product from './Product';
+import Product from '../product/Product';
 import ProductAssociation from './ProductAssociation';
-export default interface ProductCategory {
+
+export default interface ProductCollection {
     id?: string;
     hasPage?: boolean;
     slug?: string;
@@ -9,6 +10,8 @@ export default interface ProductCategory {
     position?: number;
     associationClass: string;
     productsCount?: number;
+    // belongs to
     associated?: ProductAssociation | null;
+    // has many
     products?: Array<Product>;
 }

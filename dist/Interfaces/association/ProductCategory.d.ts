@@ -1,6 +1,6 @@
-import Product from './Product';
+import Product from '../product/Product';
 import ProductAssociation from './ProductAssociation';
-export default interface ProductBrand {
+export default interface ProductCategory {
     id?: string;
     hasPage?: boolean;
     slug?: string;

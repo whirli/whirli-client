@@ -1,4 +1,4 @@
-import ProductHazardInterface from '../../Interfaces/product/ProductHazard';
+import ProductHazardInterface from '../../Interfaces/association/ProductHazard';
 
 export default class ProductHazard {
     constructor(parameters: ProductHazardInterface) {

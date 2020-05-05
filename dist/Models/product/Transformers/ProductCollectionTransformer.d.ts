@@ -1,7 +1,7 @@
 import ProductCollection from '../ProductCollection';
-import ProductCollectionInterface from '../../../Interfaces/product/ProductCollection';
+import ProductCollectionInterface from '../../../Interfaces/association/ProductCollection';
 import ProductInterface from '../../../Interfaces/product/Product';
-import ProductAssociationInterface from '../../../Interfaces/product/ProductAssociation';
+import ProductAssociationInterface from '../../../Interfaces/association/ProductAssociation';
 import BaseTransformer from '../../../BaseTransformer';
 export default class ProductCollectionTransformer extends BaseTransformer {
     mapData(productCollection: ProductCollectionInterface): ProductCollection;

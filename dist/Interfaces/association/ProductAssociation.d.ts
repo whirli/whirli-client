@@ -1,4 +1,4 @@
-import Product from './Product';
+import Product from '../product/Product';
 import ProductAgeRange from './ProductAgeRange';
 import ProductBrand from './ProductBrand';
 import ProductCategory from './ProductCategory';

@@ -1,7 +1,7 @@
 import ProductManufacturer from '../ProductManufacturer';
-import ProductManufacturerInterface from '../../../Interfaces/product/ProductManufacturer';
+import ProductManufacturerInterface from '../../../Interfaces/association/ProductManufacturer';
 import ProductInterface from '../../../Interfaces/product/Product';
-import ProductAssociationInterface from '../../../Interfaces/product/ProductAssociation';
+import ProductAssociationInterface from '../../../Interfaces/association/ProductAssociation';
 import BaseTransformer from '../../../BaseTransformer';
 export default class ProductManufacturerTransformer extends BaseTransformer {
     mapData(productManufacturer: ProductManufacturerInterface): ProductManufacturer;

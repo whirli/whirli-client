@@ -1,5 +1,5 @@
 import ProductAssociation from '../ProductAssociation';
-import ProductAssociationInterface from '../../../Interfaces/product/ProductAssociation';
+import ProductAssociationInterface from '../../../Interfaces/association/ProductAssociation';
 import ProductInterface from '../../../Interfaces/product/Product';
 import ProductTransformer from '../../product/Transformers/ProductTransformer';
 import BaseTransformer from '../../../BaseTransformer';
