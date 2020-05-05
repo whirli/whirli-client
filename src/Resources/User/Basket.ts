@@ -1,4 +1,4 @@
-import AbstractResource from '../../AbstractResource';
+import AbstractResource from '../AbstractResource';
 
 /**
  * _Used for **member's** baskets only._

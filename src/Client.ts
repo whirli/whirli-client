@@ -1,23 +1,21 @@
 import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfaces/ClientOptions';
 import HttpClient from './Interfaces/HttpClient';
 import Auth from './Resources/Auth/Auth';
-import Users from './Resources/Users/Users';
 import Codes from './Resources/Codes/Codes';
 import { loadSubscriptionsResources, SubscriptionsResources } from './Resources/Subscriptions';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
 import { loadGuestResources, GuestResources } from './Resources/Guest';
-import { loadUserResources, UserResources } from './Resources/User';
+import User from './Resources/User';
 import Products from './Resources/Products/Products';
 
 export default class Client {
     public auth!: Auth;
-    public users!: Users;
     public codes!: Codes;
     public products!: Products;
     public subscriptions!: SubscriptionsResources;
     public wacc!: WaccResources;
     public guest!: GuestResources;
-    public user!: UserResources;
+    public user!: User;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -42,13 +40,12 @@ export default class Client {
 
     loadResources(): void {
         this.auth = new Auth(this);
-        this.users = new Users(this);
         this.codes = new Codes(this);
         this.products = new Products(this);
         this.subscriptions = loadSubscriptionsResources(this);
         this.wacc = loadWaccResources(this);
         this.guest = loadGuestResources(this);
-        this.user = loadUserResources(this);
+        this.user = new User(this);
     }
 
     getBasePath(): string {
