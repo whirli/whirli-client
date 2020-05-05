@@ -2,11 +2,8 @@ import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfa
 import HttpClient from './Interfaces/HttpClient';
 import Auth from './Resources/Auth/Auth';
 import Users from './Resources/Users/Users';
-import UserSubscriptions from './Resources/UserSubscriptions/UserSubscriptions';
-import Subscriptions from './Resources/Subscriptions/Subscriptions';
-import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
 import Codes from './Resources/Codes/Codes';
-import Toybox from './Resources/Toybox/Toybox';
+import { loadSubscriptionsResources, SubscriptionsResources } from './Resources/Subscriptions';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
 import { loadGuestResources, GuestResources } from './Resources/Guest';
 import { loadUserResources, UserResources } from './Resources/User';
@@ -15,12 +12,9 @@ import Products from './Resources/Products/Products';
 export default class Client {
     public auth!: Auth;
     public users!: Users;
-    public userSubscriptions!: UserSubscriptions;
-    public subscriptions!: Subscriptions;
-    public subscriptionAddons!: SubscriptionAddons;
     public codes!: Codes;
-    public toybox!: Toybox;
     public products!: Products;
+    public subscriptions!: SubscriptionsResources;
     public wacc!: WaccResources;
     public guest!: GuestResources;
     public user!: UserResources;
@@ -49,12 +43,9 @@ export default class Client {
     loadResources(): void {
         this.auth = new Auth(this);
         this.users = new Users(this);
-        this.userSubscriptions = new UserSubscriptions(this);
-        this.subscriptions = new Subscriptions(this);
-        this.subscriptionAddons = new SubscriptionAddons(this);
         this.codes = new Codes(this);
-        this.toybox = new Toybox(this);
         this.products = new Products(this);
+        this.subscriptions = loadSubscriptionsResources(this);
         this.wacc = loadWaccResources(this);
         this.guest = loadGuestResources(this);
         this.user = loadUserResources(this);

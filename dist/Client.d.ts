@@ -2,11 +2,8 @@ import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfa
 import HttpClient from './Interfaces/HttpClient';
 import Auth from './Resources/Auth/Auth';
 import Users from './Resources/Users/Users';
-import UserSubscriptions from './Resources/UserSubscriptions/UserSubscriptions';
-import Subscriptions from './Resources/Subscriptions/Subscriptions';
-import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
 import Codes from './Resources/Codes/Codes';
-import Toybox from './Resources/Toybox/Toybox';
+import { SubscriptionsResources } from './Resources/Subscriptions';
 import { WaccResources } from './Resources/Wacc';
 import { GuestResources } from './Resources/Guest';
 import { UserResources } from './Resources/User';
@@ -14,12 +11,9 @@ import Products from './Resources/Products/Products';
 export default class Client {
     auth: Auth;
     users: Users;
-    userSubscriptions: UserSubscriptions;
-    subscriptions: Subscriptions;
-    subscriptionAddons: SubscriptionAddons;
     codes: Codes;
-    toybox: Toybox;
     products: Products;
+    subscriptions: SubscriptionsResources;
     wacc: WaccResources;
     guest: GuestResources;
     user: UserResources;
