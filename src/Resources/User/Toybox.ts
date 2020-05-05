@@ -1,5 +1,11 @@
 import AbstractResource from '../AbstractResource';
 
+/**
+ * _Updating a user's toybox_
+ *
+ * - `$whirli.user.toybox.designateToyForReturn(stockId);`
+ * - `$whirli.user.toybox.undesignateToyForReturn(stockId);`
+ */
 export default class Toybox extends AbstractResource {
     initialise(): void {
         this.resourcePath = '/stock';

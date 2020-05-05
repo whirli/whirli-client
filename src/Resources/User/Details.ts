@@ -1,6 +1,11 @@
 import AbstractResource from '../AbstractResource';
 
-export default class UserDetails extends AbstractResource {
+/**
+ * _Updating a user's details_
+ *
+ * `$whirli.user.details.update();`
+ */
+export default class Details extends AbstractResource {
     initialise(): void {
         this.resourcePath = '/users';
         this.defaultAccess = 'member';

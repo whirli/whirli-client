@@ -6,9 +6,9 @@ import Details from './Details';
 import Create from './Create';
 export default class User {
     basket: Basket;
+    create: Create;
+    details: Details;
     subscriptions: Subscriptions;
     toybox: Toybox;
-    details: Details;
-    create: Create;
     constructor(client: Client);
 }

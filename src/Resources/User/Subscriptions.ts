@@ -1,6 +1,13 @@
 import AbstractResource from '../AbstractResource';
 
-export default class Subscriptions extends AbstractResource {
+/**
+ * _Creating/updating a user's subscription._
+ *
+ * - `$whirli.user.subscription.create();`
+ * - `$whirli.user.subscription.update();`
+ * - `$whirli.user.subscription.pay();`
+ */
+export default class Subscription extends AbstractResource {
     initialise(): void {
         this.resourcePath = '/user-subscriptions';
         this.defaultAccess = 'member';
