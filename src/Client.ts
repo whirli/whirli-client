@@ -2,7 +2,7 @@ import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfa
 import HttpClient from './Interfaces/HttpClient';
 import Auth from './Resources/Auth/Auth';
 import Codes from './Resources/Codes/Codes';
-import { loadSubscriptionsResources, SubscriptionsResources } from './Resources/Subscriptions';
+import Subscriptions from './Resources/Subscriptions';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
 import { loadGuestResources, GuestResources } from './Resources/Guest';
 import User from './Resources/User';
@@ -12,7 +12,7 @@ export default class Client {
     public auth!: Auth;
     public codes!: Codes;
     public products!: Products;
-    public subscriptions!: SubscriptionsResources;
+    public subscriptions!: Subscriptions;
     public wacc!: WaccResources;
     public guest!: GuestResources;
     public user!: User;
@@ -42,7 +42,7 @@ export default class Client {
         this.auth = new Auth(this);
         this.codes = new Codes(this);
         this.products = new Products(this);
-        this.subscriptions = loadSubscriptionsResources(this);
+        this.subscriptions = new Subscriptions(this);
         this.wacc = loadWaccResources(this);
         this.guest = loadGuestResources(this);
         this.user = new User(this);

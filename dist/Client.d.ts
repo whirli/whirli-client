@@ -2,7 +2,7 @@ import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfa
 import HttpClient from './Interfaces/HttpClient';
 import Auth from './Resources/Auth/Auth';
 import Codes from './Resources/Codes/Codes';
-import { SubscriptionsResources } from './Resources/Subscriptions';
+import Subscriptions from './Resources/Subscriptions';
 import { WaccResources } from './Resources/Wacc';
 import { GuestResources } from './Resources/Guest';
 import User from './Resources/User';
@@ -11,7 +11,7 @@ export default class Client {
     auth: Auth;
     codes: Codes;
     products: Products;
-    subscriptions: SubscriptionsResources;
+    subscriptions: Subscriptions;
     wacc: WaccResources;
     guest: GuestResources;
     user: User;

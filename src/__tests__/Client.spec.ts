@@ -5,15 +5,15 @@ import WACCOrders from '../Resources/Wacc/Orders/Orders';
 import WACCReturnOrders from '../Resources/Wacc/ReturnOrders/ReturnOrders';
 import WACCSearch from '../Resources/Wacc/Search/Search';
 import WACCUsers from '../Resources/Wacc/Users/Users';
-import Subscriptions from '../Resources/Subscriptions/Subscriptions';
-import SubscriptionAddons from '../Resources/Subscriptions/SubscriptionAddons/SubscriptionAddons';
+import Subscriptions from '../Resources/Subscriptions';
+import SubscriptionAddons from '../Resources/Subscriptions/Addons';
 import Codes from '../Resources/Codes/Codes';
-import Toybox from '../Resources/User/Toybox';
 import Products from '../Resources/Products/Products';
 import GuestBasket from '../Resources/Guest/Basket/Basket';
 import User from '../Resources/User';
 import UserBasket from '../Resources/User/Basket';
-import UserSubscriptions from '../Resources/User/Subscriptions';
+import UserToybox from '../Resources/User/Toybox';
+import UserSubscriptions from '../Resources/User/Subscription';
 
 describe('Client.ts', () => {
     let client: Client;
@@ -33,7 +33,7 @@ describe('Client.ts', () => {
     it('can access all resources', () => {
         // @todo We could probably turn this in to a loop to make it easier
         expect(client.auth).toBeInstanceOf(Auth);
-        expect(client.subscriptions.subscriptions).toBeInstanceOf(Subscriptions);
+        expect(client.subscriptions).toBeInstanceOf(Subscriptions);
         expect(client.subscriptions.addons).toBeInstanceOf(SubscriptionAddons);
         expect(client.codes).toBeInstanceOf(Codes);
         expect(client.products).toBeInstanceOf(Products);
@@ -45,7 +45,7 @@ describe('Client.ts', () => {
         expect(client.user).toBeInstanceOf(User);
         expect(client.user.basket).toBeInstanceOf(UserBasket);
         expect(client.user.subscriptions).toBeInstanceOf(UserSubscriptions);
-        expect(client.user.toybox).toBeInstanceOf(Toybox);
+        expect(client.user.toybox).toBeInstanceOf(UserToybox);
     });
 
     it('can return the currently set feature options', () => {

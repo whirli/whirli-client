@@ -1,31 +1,42 @@
 import Client from '../../Client';
+import AbstractResource from '../AbstractResource';
 import Basket from './Basket';
-import Subscriptions from './Subscriptions';
+import Subscriptions from './Subscription';
 import Toybox from './Toybox';
 import Details from './Details';
-import Create from './Create';
 
 /**
  * _Resources connected to a user._
  *
- * - `$whirli.user.create...;`
+ * - `$whirli.user.create();`
  * - `$whirli.user.basket...;`
  * - `$whirli.user.subscriptions...;`
  * - `$whirli.user.toybox...;`
  * - `$whirli.user.details...;`
  */
-export default class User {
+export default class User extends AbstractResource {
     public basket: Basket;
-    public create: Create;
     public details: Details;
     public subscriptions: Subscriptions;
     public toybox: Toybox;
 
-    constructor(client: Client) {
-        this.basket = new Basket(client);
-        this.create = new Create(client);
-        this.details = new Details(client);
-        this.subscriptions = new Subscriptions(client);
-        this.toybox = new Toybox(client);
+    constructor(api: Client) {
+        super(api);
+        this.api = api;
+        this.initialise();
+        this.basket = new Basket(api);
+        this.details = new Details(api);
+        this.subscriptions = new Subscriptions(api);
+        this.toybox = new Toybox(api);
     }
+
+    initialise(): void {
+        this.resourcePath = '/users';
+        this.defaultAccess = 'guest';
+    }
+
+    public create: Function = this.createMethodFromPartialSpec({
+        method: 'POST',
+        path: '/',
+    });
 }

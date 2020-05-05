@@ -1,8 +1,9 @@
 import Client from '../../Client';
-import Addons from './SubscriptionAddons/SubscriptionAddons';
-import Subscriptions from './Subscriptions';
-export interface SubscriptionsResources {
-    subscriptions: Subscriptions;
+import AbstractResource from '../AbstractResource';
+import Addons from './Addons';
+export default class Subscriptions extends AbstractResource {
     addons: Addons;
+    constructor(api: Client);
+    initialise(): void;
+    all: Function;
 }
-export declare function loadSubscriptionsResources(client: Client): SubscriptionsResources;

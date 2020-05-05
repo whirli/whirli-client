@@ -1,15 +1,30 @@
 import Client from '../../Client';
-import Addons from './SubscriptionAddons/SubscriptionAddons';
-import Subscriptions from './Subscriptions';
+import AbstractResource from '../AbstractResource';
+import Addons from './Addons';
 
-export interface SubscriptionsResources {
-    subscriptions: Subscriptions;
-    addons: Addons;
-}
+/**
+ * _Resources connected to subscriptions._
+ *
+ * - `$whirli.subscriptions.all();`
+ * - `$whirli.subscriptions.addons.all();`
+ */
+export default class Subscriptions extends AbstractResource {
+    public addons: Addons;
 
-export function loadSubscriptionsResources(client: Client): SubscriptionsResources {
-    return {
-        addons: new Addons(client),
-        subscriptions: new Subscriptions(client),
-    };
+    constructor(api: Client) {
+        super(api);
+        this.api = api;
+        this.initialise();
+        this.addons = new Addons(api);
+    }
+
+    initialise(): void {
+        this.resourcePath = '/subscriptions';
+        this.defaultAccess = 'guest';
+    }
+
+    public all: Function = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/',
+    });
 }

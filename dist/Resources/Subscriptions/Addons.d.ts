@@ -1,5 +1,5 @@
 import AbstractResource from '../AbstractResource';
-export default class Create extends AbstractResource {
+export default class Addons extends AbstractResource {
     initialise(): void;
-    create: Function;
+    all: Function;
 }
