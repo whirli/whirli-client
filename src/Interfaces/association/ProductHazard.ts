@@ -3,10 +3,6 @@ import ProductAssociation from './ProductAssociation';
 
 export default interface ProductHazard {
     id?: string;
-    hasPage?: boolean;
-    slug?: string;
-    headerDescription?: string;
-    headerImage?: string;
     position?: number;
     associationClass: string;
     productsCount?: number;

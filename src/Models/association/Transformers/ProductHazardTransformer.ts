@@ -15,10 +15,6 @@ export default class ProductHazardTransformer extends BaseTransformer {
     mapData(productHazard: ProductHazardInterface): ProductHazard {
         return new ProductHazard({
             id: productHazard.id,
-            hasPage: productHazard.hasPage,
-            slug: productHazard.slug,
-            headerDescription: productHazard.headerDescription,
-            headerImage: productHazard.headerImage,
             position: productHazard.position,
             associationClass: productHazard.associationClass,
             productsCount: productHazard.productsCount,

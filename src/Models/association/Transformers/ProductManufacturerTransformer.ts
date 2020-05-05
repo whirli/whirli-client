@@ -15,10 +15,6 @@ export default class ProductManufacturerTransformer extends BaseTransformer {
     mapData(productManufacturer: ProductManufacturerInterface): ProductManufacturer {
         return new ProductManufacturer({
             id: productManufacturer.id,
-            hasPage: productManufacturer.hasPage,
-            slug: productManufacturer.slug,
-            headerDescription: productManufacturer.headerDescription,
-            headerImage: productManufacturer.headerImage,
             position: productManufacturer.position,
             associationClass: productManufacturer.associationClass,
             productsCount: productManufacturer.productsCount,
