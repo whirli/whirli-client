@@ -5,6 +5,7 @@ import WACCSearch from './Search/Search';
 import WACCUsers from './Users/Users';
 import WACCGifts from './Gifts/Gifts';
 import WACCProducts from './Products/Products';
+import WACCProductAssociations from './ProductAssociations/ProductAssociations';
 
 export interface WaccResources {
     orders: WACCOrders;
@@ -13,6 +14,7 @@ export interface WaccResources {
     users: WACCUsers;
     gifts: WACCGifts;
     products: WACCProducts;
+    productAssociations: WACCProductAssociations;
 }
 
 export function loadWaccResources(client: Client): WaccResources {
@@ -23,5 +25,6 @@ export function loadWaccResources(client: Client): WaccResources {
         users: new WACCUsers(client),
         gifts: new WACCGifts(client),
         products: new WACCProducts(client),
+        productAssociations: new WACCProductAssociations(client),
     };
 }
