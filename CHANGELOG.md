@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 2) All calls to `client.subscriptionAddons` should be changed to `client.subscriptions.addons`.
 
 
+## [0.0.10] - 2020-05-05
+### 🚀 Features
+- Add resource for users to update user details. ([#132](https://github.com/whirli/whirli-client/pull/132))
+### 🏡 Chore
+- Changed the default access on the users resource to be 'member'. ([#132](https://github.com/whirli/whirli-client/pull/132))
+
 ## [0.0.9] - 2020-05-01
 ### 🚀 Features
 - Add support for the config variable in axios calls such as axios.post(url, data, config)

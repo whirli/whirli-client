@@ -12,7 +12,7 @@ export default class Details extends AbstractResource {
     }
 
     public update: Function = this.createMethodFromPartialSpec({
-        method: 'POST',
+        method: 'PATCH',
         path: '/{id}',
     });
 }
