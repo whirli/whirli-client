@@ -1,6 +1,6 @@
 {
   "name": "whirli-client",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Whirli API wrapper",
   "keywords": [
     "whirli",
@@ -11,7 +11,8 @@
   "author": "Whirli <hello@whirli.com> (https://whirli.com/)",
   "contributors": [
     "Andrew Mc Cormack <andy@whirli.com>",
-    "Jamie Warburton <jamie@hexdigital.com>"
+    "Jamie Warburton <jamie@hexdigital.com>",
+    "Yasmin Green <yasmin@hexdigital.com>"
   ],
   "repository": {
     "type": "git",
