@@ -19,6 +19,7 @@ export default class ProductCollectionTransformer extends BaseTransformer {
             slug: productCollection.slug,
             headerDescription: productCollection.headerDescription,
             headerImage: productCollection.headerImage,
+            featured: productCollection.featured,
             position: productCollection.position,
             associationClass: productCollection.associationClass,
             productsCount: productCollection.productsCount,

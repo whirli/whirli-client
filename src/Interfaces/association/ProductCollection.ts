@@ -7,6 +7,7 @@ export default interface ProductCollection {
     slug?: string;
     headerDescription?: string;
     headerImage?: string;
+    featured?: boolean;
     position?: number;
     associationClass: string;
     productsCount?: number;
