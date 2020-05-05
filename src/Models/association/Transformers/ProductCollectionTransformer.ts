@@ -3,7 +3,7 @@ import ProductCollectionInterface from '../../../Interfaces/association/ProductC
 import ProductInterface from '../../../Interfaces/product/Product';
 import ProductAssociationInterface from '../../../Interfaces/association/ProductAssociation';
 import ProductTransformer from '../../product/Transformers/ProductTransformer';
-import ProductAssociationTransformer from '../../product/Transformers/ProductAssociationTransformer';
+import ProductAssociationTransformer from './ProductAssociationTransformer';
 import BaseTransformer from '../../../BaseTransformer';
 
 export default class ProductCollectionTransformer extends BaseTransformer {
