@@ -12,7 +12,7 @@ import Products from '../Resources/Products/Products';
 import GuestsBaskets from '../Resources/Guests/Baskets';
 import Users from '../Resources/Users';
 import UsersBaskets from '../Resources/Users/Baskets';
-import UsersToybox from '../Resources/Users/Toyboxs';
+import UsersToybox from '../Resources/Users/Toybox';
 import UsersSubscriptions from '../Resources/Users/Subscriptions';
 
 describe('Client.ts', () => {

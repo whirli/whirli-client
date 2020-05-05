@@ -2,18 +2,9 @@ import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
 import Baskets from './Baskets';
 import Subscriptions from './Subscriptions';
-import Toybox from './Toyboxs';
+import Toybox from './Toybox';
 import Details from './Details';
 
-/**
- * _Resources connected to a user._
- *
- * - `client.users.create();`
- * - `client.users.baskets...;`
- * - `client.users.subscriptions...;`
- * - `client.users.toybox...;`
- * - `client.users.details...;`
- */
 export default class Users extends AbstractResource {
     public baskets: Baskets;
     public details: Details;

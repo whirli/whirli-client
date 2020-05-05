@@ -1,13 +1,6 @@
 import AbstractResource from '../AbstractResource';
 
-/**
- * _Creating/updating a user's subscription._
- *
- * - `client.user.subscription.create();`
- * - `client.user.subscription.update();`
- * - `client.user.subscription.pay();`
- */
-export default class Subscription extends AbstractResource {
+export default class Subscriptions extends AbstractResource {
     initialise(): void {
         this.resourcePath = '/user-subscriptions';
         this.defaultAccess = 'member';

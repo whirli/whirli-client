@@ -2,12 +2,6 @@ import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
 import Addons from './Addons';
 
-/**
- * _Resources connected to subscriptions._
- *
- * - `client.subscriptions.all();`
- * - `client.subscriptions.addons.all();`
- */
 export default class Subscriptions extends AbstractResource {
     public addons: Addons;
 
