@@ -29,47 +29,57 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Toybox =
+var Baskets =
 /*#__PURE__*/
 function (_AbstractResource) {
-  _inherits(Toybox, _AbstractResource);
+  _inherits(Baskets, _AbstractResource);
 
-  function Toybox() {
+  function Baskets() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, Toybox);
+    _classCallCheck(this, Baskets);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Toybox)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Baskets)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_this), "designateToyForReturn", _this.createMethodFromPartialSpec({
-      method: 'PATCH',
-      path: '/{id}/designate-for-return'
+    _defineProperty(_assertThisInitialized(_this), "getActive", _this.createMethodFromPartialSpec({
+      method: 'GET',
+      path: '/active-basket'
     }));
 
-    _defineProperty(_assertThisInitialized(_this), "undesignateToyForReturn", _this.createMethodFromPartialSpec({
-      method: 'PATCH',
-      path: '/{id}/add-to-toybox'
+    _defineProperty(_assertThisInitialized(_this), "addLine", _this.createMethodFromPartialSpec({
+      method: 'POST',
+      path: '/basket-lines'
+    }));
+
+    _defineProperty(_assertThisInitialized(_this), "updateLine", _this.createMethodFromPartialSpec({
+      method: 'PUT',
+      path: '/basket-lines/{id}'
+    }));
+
+    _defineProperty(_assertThisInitialized(_this), "removeLine", _this.createMethodFromPartialSpec({
+      method: 'DELETE',
+      path: '/basket-lines/{id}'
     }));
 
     return _this;
   }
 
-  _createClass(Toybox, [{
+  _createClass(Baskets, [{
     key: "initialise",
     value: function initialise() {
-      this.resourcePath = '/stock';
+      this.resourcePath = '';
       this.defaultAccess = 'member';
     }
   }]);
 
-  return Toybox;
+  return Baskets;
 }(_AbstractResource2["default"]);
 
-exports["default"] = Toybox;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvVG95Ym94L1RveWJveC50cyJdLCJuYW1lcyI6WyJUb3lib3giLCJjcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMiLCJtZXRob2QiLCJwYXRoIiwicmVzb3VyY2VQYXRoIiwiZGVmYXVsdEFjY2VzcyIsIkFic3RyYWN0UmVzb3VyY2UiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBRXFCQSxNOzs7Ozs7Ozs7Ozs7Ozs7Ozs7NEVBTXdCLE1BQUtDLDJCQUFMLENBQWlDO0FBQ3RFQyxNQUFBQSxNQUFNLEVBQUUsT0FEOEQ7QUFFdEVDLE1BQUFBLElBQUksRUFBRTtBQUZnRSxLQUFqQyxDOzs4RUFLRSxNQUFLRiwyQkFBTCxDQUFpQztBQUN4RUMsTUFBQUEsTUFBTSxFQUFFLE9BRGdFO0FBRXhFQyxNQUFBQSxJQUFJLEVBQUU7QUFGa0UsS0FBakMsQzs7Ozs7OztpQ0FWeEI7QUFDZixXQUFLQyxZQUFMLEdBQW9CLFFBQXBCO0FBQ0EsV0FBS0MsYUFBTCxHQUFxQixRQUFyQjtBQUNIOzs7O0VBSitCQyw2QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBBYnN0cmFjdFJlc291cmNlIGZyb20gJy4uL0Fic3RyYWN0UmVzb3VyY2UnO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBUb3lib3ggZXh0ZW5kcyBBYnN0cmFjdFJlc291cmNlIHtcbiAgICBpbml0aWFsaXNlKCk6IHZvaWQge1xuICAgICAgICB0aGlzLnJlc291cmNlUGF0aCA9ICcvc3RvY2snO1xuICAgICAgICB0aGlzLmRlZmF1bHRBY2Nlc3MgPSAnbWVtYmVyJztcbiAgICB9XG5cbiAgICBwdWJsaWMgZGVzaWduYXRlVG95Rm9yUmV0dXJuOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnUEFUQ0gnLFxuICAgICAgICBwYXRoOiAnL3tpZH0vZGVzaWduYXRlLWZvci1yZXR1cm4nLFxuICAgIH0pO1xuXG4gICAgcHVibGljIHVuZGVzaWduYXRlVG95Rm9yUmV0dXJuOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnUEFUQ0gnLFxuICAgICAgICBwYXRoOiAnL3tpZH0vYWRkLXRvLXRveWJveCcsXG4gICAgfSk7XG59XG4iXX0=
+exports["default"] = Baskets;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvVXNlcnMvQmFza2V0cy50cyJdLCJuYW1lcyI6WyJCYXNrZXRzIiwiY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjIiwibWV0aG9kIiwicGF0aCIsInJlc291cmNlUGF0aCIsImRlZmF1bHRBY2Nlc3MiLCJBYnN0cmFjdFJlc291cmNlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQUVxQkEsTzs7Ozs7Ozs7Ozs7Ozs7Ozs7O2dFQU1ZLE1BQUtDLDJCQUFMLENBQWlDO0FBQzFEQyxNQUFBQSxNQUFNLEVBQUUsS0FEa0Q7QUFFMURDLE1BQUFBLElBQUksRUFBRTtBQUZvRCxLQUFqQyxDOzs4REFLRixNQUFLRiwyQkFBTCxDQUFpQztBQUN4REMsTUFBQUEsTUFBTSxFQUFFLE1BRGdEO0FBRXhEQyxNQUFBQSxJQUFJLEVBQUU7QUFGa0QsS0FBakMsQzs7aUVBS0csTUFBS0YsMkJBQUwsQ0FBaUM7QUFDM0RDLE1BQUFBLE1BQU0sRUFBRSxLQURtRDtBQUUzREMsTUFBQUEsSUFBSSxFQUFFO0FBRnFELEtBQWpDLEM7O2lFQUtBLE1BQUtGLDJCQUFMLENBQWlDO0FBQzNEQyxNQUFBQSxNQUFNLEVBQUUsUUFEbUQ7QUFFM0RDLE1BQUFBLElBQUksRUFBRTtBQUZxRCxLQUFqQyxDOzs7Ozs7O2lDQXBCWDtBQUNmLFdBQUtDLFlBQUwsR0FBb0IsRUFBcEI7QUFDQSxXQUFLQyxhQUFMLEdBQXFCLFFBQXJCO0FBQ0g7Ozs7RUFKZ0NDLDZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFic3RyYWN0UmVzb3VyY2UgZnJvbSAnLi4vQWJzdHJhY3RSZXNvdXJjZSc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEJhc2tldHMgZXh0ZW5kcyBBYnN0cmFjdFJlc291cmNlIHtcbiAgICBpbml0aWFsaXNlKCk6IHZvaWQge1xuICAgICAgICB0aGlzLnJlc291cmNlUGF0aCA9ICcnO1xuICAgICAgICB0aGlzLmRlZmF1bHRBY2Nlc3MgPSAnbWVtYmVyJztcbiAgICB9XG5cbiAgICBwdWJsaWMgZ2V0QWN0aXZlOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnR0VUJyxcbiAgICAgICAgcGF0aDogJy9hY3RpdmUtYmFza2V0JyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyBhZGRMaW5lOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnUE9TVCcsXG4gICAgICAgIHBhdGg6ICcvYmFza2V0LWxpbmVzJyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyB1cGRhdGVMaW5lOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnUFVUJyxcbiAgICAgICAgcGF0aDogJy9iYXNrZXQtbGluZXMve2lkfScsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgcmVtb3ZlTGluZTogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIG1ldGhvZDogJ0RFTEVURScsXG4gICAgICAgIHBhdGg6ICcvYmFza2V0LWxpbmVzL3tpZH0nLFxuICAgIH0pO1xufVxuIl19

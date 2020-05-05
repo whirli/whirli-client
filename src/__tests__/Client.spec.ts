@@ -1,17 +1,19 @@
 import { httpClient } from '../../test/mocks/HttpClient';
 import Client from '../Client';
 import Auth from '../Resources/Auth/Auth';
-import Users from '../Resources/Users/Users';
-import UserSubscriptions from '../Resources/UserSubscriptions/UserSubscriptions';
 import WACCOrders from '../Resources/Wacc/Orders/Orders';
 import WACCReturnOrders from '../Resources/Wacc/ReturnOrders/ReturnOrders';
 import WACCSearch from '../Resources/Wacc/Search/Search';
 import WACCUsers from '../Resources/Wacc/Users/Users';
-import Subscriptions from '../Resources/Subscriptions/Subscriptions';
-import SubscriptionAddons from '../Resources/SubscriptionAddons/SubscriptionAddons';
+import Subscriptions from '../Resources/Subscriptions';
+import SubscriptionAddons from '../Resources/Subscriptions/Addons';
 import Codes from '../Resources/Codes/Codes';
-import Toybox from '../Resources/Toybox/Toybox';
 import Products from '../Resources/Products/Products';
+import GuestsBaskets from '../Resources/Guests/Baskets';
+import Users from '../Resources/Users';
+import UsersBaskets from '../Resources/Users/Baskets';
+import UsersToybox from '../Resources/Users/Toybox';
+import UsersSubscriptions from '../Resources/Users/Subscriptions';
 
 describe('Client.ts', () => {
     let client: Client;
@@ -31,17 +33,19 @@ describe('Client.ts', () => {
     it('can access all resources', () => {
         // @todo We could probably turn this in to a loop to make it easier
         expect(client.auth).toBeInstanceOf(Auth);
-        expect(client.users).toBeInstanceOf(Users);
-        expect(client.userSubscriptions).toBeInstanceOf(UserSubscriptions);
         expect(client.subscriptions).toBeInstanceOf(Subscriptions);
-        expect(client.subscriptionAddons).toBeInstanceOf(SubscriptionAddons);
+        expect(client.subscriptions.addons).toBeInstanceOf(SubscriptionAddons);
         expect(client.codes).toBeInstanceOf(Codes);
-        expect(client.toybox).toBeInstanceOf(Toybox);
         expect(client.products).toBeInstanceOf(Products);
         expect(client.wacc.orders).toBeInstanceOf(WACCOrders);
         expect(client.wacc.returnOrders).toBeInstanceOf(WACCReturnOrders);
         expect(client.wacc.search).toBeInstanceOf(WACCSearch);
         expect(client.wacc.users).toBeInstanceOf(WACCUsers);
+        expect(client.guests.baskets).toBeInstanceOf(GuestsBaskets);
+        expect(client.users).toBeInstanceOf(Users);
+        expect(client.users.baskets).toBeInstanceOf(UsersBaskets);
+        expect(client.users.subscriptions).toBeInstanceOf(UsersSubscriptions);
+        expect(client.users.toybox).toBeInstanceOf(UsersToybox);
     });
 
     it('can return the currently set feature options', () => {

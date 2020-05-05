@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.11] - 2020-05-05
+### 🚨 Breaking changes
+- Move the User calls to a user resource. This is accessible under `client.users`, e.g. `client.users.create()`, `client.users.baskets.getActive()`.
+- Move the Subscriptions calls to a subscriptions resource. This is accessible under `client.subscriptions`, e.g. `client.subscriptions.all()`.
+
+### ⛳️ Migration Guide
+1) All calls that need to go to a User route have been moved out of the root namespace for the Client. Simply add this user property in the call chain for all the User access calls to migrate.
+    - For example `client.basketLines.addLine` should change to: `client.users.baskets.addLine()`.
+2) All calls to `client.subscriptionAddons` should be changed to `client.subscriptions.addons`.
+
 ## [0.0.10] - 2020-05-05
 ### 🚀 Features
 - Add resource for users to update user details. ([#132](https://github.com/whirli/whirli-client/pull/132))
