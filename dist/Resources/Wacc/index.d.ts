@@ -5,6 +5,7 @@ import WACCSearch from './Search/Search';
 import WACCUsers from './Users/Users';
 import WACCGifts from './Gifts/Gifts';
 import WACCProducts from './Products/Products';
+import WACCProductAssociations from './ProductAssociations/ProductAssociations';
 export interface WaccResources {
     orders: WACCOrders;
     returnOrders: WACCReturnOrders;
@@ -12,5 +13,6 @@ export interface WaccResources {
     users: WACCUsers;
     gifts: WACCGifts;
     products: WACCProducts;
+    productAssociations: WACCProductAssociations;
 }
 export declare function loadWaccResources(client: Client): WaccResources;
