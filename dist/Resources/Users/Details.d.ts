@@ -1,5 +1,5 @@
 import AbstractResource from '../AbstractResource';
-export default class Basket extends AbstractResource {
+export default class Details extends AbstractResource {
     initialise(): void;
-    get: Function;
+    update: Function;
 }

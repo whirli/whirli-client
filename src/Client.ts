@@ -1,29 +1,21 @@
 import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfaces/ClientOptions';
 import HttpClient from './Interfaces/HttpClient';
 import Auth from './Resources/Auth/Auth';
-import Users from './Resources/Users/Users';
-import UserSubscriptions from './Resources/UserSubscriptions/UserSubscriptions';
-import Basket from './Resources/Basket/Basket';
-import BasketLine from './Resources/Basket/BasketLine';
-import Subscriptions from './Resources/Subscriptions/Subscriptions';
-import SubscriptionAddons from './Resources/SubscriptionAddons/SubscriptionAddons';
 import Codes from './Resources/Codes/Codes';
-import Toybox from './Resources/Toybox/Toybox';
+import Subscriptions from './Resources/Subscriptions';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
+import { loadGuestsResources, GuestsResources } from './Resources/Guests';
+import Users from './Resources/Users';
 import Products from './Resources/Products/Products';
 
 export default class Client {
     public auth!: Auth;
-    public users!: Users;
-    public userSubscriptions!: UserSubscriptions;
-    public basket!: Basket;
-    public basketLine!: BasketLine;
-    public subscriptions!: Subscriptions;
-    public subscriptionAddons!: SubscriptionAddons;
     public codes!: Codes;
-    public toybox!: Toybox;
     public products!: Products;
+    public subscriptions!: Subscriptions;
     public wacc!: WaccResources;
+    public guests!: GuestsResources;
+    public users!: Users;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -48,16 +40,12 @@ export default class Client {
 
     loadResources(): void {
         this.auth = new Auth(this);
-        this.users = new Users(this);
-        this.userSubscriptions = new UserSubscriptions(this);
-        this.basket = new Basket(this);
-        this.basketLine = new BasketLine(this);
-        this.subscriptions = new Subscriptions(this);
-        this.subscriptionAddons = new SubscriptionAddons(this);
         this.codes = new Codes(this);
-        this.toybox = new Toybox(this);
         this.products = new Products(this);
+        this.subscriptions = new Subscriptions(this);
         this.wacc = loadWaccResources(this);
+        this.guests = loadGuestsResources(this);
+        this.users = new Users(this);
     }
 
     getBasePath(): string {

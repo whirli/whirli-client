@@ -29,53 +29,47 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Users =
+var Toybox =
 /*#__PURE__*/
 function (_AbstractResource) {
-  _inherits(Users, _AbstractResource);
+  _inherits(Toybox, _AbstractResource);
 
-  function Users() {
+  function Toybox() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, Users);
+    _classCallCheck(this, Toybox);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Users)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Toybox)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_this), "create", _this.createMethodFromPartialSpec({
-      access: 'guest',
-      method: 'POST',
-      path: '/'
-    }));
-
-    _defineProperty(_assertThisInitialized(_this), "update", _this.createMethodFromPartialSpec({
-      method: 'POST',
-      path: '/{id}'
-    }));
-
-    _defineProperty(_assertThisInitialized(_this), "updateDetails", _this.createMethodFromPartialSpec({
+    _defineProperty(_assertThisInitialized(_this), "designateToyForReturn", _this.createMethodFromPartialSpec({
       method: 'PATCH',
-      path: '/{id}'
+      path: '/{id}/designate-for-return'
+    }));
+
+    _defineProperty(_assertThisInitialized(_this), "undesignateToyForReturn", _this.createMethodFromPartialSpec({
+      method: 'PATCH',
+      path: '/{id}/add-to-toybox'
     }));
 
     return _this;
   }
 
-  _createClass(Users, [{
+  _createClass(Toybox, [{
     key: "initialise",
     value: function initialise() {
-      this.resourcePath = '/users';
+      this.resourcePath = '/stock';
       this.defaultAccess = 'member';
     }
   }]);
 
-  return Users;
+  return Toybox;
 }(_AbstractResource2["default"]);
 
-exports["default"] = Users;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvVXNlcnMvVXNlcnMudHMiXSwibmFtZXMiOlsiVXNlcnMiLCJjcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMiLCJhY2Nlc3MiLCJtZXRob2QiLCJwYXRoIiwicmVzb3VyY2VQYXRoIiwiZGVmYXVsdEFjY2VzcyIsIkFic3RyYWN0UmVzb3VyY2UiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBRXFCQSxLOzs7Ozs7Ozs7Ozs7Ozs7Ozs7NkRBTVMsTUFBS0MsMkJBQUwsQ0FBaUM7QUFDdkRDLE1BQUFBLE1BQU0sRUFBRSxPQUQrQztBQUV2REMsTUFBQUEsTUFBTSxFQUFFLE1BRitDO0FBR3ZEQyxNQUFBQSxJQUFJLEVBQUU7QUFIaUQsS0FBakMsQzs7NkRBTUEsTUFBS0gsMkJBQUwsQ0FBaUM7QUFDdkRFLE1BQUFBLE1BQU0sRUFBRSxNQUQrQztBQUV2REMsTUFBQUEsSUFBSSxFQUFFO0FBRmlELEtBQWpDLEM7O29FQUtPLE1BQUtILDJCQUFMLENBQWlDO0FBQzlERSxNQUFBQSxNQUFNLEVBQUUsT0FEc0Q7QUFFOURDLE1BQUFBLElBQUksRUFBRTtBQUZ3RCxLQUFqQyxDOzs7Ozs7O2lDQWhCZDtBQUNmLFdBQUtDLFlBQUwsR0FBb0IsUUFBcEI7QUFDQSxXQUFLQyxhQUFMLEdBQXFCLFFBQXJCO0FBQ0g7Ozs7RUFKOEJDLDZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFic3RyYWN0UmVzb3VyY2UgZnJvbSAnLi4vQWJzdHJhY3RSZXNvdXJjZSc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIFVzZXJzIGV4dGVuZHMgQWJzdHJhY3RSZXNvdXJjZSB7XG4gICAgaW5pdGlhbGlzZSgpOiB2b2lkIHtcbiAgICAgICAgdGhpcy5yZXNvdXJjZVBhdGggPSAnL3VzZXJzJztcbiAgICAgICAgdGhpcy5kZWZhdWx0QWNjZXNzID0gJ21lbWJlcic7XG4gICAgfVxuXG4gICAgcHVibGljIGNyZWF0ZTogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIGFjY2VzczogJ2d1ZXN0JyxcbiAgICAgICAgbWV0aG9kOiAnUE9TVCcsXG4gICAgICAgIHBhdGg6ICcvJyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyB1cGRhdGU6IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQT1NUJyxcbiAgICAgICAgcGF0aDogJy97aWR9JyxcbiAgICB9KTtcblxuICAgIHB1YmxpYyB1cGRhdGVEZXRhaWxzOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnUEFUQ0gnLFxuICAgICAgICBwYXRoOiAnL3tpZH0nLFxuICAgIH0pO1xufVxuIl19
+exports["default"] = Toybox;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvVXNlcnMvVG95Ym94LnRzIl0sIm5hbWVzIjpbIlRveWJveCIsImNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyIsIm1ldGhvZCIsInBhdGgiLCJyZXNvdXJjZVBhdGgiLCJkZWZhdWx0QWNjZXNzIiwiQWJzdHJhY3RSZXNvdXJjZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFFcUJBLE07Ozs7Ozs7Ozs7Ozs7Ozs7Ozs0RUFNd0IsTUFBS0MsMkJBQUwsQ0FBaUM7QUFDdEVDLE1BQUFBLE1BQU0sRUFBRSxPQUQ4RDtBQUV0RUMsTUFBQUEsSUFBSSxFQUFFO0FBRmdFLEtBQWpDLEM7OzhFQUtFLE1BQUtGLDJCQUFMLENBQWlDO0FBQ3hFQyxNQUFBQSxNQUFNLEVBQUUsT0FEZ0U7QUFFeEVDLE1BQUFBLElBQUksRUFBRTtBQUZrRSxLQUFqQyxDOzs7Ozs7O2lDQVZ4QjtBQUNmLFdBQUtDLFlBQUwsR0FBb0IsUUFBcEI7QUFDQSxXQUFLQyxhQUFMLEdBQXFCLFFBQXJCO0FBQ0g7Ozs7RUFKK0JDLDZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFic3RyYWN0UmVzb3VyY2UgZnJvbSAnLi4vQWJzdHJhY3RSZXNvdXJjZSc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIFRveWJveCBleHRlbmRzIEFic3RyYWN0UmVzb3VyY2Uge1xuICAgIGluaXRpYWxpc2UoKTogdm9pZCB7XG4gICAgICAgIHRoaXMucmVzb3VyY2VQYXRoID0gJy9zdG9jayc7XG4gICAgICAgIHRoaXMuZGVmYXVsdEFjY2VzcyA9ICdtZW1iZXInO1xuICAgIH1cblxuICAgIHB1YmxpYyBkZXNpZ25hdGVUb3lGb3JSZXR1cm46IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQQVRDSCcsXG4gICAgICAgIHBhdGg6ICcve2lkfS9kZXNpZ25hdGUtZm9yLXJldHVybicsXG4gICAgfSk7XG5cbiAgICBwdWJsaWMgdW5kZXNpZ25hdGVUb3lGb3JSZXR1cm46IEZ1bmN0aW9uID0gdGhpcy5jcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMoe1xuICAgICAgICBtZXRob2Q6ICdQQVRDSCcsXG4gICAgICAgIHBhdGg6ICcve2lkfS9hZGQtdG8tdG95Ym94JyxcbiAgICB9KTtcbn1cbiJdfQ==

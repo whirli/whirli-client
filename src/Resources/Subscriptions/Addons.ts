@@ -1,6 +1,6 @@
 import AbstractResource from '../AbstractResource';
 
-export default class SubscriptionAddons extends AbstractResource {
+export default class Addons extends AbstractResource {
     initialise(): void {
         this.resourcePath = '/subscription-addons';
         this.defaultAccess = 'guest';
