@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.12] - 2020-05-06
+### 🐛 Bug Fixes
+- Fixing get guest basket endpoint.
+
 ## [0.0.11] - 2020-05-05
 ### 🚨 Breaking changes
 - Move the User calls to a user resource. This is accessible under `client.users`, e.g. `client.users.create()`, `client.users.baskets.getActive()`.
