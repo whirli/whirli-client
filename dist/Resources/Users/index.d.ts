@@ -4,7 +4,9 @@ import Baskets from './Baskets';
 import Subscriptions from './Subscriptions';
 import Toybox from './Toybox';
 import Details from './Details';
+import Addresses from './Addresses';
 export default class Users extends AbstractResource {
+    addresses: Addresses;
     baskets: Baskets;
     details: Details;
     subscriptions: Subscriptions;
