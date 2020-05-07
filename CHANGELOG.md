@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
-- Add resource for user addresses endpoints.
+- Add resource for user addresses endpoints. ([#142](https://github.com/whirli/whirli-client/pull/142))
 
 ## [0.0.12] - 2020-05-06
 ### 🐛 Bug Fixes
