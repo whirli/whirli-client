@@ -5,8 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.0.14] - 2020-05-12
 ### 🚀 Features
-- Adding get toybox method to users' toybox resource
+- Adding get toybox method to users' toybox resource ([#146](https://github.com/whirli/whirli-client/pull/146)).
 
 ## [0.0.13] - 2020-05-12
 ### 🚀 Features
