@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.14] - 2020-05-12
+### 🚀 Features
+- Adding get toybox method to users' toybox resource ([#146](https://github.com/whirli/whirli-client/pull/146)).
+
 ## [0.0.13] - 2020-05-12
 ### 🚀 Features
 - Add resource for user addresses endpoints. ([#142](https://github.com/whirli/whirli-client/pull/142))
@@ -22,7 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added association models
 - Added association transformers ([#139](https://github.com/whirli/whirli-client/pull/139)).
 - Change PUT to POST on complete order endpoint ([#143](https://github.com/whirli/whirli-client/pull/143)).
-
 
 ## [0.0.12] - 2020-05-06
 ### 🐛 Bug Fixes
