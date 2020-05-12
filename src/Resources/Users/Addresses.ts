@@ -23,6 +23,6 @@ export default class Addresses extends AbstractResource {
 
     public default: Function = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/{id}',
+        path: '/{id}/default',
     });
 }
