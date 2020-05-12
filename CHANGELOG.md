@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
-- Updated users addresses 'default' endpoint to have the correct path.
+- Updated users addresses 'default' endpoint to have the correct path ([#148](https://github.com/whirli/whirli-client/pull/148)).
 
 ## [0.0.14] - 2020-05-12
 ### 🚀 Features
