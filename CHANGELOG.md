@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🚀 Features
+- Add Assets endpoints and corresponding Interfaces and Models ([#151](https://github.com/whirli/whirli-client/pull/151))
+  - Asset
+  - AssetSource
+  - AssetTransform
+  - Transform
+  - Add models and transformers for above Interfaces
+
 ### 🐛 Bug fixes
 - Update users addresses 'default' endpoint to have the correct path ([#148](https://github.com/whirli/whirli-client/pull/148)).
 
