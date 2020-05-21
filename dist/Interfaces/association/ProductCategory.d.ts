@@ -7,7 +7,7 @@ export default interface ProductCategory {
     headerDescription?: string;
     headerImage?: string;
     position?: number;
-    associationClass: string;
+    associationClass?: string;
     productsCount?: number;
     associated?: ProductAssociation | null;
     products?: Array<Product>;

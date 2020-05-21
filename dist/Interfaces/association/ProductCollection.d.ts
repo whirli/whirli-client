@@ -8,7 +8,7 @@ export default interface ProductCollection {
     headerImage?: string;
     featured?: boolean;
     position?: number;
-    associationClass: string;
+    associationClass?: string;
     productsCount?: number;
     associated?: ProductAssociation | null;
     products?: Array<Product>;
