@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
+- Add Gift endpoints for users and guests ([#153](https://github.com/whirli/whirli-client/pull/153))
 - Add Assets endpoints and corresponding Interfaces and Models ([#151](https://github.com/whirli/whirli-client/pull/151))
   - Asset
   - AssetSource

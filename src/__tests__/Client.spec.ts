@@ -10,8 +10,10 @@ import SubscriptionAddons from '../Resources/Subscriptions/Addons';
 import Codes from '../Resources/Codes/Codes';
 import Products from '../Resources/Products/Products';
 import GuestsBaskets from '../Resources/Guests/Baskets';
+import GuestsGifts from '../Resources/Guests/Gifts';
 import Users from '../Resources/Users';
 import UsersBaskets from '../Resources/Users/Baskets';
+import UsersGifts from '../Resources/Users/Gifts';
 import UsersToybox from '../Resources/Users/Toybox';
 import UsersSubscriptions from '../Resources/Users/Subscriptions';
 
@@ -42,8 +44,10 @@ describe('Client.ts', () => {
         expect(client.wacc.search).toBeInstanceOf(WACCSearch);
         expect(client.wacc.users).toBeInstanceOf(WACCUsers);
         expect(client.guests.baskets).toBeInstanceOf(GuestsBaskets);
+        expect(client.guests.gifts).toBeInstanceOf(GuestsGifts);
         expect(client.users).toBeInstanceOf(Users);
         expect(client.users.baskets).toBeInstanceOf(UsersBaskets);
+        expect(client.users.gifts).toBeInstanceOf(UsersGifts);
         expect(client.users.subscriptions).toBeInstanceOf(UsersSubscriptions);
         expect(client.users.toybox).toBeInstanceOf(UsersToybox);
     });
