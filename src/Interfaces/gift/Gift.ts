@@ -3,7 +3,7 @@ import Order from '../order/Order';
 import { Basket } from '../basket/Basket';
 
 export default class Gift {
-    id?: string;
+    id!: string;
     createdAt?: Date;
     completedAt?: Date;
     code?: string;
