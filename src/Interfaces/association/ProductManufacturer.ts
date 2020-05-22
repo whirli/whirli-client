@@ -4,7 +4,7 @@ import ProductAssociation from './ProductAssociation';
 export default interface ProductManufacturer {
     id?: string;
     position?: number;
-    associationClass: string;
+    associationClass?: string;
     productsCount?: number;
     // belongs to
     associated?: ProductAssociation | null;

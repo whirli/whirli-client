@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.15] - 2020-05-22
+### 🚀 Features
+- Add Gift endpoints for users and guests ([#153](https://github.com/whirli/whirli-client/pull/153))
+- Add Assets endpoints and corresponding Interfaces and Models ([#151](https://github.com/whirli/whirli-client/pull/151))
+  - Asset
+  - AssetSource
+  - AssetTransform
+  - Transform
+  - Add models and transformers for above Interfaces
+
+### 🐛 Bug fixes
+- Update users addresses 'default' endpoint to have the correct path ([#148](https://github.com/whirli/whirli-client/pull/148)).
+
 ## [0.0.14] - 2020-05-12
 ### 🚀 Features
 - Adding get toybox method to users' toybox resource ([#146](https://github.com/whirli/whirli-client/pull/146)).
