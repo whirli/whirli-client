@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.16] - 2020-05-25
+### 🐛 Bug fixes
+- Fix Gift endpoints having incorrect method types
+
 ## [0.0.15] - 2020-05-22
 ### 🚀 Features
 - Add Gift endpoints for users and guests ([#153](https://github.com/whirli/whirli-client/pull/153))
