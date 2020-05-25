@@ -7,7 +7,7 @@ export default class Gifts extends AbstractResource {
     }
 
     public create: Function = this.createMethodFromPartialSpec({
-        method: 'GET',
+        method: 'POST',
         path: '/',
     });
 
@@ -16,8 +16,13 @@ export default class Gifts extends AbstractResource {
         path: '/{id}',
     });
 
+    public update: Function = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: '/{id}',
+    });
+
     public placeOrder: Function = this.createMethodFromPartialSpec({
-        method: 'GET',
+        method: 'PATCH',
         path: '/{id}/pay',
     });
 }
