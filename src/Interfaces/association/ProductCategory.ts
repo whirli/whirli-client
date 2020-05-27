@@ -1,4 +1,5 @@
 import Product from '../product/Product';
+import Asset from '../asset/Asset';
 import ProductAssociation from './ProductAssociation';
 
 export default interface ProductCategory {
@@ -13,5 +14,6 @@ export default interface ProductCategory {
     // belongs to
     associated?: ProductAssociation | null;
     // has many
+    assets?: Array<Asset>;
     products?: Array<Product>;
 }

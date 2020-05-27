@@ -15,6 +15,7 @@ export default class ProductTransformer extends BaseTransformer {
             id: product.id,
             createdAt: product.createdAt,
             updatedAt: product.updatedAt,
+            publishedAt: product.publishedAt,
             name: product.name,
             brand: product.brand,
             tokens: product.tokens,
