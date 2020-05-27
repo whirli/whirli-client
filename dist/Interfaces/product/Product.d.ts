@@ -3,6 +3,7 @@ export default interface Product {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
+    publishedAt?: Date;
     name?: string;
     brand?: string;
     tokens?: number;

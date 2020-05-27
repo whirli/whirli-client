@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### 🐛 Bug fixes
 - Update Brand, Age, Collection and Category association interfaces and transformers to include Assets ([#160](https://github.com/whirli/whirli-client/pull/160))
+  - Added publishedAt to product interface as well
 
 ## [0.0.16] - 2020-05-25
 ### 🐛 Bug fixes
