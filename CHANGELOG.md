@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🐛 Bug fixes
+- Update Brand, Age, Collection and Category association interfaces and transformers to include Assets ([#160](https://github.com/whirli/whirli-client/pull/160))
 
 ## [0.0.16] - 2020-05-25
 ### 🐛 Bug fixes
