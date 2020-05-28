@@ -1,8 +1,8 @@
 import Product from '../Product';
 import ProductInterface from '../../../Interfaces/product/Product';
-import ProductVariantInterface from '../../../Interfaces/product/ProductVariant';
-import AssetInterface from '../../../Interfaces/asset/Asset';
-import ProductAssociationInterface from '../../../Interfaces/association/ProductAssociation';
+import ProductVariant from '../ProductVariant';
+import Asset from '../../asset/Asset';
+import ProductAssociation from '../../association/ProductAssociation';
 import ProductVariantTransformer from './ProductVariantTransformer';
 import AssetTransformer from '../../asset/Transformers/AssetTransformer';
 import ProductAssociationTransformer from '../../association/Transformers/ProductAssociationTransformer';
@@ -41,19 +41,19 @@ export default class ProductTransformer extends BaseTransformer {
         });
     }
 
-    includeAssets(product: ProductInterface): AssetInterface[] {
+    includeAssets(product: ProductInterface): Array<Asset> {
         return this.collection(product, 'assets', new AssetTransformer());
     }
 
-    includeProductAssociations(product: ProductInterface): ProductAssociationInterface[] {
+    includeProductAssociations(product: ProductInterface): Array<ProductAssociation> {
         return this.collection(product, 'productAssociations', new ProductAssociationTransformer());
     }
 
-    includeProductVariants(product: ProductInterface): ProductVariantInterface[] {
+    includeProductVariants(product: ProductInterface): Array<ProductVariant> {
         return this.collection(product, 'productVariants', new ProductVariantTransformer());
     }
 
-    includeRelatedProducts(product: ProductInterface): ProductInterface[] {
+    includeRelatedProducts(product: ProductInterface): Array<Product> {
         return this.collection(product, 'relatedProducts', new ProductTransformer());
     }
 }

@@ -1,6 +1,6 @@
 import ProductVariant from '../ProductVariant';
 import ProductVariantInterface from '../../../Interfaces/product/ProductVariant';
-import ProductInterface from '../../../Interfaces/product/Product';
+import Product from '../Product';
 import ProductTransformer from '../../product/Transformers/ProductTransformer';
 import BaseTransformer from '../../../BaseTransformer';
 
@@ -41,12 +41,15 @@ export default class ProductVariantTransformer extends BaseTransformer {
             boxSizeId: productVariant.boxSizeId,
             numberOfPieces: productVariant.numberOfPieces,
             batteriesRequired: productVariant.batteriesRequired,
+            supplierSku: productVariant.supplierSku,
+            supplierTradePrice: productVariant.supplierTradePrice,
+            supplierTokenMargin: productVariant.supplierTokenMargin,
             // belongs to
             product: this.includeProduct(productVariant),
         });
     }
 
-    includeProduct(productVariant: ProductVariantInterface): ProductInterface | null {
+    includeProduct(productVariant: ProductVariantInterface): Product | null {
         return this.item(productVariant, 'product', new ProductTransformer());
     }
 }
