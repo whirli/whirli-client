@@ -1,7 +1,11 @@
 import Product from '../Product';
 import ProductInterface from '../../../Interfaces/product/Product';
 import ProductVariantInterface from '../../../Interfaces/product/ProductVariant';
-import ProductVariantTransformer from '../../product/Transformers/ProductVariantTransformer';
+import AssetInterface from '../../../Interfaces/asset/Asset';
+import ProductAssociationInterface from '../../../Interfaces/association/ProductAssociation';
+import ProductVariantTransformer from './ProductVariantTransformer';
+import AssetTransformer from '../../asset/Transformers/AssetTransformer';
+import ProductAssociationTransformer from '../../association/Transformers/ProductAssociationTransformer';
 import BaseTransformer from '../../../BaseTransformer';
 
 export default class ProductTransformer extends BaseTransformer {
@@ -30,11 +34,26 @@ export default class ProductTransformer extends BaseTransformer {
             metaDescription: product.metaDescription,
             shortDescription: product.shortDescription,
             // has many
-            variants: this.includeProductVariants(product),
+            assets: this.includeAssets(product),
+            productAssociations: this.includeProductAssociations(product),
+            productVariants: this.includeProductVariants(product),
+            relatedProducts: this.includeRelatedProducts(product),
         });
     }
 
+    includeAssets(product: ProductInterface): AssetInterface[] {
+        return this.collection(product, 'assets', new AssetTransformer());
+    }
+
+    includeProductAssociations(product: ProductInterface): ProductAssociationInterface[] {
+        return this.collection(product, 'productAssociations', new ProductAssociationTransformer());
+    }
+
     includeProductVariants(product: ProductInterface): ProductVariantInterface[] {
-        return this.collection(product, 'variants', new ProductVariantTransformer());
+        return this.collection(product, 'productVariants', new ProductVariantTransformer());
+    }
+
+    includeRelatedProducts(product: ProductInterface): ProductInterface[] {
+        return this.collection(product, 'relatedProducts', new ProductTransformer());
     }
 }
