@@ -38,6 +38,8 @@ export default class ProductVariantTransformer extends BaseTransformer {
             volumeUnit: productVariant.volumeUnit,
             taxId: productVariant.taxId,
             groupPricing: productVariant.groupPricing,
+            boxSizeId: productVariant.boxSizeId,
+            numberOfPieces: productVariant.numberOfPieces,
             // belongs to
             product: this.includeProduct(productVariant),
         });
