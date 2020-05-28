@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🐛 Bug fixes
 - Update Brand, Age, Collection and Category association interfaces and transformers to include Assets ([#160](https://github.com/whirli/whirli-client/pull/160))
   - Added publishedAt to product interface as well
+- Add assets, productAssociations and relatedProducts has-many relations to Product Interface ([#169](https://github.com/whirli/whirli-client/pull/168))
+  - Update 'variants' to 'productVariants' in Product interface
+  - Add supplier properties to ProductVariant interface
+  - Change some transformer to return the class instance instead of an interface (ProductTransformer for an example)
 
 ## [0.0.16] - 2020-05-25
 ### 🐛 Bug fixes

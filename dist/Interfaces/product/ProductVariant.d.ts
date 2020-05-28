@@ -29,5 +29,8 @@ export default interface ProductVariant {
     boxSizeId?: number;
     numberOfPieces?: number;
     batteriesRequired?: boolean;
+    supplierSku?: string;
+    supplierTradePrice?: number;
+    supplierTokenMargin?: number;
     product?: Product | null;
 }
