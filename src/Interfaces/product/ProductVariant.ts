@@ -28,6 +28,7 @@ export default interface ProductVariant {
     taxId?: number;
     groupPricing?: number;
     boxSizeId?: number;
+    numberOfPieces?: number;
     // belongs to
     product?: Product | null;
 }
