@@ -26,5 +26,6 @@ export default interface ProductVariant {
     volumeUnit?: string;
     taxId?: number;
     groupPricing?: number;
+    boxSizeId?: number;
     product?: Product | null;
 }
