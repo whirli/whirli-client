@@ -29,6 +29,7 @@ export default interface ProductVariant {
     groupPricing?: number;
     boxSizeId?: number;
     numberOfPieces?: number;
+    batteriesRequired?: number;
     // belongs to
     product?: Product | null;
 }

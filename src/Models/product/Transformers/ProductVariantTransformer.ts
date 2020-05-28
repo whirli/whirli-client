@@ -40,6 +40,7 @@ export default class ProductVariantTransformer extends BaseTransformer {
             groupPricing: productVariant.groupPricing,
             boxSizeId: productVariant.boxSizeId,
             numberOfPieces: productVariant.numberOfPieces,
+            batteriesRequired: productVariant.batteriesRequired,
             // belongs to
             product: this.includeProduct(productVariant),
         });
