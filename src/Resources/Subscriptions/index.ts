@@ -21,4 +21,10 @@ export default class Subscriptions extends AbstractResource {
         method: 'GET',
         path: '/',
     });
+
+    public allWithChange: Function = this.createMethodFromPartialSpec({
+        access: 'member',
+        method: 'GET',
+        path: '/',
+    });
 }
