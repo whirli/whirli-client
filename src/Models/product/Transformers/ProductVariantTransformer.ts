@@ -44,6 +44,7 @@ export default class ProductVariantTransformer extends BaseTransformer {
             supplierSku: productVariant.supplierSku,
             supplierTradePrice: productVariant.supplierTradePrice,
             supplierTokenMargin: productVariant.supplierTokenMargin,
+            otherHazards: productVariant.otherHazards,
             // belongs to
             product: this.includeProduct(productVariant),
         });
