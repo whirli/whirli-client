@@ -32,5 +32,6 @@ export default interface ProductVariant {
     supplierSku?: string;
     supplierTradePrice?: number;
     supplierTokenMargin?: number;
+    otherHazards?: string;
     product?: Product | null;
 }
