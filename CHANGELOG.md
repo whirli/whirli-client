@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
-- Add member endpoint for retrieving subscription pricing plans with can change status
+- Add member endpoint for retrieving subscription pricing plans with can change status ([#170](https://github.com/whirli/whirli-client/pull/170))
 
 ### 🐛 Bug fixes
 - Update Brand, Age, Collection and Category association interfaces and transformers to include Assets ([#160](https://github.com/whirli/whirli-client/pull/160))
