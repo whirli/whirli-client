@@ -32,7 +32,7 @@ export default class Products extends AbstractResource {
     });
 
     public updateRelations: Function = this.createMethodFromPartialSpec({
-        method: 'POST',
+        method: 'PUT',
         path: '/{id}/relations',
     });
 }
