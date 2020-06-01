@@ -33,6 +33,7 @@ export default class ProductTransformer extends BaseTransformer {
             recommendedAge: product.recommendedAge,
             metaDescription: product.metaDescription,
             shortDescription: product.shortDescription,
+            resourceType: product.resourceType,
             // has many
             assets: this.includeAssets(product),
             productAssociations: this.includeProductAssociations(product),

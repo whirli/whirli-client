@@ -20,6 +20,7 @@ export default interface Product {
     recommendedAge?: string;
     metaDescription?: string;
     shortDescription?: string;
+    resourceType?: string;
     // has many
     assets?: Array<Asset>;
     productAssociations?: Array<ProductAssociation>;
