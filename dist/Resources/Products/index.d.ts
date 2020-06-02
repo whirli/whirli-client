@@ -5,6 +5,6 @@ export default class Products extends AbstractResource {
     associations: Associations;
     constructor(api: Client);
     initialise(): void;
-    all: Function;
+    all: () => any;
     get: Function;
 }

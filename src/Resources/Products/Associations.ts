@@ -10,7 +10,7 @@ export default class Products extends AbstractResource {
      * Get a single product association
      * e.g. `/products/associations/disney`.
      */
-    public get: Function = this.createMethodFromPartialSpec({
+    public get: (productAssociationSlug: string) => void = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/{slug}',
     });
@@ -19,7 +19,7 @@ export default class Products extends AbstractResource {
      * Get a single product association type: age, brand, category, collection
      * e.g. `/products/associations/age`.
      */
-    public getByType: Function = this.createMethodFromPartialSpec({
+    public getByType: (productAssociationTypeSlug: string) => void = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/type/{slug}',
     });

@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Change some transformer to return the class instance instead of an interface (ProductTransformer for an example)
 - Update product relations endpoint and remove deleteRelated ([#169](https://github.com/whirli/whirli-client/pull/169))
 
+### 🏡 Chore
+- Add proper return types to resource methods ([#183](https://github.com/whirli/whirli-client/pull/183))
+
 ## [0.0.16] - 2020-05-25
 ### 🐛 Bug fixes
 - Fix Gift endpoints having incorrect method types
