@@ -1,8 +1,11 @@
 import ProductVariant from './ProductVariant';
+import Asset from '../asset/Asset';
+import ProductAssociation from '../association/ProductAssociation';
 export default interface Product {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
+    publishedAt?: Date;
     name?: string;
     brand?: string;
     tokens?: number;
@@ -16,5 +19,9 @@ export default interface Product {
     recommendedAge?: string;
     metaDescription?: string;
     shortDescription?: string;
-    variants?: ProductVariant[];
+    resourceType?: string;
+    assets?: Array<Asset>;
+    productAssociations?: Array<ProductAssociation>;
+    productVariants?: Array<ProductVariant>;
+    relatedProducts?: Array<Product>;
 }

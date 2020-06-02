@@ -26,6 +26,11 @@ export default class Assets extends AbstractResource {
         path: '/{id}',
     });
 
+    public updateAll: Function = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: '/',
+    });
+
     public delete: Function = this.createMethodFromPartialSpec({
         method: 'DELETE',
         path: '/{id}',

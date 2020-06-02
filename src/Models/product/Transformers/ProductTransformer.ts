@@ -1,7 +1,11 @@
 import Product from '../Product';
 import ProductInterface from '../../../Interfaces/product/Product';
-import ProductVariantInterface from '../../../Interfaces/product/ProductVariant';
-import ProductVariantTransformer from '../../product/Transformers/ProductVariantTransformer';
+import ProductVariant from '../ProductVariant';
+import Asset from '../../asset/Asset';
+import ProductAssociation from '../../association/ProductAssociation';
+import ProductVariantTransformer from './ProductVariantTransformer';
+import AssetTransformer from '../../asset/Transformers/AssetTransformer';
+import ProductAssociationTransformer from '../../association/Transformers/ProductAssociationTransformer';
 import BaseTransformer from '../../../BaseTransformer';
 
 export default class ProductTransformer extends BaseTransformer {
@@ -15,6 +19,7 @@ export default class ProductTransformer extends BaseTransformer {
             id: product.id,
             createdAt: product.createdAt,
             updatedAt: product.updatedAt,
+            publishedAt: product.publishedAt,
             name: product.name,
             brand: product.brand,
             tokens: product.tokens,
@@ -28,12 +33,28 @@ export default class ProductTransformer extends BaseTransformer {
             recommendedAge: product.recommendedAge,
             metaDescription: product.metaDescription,
             shortDescription: product.shortDescription,
+            resourceType: product.resourceType,
             // has many
-            variants: this.includeProductVariants(product),
+            assets: this.includeAssets(product),
+            productAssociations: this.includeProductAssociations(product),
+            productVariants: this.includeProductVariants(product),
+            relatedProducts: this.includeRelatedProducts(product),
         });
     }
 
-    includeProductVariants(product: ProductInterface): ProductVariantInterface[] {
-        return this.collection(product, 'variants', new ProductVariantTransformer());
+    includeAssets(product: ProductInterface): Array<Asset> {
+        return this.collection(product, 'assets', new AssetTransformer());
+    }
+
+    includeProductAssociations(product: ProductInterface): Array<ProductAssociation> {
+        return this.collection(product, 'productAssociations', new ProductAssociationTransformer());
+    }
+
+    includeProductVariants(product: ProductInterface): Array<ProductVariant> {
+        return this.collection(product, 'productVariants', new ProductVariantTransformer());
+    }
+
+    includeRelatedProducts(product: ProductInterface): Array<Product> {
+        return this.collection(product, 'relatedProducts', new ProductTransformer());
     }
 }

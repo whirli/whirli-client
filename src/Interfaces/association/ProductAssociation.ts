@@ -9,10 +9,12 @@ import ProductManufacturer from './ProductManufacturer';
 export default interface ProductAssociation {
     id?: string;
     name?: string;
+    internalName?: string;
     active?: boolean;
     position?: number;
     associationClass?: string;
     productsCount?: number;
+    publishedAt?: Date;
     association?:
         | ProductBrand
         | ProductCollection

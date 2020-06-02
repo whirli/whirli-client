@@ -27,6 +27,14 @@ export default interface ProductVariant {
     volumeUnit?: string;
     taxId?: number;
     groupPricing?: number;
+    boxSizeId?: number;
+    numberOfPieces?: number;
+    batteriesRequired?: boolean;
+    supplierSku?: string;
+    supplierTradePrice?: number;
+    supplierTokenMargin?: number;
+    otherHazards?: string;
+    supplierName?: string;
     // belongs to
     product?: Product | null;
 }

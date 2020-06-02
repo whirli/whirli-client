@@ -6,4 +6,5 @@ export default class Subscriptions extends AbstractResource {
     constructor(api: Client);
     initialise(): void;
     all: Function;
+    allWithChange: Function;
 }
