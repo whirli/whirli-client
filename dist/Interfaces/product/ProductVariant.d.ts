@@ -33,5 +33,6 @@ export default interface ProductVariant {
     supplierTradePrice?: number;
     supplierTokenMargin?: number;
     otherHazards?: string;
+    supplierName?: string;
     product?: Product | null;
 }
