@@ -7,3 +7,5 @@ export default interface HttpClient {
 }
 
 export type HttpClientConfig = any;
+
+export type HttpClientResponse = any;

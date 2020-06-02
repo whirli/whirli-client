@@ -1,7 +1,7 @@
 import AbstractResource from '../AbstractResource';
-import { HttpClientConfig } from '../../Interfaces/HttpClient';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 export default class Products extends AbstractResource {
     initialise(): void;
-    all: (...args: HttpClientConfig) => any;
-    get: (slug: string, ...args: HttpClientConfig) => any;
+    all: (...args: HttpClientConfig) => HttpClientResponse;
+    get: (slug: string, ...args: HttpClientConfig) => HttpClientResponse;
 }

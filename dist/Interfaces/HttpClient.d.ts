@@ -4,3 +4,4 @@ export default interface HttpClient {
     [key: string]: any;
 }
 export declare type HttpClientConfig = any;
+export declare type HttpClientResponse = any;
