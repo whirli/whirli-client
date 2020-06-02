@@ -5,5 +5,6 @@ export default class Assets extends AbstractResource {
     create: Function;
     get: Function;
     update: Function;
+    updateAll: Function;
     delete: Function;
 }
