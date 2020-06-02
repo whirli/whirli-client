@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🚀 Features
 - Change 'get' method to 'all' and add new get method for getting individual product ([#153](https://github.com/whirli/whirli-client/pull/174))
 - Add member endpoint for retrieving subscription pricing plans with can change status ([#170](https://github.com/whirli/whirli-client/pull/170))
-- Add updateAll endpoint to assets resource to update the position of multiple images when reordered ([#177](https://github.com/whirli/whirli-client/pull/177)) 
+- Add updateAll endpoint to assets resource to update the position of multiple images when reordered ([#177](https://github.com/whirli/whirli-client/pull/177))
+- Add product associations resource and update products resource to house the new associations resource.
 
 ### 🐛 Bug fixes
 - Update Brand, Age, Collection and Category association interfaces and transformers to include Assets ([#160](https://github.com/whirli/whirli-client/pull/160))

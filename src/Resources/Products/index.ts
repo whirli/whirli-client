@@ -1,6 +1,17 @@
+import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
+import Associations from './Associations';
 
 export default class Products extends AbstractResource {
+    public associations: Associations;
+
+    constructor(api: Client) {
+        super(api);
+        this.api = api;
+        this.initialise();
+        this.associations = new Associations(api);
+    }
+
     initialise(): void {
         this.resourcePath = '/products';
         this.defaultAccess = 'guest';

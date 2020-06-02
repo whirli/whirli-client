@@ -47,14 +47,14 @@ function (_AbstractResource) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Products)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_this), "all", _this.createMethodFromPartialSpec({
-      method: 'GET',
-      path: '/'
-    }));
-
     _defineProperty(_assertThisInitialized(_this), "get", _this.createMethodFromPartialSpec({
       method: 'GET',
       path: '/{slug}'
+    }));
+
+    _defineProperty(_assertThisInitialized(_this), "getByType", _this.createMethodFromPartialSpec({
+      method: 'GET',
+      path: '/type/{slug}'
     }));
 
     return _this;
@@ -63,19 +63,12 @@ function (_AbstractResource) {
   _createClass(Products, [{
     key: "initialise",
     value: function initialise() {
-      this.resourcePath = '/products';
+      this.resourcePath = '/products/associations';
       this.defaultAccess = 'guest';
     }
     /**
-     * **Main endpoint for browse toys.**
-     * @param {string} perPage - size of data.
-     * @param {string} page - pagination.
-     * @param {string} search - Search term.
-     * @param {string} match - Returns all records that match the query, for example `productCategories.name:board%20games`.
-     * @param {string} orderBy - Field you want to order by, for example `created_at`.
-     * @param {string} sortedBy - Ascending or descending, needs `orderBy` field - `asc` or `desc`.
-     * @param {string} to - Anything equal or smaller than column:number, for example `tokens:30`.
-     * @param {string} from - Anything equal or large than column:number, for example `tokens:1`.
+     * Get a single product association
+     * e.g. `/products/associations/disney`.
      */
 
   }]);
@@ -84,4 +77,4 @@ function (_AbstractResource) {
 }(_AbstractResource2["default"]);
 
 exports["default"] = Products;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvUHJvZHVjdHMvUHJvZHVjdHMudHMiXSwibmFtZXMiOlsiUHJvZHVjdHMiLCJjcmVhdGVNZXRob2RGcm9tUGFydGlhbFNwZWMiLCJtZXRob2QiLCJwYXRoIiwicmVzb3VyY2VQYXRoIiwiZGVmYXVsdEFjY2VzcyIsIkFic3RyYWN0UmVzb3VyY2UiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBRXFCQSxROzs7Ozs7Ozs7Ozs7Ozs7Ozs7MERBaUJNLE1BQUtDLDJCQUFMLENBQWlDO0FBQ3BEQyxNQUFBQSxNQUFNLEVBQUUsS0FENEM7QUFFcERDLE1BQUFBLElBQUksRUFBRTtBQUY4QyxLQUFqQyxDOzswREFLQSxNQUFLRiwyQkFBTCxDQUFpQztBQUNwREMsTUFBQUEsTUFBTSxFQUFFLEtBRDRDO0FBRXBEQyxNQUFBQSxJQUFJLEVBQUU7QUFGOEMsS0FBakMsQzs7Ozs7OztpQ0FyQko7QUFDZixXQUFLQyxZQUFMLEdBQW9CLFdBQXBCO0FBQ0EsV0FBS0MsYUFBTCxHQUFxQixPQUFyQjtBQUNIO0FBRUQ7Ozs7Ozs7Ozs7Ozs7OztFQU5rQ0MsNkIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQWJzdHJhY3RSZXNvdXJjZSBmcm9tICcuLi9BYnN0cmFjdFJlc291cmNlJztcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgUHJvZHVjdHMgZXh0ZW5kcyBBYnN0cmFjdFJlc291cmNlIHtcbiAgICBpbml0aWFsaXNlKCk6IHZvaWQge1xuICAgICAgICB0aGlzLnJlc291cmNlUGF0aCA9ICcvcHJvZHVjdHMnO1xuICAgICAgICB0aGlzLmRlZmF1bHRBY2Nlc3MgPSAnZ3Vlc3QnO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqICoqTWFpbiBlbmRwb2ludCBmb3IgYnJvd3NlIHRveXMuKipcbiAgICAgKiBAcGFyYW0ge3N0cmluZ30gcGVyUGFnZSAtIHNpemUgb2YgZGF0YS5cbiAgICAgKiBAcGFyYW0ge3N0cmluZ30gcGFnZSAtIHBhZ2luYXRpb24uXG4gICAgICogQHBhcmFtIHtzdHJpbmd9IHNlYXJjaCAtIFNlYXJjaCB0ZXJtLlxuICAgICAqIEBwYXJhbSB7c3RyaW5nfSBtYXRjaCAtIFJldHVybnMgYWxsIHJlY29yZHMgdGhhdCBtYXRjaCB0aGUgcXVlcnksIGZvciBleGFtcGxlIGBwcm9kdWN0Q2F0ZWdvcmllcy5uYW1lOmJvYXJkJTIwZ2FtZXNgLlxuICAgICAqIEBwYXJhbSB7c3RyaW5nfSBvcmRlckJ5IC0gRmllbGQgeW91IHdhbnQgdG8gb3JkZXIgYnksIGZvciBleGFtcGxlIGBjcmVhdGVkX2F0YC5cbiAgICAgKiBAcGFyYW0ge3N0cmluZ30gc29ydGVkQnkgLSBBc2NlbmRpbmcgb3IgZGVzY2VuZGluZywgbmVlZHMgYG9yZGVyQnlgIGZpZWxkIC0gYGFzY2Agb3IgYGRlc2NgLlxuICAgICAqIEBwYXJhbSB7c3RyaW5nfSB0byAtIEFueXRoaW5nIGVxdWFsIG9yIHNtYWxsZXIgdGhhbiBjb2x1bW46bnVtYmVyLCBmb3IgZXhhbXBsZSBgdG9rZW5zOjMwYC5cbiAgICAgKiBAcGFyYW0ge3N0cmluZ30gZnJvbSAtIEFueXRoaW5nIGVxdWFsIG9yIGxhcmdlIHRoYW4gY29sdW1uOm51bWJlciwgZm9yIGV4YW1wbGUgYHRva2VuczoxYC5cbiAgICAgKi9cbiAgICBwdWJsaWMgYWxsOiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnR0VUJyxcbiAgICAgICAgcGF0aDogJy8nLFxuICAgIH0pO1xuXG4gICAgcHVibGljIGdldDogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIG1ldGhvZDogJ0dFVCcsXG4gICAgICAgIHBhdGg6ICcve3NsdWd9JyxcbiAgICB9KTtcbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9SZXNvdXJjZXMvUHJvZHVjdHMvQXNzb2NpYXRpb25zLnRzIl0sIm5hbWVzIjpbIlByb2R1Y3RzIiwiY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjIiwibWV0aG9kIiwicGF0aCIsInJlc291cmNlUGF0aCIsImRlZmF1bHRBY2Nlc3MiLCJBYnN0cmFjdFJlc291cmNlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQUVxQkEsUTs7Ozs7Ozs7Ozs7Ozs7Ozs7OzBEQVVNLE1BQUtDLDJCQUFMLENBQWlDO0FBQ3BEQyxNQUFBQSxNQUFNLEVBQUUsS0FENEM7QUFFcERDLE1BQUFBLElBQUksRUFBRTtBQUY4QyxLQUFqQyxDOztnRUFTTSxNQUFLRiwyQkFBTCxDQUFpQztBQUMxREMsTUFBQUEsTUFBTSxFQUFFLEtBRGtEO0FBRTFEQyxNQUFBQSxJQUFJLEVBQUU7QUFGb0QsS0FBakMsQzs7Ozs7OztpQ0FsQlY7QUFDZixXQUFLQyxZQUFMLEdBQW9CLHdCQUFwQjtBQUNBLFdBQUtDLGFBQUwsR0FBcUIsT0FBckI7QUFDSDtBQUVEOzs7Ozs7OztFQU5rQ0MsNkIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQWJzdHJhY3RSZXNvdXJjZSBmcm9tICcuLi9BYnN0cmFjdFJlc291cmNlJztcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgUHJvZHVjdHMgZXh0ZW5kcyBBYnN0cmFjdFJlc291cmNlIHtcbiAgICBpbml0aWFsaXNlKCk6IHZvaWQge1xuICAgICAgICB0aGlzLnJlc291cmNlUGF0aCA9ICcvcHJvZHVjdHMvYXNzb2NpYXRpb25zJztcbiAgICAgICAgdGhpcy5kZWZhdWx0QWNjZXNzID0gJ2d1ZXN0JztcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBHZXQgYSBzaW5nbGUgcHJvZHVjdCBhc3NvY2lhdGlvblxuICAgICAqIGUuZy4gYC9wcm9kdWN0cy9hc3NvY2lhdGlvbnMvZGlzbmV5YC5cbiAgICAgKi9cbiAgICBwdWJsaWMgZ2V0OiBGdW5jdGlvbiA9IHRoaXMuY3JlYXRlTWV0aG9kRnJvbVBhcnRpYWxTcGVjKHtcbiAgICAgICAgbWV0aG9kOiAnR0VUJyxcbiAgICAgICAgcGF0aDogJy97c2x1Z30nLFxuICAgIH0pO1xuXG4gICAgLyoqXG4gICAgICogR2V0IGEgc2luZ2xlIHByb2R1Y3QgYXNzb2NpYXRpb24gdHlwZTogYWdlLCBicmFuZCwgY2F0ZWdvcnksIGNvbGxlY3Rpb25cbiAgICAgKiBlLmcuIGAvcHJvZHVjdHMvYXNzb2NpYXRpb25zL2FnZWAuXG4gICAgICovXG4gICAgcHVibGljIGdldEJ5VHlwZTogRnVuY3Rpb24gPSB0aGlzLmNyZWF0ZU1ldGhvZEZyb21QYXJ0aWFsU3BlYyh7XG4gICAgICAgIG1ldGhvZDogJ0dFVCcsXG4gICAgICAgIHBhdGg6ICcvdHlwZS97c2x1Z30nLFxuICAgIH0pO1xufVxuIl19
