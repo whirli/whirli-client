@@ -1,6 +1,18 @@
+import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
+import Associations from './Associations';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Products extends AbstractResource {
+    public associations: Associations;
+
+    constructor(api: Client) {
+        super(api);
+        this.api = api;
+        this.initialise();
+        this.associations = new Associations(api);
+    }
+
     initialise(): void {
         this.resourcePath = '/products';
         this.defaultAccess = 'guest';
@@ -17,12 +29,12 @@ export default class Products extends AbstractResource {
      * @param {string} to - Anything equal or smaller than column:number, for example `tokens:30`.
      * @param {string} from - Anything equal or large than column:number, for example `tokens:1`.
      */
-    public all: Function = this.createMethodFromPartialSpec({
+    public all: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/',
     });
 
-    public get: Function = this.createMethodFromPartialSpec({
+    public get: (slug: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/{slug}',
     });

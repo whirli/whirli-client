@@ -31,13 +31,8 @@ export default class Products extends AbstractResource {
         path: '/{id}',
     });
 
-    public updateRelated: Function = this.createMethodFromPartialSpec({
-        method: 'POST',
-        path: '/{id}/related/{relatedId}',
-    });
-
-    public deleteRelated: Function = this.createMethodFromPartialSpec({
-        method: 'DELETE',
-        path: '/{id}/related/{relatedId}',
+    public updateRelations: Function = this.createMethodFromPartialSpec({
+        method: 'PUT',
+        path: '/{id}/relations',
     });
 }

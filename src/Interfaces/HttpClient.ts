@@ -5,3 +5,7 @@ export default interface HttpClient {
     $post: Function;
     [key: string]: any;
 }
+
+export type HttpClientConfig = any;
+
+export type HttpClientResponse = any;
