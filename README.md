@@ -70,8 +70,9 @@ yarn build
 ```
 
 ### Publishing
-- Lint and type-check 
-- Build 
-- Commit (including dist directory)
-- Tag
-- Push 
+- Checkout develop
+- Check package.json to see what the next release name will be (e.g. 0.0.10 means next is 0.0.11)
+- Alter the CHANGELOG with the new release name and date, inserting it just below 'Unreleased'.
+- Commit on to the develop branch
+- Run `yarn release`
+- PR to master 
