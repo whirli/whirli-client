@@ -6,7 +6,7 @@ import Subscriptions from './Resources/Subscriptions';
 import { WaccResources } from './Resources/Wacc';
 import { GuestsResources } from './Resources/Guests';
 import Users from './Resources/Users';
-import Products from './Resources/Products/Products';
+import Products from './Resources/Products';
 export default class Client {
     auth: Auth;
     codes: Codes;
