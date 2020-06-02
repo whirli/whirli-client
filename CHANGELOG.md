@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.0.17] - 2020-06-02
 ### 🚀 Features
 - Change 'get' method to 'all' and add new get method for getting individual product ([#153](https://github.com/whirli/whirli-client/pull/174))
 - Add member endpoint for retrieving subscription pricing plans with can change status ([#170](https://github.com/whirli/whirli-client/pull/170))
