@@ -14,7 +14,6 @@ export default interface ProductVariant {
     incoming?: number;
     backorder?: string;
     requiresShipping?: number;
-    resourceType?: string;
     weightValue?: number;
     weightUnit?: string;
     heightValue?: number;
@@ -26,13 +25,6 @@ export default interface ProductVariant {
     volumeValue?: number;
     volumeUnit?: string;
     taxId?: number;
-    totalOrders?: number;
-    totalReturnedDamaged?: number;
-    totalReturnedUndamaged?: number;
-    totalSafetyStock?: number;
-    totalSold?: number;
-    totalStockUnits?: number;
-    totalStockWithCustomer?: number;
     groupPricing?: number;
     boxSizeId?: number;
     numberOfPieces?: number;
