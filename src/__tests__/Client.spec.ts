@@ -17,6 +17,7 @@ import UsersBaskets from '../Resources/Users/Baskets';
 import UsersGifts from '../Resources/Users/Gifts';
 import UsersToybox from '../Resources/Users/Toybox';
 import UsersSubscriptions from '../Resources/Users/Subscriptions';
+import Gift from '../Resources/Gift/Gift';
 
 describe('Client.ts', () => {
     let client: Client;
@@ -52,6 +53,7 @@ describe('Client.ts', () => {
         expect(client.users.gifts).toBeInstanceOf(UsersGifts);
         expect(client.users.subscriptions).toBeInstanceOf(UsersSubscriptions);
         expect(client.users.toybox).toBeInstanceOf(UsersToybox);
+        expect(client.gift).toBeInstanceOf(Gift);
     });
 
     it('can return the currently set feature options', () => {
