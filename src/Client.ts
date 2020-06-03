@@ -6,8 +6,8 @@ import Subscriptions from './Resources/Subscriptions';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
 import { loadGuestsResources, GuestsResources } from './Resources/Guests';
 import Users from './Resources/Users';
-import Products from './Resources/Products/Products';
 import Gift from './Resources/Gift/Gift';
+import Products from './Resources/Products';
 
 export default class Client {
     public auth!: Auth;

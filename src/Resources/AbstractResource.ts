@@ -28,7 +28,7 @@ export default class AbstractResource {
      * @param partialSpec
      * @returns {Function}
      */
-    createMethodFromPartialSpec(partialSpec: PartialSpec): Function {
+    createMethodFromPartialSpec(partialSpec: PartialSpec) {
         const api = this.api;
         const self = this;
 
@@ -38,7 +38,7 @@ export default class AbstractResource {
         };
         const spec = new Spec(resourceOptions, partialSpec);
 
-        return function makeResourceRequest(...args: RequestArguments): void {
+        return function makeResourceRequest(...args: RequestArguments): any {
             const requestPath = self.getRequestPath(spec, args);
             const requestConfig: Array<object> = self.getRequestConfig(args);
 
