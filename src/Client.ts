@@ -7,6 +7,7 @@ import { loadWaccResources, WaccResources } from './Resources/Wacc';
 import { loadGuestsResources, GuestsResources } from './Resources/Guests';
 import Users from './Resources/Users';
 import Products from './Resources/Products/Products';
+import Gift from './Resources/Gift/Gift';
 
 export default class Client {
     public auth!: Auth;
@@ -16,6 +17,7 @@ export default class Client {
     public wacc!: WaccResources;
     public guests!: GuestsResources;
     public users!: Users;
+    public gift!: Gift;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -46,6 +48,7 @@ export default class Client {
         this.wacc = loadWaccResources(this);
         this.guests = loadGuestsResources(this);
         this.users = new Users(this);
+        this.gift = new Gift(this);
     }
 
     getBasePath(): string {
