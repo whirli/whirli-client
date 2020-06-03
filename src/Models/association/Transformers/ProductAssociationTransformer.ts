@@ -14,10 +14,12 @@ export default class ProductAssociationTransformer extends BaseTransformer {
         return new ProductAssociation({
             id: productAssociation.id,
             name: productAssociation.name,
+            internalName: productAssociation.internalName,
             active: productAssociation.active,
             position: productAssociation.position,
             associationClass: productAssociation.associationClass,
             productsCount: productAssociation.productsCount,
+            publishedAt: productAssociation.publishedAt,
             association: productAssociation.association,
             // has many
             products: this.includeProducts(productAssociation),

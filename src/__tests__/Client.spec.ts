@@ -8,7 +8,8 @@ import WACCUsers from '../Resources/Wacc/Users/Users';
 import Subscriptions from '../Resources/Subscriptions';
 import SubscriptionAddons from '../Resources/Subscriptions/Addons';
 import Codes from '../Resources/Codes/Codes';
-import Products from '../Resources/Products/Products';
+import Products from '../Resources/Products';
+import ProductAssociations from '../Resources/Products/Associations';
 import GuestsBaskets from '../Resources/Guests/Baskets';
 import GuestsGifts from '../Resources/Guests/Gifts';
 import Users from '../Resources/Users';
@@ -40,6 +41,7 @@ describe('Client.ts', () => {
         expect(client.subscriptions.addons).toBeInstanceOf(SubscriptionAddons);
         expect(client.codes).toBeInstanceOf(Codes);
         expect(client.products).toBeInstanceOf(Products);
+        expect(client.products.associations).toBeInstanceOf(ProductAssociations);
         expect(client.wacc.orders).toBeInstanceOf(WACCOrders);
         expect(client.wacc.returnOrders).toBeInstanceOf(WACCReturnOrders);
         expect(client.wacc.search).toBeInstanceOf(WACCSearch);

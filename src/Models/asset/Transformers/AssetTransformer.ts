@@ -1,8 +1,8 @@
 import Asset from '../Asset';
 import AssetInterface from '../../../Interfaces/asset/Asset';
-import AssetSourceInterface from '../../../Interfaces/asset/AssetSource';
-import AssetTransformInterface from '../../../Interfaces/asset/AssetTransform';
-import ProductInterface from '../../../Interfaces/product/Product';
+import AssetSource from '../../asset/AssetSource';
+import AssetTransform from '../../asset/AssetTransform';
+import Product from '../../product/Product';
 import AssetSourceTransformer from './AssetSourceTransformer';
 import AssetTransformTransformer from './AssetTransformTransformer';
 import ProductTransformer from '../../product/Transformers/ProductTransformer';
@@ -43,19 +43,19 @@ export default class AssetTransformer extends BaseTransformer {
         });
     }
 
-    includeSource(asset: AssetInterface): AssetSourceInterface | null {
+    includeSource(asset: AssetInterface): AssetSource | null {
         return this.item(asset, 'source', new AssetSourceTransformer());
     }
 
-    includeThumbnail(asset: AssetInterface): AssetTransformInterface | null {
+    includeThumbnail(asset: AssetInterface): AssetTransform | null {
         return this.item(asset, 'thumbnail', new AssetTransformTransformer());
     }
 
-    includeProducts(asset: AssetInterface): Array<ProductInterface> {
+    includeProducts(asset: AssetInterface): Array<Product> {
         return this.collection(asset, 'products', new ProductTransformer());
     }
 
-    includeTransforms(asset: AssetInterface): Array<AssetTransformInterface> {
+    includeTransforms(asset: AssetInterface): Array<AssetTransform> {
         return this.collection(asset, 'transforms', new AssetTransformTransformer());
     }
 }
