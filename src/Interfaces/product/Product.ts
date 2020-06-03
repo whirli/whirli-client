@@ -8,6 +8,9 @@ export default interface Product {
     updatedAt?: Date;
     publishedAt?: Date;
     name?: string;
+    slug?: string;
+    status?: number;
+    stock?: number;
     brand?: string;
     tokens?: number;
     features?: string;
@@ -21,6 +24,13 @@ export default interface Product {
     metaDescription?: string;
     shortDescription?: string;
     resourceType?: string;
+    totalOrders?: number;
+    totalReturnedDamaged?: number;
+    totalReturnedUndamaged?: number;
+    totalSafetyStock?: number;
+    totalSold?: number;
+    totalStockUnits?: number;
+    totalStockWithCustomer?: number;
     // has many
     assets?: Array<Asset>;
     productAssociations?: Array<ProductAssociation>;
