@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🐛 Bug fixes
 - Add missing product and product variant properties ([#186](https://github.com/whirli/whirli-client/pull/186))
 
 ## [0.0.17] - 2020-06-02
