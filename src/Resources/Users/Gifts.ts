@@ -1,33 +1,47 @@
 import AbstractResource from '../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Gifts extends AbstractResource {
     initialise(): void {
-        this.resourcePath = '/gifts';
+        this.resourcePath = '';
         this.defaultAccess = 'member';
     }
 
-    public create: Function = this.createMethodFromPartialSpec({
+    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
-        path: '/',
+        path: '/gifts',
     });
 
-    public get: Function = this.createMethodFromPartialSpec({
+    public getActive: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/{id}',
+        path: '/active-gift',
     });
 
-    public update: Function = this.createMethodFromPartialSpec({
-        method: 'PATCH',
-        path: '/{id}',
+    public get: (giftId: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/gifts/{id}',
     });
 
-    public placeOrder: Function = this.createMethodFromPartialSpec({
+    public update: (giftId: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec(
+        {
+            method: 'PATCH',
+            path: '/gifts/{id}',
+        },
+    );
+
+    public placeOrder: (
+        giftId: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/{id}/pay',
+        path: '/gifts/{id}/pay',
     });
 
-    public claimGuestBasket: Function = this.createMethodFromPartialSpec({
+    public claimGuestBasket: (
+        giftId: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/{id}/assign',
+        path: '/gifts/{id}/assign',
     });
 }
