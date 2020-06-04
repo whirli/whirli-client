@@ -1,4 +1,5 @@
 import AbstractResource from '../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Gifts extends AbstractResource {
     initialise(): void {
@@ -6,32 +7,40 @@ export default class Gifts extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public create: Function = this.createMethodFromPartialSpec({
+    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/gifts',
     });
 
-    public getActive: Function = this.createMethodFromPartialSpec({
+    public getActive: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/active-gift',
     });
 
-    public get: Function = this.createMethodFromPartialSpec({
+    public get: (giftId: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/gifts/{id}',
     });
 
-    public update: Function = this.createMethodFromPartialSpec({
-        method: 'PATCH',
-        path: '/gifts/{id}',
-    });
+    public update: (giftId: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec(
+        {
+            method: 'PATCH',
+            path: '/gifts/{id}',
+        },
+    );
 
-    public placeOrder: Function = this.createMethodFromPartialSpec({
+    public placeOrder: (
+        giftId: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/gifts/{id}/pay',
     });
 
-    public claimGuestBasket: Function = this.createMethodFromPartialSpec({
+    public claimGuestBasket: (
+        giftId: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/gifts/{id}/assign',
     });
