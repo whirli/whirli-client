@@ -2,32 +2,37 @@ import AbstractResource from '../AbstractResource';
 
 export default class Gifts extends AbstractResource {
     initialise(): void {
-        this.resourcePath = '/gifts';
+        this.resourcePath = '';
         this.defaultAccess = 'member';
     }
 
     public create: Function = this.createMethodFromPartialSpec({
         method: 'POST',
-        path: '/',
+        path: '/gifts',
+    });
+
+    public getActive: Function = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/active-gift',
     });
 
     public get: Function = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/{id}',
+        path: '/gifts/{id}',
     });
 
     public update: Function = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/{id}',
+        path: '/gifts/{id}',
     });
 
     public placeOrder: Function = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/{id}/pay',
+        path: '/gifts/{id}/pay',
     });
 
     public claimGuestBasket: Function = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/{id}/assign',
+        path: '/gifts/{id}/assign',
     });
 }
