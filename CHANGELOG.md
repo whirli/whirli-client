@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.20] - 2020-06-05
+### 🚨 Breaking changes
+- `client.guests.gifts.get(giftId)` has become `client.guests.gifts.getActive()`, and no longer requires the giftId. ([#192](https://github.com/whirli/whirli-client/pull/192))
+
 ## [0.0.19] - 2020-06-04
 ### 🚀 Features
 - Add get activeGift endpoint for members ([#190](https://github.com/whirli/whirli-client/pull/190))
