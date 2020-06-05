@@ -3,24 +3,24 @@ import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClien
 
 export default class Gifts extends AbstractResource {
     initialise(): void {
-        this.resourcePath = '/gifts';
+        this.resourcePath = '';
         this.defaultAccess = 'guest';
     }
 
     public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
-        path: '/',
+        path: '/gifts',
     });
 
     public getActive: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/',
+        path: '/active-gift',
     });
 
     public update: (giftId: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec(
         {
             method: 'PATCH',
-            path: '/{id}',
+            path: '/gifts/{id}',
         },
     );
 
@@ -29,6 +29,6 @@ export default class Gifts extends AbstractResource {
         ...args: HttpClientConfig
     ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/{id}/pay',
+        path: '/gifts/{id}/pay',
     });
 }
