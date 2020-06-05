@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🐛 Bug fixes
+- fix guest activeGift endpoint not going to the correct place ([#192](https://github.com/whirli/whirli-client/pull/192))
 
 ## [0.0.20] - 2020-06-05
 ### 🚨 Breaking changes
