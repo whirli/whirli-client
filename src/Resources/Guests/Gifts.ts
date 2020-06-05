@@ -1,4 +1,5 @@
 import AbstractResource from '../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Gifts extends AbstractResource {
     initialise(): void {
@@ -6,22 +7,27 @@ export default class Gifts extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public create: Function = this.createMethodFromPartialSpec({
+    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/',
     });
 
-    public get: Function = this.createMethodFromPartialSpec({
+    public getActive: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/{id}',
+        path: '/',
     });
 
-    public update: Function = this.createMethodFromPartialSpec({
-        method: 'PATCH',
-        path: '/{id}',
-    });
+    public update: (giftId: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec(
+        {
+            method: 'PATCH',
+            path: '/{id}',
+        },
+    );
 
-    public placeOrder: Function = this.createMethodFromPartialSpec({
+    public placeOrder: (
+        giftId: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/{id}/pay',
     });
