@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 🐛 Bug fixes
+- Temp change returnOrder complete from POST to PUT to test staging ([#195](https://github.com/whirli/whirli-client/pull/195))
+
 ## [0.0.21] - 2020-06-05
 ### 🐛 Bug fixes
 - fix guest activeGift endpoint not going to the correct place ([#192](https://github.com/whirli/whirli-client/pull/192))
