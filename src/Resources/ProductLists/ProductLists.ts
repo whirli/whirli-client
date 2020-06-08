@@ -7,7 +7,7 @@ export default class ProductLists extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public getAllLists: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public getAll: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/product-lists',
     });
