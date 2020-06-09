@@ -8,6 +8,7 @@ import { GuestsResources } from './Resources/Guests';
 import Users from './Resources/Users';
 import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
+import ProductLists from './Resources/ProductLists/ProductLists';
 export default class Client {
     auth: Auth;
     codes: Codes;
@@ -17,6 +18,7 @@ export default class Client {
     guests: GuestsResources;
     users: Users;
     gift: Gift;
+    productLists: ProductLists;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
     constructor(httpClient: HttpClient, opts?: ClientOptions);

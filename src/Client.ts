@@ -8,6 +8,7 @@ import { loadGuestsResources, GuestsResources } from './Resources/Guests';
 import Users from './Resources/Users';
 import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
+import ProductLists from './Resources/ProductLists/ProductLists';
 
 export default class Client {
     public auth!: Auth;
@@ -18,6 +19,7 @@ export default class Client {
     public guests!: GuestsResources;
     public users!: Users;
     public gift!: Gift;
+    public productLists!: ProductLists;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -49,6 +51,7 @@ export default class Client {
         this.guests = loadGuestsResources(this);
         this.users = new Users(this);
         this.gift = new Gift(this);
+        this.productLists = new ProductLists(this);
     }
 
     getBasePath(): string {
