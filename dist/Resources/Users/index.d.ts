@@ -6,6 +6,7 @@ import Subscriptions from './Subscriptions';
 import Toybox from './Toybox';
 import Details from './Details';
 import Addresses from './Addresses';
+import ProductLists from './ProductLists';
 export default class Users extends AbstractResource {
     addresses: Addresses;
     baskets: Baskets;
@@ -13,6 +14,7 @@ export default class Users extends AbstractResource {
     details: Details;
     subscriptions: Subscriptions;
     toybox: Toybox;
+    productLists: ProductLists;
     constructor(api: Client);
     initialise(): void;
     create: Function;

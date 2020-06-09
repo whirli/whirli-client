@@ -6,6 +6,7 @@ import Subscriptions from './Subscriptions';
 import Toybox from './Toybox';
 import Details from './Details';
 import Addresses from './Addresses';
+import ProductLists from './ProductLists';
 
 export default class Users extends AbstractResource {
     public addresses: Addresses;
@@ -14,6 +15,7 @@ export default class Users extends AbstractResource {
     public details: Details;
     public subscriptions: Subscriptions;
     public toybox: Toybox;
+    public productLists: ProductLists;
 
     constructor(api: Client) {
         super(api);
@@ -26,6 +28,7 @@ export default class Users extends AbstractResource {
         this.details = new Details(api);
         this.subscriptions = new Subscriptions(api);
         this.toybox = new Toybox(api);
+        this.productLists = new ProductLists(api);
     }
 
     initialise(): void {
