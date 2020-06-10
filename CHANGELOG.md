@@ -6,11 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
-- Add subscription pricing plan resource
+- Add subscription pricing plan resource ([#198](https://github.com/whirli/whirli-client/pull/198))
 ### 🐛 Bug fixes
-- Fix subscription pricing plans with change status endpoint not going to the correct path
+- Fix subscription pricing plans with change status endpoint not going to the correct path ([#198](https://github.com/whirli/whirli-client/pull/198))
 ### 🏡 Chore
-- Refactor subscription index to use new return types
+- Refactor subscription index to use new return types ([#198](https://github.com/whirli/whirli-client/pull/198))
 
 ## [0.0.22] - 2020-06-09
 ### 🚀 Features
