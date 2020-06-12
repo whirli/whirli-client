@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.23] - 2020-06-12
+### 🚀 Features
+- Add update relations PUT to product associations resource ([#199](https://github.com/whirli/whirli-client/pull/199))
 ## [0.0.22] - 2020-06-09
 ### 🚀 Features
 - Add all product-lists and product-list-lines endpoints, both public and private ([#196](https://github.com/whirli/whirli-client/pull/196))
