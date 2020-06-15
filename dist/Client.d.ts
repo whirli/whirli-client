@@ -5,6 +5,7 @@ import Codes from './Resources/Codes/Codes';
 import Subscriptions from './Resources/Subscriptions';
 import { WaccResources } from './Resources/Wacc';
 import { GuestsResources } from './Resources/Guests';
+import { GlobalResources } from './Resources/Global';
 import Users from './Resources/Users';
 import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
@@ -17,6 +18,7 @@ export default class Client {
     guests: GuestsResources;
     users: Users;
     gift: Gift;
+    global: GlobalResources;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
     constructor(httpClient: HttpClient, opts?: ClientOptions);
