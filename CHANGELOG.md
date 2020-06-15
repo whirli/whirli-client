@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
-- Add contact endpoint for submitting contact form ([#187](https://github.com/whirli/whirli-client/pull/187))
+- Add contact endpoint for submitting contact form ([#202](https://github.com/whirli/whirli-client/pull/202))
 
 ## [0.0.18] - 2020-06-03
 ### 🚀 Features
