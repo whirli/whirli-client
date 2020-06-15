@@ -6,4 +6,5 @@ export default class ProductAssociations extends AbstractResource {
     get: Function;
     update: Function;
     delete: Function;
+    updateRelations: Function;
 }
