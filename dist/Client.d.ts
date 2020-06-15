@@ -9,6 +9,7 @@ import Contact from './Resources/Contact/Contact';
 import Users from './Resources/Users';
 import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
+import ProductLists from './Resources/ProductLists/ProductLists';
 export default class Client {
     auth: Auth;
     codes: Codes;
@@ -19,6 +20,7 @@ export default class Client {
     users: Users;
     gift: Gift;
     contact: Contact;
+    productLists: ProductLists;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
     constructor(httpClient: HttpClient, opts?: ClientOptions);

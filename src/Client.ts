@@ -9,6 +9,7 @@ import Contact from './Resources/Contact/Contact';
 import Users from './Resources/Users';
 import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
+import ProductLists from './Resources/ProductLists/ProductLists';
 
 export default class Client {
     public auth!: Auth;
@@ -20,6 +21,7 @@ export default class Client {
     public users!: Users;
     public gift!: Gift;
     public contact!: Contact;
+    public productLists!: ProductLists;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -52,6 +54,7 @@ export default class Client {
         this.users = new Users(this);
         this.gift = new Gift(this);
         this.contact = new Contact(this);
+        this.productLists = new ProductLists(this);
     }
 
     getBasePath(): string {

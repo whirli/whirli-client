@@ -30,4 +30,9 @@ export default class ProductAssociations extends AbstractResource {
         method: 'DELETE',
         path: '/{id}',
     });
+
+    public updateRelations: Function = this.createMethodFromPartialSpec({
+        method: 'PUT',
+        path: '/{id}/relations',
+    });
 }

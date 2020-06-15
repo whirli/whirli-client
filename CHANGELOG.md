@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### 🚀 Features
 - Add contact endpoint for submitting contact form ([#202](https://github.com/whirli/whirli-client/pull/202))
+- Add preview change subscription endpoint ([#201](https://github.com/whirli/whirli-client/pull/201))
+
+### 🚀 Features
+- Add update relations PUT to product associations resource ([#199](https://github.com/whirli/whirli-client/pull/199))
+## [0.0.22] - 2020-06-09
+
+### 🚀 Features
+- Add all product-lists and product-list-lines endpoints, both public and private ([#196](https://github.com/whirli/whirli-client/pull/196))
+
+### 🐛 Bug fixes
+- Temp change returnOrder complete from POST to PUT to test staging ([#195](https://github.com/whirli/whirli-client/pull/195))
+
+## [0.0.21] - 2020-06-05
+### 🐛 Bug fixes
+- fix guest activeGift endpoint not going to the correct place ([#192](https://github.com/whirli/whirli-client/pull/192))
+
+## [0.0.20] - 2020-06-05
+### 🚨 Breaking changes
+- `client.guests.gifts.get(giftId)` has become `client.guests.gifts.getActive()`, and no longer requires the giftId. ([#192](https://github.com/whirli/whirli-client/pull/192))
+
+## [0.0.19] - 2020-06-04
+### 🚀 Features
+- Add get activeGift endpoint for members ([#190](https://github.com/whirli/whirli-client/pull/190))
+
+### 🏡 Chore
+- Add types for all gift member endpoints ([#190](https://github.com/whirli/whirli-client/pull/190))
 
 ## [0.0.18] - 2020-06-03
 ### 🚀 Features
