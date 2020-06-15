@@ -5,10 +5,10 @@ import Codes from './Resources/Codes/Codes';
 import Subscriptions from './Resources/Subscriptions';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
 import { loadGuestsResources, GuestsResources } from './Resources/Guests';
-import Contact from './Resources/Contact/Contact';
 import Users from './Resources/Users';
 import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
+import Contact from './Resources/Contact/Contact';
 import ProductLists from './Resources/ProductLists/ProductLists';
 
 export default class Client {
