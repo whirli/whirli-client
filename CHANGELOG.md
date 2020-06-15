@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### 🚀 Features
 - Add subscription pricing plan resource ([#198](https://github.com/whirli/whirli-client/pull/198))
-- Add preview change subscription endpoint ([#201](https://github.com/whirli/whirli-client/pull/201))
 - Add update relations PUT to product associations resource ([#199](https://github.com/whirli/whirli-client/pull/199))
+- Add preview change subscription endpoint ([#201](https://github.com/whirli/whirli-client/pull/201))
 
 ### 🐛 Bug fixes
 - Fix subscription pricing plans with change status endpoint not going to the correct path ([#198](https://github.com/whirli/whirli-client/pull/198))
