@@ -10,8 +10,6 @@ export default class Subscriptions extends AbstractResource {
 
     constructor(api: Client) {
         super(api);
-        this.api = api;
-        this.initialise();
         this.addons = new Addons(api);
         this.pricingPlans = new PricingPlans(api);
     }
