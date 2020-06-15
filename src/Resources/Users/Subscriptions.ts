@@ -1,4 +1,5 @@
 import AbstractResource from '../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Subscriptions extends AbstractResource {
     initialise(): void {
@@ -19,5 +20,13 @@ export default class Subscriptions extends AbstractResource {
     public pay: Function = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/{id}/pay',
+    });
+
+    public previewChange: (
+        subscriptionId: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'POST',
+        path: '/{id}/preview-change',
     });
 }
