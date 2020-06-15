@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🏡 Chore
-- Refactor contact form submit endpoint to use new types ([#198](https://github.com/whirli/whirli-client/pull/204))
+- Refactor contact form submit endpoint to use new types ([#204](https://github.com/whirli/whirli-client/pull/204))
 
 ## [0.0.23] - 2020-06-15
 ### 🚀 Features
