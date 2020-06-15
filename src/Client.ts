@@ -5,7 +5,7 @@ import Codes from './Resources/Codes/Codes';
 import Subscriptions from './Resources/Subscriptions';
 import { loadWaccResources, WaccResources } from './Resources/Wacc';
 import { loadGuestsResources, GuestsResources } from './Resources/Guests';
-import { loadGlobalResources, GlobalResources } from './Resources/Global';
+import Contact from './Resources/Contact/Contact';
 import Users from './Resources/Users';
 import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
@@ -19,7 +19,7 @@ export default class Client {
     public guests!: GuestsResources;
     public users!: Users;
     public gift!: Gift;
-    public global!: GlobalResources;
+    public contact!: Contact;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -51,7 +51,7 @@ export default class Client {
         this.guests = loadGuestsResources(this);
         this.users = new Users(this);
         this.gift = new Gift(this);
-        this.global = loadGlobalResources(this);
+        this.contact = new Contact(this);
     }
 
     getBasePath(): string {

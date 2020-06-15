@@ -6,7 +6,7 @@ export default class Contact extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public contact: Function = this.createMethodFromPartialSpec({
+    public submit: Function = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/contact-us',
     });
