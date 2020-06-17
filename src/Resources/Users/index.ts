@@ -7,6 +7,7 @@ import Toybox from './Toybox';
 import Details from './Details';
 import Addresses from './Addresses';
 import ProductLists from './ProductLists';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Users extends AbstractResource {
     public addresses: Addresses;
@@ -33,11 +34,17 @@ export default class Users extends AbstractResource {
 
     initialise(): void {
         this.resourcePath = '/users';
-        this.defaultAccess = 'guest';
+        this.defaultAccess = 'member';
     }
 
     public create: Function = this.createMethodFromPartialSpec({
+        access: 'guest',
         method: 'POST',
         path: '/',
+    });
+
+    public claimGuestResources: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: '/claim',
     });
 }

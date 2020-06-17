@@ -7,6 +7,7 @@ import Toybox from './Toybox';
 import Details from './Details';
 import Addresses from './Addresses';
 import ProductLists from './ProductLists';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 export default class Users extends AbstractResource {
     addresses: Addresses;
     baskets: Baskets;
@@ -18,4 +19,5 @@ export default class Users extends AbstractResource {
     constructor(api: Client);
     initialise(): void;
     create: Function;
+    claimGuestResources: (...args: HttpClientConfig) => HttpClientResponse;
 }
