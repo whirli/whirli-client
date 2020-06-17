@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.24] - 2020-06-17
+### 🚀 Features
+- Add claim endpoint for users, for assigning guest resources to the user ([#207](https://github.com/whirli/whirli-client/pull/207))
+
+### 🏡 Chore
+- Refactor contact form submit endpoint to use new types ([#204](https://github.com/whirli/whirli-client/pull/204))
+
 ## [0.0.23] - 2020-06-15
 ### 🚀 Features
 - Add subscription pricing plan resource ([#198](https://github.com/whirli/whirli-client/pull/198))

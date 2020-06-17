@@ -36,12 +36,4 @@ export default class Gifts extends AbstractResource {
         method: 'PATCH',
         path: '/gifts/{id}/pay',
     });
-
-    public claimGuestBasket: (
-        giftId: string,
-        ...args: HttpClientConfig
-    ) => HttpClientResponse = this.createMethodFromPartialSpec({
-        method: 'PATCH',
-        path: '/gifts/{id}/assign',
-    });
 }
