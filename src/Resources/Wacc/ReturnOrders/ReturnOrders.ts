@@ -22,7 +22,7 @@ export default class ReturnOrders extends AbstractResource {
     });
 
     public complete: Function = this.createMethodFromPartialSpec({
-        method: 'PUT',
+        method: 'POST',
         path: '/{id}/complete',
     });
 }
