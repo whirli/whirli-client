@@ -7,10 +7,7 @@ export default class Orders extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public create: (
-        orderLineId: string,
-        ...args: HttpClientConfig
-    ) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/orders',
     });
