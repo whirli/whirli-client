@@ -7,6 +7,8 @@ import Toybox from './Toybox';
 import Details from './Details';
 import Addresses from './Addresses';
 import ProductLists from './ProductLists';
+import Orders from './Orders';
+import OrderLines from './OrderLines';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Users extends AbstractResource {
@@ -17,6 +19,8 @@ export default class Users extends AbstractResource {
     public subscriptions: Subscriptions;
     public toybox: Toybox;
     public productLists: ProductLists;
+    public orders: Orders;
+    public orderLines: OrderLines;
 
     constructor(api: Client) {
         super(api);
@@ -30,6 +34,8 @@ export default class Users extends AbstractResource {
         this.subscriptions = new Subscriptions(api);
         this.toybox = new Toybox(api);
         this.productLists = new ProductLists(api);
+        this.orders = new Orders(api);
+        this.orderLines = new OrderLines(api);
     }
 
     initialise(): void {
