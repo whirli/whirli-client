@@ -8,8 +8,8 @@ export default class Orders extends AbstractResource {
     }
 
     public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
-        method: 'POST',
-        path: '/orders',
+        method: 'PATCH',
+        path: '/orders/create',
     });
 
     public updateLine: (
