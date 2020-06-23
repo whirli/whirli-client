@@ -17,7 +17,7 @@ export default class Orders extends AbstractResource {
         ...args: HttpClientConfig
     ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: 'order-lines/{id}/update',
+        path: '/order-lines/{id}/update',
     });
 
     public deleteLine: (
@@ -25,6 +25,6 @@ export default class Orders extends AbstractResource {
         ...args: HttpClientConfig
     ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: 'order-lines/{id}/delete',
+        path: '/order-lines/{id}/delete',
     });
 }
