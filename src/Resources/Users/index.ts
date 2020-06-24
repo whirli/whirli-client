@@ -50,4 +50,9 @@ export default class Users extends AbstractResource {
         method: 'PATCH',
         path: '/claim',
     });
+
+    public checkout: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'POST',
+        path: '/checkout',
+    });
 }

@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
+- Add checkout endpoint ([#213](https://github.com/whirli/whirli-client/pull/213))
 - Add shipping addon resource and get all endpoint ([#214](https://github.com/whirli/whirli-client/pull/214))
 
 ## [0.0.24] - 2020-06-17
