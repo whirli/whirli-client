@@ -20,6 +20,7 @@ import UsersSubscriptions from '../Resources/Users/Subscriptions';
 import UsersProductLists from '../Resources/Users/ProductLists';
 import Gift from '../Resources/Gift/Gift';
 import Contact from '../Resources/Contact/Contact';
+import ShippingAddons from '../Resources/Guests/ShippingAddons';
 
 describe('Client.ts', () => {
     let client: Client;
@@ -50,6 +51,7 @@ describe('Client.ts', () => {
         expect(client.wacc.users).toBeInstanceOf(WACCUsers);
         expect(client.guests.baskets).toBeInstanceOf(GuestsBaskets);
         expect(client.guests.gifts).toBeInstanceOf(GuestsGifts);
+        expect(client.guests.shippingAddons).toBeInstanceOf(ShippingAddons);
         expect(client.users).toBeInstanceOf(Users);
         expect(client.users.baskets).toBeInstanceOf(UsersBaskets);
         expect(client.users.gifts).toBeInstanceOf(UsersGifts);
