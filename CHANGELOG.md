@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.25] - 2020-06-24
+### 🚀 Features
+- Add orders endpoints ([#212](https://github.com/whirli/whirli-client/pull/212))
+- Add checkout endpoint ([#213](https://github.com/whirli/whirli-client/pull/213))
+- Add shipping addon resource and get all endpoint ([#214](https://github.com/whirli/whirli-client/pull/214))
+
 ## [0.0.24] - 2020-06-17
 ### 🚀 Features
 - Add claim endpoint for users, for assigning guest resources to the user ([#207](https://github.com/whirli/whirli-client/pull/207))
