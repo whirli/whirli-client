@@ -53,5 +53,4 @@ export default class Users extends AbstractResource {
         method: 'PATCH',
         path: '/claim',
     });
-
 }
