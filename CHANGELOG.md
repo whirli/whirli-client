@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.26] - 2020-06-26
+### 🐛 Bug fixes
+- Fix checkout route ([#217](https://github.com/whirli/whirli-client/pull/217))
+
 ## [0.0.25] - 2020-06-24
 ### 🚀 Features
 - Add orders endpoints ([#212](https://github.com/whirli/whirli-client/pull/212))
