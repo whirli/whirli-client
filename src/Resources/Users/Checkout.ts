@@ -7,7 +7,7 @@ export default class Checkout extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public checkout: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public process: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/checkout',
     });
