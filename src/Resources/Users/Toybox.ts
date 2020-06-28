@@ -20,4 +20,9 @@ export default class Toybox extends AbstractResource {
         method: 'PATCH',
         path: '/stock/{id}/add-to-toybox',
     });
+
+    public purchase: Function = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: '/stock/{id}/purchase',
+    });
 }

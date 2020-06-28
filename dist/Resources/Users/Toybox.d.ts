@@ -4,4 +4,5 @@ export default class Toybox extends AbstractResource {
     get: Function;
     designateToyForReturn: Function;
     undesignateToyForReturn: Function;
+    purchase: Function;
 }
