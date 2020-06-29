@@ -9,7 +9,7 @@ export default class AbstractResource {
     protected defaultAccess: AccessType;
     constructor(api: Client);
     initialise(): void;
-    createMethodFromPartialSpec(partialSpec: PartialSpec): (...args: (string | object | Function)[]) => any;
+    createMethodFromPartialSpec(partialSpec: PartialSpec): (...args: RequestArguments) => any;
     getRequestPath(spec: Spec, requestArgs: RequestArguments): string;
     getRequestConfig(requestArgs: RequestArguments): Array<object>;
 }
