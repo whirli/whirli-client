@@ -6,4 +6,5 @@ export default class Subscriptions extends AbstractResource {
     update: Function;
     pay: Function;
     previewChange: (subscriptionId: string, ...args: HttpClientConfig) => HttpClientResponse;
+    change: (subscriptionId: string, ...args: HttpClientConfig) => HttpClientResponse;
 }
