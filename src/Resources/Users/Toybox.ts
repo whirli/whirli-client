@@ -1,4 +1,5 @@
 import AbstractResource from '../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Toybox extends AbstractResource {
     initialise(): void {
@@ -21,7 +22,10 @@ export default class Toybox extends AbstractResource {
         path: '/stock/{id}/add-to-toybox',
     });
 
-    public purchase: Function = this.createMethodFromPartialSpec({
+    public purchase: (
+        stockId: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/stock/{id}/purchase',
     });
