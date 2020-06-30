@@ -38,6 +38,6 @@ export default class Gifts extends AbstractResource {
 
     public getForPicking: Function = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/',
+        path: '/pick',
     });
 }
