@@ -7,5 +7,5 @@ export default class Gifts extends AbstractResource {
     update: Function;
     delete: Function;
     print: Function;
-    picking: Function;
+    getForPicking: Function;
 }
