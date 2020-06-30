@@ -5,7 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
 ### 🚀 Features
+- Add picking endpoint to orders and gifts resource ([#225](https://github.com/whirli/whirli-client/pull/225))
+
 - Add member change subscription endpoint ([#219](https://github.com/whirli/whirli-client/pull/219))
 - Add purchase endpoint ([#220](https://github.com/whirli/whirli-client/pull/220))
 
