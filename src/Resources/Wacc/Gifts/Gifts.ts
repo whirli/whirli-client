@@ -35,4 +35,9 @@ export default class Gifts extends AbstractResource {
         method: 'GET',
         path: '/{id}/print',
     });
+
+    public picking: Function = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/',
+    });
 }
