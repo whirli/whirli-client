@@ -1,3 +1,3 @@
-export default class UndeliverableDate {
-    date!: Date;
+export default interface UndeliverableDate {
+    date: Date;
 }
