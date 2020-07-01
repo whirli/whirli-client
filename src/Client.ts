@@ -10,7 +10,7 @@ import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
 import Contact from './Resources/Contact/Contact';
 import ProductLists from './Resources/ProductLists/ProductLists';
-import UndeliverableDates from './Resources/UndeliverableDates';
+import UndeliverableDates from './Resources/UndeliverableDates/UnderliverableDates';
 
 export default class Client {
     public auth!: Auth;
