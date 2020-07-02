@@ -35,4 +35,9 @@ export default class Orders extends AbstractResource {
         method: 'GET',
         path: '/{id}/print',
     });
+
+    public getForPicking: Function = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/pick',
+    });
 }
