@@ -9,10 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.28] - 2020-07-02
 ### 🚀 Features
 - Add picking endpoint to orders and gifts resource ([#225](https://github.com/whirli/whirli-client/pull/225))
-
 - Add member change subscription endpoint ([#219](https://github.com/whirli/whirli-client/pull/219))
-- Add purchase endpoint ([#220](https://github.com/whirli/whirli-client/pull/220))
 - Add undeliverable dates endpoint ([#224](https://github.com/whirli/whirli-client/pull/224))
+
+## [0.0.27] - 2020-06-30
+### 🚀 Features
+- Add purchase endpoint ([#220](https://github.com/whirli/whirli-client/pull/220))
 
 ## [0.0.26] - 2020-06-26
 ### 🐛 Bug fixes
