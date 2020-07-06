@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.29] - 2020-07-06
+### 🐛 Bug fixes
+- Change slug name from hyphenated to not on public product-lists to fix endpoint not registering it ([#232](https://github.com/whirli/whirli-client/pull/232))
+
 ## [0.0.28] - 2020-07-02
 ### 🚀 Features
 - Add picking endpoint to orders and gifts resource ([#225](https://github.com/whirli/whirli-client/pull/225))
