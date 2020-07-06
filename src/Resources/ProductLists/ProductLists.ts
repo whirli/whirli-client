@@ -7,8 +7,11 @@ export default class ProductLists extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public get: (slug: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public get: (
+        sharingSlug: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/product-lists/{slug}',
+        path: '/product-lists/{sharingSlug}',
     });
 }
