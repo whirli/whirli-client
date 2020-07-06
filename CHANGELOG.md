@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.0.29] - 2020-07-06
 ### 🐛 Bug fixes
 - Change slug name from hyphenated to not on public product-lists to fix endpoint not registering it ([#232](https://github.com/whirli/whirli-client/pull/232))
 
