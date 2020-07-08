@@ -1,5 +1,4 @@
 import AbstractResource from '../AbstractResource';
-import { HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Referral extends AbstractResource {
     initialise(): void {
@@ -7,7 +6,7 @@ export default class Referral extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public get: () => HttpClientResponse = this.createMethodFromPartialSpec({
+    public get: Function = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/active-referral',
     });
