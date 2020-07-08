@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.31] - 2020-07-08
+### 🐛 Bug fixes
+- Fix get method and referrals interface ([#238](https://github.com/whirli/whirli-client/pull/238))
+
 ## [0.0.30] - 2020-07-08
 ### 🚀 Features
-- Add active-referral endpoint
+- Add active-referral endpoint ([#235](https://github.com/whirli/whirli-client/pull/235))
 
 ## [0.0.29] - 2020-07-06
 ### 🐛 Bug fixes
