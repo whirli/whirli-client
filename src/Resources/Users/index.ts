@@ -9,6 +9,7 @@ import Details from './Details';
 import Addresses from './Addresses';
 import ProductLists from './ProductLists';
 import Orders from './Orders';
+import Referral from './Referral';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Users extends AbstractResource {
@@ -21,6 +22,7 @@ export default class Users extends AbstractResource {
     public checkout: Checkout;
     public productLists: ProductLists;
     public orders: Orders;
+    public referral: Referral;
 
     constructor(api: Client) {
         super(api);
@@ -36,6 +38,7 @@ export default class Users extends AbstractResource {
         this.checkout = new Checkout(api);
         this.productLists = new ProductLists(api);
         this.orders = new Orders(api);
+        this.referral = new Referral(api);
     }
 
     initialise(): void {
