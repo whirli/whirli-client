@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🚀 Features
+- Add card's resource and endpoints ([#241](https://github.com/whirli/whirli-client/pull/241))
 
 ## [0.0.32] - 2020-07-08
 ### 🐛 Bug fixes
