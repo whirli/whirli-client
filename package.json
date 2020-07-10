@@ -1,6 +1,6 @@
 {
   "name": "whirli-client",
-  "version": "0.0.34",
+  "version": "0.0.33",
   "description": "Whirli API wrapper",
   "keywords": [
     "whirli",
