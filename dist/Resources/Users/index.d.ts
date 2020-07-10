@@ -10,6 +10,7 @@ import Addresses from './Addresses';
 import ProductLists from './ProductLists';
 import Orders from './Orders';
 import Referral from './Referral';
+import Card from './Card';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 export default class Users extends AbstractResource {
     addresses: Addresses;
@@ -22,6 +23,7 @@ export default class Users extends AbstractResource {
     productLists: ProductLists;
     orders: Orders;
     referral: Referral;
+    card: Card;
     constructor(api: Client);
     initialise(): void;
     create: Function;

@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🐛 Bug fixes
 - Change member redeem endpoints' path to updated version ([#236](https://github.com/whirli/whirli-client/pull/236/files))
 
+## [0.0.33] - 2020-07-09
+### 🚀 Features
+- Add card's resource and endpoints ([#241](https://github.com/whirli/whirli-client/pull/241))
+
 ## [0.0.32] - 2020-07-08
 ### 🐛 Bug fixes
 - Fixes to active-referral ([#238](https://github.com/whirli/whirli-client/pull/239))
