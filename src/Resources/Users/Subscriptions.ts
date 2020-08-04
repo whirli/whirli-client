@@ -37,4 +37,12 @@ export default class Subscriptions extends AbstractResource {
         method: 'POST',
         path: '/{id}/change',
     });
+
+    public cancel: (
+        subscriptionId: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'POST',
+        path: '/{id}/cancel',
+    });
 }
