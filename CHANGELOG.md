@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
-- Add members cancel subscription plan endpoint
+- Add members cancel subscription plan endpoint ([#248](https://github.com/whirli/whirli-client/pull/248))
 
 ## [0.0.33] - 2020-07-09
 ### 🚀 Features
