@@ -49,10 +49,10 @@ export default class Users extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public userWithStatuses: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public user: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         access: 'auth',
         method: 'GET',
-        path: '/user?balance=1&changeSubscription=1&cancelSubscription=1',
+        path: '/user',
     });
 
     public create: Function = this.createMethodFromPartialSpec({
