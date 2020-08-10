@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
-- Add user endpoint with the Stripe params attached to the path
+- Add user endpoint ([#251](https://github.com/whirli/whirli-client/pull/251))
 
 ## [0.0.34] - 2020-08-05
 ### 🚀 Features
