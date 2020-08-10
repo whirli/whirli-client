@@ -1,1 +1,1 @@
-export declare type AccessType = 'guest' | 'member' | 'wacc';
+export declare type AccessType = 'guest' | 'member' | 'wacc' | 'auth';
