@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🐛 Bug fixes
 - Change member redeem endpoints' path to updated version ([#236](https://github.com/whirli/whirli-client/pull/236/files))
 
+## [0.0.35] - 2020-08-10
+### 🚀 Features
+- Add user endpoint ([#251](https://github.com/whirli/whirli-client/pull/251))
+
 ## [0.0.34] - 2020-08-05
 ### 🚀 Features
 - Add members cancel subscription plan endpoint ([#248](https://github.com/whirli/whirli-client/pull/248))

@@ -1,1 +1,1 @@
-export type AccessType = 'guest' | 'member' | 'wacc';
+export type AccessType = 'guest' | 'member' | 'wacc' | 'auth';
