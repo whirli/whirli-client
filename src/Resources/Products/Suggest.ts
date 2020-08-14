@@ -8,6 +8,6 @@ export default class Suggest extends AbstractResource {
 
     public all: Function = this.createMethodFromPartialSpec({
         method: 'GET',
-        path: '/products/',
+        path: '/products/suggest',
     });
 }
