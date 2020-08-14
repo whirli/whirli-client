@@ -1,10 +1,5 @@
-import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
-import Associations from './Associations';
-import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
-export default class Products extends AbstractResource {
-    associations: Associations;
-    constructor(api: Client);
+export default class Suggest extends AbstractResource {
     initialise(): void;
-    all: (...args: HttpClientConfig) => HttpClientResponse;
+    all: Function;
 }
