@@ -61,8 +61,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add orders endpoints ([#212](https://github.com/whirli/whirli-client/pull/212))
 - Add checkout endpoint ([#213](https://github.com/whirli/whirli-client/pull/213))
 - Add shipping addon resource and get all endpoint ([#214](https://github.com/whirli/whirli-client/pull/214))
-### 🐛 Bug fixes
-- Change returnOrder complete from PUT to POST to test image uploading ([#195](https://github.com/whirli/whirli-client/pull/195))
 
 ## [0.0.24] - 2020-06-17
 ### 🚀 Features
