@@ -45,24 +45,24 @@ export default class Users extends AbstractResource {
     }
 
     initialise(): void {
-        this.resourcePath = '/users';
+        this.resourcePath = '/';
         this.defaultAccess = 'member';
     }
 
     public user: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         access: 'auth',
         method: 'GET',
-        path: '/user',
+        path: 'user',
     });
 
     public create: Function = this.createMethodFromPartialSpec({
         access: 'guest',
         method: 'POST',
-        path: '/',
+        path: 'users',
     });
 
     public claimGuestResources: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/claim',
+        path: 'users/claim',
     });
 }
