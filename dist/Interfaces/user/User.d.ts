@@ -4,7 +4,8 @@ export default interface User {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
-    name?: string;
+    firstname?: string;
+    lastname?: string;
     email?: string;
     emailVerifiedAt?: Date;
     statusId?: number;
