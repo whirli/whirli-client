@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### 🐛 Bug fixes
 - Change member redeem endpoints' path to updated version ([#236](https://github.com/whirli/whirli-client/pull/236/files))
+- Refactored users resource path ([#256](https://github.com/whirli/whirli-client/pull/256))
+- Update User interface to have firstname and lastname, not name ([#258](https://github.com/whirli/whirli-client/pull/258))
+
+### 🚀 Features
+- Create product suggest endpoint ([#257](https://github.com/whirli/whirli-client/pull/257))
 
 ## [0.0.36] - 2020-08-12
 ### 🚀 Features
