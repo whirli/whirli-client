@@ -55,6 +55,7 @@ export default class OrderTransformer extends BaseTransformer {
             meta: order.meta,
             resourceType: order.resourceType,
             onFirstOrder: order.onFirstOrder,
+            isFirstOrder: order.isFirstOrder,
             deliveryMethod: order.deliveryMethod,
             expectedDeliveryDate: order.expectedDeliveryDate,
             hasReusablePackagingOptIn: order.hasReusablePackagingOptIn,
