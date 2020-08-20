@@ -43,6 +43,7 @@ export default interface Order {
     statusId?: number;
     resourceType?: string;
     onFirstOrder?: boolean;
+    isFirstOrder?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
     hasReusablePackagingOptIn?: boolean;
