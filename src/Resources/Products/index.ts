@@ -1,16 +1,20 @@
 import Client from '../../Client';
 import AbstractResource from '../AbstractResource';
 import Associations from './Associations';
+import Suggest from './Suggest';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Products extends AbstractResource {
     public associations: Associations;
+    public suggest: Suggest;
 
     constructor(api: Client) {
         super(api);
         this.api = api;
         this.initialise();
+
         this.associations = new Associations(api);
+        this.suggest = new Suggest(api);
     }
 
     initialise(): void {
