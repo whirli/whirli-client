@@ -3,6 +3,7 @@ import WACCOrders from './Orders/Orders';
 import WACCReturnOrders from './ReturnOrders/ReturnOrders';
 import WACCSearch from './Search/Search';
 import WACCUsers from './Users/Users';
+import WACCUserSubscriptions from './UserSubscriptions/UserSubscriptions';
 import WACCGifts from './Gifts/Gifts';
 import WACCProducts from './Products/Products';
 import WACCProductAssociations from './ProductAssociations/ProductAssociations';
@@ -12,6 +13,7 @@ export interface WaccResources {
     returnOrders: WACCReturnOrders;
     search: WACCSearch;
     users: WACCUsers;
+    userSubscriptions: WACCUserSubscriptions;
     gifts: WACCGifts;
     products: WACCProducts;
     productAssociations: WACCProductAssociations;
