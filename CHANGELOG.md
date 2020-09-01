@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### 🚀 Features
 - Add WACC user subscription endpoints ([#262](https://github.com/whirli/whirli-client/pull/262))
+- Add SubscriptionAddon interfaces
+- Add SubscriptionAddonPricingPlan interfaces
+- Add Subscription Tier interfaces
+- Add UserSubscription interfaces
 
 ## [0.0.37] - 2020-08-20
 ### 🚀 Features
