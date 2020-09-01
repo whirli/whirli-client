@@ -3,7 +3,6 @@ import { Subscription } from '../subscription/Subscription';
 import { SubscriptionPricingPlan } from '../subscription/SubscriptionPricingPlan';
 import { SubscriptionTier } from '../subscription/SubscriptionTier';
 import { SubscriptionAddon } from '../subscription/SubscriptionAddon';
-export declare type UserSubscriptionReasonForEndIdType = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 export declare type UserSubscriptionStatusId = 0 | 1 | 2 | 3 | 4 | 5;
 export interface APIUserSubscription {
     id?: string;
@@ -12,7 +11,7 @@ export interface APIUserSubscription {
     ended_at?: Date | string | null;
     created_at?: Date | string;
     updated_at?: Date | string;
-    reason_for_end_id?: UserSubscriptionReasonForEndIdType;
+    reason_for_end_id?: number;
     pending_cancel_at?: Date | string | null;
     suspended_at?: Date | string | null;
     resource_type?: string;
@@ -34,7 +33,7 @@ export interface UserSubscription {
     endedAt?: Date | string | null;
     createdAt?: Date | string;
     updatedAt?: Date | string;
-    reasonForEndId?: UserSubscriptionReasonForEndIdType;
+    reasonForEndId?: number;
     pendingCancelAt?: Date | string | null;
     suspendedAt?: Date | string | null;
     resourceType?: string;
