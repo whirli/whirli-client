@@ -4,28 +4,6 @@ import { SubscriptionPricingPlan } from '../subscription/SubscriptionPricingPlan
 import { SubscriptionTier } from '../subscription/SubscriptionTier';
 import { SubscriptionAddon } from '../subscription/SubscriptionAddon';
 export declare type UserSubscriptionStatusId = 0 | 1 | 2 | 3 | 4 | 5;
-export interface APIUserSubscription {
-    id?: string;
-    stripe_id?: string;
-    started_at?: Date | string | null;
-    ended_at?: Date | string | null;
-    created_at?: Date | string;
-    updated_at?: Date | string;
-    reason_for_end_id?: number;
-    pending_cancel_at?: Date | string | null;
-    suspended_at?: Date | string | null;
-    resource_type?: string;
-    has_delivery_booster?: boolean;
-    status_id?: UserSubscriptionStatusId;
-    user?: User;
-    subscription?: Subscription;
-    subscription_pricing_plan?: SubscriptionPricingPlan;
-    subscription_tiers?: Array<SubscriptionTier>;
-    active_subscription_tier?: SubscriptionTier;
-    addons?: Array<SubscriptionAddon>;
-    highlights?: Array<any>;
-    total_subscription_cost?: number;
-}
 export interface UserSubscription {
     id?: string;
     stripeId?: string;
