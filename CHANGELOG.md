@@ -6,12 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
-- Add SubscriptionAddon Model & Transformer
-- Add SubscriptionAddonPricingPlan Model & Transformer
-- Add SubscriptionTier Model & Transformer
-- Add UserSubscription Model & Transformer
+- Add SubscriptionAddon Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add SubscriptionAddonPricingPlan Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add SubscriptionTier Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add UserSubscription Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
 
-### 🚀 Features
+
 - Add SubscriptionAddon interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
 - Add SubscriptionAddonPricingPlan interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
 - Add Subscription Tier interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
