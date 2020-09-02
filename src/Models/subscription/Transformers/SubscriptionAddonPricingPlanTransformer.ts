@@ -3,6 +3,11 @@ import SubscriptionAddonPricingPlanInterface from '../../../Interfaces/subscript
 import SubscriptionAddonPricingPlan from '../SubscriptionAddonPricingPlan';
 
 export default class SubscriptionAddonPricingPlanTransformer extends BaseTransformer {
+    /**
+     * Map a subscription pricing plan response
+     *
+     * @param subscriptionAddonPricingPlan
+     */
     mapData(subscriptionAddonPricingPlan: SubscriptionAddonPricingPlanInterface): SubscriptionAddonPricingPlan {
         return new SubscriptionAddonPricingPlan({
             id: subscriptionAddonPricingPlan.id,

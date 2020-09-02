@@ -3,6 +3,11 @@ import SubscriptionTierInterface from '../../../Interfaces/subscription/Subscrip
 import SubscriptionTier from '../SubscriptionTier';
 
 export default class SubscriptionTierTransformer extends BaseTransformer {
+    /**
+     * Map a subscription tier response
+     *
+     * @param subscriptionTier
+     */
     mapData(subscriptionTier: SubscriptionTierInterface): SubscriptionTier {
         return new SubscriptionTier({
             id: subscriptionTier.id,
