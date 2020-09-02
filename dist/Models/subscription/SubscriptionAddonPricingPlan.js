@@ -1,0 +1,17 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SubscriptionAddonPricingPlan = function SubscriptionAddonPricingPlan(parameters) {
+  _classCallCheck(this, SubscriptionAddonPricingPlan);
+
+  Object.assign(this, parameters);
+};
+
+exports["default"] = SubscriptionAddonPricingPlan;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9Nb2RlbHMvc3Vic2NyaXB0aW9uL1N1YnNjcmlwdGlvbkFkZG9uUHJpY2luZ1BsYW4udHMiXSwibmFtZXMiOlsiU3Vic2NyaXB0aW9uQWRkb25QcmljaW5nUGxhbiIsInBhcmFtZXRlcnMiLCJPYmplY3QiLCJhc3NpZ24iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztJQUVxQkEsNEIsR0FDakIsc0NBQVlDLFVBQVosRUFBK0Q7QUFBQTs7QUFDM0RDLEVBQUFBLE1BQU0sQ0FBQ0MsTUFBUCxDQUFjLElBQWQsRUFBb0JGLFVBQXBCO0FBQ0gsQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBTdWJzY3JpcHRpb25BZGRvblByaWNpbmdQbGFuSW50ZXJmYWNlIGZyb20gJy4uLy4uL0ludGVyZmFjZXMvc3Vic2NyaXB0aW9uL1N1YnNjcmlwdGlvbkFkZG9uUHJpY2luZ1BsYW4nO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBTdWJzY3JpcHRpb25BZGRvblByaWNpbmdQbGFuIHtcbiAgICBjb25zdHJ1Y3RvcihwYXJhbWV0ZXJzOiBTdWJzY3JpcHRpb25BZGRvblByaWNpbmdQbGFuSW50ZXJmYWNlKSB7XG4gICAgICAgIE9iamVjdC5hc3NpZ24odGhpcywgcGFyYW1ldGVycyk7XG4gICAgfVxufVxuIl19

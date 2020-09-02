@@ -1,6 +1,6 @@
 export type SubscriptionAddonPricingPlanIntervalLength = 1 | 6 | 12;
 
-export interface SubscriptionAddonPricingPlan {
+export default interface SubscriptionAddonPricingPlan {
     id?: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;

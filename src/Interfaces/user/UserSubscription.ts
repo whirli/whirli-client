@@ -1,12 +1,12 @@
 import User from './User';
 import { Subscription } from '../subscription/Subscription';
 import { SubscriptionPricingPlan } from '../subscription/SubscriptionPricingPlan';
-import { SubscriptionTier } from '../subscription/SubscriptionTier';
-import { SubscriptionAddon } from '../subscription/SubscriptionAddon';
+import SubscriptionTier from '../subscription/SubscriptionTier';
+import SubscriptionAddon from '../subscription/SubscriptionAddon';
 
 export type UserSubscriptionStatusId = 0 | 1 | 2 | 3 | 4 | 5;
 
-export interface UserSubscription {
+export default interface UserSubscription {
     id?: string;
     stripeId?: string;
     startedAt?: Date | string | null;
