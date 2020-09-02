@@ -1,5 +1,5 @@
-import { SubscriptionAddonPricingPlan } from './SubscriptionAddonPricingPlan';
-export interface SubscriptionAddon {
+import SubscriptionAddonPricingPlan from './SubscriptionAddonPricingPlan';
+export default interface SubscriptionAddon {
     id?: string;
     createdAt?: Date | string;
     updatedAt?: Date | string;
