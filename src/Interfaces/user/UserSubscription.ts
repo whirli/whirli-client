@@ -13,7 +13,7 @@ export default interface UserSubscription {
     endedAt?: Date | string | null;
     createdAt?: Date | string;
     updatedAt?: Date | string;
-    reasonForEndId?: number;
+    reasonForEndId?: number | null;
     pendingCancelAt?: Date | string | null;
     suspendedAt?: Date | string | null;
     resourceType?: string;
