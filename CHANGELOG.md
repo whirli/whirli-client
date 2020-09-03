@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🐛 Bug fixes
-- Fix UserSubscription interface reasonForEndId type
+- Fix UserSubscription interface reasonForEndId type ([#265](https://github.com/whirli/whirli-client/pull/265))
 
 ### 🚀 Features
 - Add SubscriptionAddon Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
