@@ -1,5 +1,6 @@
 import User from '../user/User';
 import OrderLine from './OrderLine';
+import Assignee from './Assignee';
 export default interface Order {
     id?: string;
     createdAt?: Date;
@@ -47,5 +48,6 @@ export default interface Order {
     expectedDeliveryDate?: string;
     hasReusablePackagingOptIn?: boolean;
     user?: User | null;
+    assignee?: Assignee | null;
     lines?: OrderLine[];
 }
