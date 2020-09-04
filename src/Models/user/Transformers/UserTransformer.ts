@@ -27,6 +27,7 @@ export default class UserTransformer extends BaseTransformer {
             subscriptionCancellationCharges: user.subscriptionCancellationCharges,
             verifiedAt: user.verifiedAt,
             resourceType: user.resourceType,
+            reference: user.reference,
             // has many
             orders: this.includeOrders(user),
         });
