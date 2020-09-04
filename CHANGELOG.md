@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix UserSubscription interface reasonForEndId type ([#265](https://github.com/whirli/whirli-client/pull/265))
 
 ### 🚀 Features
+- Add "reference" to User interface ([#266](https://github.com/whirli/whirli-client/pull/266))
+
+
 - Add SubscriptionAddon Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
 - Add SubscriptionAddonPricingPlan Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
 - Add SubscriptionTier Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
