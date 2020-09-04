@@ -7,8 +7,8 @@ export default class Gift extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public redeem: (code: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public redeem: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
-        path: '/{code}',
+        path: '/',
     });
 }
