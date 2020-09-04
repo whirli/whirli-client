@@ -1,5 +1,4 @@
 import AbstractResource from '../AbstractResource';
-import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Gift extends AbstractResource {
     initialise(): void {
@@ -7,7 +6,7 @@ export default class Gift extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public redeem: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public redeem: Function = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/{code}',
     });
