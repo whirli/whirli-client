@@ -8,11 +8,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🚀 Features
 - Add subscriptions to the guest resource ([#267](https://github.com/whirli/whirli-client/pull/267))
 
+- Add "reference" to User interface ([#266](https://github.com/whirli/whirli-client/pull/266))
+
+
+- Add SubscriptionAddon Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add SubscriptionAddonPricingPlan Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add SubscriptionTier Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add UserSubscription Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+
+
+- Add SubscriptionAddon interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
+- Add SubscriptionAddonPricingPlan interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
+- Add Subscription Tier interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
+- Add UserSubscription interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
+
+
+- Add WACC user subscription endpoints ([#262](https://github.com/whirli/whirli-client/pull/262))
+
 ### 🐛 Bug fixes
 - Change member redeem endpoints' path to updated version ([#236](https://github.com/whirli/whirli-client/pull/236/files))
+- Fix UserSubscription interface reasonForEndId type ([#265](https://github.com/whirli/whirli-client/pull/265))
 
 ## [0.0.37] - 2020-08-20
 ### 🚀 Features
+- Add isFirstOrder to order interface ([#260](https://github.com/whirli/whirli-client/pull/260))
+
 - Create product suggest endpoint ([#257](https://github.com/whirli/whirli-client/pull/257))
 
 ### 🐛 Bug fixes
