@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
-- Add subscriptions to the guest resource
+- Add subscriptions to the guest resource ([#267](https://github.com/whirli/whirli-client/pull/267))
 
 ### 🐛 Bug fixes
 - Change member redeem endpoints' path to updated version ([#236](https://github.com/whirli/whirli-client/pull/236/files))
