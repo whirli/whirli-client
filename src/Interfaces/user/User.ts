@@ -6,6 +6,7 @@ import Address from '../address/Address';
 import ReturnOrder from '../return/ReturnOrder';
 import PurchaseStock from '../stock/PurchaseStock';
 import ProductList from '../product/ProductList';
+import Role from '../role/Role';
 
 interface Meta {
     daysUntilAvailable?: number;
@@ -53,7 +54,7 @@ export default interface User {
     userSubscriptions?: Array<UserSubscription>;
     activeUserSubscription?: UserSubscription;
     activeReturnOrder?: ReturnOrder;
-    // roles?: Array<Roles>
+    roles?: Array<Role>;
     // Accessors
     onFirstOrder?: boolean;
     toyboxTokens?: number;

@@ -17,6 +17,8 @@ import UserSubscriptionTransformer from './UserSubscriptionTransformer';
 import AddressTransformer from '../../address/Transformers/AddressTransformer';
 import PurchaseStockTransformer from '../../stock/Transformers/PurchaseStockTransformer';
 import ProductListTransformer from '../../product/Transformers/ProductListTransformer';
+import RoleInterface from '../../../Interfaces/role/Role';
+import RoleTransformer from '../../role/Transformers/RoleTransformer';
 
 export default class UserTransformer extends BaseTransformer {
     /**
@@ -54,6 +56,7 @@ export default class UserTransformer extends BaseTransformer {
             userSubscriptions: this.includeUserSubscriptions(user),
             activeUserSubscription: this.includeUserSubscription(user) || undefined,
             activeReturnOrder: this.includeActiveReturnOrder(user) || undefined,
+            roles: this.includeRoles(user),
             // Accessors
             onFirstOrder: user.onFirstOrder,
             toyboxTokens: user.toyboxTokens,
@@ -94,6 +97,10 @@ export default class UserTransformer extends BaseTransformer {
 
     includeActiveReturnOrder(user: UserInterface): ReturnOrderInterface | null {
         return this.item(user, 'activeReturnOrder', new ReturnOrderTransformer());
+    }
+
+    includeRoles(user: UserInterface): Array<RoleInterface> {
+        return this.collection(user, 'roles', new RoleTransformer());
     }
 
     includeBasket(user: UserInterface): Array<BasketInterface> {

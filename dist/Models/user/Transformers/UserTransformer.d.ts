@@ -9,6 +9,7 @@ import ProductListInterface from '../../../Interfaces/product/ProductList';
 import ReturnOrderInterface from '../../../Interfaces/return/ReturnOrder';
 import { Basket as BasketInterface } from '../../../Interfaces/basket/Basket';
 import UserSubscriptionInterface from '../../../Interfaces/user/UserSubscription';
+import RoleInterface from '../../../Interfaces/role/Role';
 export default class UserTransformer extends BaseTransformer {
     mapData(user: UserInterface): User;
     includeOrders(user: UserInterface): Array<OrderInterface>;
@@ -18,6 +19,7 @@ export default class UserTransformer extends BaseTransformer {
     includeLists(user: UserInterface): Array<ProductListInterface>;
     includeReturnOrders(user: UserInterface): Array<ReturnOrderInterface>;
     includeActiveReturnOrder(user: UserInterface): ReturnOrderInterface | null;
+    includeRoles(user: UserInterface): Array<RoleInterface>;
     includeBasket(user: UserInterface): Array<BasketInterface>;
     includeUserSubscriptions(user: UserInterface): Array<UserSubscriptionInterface>;
     includeUserSubscription(user: UserInterface): UserSubscriptionInterface | null;
