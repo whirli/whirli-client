@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🏡 Chore
+- Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))
+
 ### 🚀 Features
 - Add subscriptions to the guest resource ([#267](https://github.com/whirli/whirli-client/pull/267))
 
@@ -26,7 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add WACC user subscription endpoints ([#262](https://github.com/whirli/whirli-client/pull/262))
 
 ### 🐛 Bug fixes
-- Change member redeem endpoints' path to updated version ([#236](https://github.com/whirli/whirli-client/pull/236/files))
+- Change member redeem endpoints' path to updated version 
+
 - Fix UserSubscription interface reasonForEndId type ([#265](https://github.com/whirli/whirli-client/pull/265))
 
 ## [0.0.37] - 2020-08-20
