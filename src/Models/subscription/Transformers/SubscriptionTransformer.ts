@@ -3,6 +3,8 @@ import SubscriptionPricingPlan from '../SubscriptionPricingPlan';
 import { APISubscription as APISubscriptionInterface } from '../../../Interfaces/subscription/Subscription';
 import SubscriptionPricingPlanTransformer from './SubscriptionPricingPlanTransformer';
 import BaseTransformer from '../../../BaseTransformer';
+import SubscriptionTier from '../SubscriptionTier';
+import SubscriptionTierTransformer from './SubscriptionTierTransformer';
 
 export default class SubscriptionTransformer extends BaseTransformer {
     /**
@@ -25,11 +27,16 @@ export default class SubscriptionTransformer extends BaseTransformer {
             createdAt: subscription.created_at,
             updatedAt: subscription.updated_at,
             // has many
-            pricingPlans: this.includePricingPlans(subscription),
+            subscriptionPricingPlans: this.includeSubscriptionPricingPlans(subscription),
+            subscriptionTiers: this.includeSubscriptionTiers(subscription),
         });
     }
 
-    includePricingPlans(subscription: APISubscriptionInterface): Array<SubscriptionPricingPlan> {
+    includeSubscriptionPricingPlans(subscription: APISubscriptionInterface): Array<SubscriptionPricingPlan> {
         return this.collection(subscription, 'subscription_pricing_plans', new SubscriptionPricingPlanTransformer());
+    }
+
+    includeSubscriptionTiers(subscription: APISubscriptionInterface): Array<SubscriptionTier> {
+        return this.collection(subscription, 'subscription_pricing_plans', new SubscriptionTierTransformer());
     }
 }
