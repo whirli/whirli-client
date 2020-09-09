@@ -18,6 +18,7 @@ export default interface User {
     verifiedAt?: Date;
     reference?: string;
     resourceType?: string;
+    color?: string;
     // has many
     orders?: Order[];
     stock?: Stock[];

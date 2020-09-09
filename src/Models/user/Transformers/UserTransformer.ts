@@ -28,6 +28,7 @@ export default class UserTransformer extends BaseTransformer {
             verifiedAt: user.verifiedAt,
             resourceType: user.resourceType,
             reference: user.reference,
+            color: user.color,
             // has many
             orders: this.includeOrders(user),
         });
