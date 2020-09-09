@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add WACC user subscription endpoints ([#262](https://github.com/whirli/whirli-client/pull/262))
 
 ### 🐛 Bug fixes
+- Updated User interface with correct API resource data
 - Change member redeem endpoints' path to updated version 
 
 - Fix UserSubscription interface reasonForEndId type ([#265](https://github.com/whirli/whirli-client/pull/265))

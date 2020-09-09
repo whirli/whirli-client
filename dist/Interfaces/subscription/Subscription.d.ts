@@ -1,4 +1,5 @@
 import { SubscriptionPricingPlan } from './SubscriptionPricingPlan';
+export declare type SubscriptionAddonPricingPlanIntervalLength = 1 | 6 | 12;
 export interface APISubscription {
     id?: string;
     stripe_id?: string;

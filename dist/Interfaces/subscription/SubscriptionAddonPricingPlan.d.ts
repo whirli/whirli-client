@@ -1,4 +1,4 @@
-export declare type SubscriptionAddonPricingPlanIntervalLength = 1 | 6 | 12;
+import { SubscriptionAddonPricingPlanIntervalLength } from './Subscription';
 export default interface SubscriptionAddonPricingPlan {
     id?: string;
     createdAt?: Date | string;
