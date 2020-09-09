@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))
 
 ### 🚀 Features
+- Update existing interface, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
+- Add new product, gift, stock, role & basket interfaces, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
+
 - Add subscriptions to the guest resource ([#267](https://github.com/whirli/whirli-client/pull/267))
 
 - Add "reference" to User interface ([#266](https://github.com/whirli/whirli-client/pull/266))
