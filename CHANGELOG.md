@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 🚀 Features
 - Update existing interface, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
-- Add new product, gift, stock, role & basket interfaces, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
+- Add new Product, Address, Gift, Stock, Subscription, Checkout, ShippingAddon, Role & Basket related interfaces, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
 
 - Add subscriptions to the guest resource ([#267](https://github.com/whirli/whirli-client/pull/267))
 
