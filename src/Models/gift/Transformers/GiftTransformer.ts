@@ -4,9 +4,9 @@ import OrderInterface from '../../../Interfaces/order/Order';
 import OrderTransformer from '../../order/Transformers/OrderTransformer';
 import UserInterface from '../../../Interfaces/user/User';
 import UserTransformer from '../../user/Transformers/UserTransformer';
-import { Basket as BasketInterface } from '../../../Interfaces/basket/Basket';
 import BasketTransformer from '../../basket/Transformers/BasketTransformer';
 import BaseTransformer from '../../../BaseTransformer';
+import GiftBasketInterface from '../../../Interfaces/gift/GiftBasket';
 
 export default class GiftTransformer extends BaseTransformer {
     /**
@@ -85,7 +85,7 @@ export default class GiftTransformer extends BaseTransformer {
         return this.item(gift, 'order', new OrderTransformer());
     }
 
-    includeGiftBasket(gift: GiftInterface): BasketInterface | null {
+    includeGiftBasket(gift: GiftInterface): GiftBasketInterface | null {
         return this.item(gift, 'giftBasket', new BasketTransformer());
     }
 }
