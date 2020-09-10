@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🏡 Chore
+- Rename the type "SubscriptionAddonPricingPlanIntervalLength" to "SubscriptionIntervalLength"
 - Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))
 
 ### 🚀 Features
+- Add subscription to the SubscriptionPricingPlan interface/transformer
 - Update existing interface, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
 - Add new Product, Address, Gift, Stock, Subscription, Checkout, ShippingAddon, Role & Basket related interfaces, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
 
