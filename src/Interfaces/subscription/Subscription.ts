@@ -1,7 +1,7 @@
 import { SubscriptionPricingPlan } from './SubscriptionPricingPlan';
 import SubscriptionTier from './SubscriptionTier';
 
-export type SubscriptionAddonPricingPlanIntervalLength = 1 | 6 | 12;
+export type SubscriptionIntervalLength = 1 | 6 | 12;
 
 export interface APISubscription {
     id?: string;
