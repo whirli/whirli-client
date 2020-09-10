@@ -1,4 +1,5 @@
 import { SubscriptionPricingPlan } from './SubscriptionPricingPlan';
+import SubscriptionTier from './SubscriptionTier';
 export declare type SubscriptionAddonPricingPlanIntervalLength = 1 | 6 | 12;
 export interface APISubscription {
     id?: string;
@@ -13,6 +14,8 @@ export interface APISubscription {
     active?: number;
     created_at?: Date;
     updated_at?: Date;
+    subscription_pricing_plans?: Array<SubscriptionPricingPlan>;
+    subscription_tiers?: Array<SubscriptionTier>;
 }
 export interface Subscription {
     id?: string;
@@ -27,5 +30,6 @@ export interface Subscription {
     active?: number;
     createdAt?: Date;
     updatedAt?: Date;
-    pricingPlans?: Array<SubscriptionPricingPlan>;
+    subscriptionPricingPlans?: Array<SubscriptionPricingPlan>;
+    subscriptionTiers?: Array<SubscriptionTier>;
 }
