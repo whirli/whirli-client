@@ -1,4 +1,4 @@
-import { SubscriptionAddonPricingPlanIntervalLength } from './Subscription';
+import { SubscriptionIntervalLength } from './Subscription';
 
 export default interface SubscriptionAddonPricingPlan {
     id?: string;
@@ -7,7 +7,7 @@ export default interface SubscriptionAddonPricingPlan {
     name?: string;
     stripeId?: string;
     cost?: number;
-    intervalLength?: SubscriptionAddonPricingPlanIntervalLength;
+    intervalLength?: SubscriptionIntervalLength;
     intervalUnit?: string;
     archivedAt?: Date | string | null;
     subscriptionAddonId?: string;
