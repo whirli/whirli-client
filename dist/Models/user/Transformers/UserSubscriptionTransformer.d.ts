@@ -10,6 +10,6 @@ export default class UserSubscriptionTransformer extends BaseTransformer {
     includeSubscription(userSubscription: UserSubscriptionInterface): SubscriptionInterface | null;
     includeSubscriptionPricingPlan(userSubscription: UserSubscriptionInterface): SubscriptionPricingPlanInterface | null;
     includeSubscriptionTiers(userSubscription: UserSubscriptionInterface): Array<SubscriptionTierInterface> | null;
-    includeActiveSubscriptionTier(userSubscription: UserSubscriptionInterface): SubscriptionTierInterface | null;
+    includeActiveSubscriptionTier(userSubscription: UserSubscriptionInterface): Array<SubscriptionTierInterface> | null;
     includeAddons(userSubscription: UserSubscriptionInterface): Array<SubscriptionAddonInterface> | null;
 }
