@@ -1,9 +1,11 @@
 import User from '../user/User';
 import Order from '../order/Order';
-import { Basket } from '../basket/Basket';
+import GiftBasket from './GiftBasket';
+import ShippingAddon from '../delivery/ShippingAddon';
+import Checkout from '../checkout/Checkout';
 
-export default class Gift {
-    id!: string;
+export default interface Gift {
+    id?: string;
     createdAt?: Date;
     completedAt?: Date;
     code?: string;
@@ -55,11 +57,15 @@ export default class Gift {
     guest?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
-    // belongs to
-    giftBasket?: Basket | null;
+    // Belongs to
+    giftBasket?: GiftBasket | null;
     order?: Order | null;
     user?: User | null;
     redeemedBy?: User | null;
-    // acessors
+    shippingAddons?: Array<ShippingAddon>;
+    // Accessors
     giftStatusId?: number;
+    hasReusablePackagingOptIn?: boolean;
+    shippingFee?: number;
+    checkout?: Checkout;
 }

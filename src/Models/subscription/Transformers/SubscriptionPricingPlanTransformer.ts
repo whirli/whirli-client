@@ -1,6 +1,8 @@
 import SubscriptionPricingPlan from '../SubscriptionPricingPlan';
 import { APISubscriptionPricingPlan as APISubscriptionPricingPlanInterface } from '../../../Interfaces/subscription/SubscriptionPricingPlan';
 import BaseTransformer from '../../../BaseTransformer';
+import { Subscription as SubscriptionInterface } from '../../../Interfaces/subscription/Subscription';
+import SubscriptionTransformer from './SubscriptionTransformer';
 
 export default class SubscriptionPricingPlanTransformer extends BaseTransformer {
     /**
@@ -18,9 +20,14 @@ export default class SubscriptionPricingPlanTransformer extends BaseTransformer 
             intervalUnit: subscriptionPricingPlan.interval_unit,
             intervalLength: subscriptionPricingPlan.interval_length,
             startingSubscriptionTier: subscriptionPricingPlan.starting_subscription_tier,
+            subscription: this.includeSubscription(subscriptionPricingPlan) || undefined,
             active: subscriptionPricingPlan.active,
             createdAt: subscriptionPricingPlan.created_at,
             updatedAt: subscriptionPricingPlan.updated_at,
         });
+    }
+
+    includeSubscription(subscriptionPricingPlan: APISubscriptionPricingPlanInterface): SubscriptionInterface | null {
+        return this.item(subscriptionPricingPlan, 'subscription', new SubscriptionTransformer());
     }
 }

@@ -5,10 +5,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### 🐛 Bug fixes
-- Fix UserSubscription interface reasonForEndId type ([#265](https://github.com/whirli/whirli-client/pull/265))
+### Features
+- Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
+
+### 🏡 Chore
+- Rename the type "SubscriptionAddonPricingPlanIntervalLength" to "SubscriptionIntervalLength" ([#271](https://github.com/whirli/whirli-client/pull/271))
+- Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))
 
 ### 🚀 Features
+- Add subscription to the SubscriptionPricingPlan interface/transformer ([#271](https://github.com/whirli/whirli-client/pull/271))
+- Update existing interface, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
+- Add new Product, Address, Gift, Stock, Subscription, Checkout, ShippingAddon, Role & Basket related interfaces, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
+
+- Add subscriptions to the guest resource ([#267](https://github.com/whirli/whirli-client/pull/267))
+
 - Add "reference" to User interface ([#266](https://github.com/whirli/whirli-client/pull/266))
 
 
@@ -23,8 +33,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Subscription Tier interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
 - Add UserSubscription interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
 
-### 🚀 Features
+
 - Add WACC user subscription endpoints ([#262](https://github.com/whirli/whirli-client/pull/262))
+
+### 🐛 Bug fixes
+- Fix Subscription interface to match the api resource ([#269](https://github.com/whirli/whirli-client/pull/269))
+
+- Fix UserSubscription interface reasonForEndId type ([#265](https://github.com/whirli/whirli-client/pull/265))
+
+- Change member redeem endpoints' path to updated version ([#236](https://github.com/whirli/whirli-client/pull/236/files))
 
 ## [0.0.37] - 2020-08-20
 ### 🚀 Features
