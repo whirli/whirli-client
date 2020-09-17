@@ -8,4 +8,5 @@ export default class Orders extends AbstractResource {
     delete: Function;
     print: Function;
     getForPicking: Function;
+    assignOrders: Function;
 }
