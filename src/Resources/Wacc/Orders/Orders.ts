@@ -43,6 +43,6 @@ export default class Orders extends AbstractResource {
 
     public assignOrders: Function = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: 'assign-user/{id}',
+        path: '/assign-user/{id}',
     });
 }
