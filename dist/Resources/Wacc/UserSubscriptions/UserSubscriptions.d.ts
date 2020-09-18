@@ -10,4 +10,5 @@ export default class UserSubscriptions extends AbstractResource {
     activate: (id: string, ...args: HttpClientConfig) => HttpClientResponse;
     previewChange: (id: string, ...args: HttpClientConfig) => HttpClientResponse;
     change: (id: string, ...args: HttpClientConfig) => HttpClientResponse;
+    upgradeTier: (id: string, ...args: HttpClientConfig) => HttpClientResponse;
 }
