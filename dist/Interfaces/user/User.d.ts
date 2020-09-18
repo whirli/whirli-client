@@ -38,6 +38,7 @@ export default interface User {
     verifiedAt?: Date;
     reference?: string;
     resourceType?: string;
+    color?: string;
     highlights?: [];
     orders?: Array<Order>;
     stock?: Array<Stock>;

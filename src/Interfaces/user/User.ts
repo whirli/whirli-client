@@ -42,6 +42,7 @@ export default interface User {
     verifiedAt?: Date;
     reference?: string;
     resourceType?: string;
+    color?: string;
     highlights?: [];
     // has many
     orders?: Array<Order>;

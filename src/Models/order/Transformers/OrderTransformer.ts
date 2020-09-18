@@ -5,6 +5,8 @@ import UserInterface from '../../../Interfaces/user/User';
 import UserTransformer from '../../user/Transformers/UserTransformer';
 import OrderLineTransformer from '../../order/Transformers/OrderLineTransformer';
 import BaseTransformer from '../../../BaseTransformer';
+import AssigneeInterface from '../../../Interfaces/order/Assignee';
+import AssigneeTransformer from './AssigneeTransformer';
 
 export default class OrderTransformer extends BaseTransformer {
     /**
@@ -72,5 +74,9 @@ export default class OrderTransformer extends BaseTransformer {
 
     includeOrderLines(order: OrderInterface): OrderLineInterface[] {
         return this.collection(order, 'lines', new OrderLineTransformer());
+    }
+
+    includeAssignee(order: OrderInterface): AssigneeInterface | null {
+        return this.item(order, 'assignee', new AssigneeTransformer());
     }
 }
