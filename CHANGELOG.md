@@ -6,7 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
-- Add UserSubscriptions' upgrade tier POST endpoint ([#276](https://github.com/whirli/whirli-client/pull/276))
 - Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
 
 ### 🏡 Chore
