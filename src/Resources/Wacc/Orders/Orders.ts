@@ -1,4 +1,5 @@
 import AbstractResource from '../../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../../Interfaces/HttpClient';
 
 export default class Orders extends AbstractResource {
     initialise(): void {
@@ -41,7 +42,7 @@ export default class Orders extends AbstractResource {
         path: '/pick',
     });
 
-    public assignOrders: Function = this.createMethodFromPartialSpec({
+    public assignOrders: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/assign-user/{id}',
     });
