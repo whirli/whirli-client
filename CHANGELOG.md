@@ -5,21 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Features
+- Add UserSubscriptions' upgrade tier POST endpoint ([#276](https://github.com/whirli/whirli-client/pull/276))
+- Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
+
 ### 🏡 Chore
 - Rename the type "SubscriptionAddonPricingPlanIntervalLength" to "SubscriptionIntervalLength" ([#271](https://github.com/whirli/whirli-client/pull/271))
 - Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))
 
 ### 🚀 Features
-- Add UserSubscriptions' upgrade tier POST endpoint ([#276](https://github.com/whirli/whirli-client/pull/276))
-
-- Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
-
-
-- Add Assignee Interface ([#273](https://github.com/whirli/whirli-client/pull/273))
-- Update User Resource - Add color ([#273](https://github.com/whirli/whirli-client/pull/273))
-- Add assign orders endpoint ([#273](https://github.com/whirli/whirli-client/pull/273))
-
-
 - Add subscription to the SubscriptionPricingPlan interface/transformer ([#271](https://github.com/whirli/whirli-client/pull/271))
 - Update existing interface, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
 - Add new Product, Address, Gift, Stock, Subscription, Checkout, ShippingAddon, Role & Basket related interfaces, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
