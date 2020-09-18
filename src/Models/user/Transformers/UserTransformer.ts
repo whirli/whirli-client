@@ -63,6 +63,7 @@ export default class UserTransformer extends BaseTransformer {
             toyboxTokens: user.toyboxTokens,
             additionalTokens: user.additionalTokens,
             availableTokens: user.availableTokens,
+            subscriptionTokens: user.subscriptionTokens,
             maxTokens: user.maxTokens,
             basketQuantity: user.basketQuantity,
             activeBasketTotalTokens: user.activeBasketTotalTokens,

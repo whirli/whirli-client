@@ -61,6 +61,7 @@ export default interface User {
     toyboxTokens?: number;
     additionalTokens?: number;
     availableTokens?: number;
+    subscriptionTokens?: number;
     maxTokens?: number;
     basketQuantity?: number;
     activeBasketTotalTokens?: number;
