@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))
 
 ### 🚀 Features
-- Add UserSubscriptions' upgrade tier POST endpoint ([#273](https://github.com/whirli/whirli-client/pull/273))
+- Add UserSubscriptions' upgrade tier POST endpoint ([#276](https://github.com/whirli/whirli-client/pull/276))
 
 - Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
 
