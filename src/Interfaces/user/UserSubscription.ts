@@ -29,4 +29,5 @@ export default interface UserSubscription {
     highlights?: Array<any>;
     // Accessors
     totalSubscriptionCost?: number;
+    planName?: string;
 }

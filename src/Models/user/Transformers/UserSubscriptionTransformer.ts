@@ -38,6 +38,7 @@ export default class UserSubscriptionTransformer extends BaseTransformer {
             addons: this.includeAddons(userSubscription) || undefined,
             highlights: userSubscription.highlights,
             totalSubscriptionCost: userSubscription.totalSubscriptionCost,
+            planName: userSubscription.planName,
         });
     }
 
