@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
-- Add 'planName' to the UserSubscription interface/transformer ([]())
+- Add 'planName' to the UserSubscription interface/transformer ([#277](https://github.com/whirli/whirli-client/pull/277))
 - Add UserSubscriptions' upgrade tier endpoint ([#276](https://github.com/whirli/whirli-client/pull/276))
 - Add subscription tokens to user interface ([#275](https://github.com/whirli/whirli-client/pull/275))
 - Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
