@@ -25,4 +25,5 @@ export default interface UserSubscription {
     addons?: Array<SubscriptionAddon>;
     highlights?: Array<any>;
     totalSubscriptionCost?: number;
+    planName?: string;
 }
