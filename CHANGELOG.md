@@ -6,8 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
-- Create the UserSubscriptionAddon model, transformer & interface ([#277](https://github.com/whirli/whirli-client/pull/277))
-- Fix the UserSubscription to use UserSubscriptionAddon instead of SubscriptionAddon as its 'addon' property ([#277](https://github.com/whirli/whirli-client/pull/277))
+- Create the UserSubscriptionAddon model, transformer & interface ([#278](https://github.com/whirli/whirli-client/pull/278))
+- Fix the UserSubscription to use UserSubscriptionAddon instead of SubscriptionAddon as its 'addon' property ([#277](https://github.com/whirli/whirli-client/pull/278))
 - Add 'planName' to the UserSubscription interface/transformer ([#277](https://github.com/whirli/whirli-client/pull/277))
 - Add UserSubscriptions' upgrade tier endpoint ([#276](https://github.com/whirli/whirli-client/pull/276))
 - Add subscription tokens to user interface ([#275](https://github.com/whirli/whirli-client/pull/275))
