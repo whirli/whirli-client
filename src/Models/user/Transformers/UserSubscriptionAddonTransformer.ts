@@ -6,7 +6,7 @@ import SubscriptionAddonPricingPlanTransformer from '../../subscription/Transfor
 
 export default class UserSubscriptionAddonTransformer extends BaseTransformer {
     /**
-     * Map a UserSubscription response
+     * Map a UserSubscriptionAddon response
      *
      * @param userSubscriptionAddon
      */
