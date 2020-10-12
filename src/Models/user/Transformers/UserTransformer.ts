@@ -55,7 +55,7 @@ export default class UserTransformer extends BaseTransformer {
             returnOrders: this.includeReturnOrders(user),
             activeBasket: this.includeBasket(user),
             userSubscriptions: this.includeUserSubscriptions(user),
-            activeUserSubscriptions: this.includeUserSubscription(user) || undefined,
+            activeUserSubscriptions: this.includeUserSubscriptions(user) || undefined,
             activeUserSubscriptionStatusId: user.activeUserSubscriptionStatusId,
             activeUserSubscriptionPlan: user.activeUserSubscriptionPlan,
             activeReturnOrder: this.includeActiveReturnOrder(user) || undefined,
@@ -112,10 +112,6 @@ export default class UserTransformer extends BaseTransformer {
     }
 
     includeUserSubscriptions(user: UserInterface): Array<UserSubscriptionInterface> {
-        return this.collection(user, 'userSubscriptions', new UserSubscriptionTransformer());
-    }
-
-    includeUserSubscription(user: UserInterface): Array<UserSubscriptionInterface> | null {
         return this.collection(user, 'userSubscriptions', new UserSubscriptionTransformer());
     }
 }
