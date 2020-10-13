@@ -47,6 +47,7 @@ export default interface Order {
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
     hasReusablePackagingOptIn?: boolean;
+    weight?: number;
     user?: User | null;
     assignee?: Assignee | null;
     lines?: OrderLine[];
