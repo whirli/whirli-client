@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
+- Add weight property to order ([#281](https://github.com/whirli/whirli-client/pull/281))
 - Update User interface and transformer to the latest on the Whirli API ([#279](https://github.com/whirli/whirli-client/pull/279))
 - Create the UserSubscriptionAddon model, transformer & interface ([#278](https://github.com/whirli/whirli-client/pull/278))
 - Add 'planName' to the UserSubscription interface/transformer ([#277](https://github.com/whirli/whirli-client/pull/277))

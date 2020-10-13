@@ -61,6 +61,7 @@ export default class OrderTransformer extends BaseTransformer {
             deliveryMethod: order.deliveryMethod,
             expectedDeliveryDate: order.expectedDeliveryDate,
             hasReusablePackagingOptIn: order.hasReusablePackagingOptIn,
+            weight: order.weight,
             // belongs to
             user: this.includeUser(order),
             // has many
