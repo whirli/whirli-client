@@ -64,5 +64,6 @@ export default interface User {
     balance?: number;
     changeSubscriptionStatus?: ChangeSubscriptionStatus;
     cancelSubscriptionStatus?: CancelSubscriptionStatus;
+    notes?: string;
 }
 export {};

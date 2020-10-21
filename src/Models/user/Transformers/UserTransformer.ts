@@ -72,6 +72,7 @@ export default class UserTransformer extends BaseTransformer {
             balance: user.balance,
             changeSubscriptionStatus: user.changeSubscriptionStatus,
             cancelSubscriptionStatus: user.cancelSubscriptionStatus,
+            notes: user.notes,
         });
     }
 
