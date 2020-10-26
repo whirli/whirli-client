@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
+- Add the edit Return Order Lines endpoint ([#]())
 - Add notes property to user ([#282](https://github.com/whirli/whirli-client/pull/282))
 - Add weight property to order ([#281](https://github.com/whirli/whirli-client/pull/281))
 - Update User interface and transformer to the latest on the Whirli API ([#279](https://github.com/whirli/whirli-client/pull/279))
