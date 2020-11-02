@@ -29,7 +29,7 @@ export default class UserSubscriptions extends AbstractResource {
 
     public cancel: (id: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
-        path: '/{id}',
+        path: '/{id}/cancel',
     });
 
     public activate: (id: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
