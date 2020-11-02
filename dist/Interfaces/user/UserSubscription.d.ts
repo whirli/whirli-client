@@ -21,7 +21,7 @@ export default interface UserSubscription {
     subscription?: Subscription;
     subscriptionPricingPlan?: SubscriptionPricingPlan;
     subscriptionTiers?: Array<SubscriptionTier>;
-    activeSubscriptionTier?: SubscriptionTier;
+    activeSubscriptionTier?: Array<SubscriptionTier>;
     addons?: Array<UserSubscriptionAddon>;
     highlights?: Array<any>;
     totalSubscriptionCost?: number;

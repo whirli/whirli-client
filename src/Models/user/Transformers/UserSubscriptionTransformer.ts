@@ -56,8 +56,10 @@ export default class UserSubscriptionTransformer extends BaseTransformer {
         return this.collection(userSubscription, 'subscriptionTiers', new SubscriptionTierTransformer());
     }
 
-    includeActiveSubscriptionTier(userSubscription: UserSubscriptionInterface): SubscriptionTierInterface | null {
-        return this.item(userSubscription, 'activeSubscriptionTier', new SubscriptionTierTransformer());
+    includeActiveSubscriptionTier(
+        userSubscription: UserSubscriptionInterface,
+    ): Array<SubscriptionTierInterface> | null {
+        return this.collection(userSubscription, 'activeSubscriptionTier', new SubscriptionTierTransformer());
     }
 
     includeAddons(userSubscription: UserSubscriptionInterface): Array<UserSubscriptionAddonInterface> | null {
