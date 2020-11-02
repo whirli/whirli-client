@@ -1,4 +1,5 @@
 import AbstractResource from '../../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../../Interfaces/HttpClient';
 export default class Orders extends AbstractResource {
     initialise(): void;
     all: Function;
@@ -8,4 +9,5 @@ export default class Orders extends AbstractResource {
     delete: Function;
     print: Function;
     getForPicking: Function;
+    assignOrders: (...args: HttpClientConfig) => HttpClientResponse;
 }

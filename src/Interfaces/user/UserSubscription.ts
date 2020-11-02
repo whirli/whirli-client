@@ -2,7 +2,7 @@ import User from './User';
 import { Subscription } from '../subscription/Subscription';
 import { SubscriptionPricingPlan } from '../subscription/SubscriptionPricingPlan';
 import SubscriptionTier from '../subscription/SubscriptionTier';
-import SubscriptionAddon from '../subscription/SubscriptionAddon';
+import UserSubscriptionAddon from './UserSubscriptionAddon';
 
 export type UserSubscriptionStatusId = 0 | 1 | 2 | 3 | 4 | 5;
 
@@ -25,8 +25,9 @@ export default interface UserSubscription {
     subscriptionPricingPlan?: SubscriptionPricingPlan;
     subscriptionTiers?: Array<SubscriptionTier>;
     activeSubscriptionTier?: Array<SubscriptionTier>;
-    addons?: Array<SubscriptionAddon>;
+    addons?: Array<UserSubscriptionAddon>;
     highlights?: Array<any>;
     // Accessors
     totalSubscriptionCost?: number;
+    planName?: string;
 }

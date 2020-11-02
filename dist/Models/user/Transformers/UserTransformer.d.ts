@@ -22,5 +22,4 @@ export default class UserTransformer extends BaseTransformer {
     includeRoles(user: UserInterface): Array<RoleInterface>;
     includeBasket(user: UserInterface): Array<BasketInterface>;
     includeUserSubscriptions(user: UserInterface): Array<UserSubscriptionInterface>;
-    includeUserSubscription(user: UserInterface): UserSubscriptionInterface | null;
 }

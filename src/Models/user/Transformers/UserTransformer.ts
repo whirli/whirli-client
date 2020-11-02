@@ -44,6 +44,7 @@ export default class UserTransformer extends BaseTransformer {
             verifiedAt: user.verifiedAt,
             resourceType: user.resourceType,
             reference: user.reference,
+            color: user.color,
             highlights: user.highlights,
             // Has many
             orders: this.includeOrders(user),
@@ -54,7 +55,9 @@ export default class UserTransformer extends BaseTransformer {
             returnOrders: this.includeReturnOrders(user),
             activeBasket: this.includeBasket(user),
             userSubscriptions: this.includeUserSubscriptions(user),
-            activeUserSubscription: this.includeUserSubscription(user) || undefined,
+            activeUserSubscriptions: this.includeUserSubscriptions(user) || undefined,
+            activeUserSubscriptionStatusId: user.activeUserSubscriptionStatusId,
+            activeUserSubscriptionPlan: user.activeUserSubscriptionPlan,
             activeReturnOrder: this.includeActiveReturnOrder(user) || undefined,
             roles: this.includeRoles(user),
             // Accessors
@@ -62,12 +65,14 @@ export default class UserTransformer extends BaseTransformer {
             toyboxTokens: user.toyboxTokens,
             additionalTokens: user.additionalTokens,
             availableTokens: user.availableTokens,
+            subscriptionTokens: user.subscriptionTokens,
             maxTokens: user.maxTokens,
             basketQuantity: user.basketQuantity,
             activeBasketTotalTokens: user.activeBasketTotalTokens,
             balance: user.balance,
             changeSubscriptionStatus: user.changeSubscriptionStatus,
             cancelSubscriptionStatus: user.cancelSubscriptionStatus,
+            notes: user.notes,
         });
     }
 
@@ -109,9 +114,5 @@ export default class UserTransformer extends BaseTransformer {
 
     includeUserSubscriptions(user: UserInterface): Array<UserSubscriptionInterface> {
         return this.collection(user, 'userSubscriptions', new UserSubscriptionTransformer());
-    }
-
-    includeUserSubscription(user: UserInterface): UserSubscriptionInterface | null {
-        return this.item(user, 'userSubscriptions', new UserSubscriptionTransformer());
     }
 }

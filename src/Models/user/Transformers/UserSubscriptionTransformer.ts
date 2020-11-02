@@ -7,8 +7,8 @@ import SubscriptionPricingPlanTransformer from '../../subscription/Transformers/
 import { SubscriptionPricingPlan as SubscriptionPricingPlanInterface } from '../../../Interfaces/subscription/SubscriptionPricingPlan';
 import SubscriptionTierInterface from '../../../Interfaces/subscription/SubscriptionTier';
 import SubscriptionTierTransformer from '../../subscription/Transformers/SubscriptionTierTransformer';
-import SubscriptionAddonInterface from '../../../Interfaces/subscription/SubscriptionAddon';
 import SubscriptionAddonTransformer from '../../subscription/Transformers/SubscriptionAddonTransformer';
+import UserSubscriptionAddonInterface from '../../../Interfaces/user/UserSubscriptionAddon';
 
 export default class UserSubscriptionTransformer extends BaseTransformer {
     /**
@@ -38,6 +38,7 @@ export default class UserSubscriptionTransformer extends BaseTransformer {
             addons: this.includeAddons(userSubscription) || undefined,
             highlights: userSubscription.highlights,
             totalSubscriptionCost: userSubscription.totalSubscriptionCost,
+            planName: userSubscription.planName,
         });
     }
 
@@ -61,7 +62,7 @@ export default class UserSubscriptionTransformer extends BaseTransformer {
         return this.collection(userSubscription, 'activeSubscriptionTier', new SubscriptionTierTransformer());
     }
 
-    includeAddons(userSubscription: UserSubscriptionInterface): Array<SubscriptionAddonInterface> | null {
+    includeAddons(userSubscription: UserSubscriptionInterface): Array<UserSubscriptionAddonInterface> | null {
         return this.collection(userSubscription, 'addons', new SubscriptionAddonTransformer());
     }
 }

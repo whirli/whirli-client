@@ -49,4 +49,12 @@ export default class UserSubscriptions extends AbstractResource {
         method: 'POST',
         path: '/{id}/change',
     });
+
+    public upgradeTier: (
+        id: string,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'POST',
+        path: '/{id}/upgrade-tier',
+    });
 }

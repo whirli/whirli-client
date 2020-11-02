@@ -1,7 +1,7 @@
 import Order from '../order/Order';
 import Stock from '../stock/Stock';
 import { Basket } from '../basket/Basket';
-import UserSubscription from './UserSubscription';
+import UserSubscription, { UserSubscriptionStatusId } from './UserSubscription';
 import Address from '../address/Address';
 import ReturnOrder from '../return/ReturnOrder';
 import PurchaseStock from '../stock/PurchaseStock';
@@ -38,6 +38,7 @@ export default interface User {
     verifiedAt?: Date;
     reference?: string;
     resourceType?: string;
+    color?: string;
     highlights?: [];
     orders?: Array<Order>;
     stock?: Array<Stock>;
@@ -47,18 +48,22 @@ export default interface User {
     returnOrders?: Array<ReturnOrder>;
     activeBasket?: Array<Basket>;
     userSubscriptions?: Array<UserSubscription>;
-    activeUserSubscription?: UserSubscription;
+    activeUserSubscriptions?: Array<UserSubscription>;
+    activeUserSubscriptionStatusId?: UserSubscriptionStatusId;
+    activeUserSubscriptionPlan?: string;
     activeReturnOrder?: ReturnOrder;
     roles?: Array<Role>;
     onFirstOrder?: boolean;
     toyboxTokens?: number;
     additionalTokens?: number;
     availableTokens?: number;
+    subscriptionTokens?: number;
     maxTokens?: number;
     basketQuantity?: number;
     activeBasketTotalTokens?: number;
     balance?: number;
     changeSubscriptionStatus?: ChangeSubscriptionStatus;
     cancelSubscriptionStatus?: CancelSubscriptionStatus;
+    notes?: string;
 }
 export {};

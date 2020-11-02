@@ -6,9 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
+- Add the edit Return Order Lines endpoint ([#283](https://github.com/whirli/whirli-client/pull/283))
+- Add notes property to user ([#282](https://github.com/whirli/whirli-client/pull/282))
+- Add weight property to order ([#281](https://github.com/whirli/whirli-client/pull/281))
+- Update User interface and transformer to the latest on the Whirli API ([#279](https://github.com/whirli/whirli-client/pull/279))
+- Create the UserSubscriptionAddon model, transformer & interface ([#278](https://github.com/whirli/whirli-client/pull/278))
+- Add 'planName' to the UserSubscription interface/transformer ([#277](https://github.com/whirli/whirli-client/pull/277))
+- Add UserSubscriptions' upgrade tier endpoint ([#276](https://github.com/whirli/whirli-client/pull/276))
+- Add subscription tokens to user interface ([#275](https://github.com/whirli/whirli-client/pull/275))
 - Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
 
 ### 🏡 Chore
+- Fix the UserSubscription to use UserSubscriptionAddon instead of SubscriptionAddon as its 'addon' property ([#278](https://github.com/whirli/whirli-client/pull/278))
 - Rename the type "SubscriptionAddonPricingPlanIntervalLength" to "SubscriptionIntervalLength" ([#271](https://github.com/whirli/whirli-client/pull/271))
 - Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))
 

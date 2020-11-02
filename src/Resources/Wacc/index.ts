@@ -9,10 +9,12 @@ import WACCProducts from './Products/Products';
 import WACCStock from './Stock/Toybox';
 import WACCProductAssociations from './ProductAssociations/ProductAssociations';
 import WACCAssets from './Assets/Assets';
+import WACCReturnOrderLines from './ReturnOrderLines/ReturnOrderLines';
 
 export interface WaccResources {
     orders: WACCOrders;
     returnOrders: WACCReturnOrders;
+    returnOrderLines: WACCReturnOrderLines;
     search: WACCSearch;
     users: WACCUsers;
     userSubscriptions: WACCUserSubscriptions;
@@ -27,6 +29,7 @@ export function loadWaccResources(client: Client): WaccResources {
     return {
         orders: new WACCOrders(client),
         returnOrders: new WACCReturnOrders(client),
+        returnOrderLines: new WACCReturnOrderLines(client),
         search: new WACCSearch(client),
         users: new WACCUsers(client),
         userSubscriptions: new WACCUserSubscriptions(client),
