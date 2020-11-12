@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
+- Add update OrderLine endpoint ([#286](https://github.com/whirli/whirli-client/pull/286))
 - Add ReasonForEnd model and transformer ([#285](https://github.com/whirli/whirli-client/pull/285))
 - Update the WACC User Subscription cancel plan endpoint ([#284](https://github.com/whirli/whirli-client/pull/284)) 
 - Add the edit Return Order Lines endpoint ([#283](https://github.com/whirli/whirli-client/pull/283))
