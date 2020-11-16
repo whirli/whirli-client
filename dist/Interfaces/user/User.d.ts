@@ -53,6 +53,7 @@ export default interface User {
     activeUserSubscriptionPlan?: string;
     activeReturnOrder?: ReturnOrder;
     roles?: Array<Role>;
+    waccRole?: string;
     onFirstOrder?: boolean;
     toyboxTokens?: number;
     additionalTokens?: number;

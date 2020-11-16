@@ -60,6 +60,7 @@ export default class UserTransformer extends BaseTransformer {
             activeUserSubscriptionPlan: user.activeUserSubscriptionPlan,
             activeReturnOrder: this.includeActiveReturnOrder(user) || undefined,
             roles: this.includeRoles(user),
+            waccRole: user.waccRole,
             // Accessors
             onFirstOrder: user.onFirstOrder,
             toyboxTokens: user.toyboxTokens,

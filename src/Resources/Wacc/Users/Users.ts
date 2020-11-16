@@ -30,4 +30,9 @@ export default class Users extends AbstractResource {
         method: 'DELETE',
         path: '/{id}',
     });
+
+    public assignRole: Function = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: '/assign-role',
+    });
 }
