@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
 
 ### 🏡 Chore
+- Update Order & OrderLine interfaces / transformers ([#288](https://github.com/whirli/whirli-client/pull/288))
 - Fix the UserSubscription to use UserSubscriptionAddon instead of SubscriptionAddon as its 'addon' property ([#278](https://github.com/whirli/whirli-client/pull/278))
 - Rename the type "SubscriptionAddonPricingPlanIntervalLength" to "SubscriptionIntervalLength" ([#271](https://github.com/whirli/whirli-client/pull/271))
 - Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))

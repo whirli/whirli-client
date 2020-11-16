@@ -2,9 +2,11 @@ import OrderLine from '../OrderLine';
 import OrderLineInterface from '../../../Interfaces/order/OrderLine';
 import OrderInterface from '../../../Interfaces/order/Order';
 import ProductVariantInterface from '../../../Interfaces/product/ProductVariant';
+import StockInterface from '../../../Interfaces/stock/Stock';
 import ProductVariantTransformer from '../../product/Transformers/ProductVariantTransformer';
 import OrderTransformer from '../../order/Transformers/OrderTransformer';
 import BaseTransformer from '../../../BaseTransformer';
+import StockTransformer from '../../stock/Transformers/StockTransformer';
 
 export default class OrderLineTransformer extends BaseTransformer {
     /**
@@ -35,6 +37,7 @@ export default class OrderLineTransformer extends BaseTransformer {
             // belongs to
             order: this.includeOrder(orderLine),
             productVariant: this.includeProductVariant(orderLine),
+            stock: this.includeStock(orderLine),
         });
     }
 
@@ -44,5 +47,9 @@ export default class OrderLineTransformer extends BaseTransformer {
 
     includeProductVariant(orderLine: OrderLineInterface): ProductVariantInterface | null {
         return this.item(orderLine, 'productVariant', new ProductVariantTransformer());
+    }
+
+    includeStock(orderLine: OrderLineInterface): Array<StockInterface> {
+        return this.collection(orderLine, 'stock', new StockTransformer());
     }
 }
