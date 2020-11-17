@@ -1,6 +1,6 @@
 import ProductVariant from '../product/ProductVariant';
 import Order from './Order';
-import Stock from "../stock/Stock";
+import Stock from '../stock/Stock';
 export default interface OrderLine {
     id?: string;
     createdAt?: Date;
