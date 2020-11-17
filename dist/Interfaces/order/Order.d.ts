@@ -1,7 +1,7 @@
 import User from '../user/User';
 import OrderLine from './OrderLine';
 import Assignee from './Assignee';
-import { Basket } from "../basket/Basket";
+import { Basket } from '../basket/Basket';
 export default interface Order {
     id?: string;
     createdAt?: Date;
