@@ -10,6 +10,7 @@ import WACCStock from './Stock/Toybox';
 import WACCProductAssociations from './ProductAssociations/ProductAssociations';
 import WACCAssets from './Assets/Assets';
 import WACCReturnOrderLines from './ReturnOrderLines/ReturnOrderLines';
+import WACCRoles from './Roles/Roles';
 
 export interface WaccResources {
     orders: WACCOrders;
@@ -23,6 +24,7 @@ export interface WaccResources {
     productAssociations: WACCProductAssociations;
     assets: WACCAssets;
     stock: WACCStock;
+    roles: WACCRoles;
 }
 
 export function loadWaccResources(client: Client): WaccResources {
@@ -38,5 +40,6 @@ export function loadWaccResources(client: Client): WaccResources {
         productAssociations: new WACCProductAssociations(client),
         assets: new WACCAssets(client),
         stock: new WACCStock(client),
+        roles: new WACCRoles(client),
     };
 }
