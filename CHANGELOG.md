@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Features
+- Change product recommended age type in interface to number ([#291](https://github.com/whirli/whirli-client/pull/291))
 - Add Roles resource to the WACC client ([#290](https://github.com/whirli/whirli-client/pull/290))
 - Add WACC roles resource & GET roles ([#289](https://github.com/whirli/whirli-client/pull/289))
 - Add users assign wacc role endpoint in resource ([#287](https://github.com/whirli/whirli-client/pull/287))
