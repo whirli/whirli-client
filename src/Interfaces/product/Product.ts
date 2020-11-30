@@ -20,7 +20,7 @@ export default interface Product {
     recentRank?: string;
     manufacturer?: string;
     metaKeywords?: string;
-    recommendedAge?: string;
+    recommendedAge?: number;
     metaDescription?: string;
     shortDescription?: string;
     resourceType?: string;
