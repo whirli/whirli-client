@@ -11,8 +11,10 @@ import WACCProductAssociations from './ProductAssociations/ProductAssociations';
 import WACCAssets from './Assets/Assets';
 import WACCReturnOrderLines from './ReturnOrderLines/ReturnOrderLines';
 import WACCRoles from './Roles/Roles';
+import WACCOrderLines from './OrderLines/OrderLines';
 export interface WaccResources {
     orders: WACCOrders;
+    orderLines: WACCOrderLines;
     returnOrders: WACCReturnOrders;
     returnOrderLines: WACCReturnOrderLines;
     search: WACCSearch;
