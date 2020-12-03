@@ -1,5 +1,6 @@
 import ProductVariant from '../product/ProductVariant';
 import Order from './Order';
+import Stock from '../stock/Stock';
 export default interface OrderLine {
     id?: string;
     createdAt?: Date;
@@ -21,4 +22,5 @@ export default interface OrderLine {
     meta?: string;
     order?: Order | null;
     productVariant?: ProductVariant | null;
+    stock?: Array<Stock>;
 }

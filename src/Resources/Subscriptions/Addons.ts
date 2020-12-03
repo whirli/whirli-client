@@ -1,4 +1,5 @@
 import AbstractResource from '../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Addons extends AbstractResource {
     initialise(): void {
@@ -6,7 +7,7 @@ export default class Addons extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public all: Function = this.createMethodFromPartialSpec({
+    public all: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/',
     });

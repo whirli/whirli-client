@@ -1,5 +1,7 @@
 import User from '../user/User';
 import OrderLine from './OrderLine';
+import Assignee from './Assignee';
+import { Basket } from '../basket/Basket';
 
 export default interface Order {
     id?: string;
@@ -43,11 +45,19 @@ export default interface Order {
     statusId?: number;
     resourceType?: string;
     onFirstOrder?: boolean;
+    isFirstOrder?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
     hasReusablePackagingOptIn?: boolean;
+    weight?: number;
+    shippingServiceId?: number;
     // belongs to
     user?: User | null;
+    assignee?: Assignee | null;
+    basket?: Basket | null;
     // has many
     lines?: OrderLine[];
+    // accessors
+    isGift?: boolean;
+    tokensTotal?: number;
 }

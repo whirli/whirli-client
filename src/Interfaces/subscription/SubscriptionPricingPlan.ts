@@ -1,3 +1,5 @@
+import { SubscriptionIntervalLength, Subscription } from './Subscription';
+
 export interface APISubscriptionPricingPlan {
     id?: string;
     stripe_id?: string;
@@ -5,7 +7,8 @@ export interface APISubscriptionPricingPlan {
     name?: string;
     cost?: number;
     interval_unit?: string;
-    interval_length?: number;
+    interval_length?: SubscriptionIntervalLength;
+    subscription?: Subscription;
     starting_subscription_tier?: number;
     active?: number;
     created_at?: Date;
@@ -19,7 +22,8 @@ export interface SubscriptionPricingPlan {
     name?: string;
     cost?: number;
     intervalUnit?: string;
-    intervalLength?: number;
+    intervalLength?: SubscriptionIntervalLength;
+    subscription?: Subscription;
     startingSubscriptionTier?: number;
     active?: number;
     createdAt?: Date;

@@ -1,8 +1,10 @@
 import User from '../user/User';
 import Order from '../order/Order';
-import { Basket } from '../basket/Basket';
-export default class Gift {
-    id: string;
+import GiftBasket from './GiftBasket';
+import ShippingAddon from '../delivery/ShippingAddon';
+import Checkout from '../checkout/Checkout';
+export default interface Gift {
+    id?: string;
     createdAt?: Date;
     completedAt?: Date;
     code?: string;
@@ -54,9 +56,13 @@ export default class Gift {
     guest?: boolean;
     deliveryMethod?: string;
     expectedDeliveryDate?: string;
-    giftBasket?: Basket | null;
+    giftBasket?: GiftBasket | null;
     order?: Order | null;
     user?: User | null;
     redeemedBy?: User | null;
+    shippingAddons?: Array<ShippingAddon>;
     giftStatusId?: number;
+    hasReusablePackagingOptIn?: boolean;
+    shippingFee?: number;
+    checkout?: Checkout;
 }

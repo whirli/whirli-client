@@ -5,11 +5,70 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.0.38] - 2020-12-03
+### Features
+- Change product recommended age type in interface to number ([#291](https://github.com/whirli/whirli-client/pull/291))
+- Add Roles resource to the WACC client ([#290](https://github.com/whirli/whirli-client/pull/290))
+- Add WACC roles resource & GET roles ([#289](https://github.com/whirli/whirli-client/pull/289))
+- Add users assign wacc role endpoint in resource ([#287](https://github.com/whirli/whirli-client/pull/287))
+- Add update OrderLine endpoint ([#286](https://github.com/whirli/whirli-client/pull/286))
+- Add ReasonForEnd model and transformer ([#285](https://github.com/whirli/whirli-client/pull/285))
+- Update the WACC User Subscription cancel plan endpoint ([#284](https://github.com/whirli/whirli-client/pull/284)) 
+- Add the edit Return Order Lines endpoint ([#283](https://github.com/whirli/whirli-client/pull/283))
+- Add notes property to user ([#282](https://github.com/whirli/whirli-client/pull/282))
+- Add weight property to order ([#281](https://github.com/whirli/whirli-client/pull/281))
+- Update User interface and transformer to the latest on the Whirli API ([#279](https://github.com/whirli/whirli-client/pull/279))
+- Create the UserSubscriptionAddon model, transformer & interface ([#278](https://github.com/whirli/whirli-client/pull/278))
+- Add 'planName' to the UserSubscription interface/transformer ([#277](https://github.com/whirli/whirli-client/pull/277))
+- Add UserSubscriptions' upgrade tier endpoint ([#276](https://github.com/whirli/whirli-client/pull/276))
+- Add subscription tokens to user interface ([#275](https://github.com/whirli/whirli-client/pull/275))
+- Add Toybox PATCH to wacc stock toybox resource ([#272](https://github.com/whirli/whirli-client/pull/272))
+
+### 🏡 Chore
+- Update Order & OrderLine interfaces / transformers ([#288](https://github.com/whirli/whirli-client/pull/288))
+- Fix the UserSubscription to use UserSubscriptionAddon instead of SubscriptionAddon as its 'addon' property ([#278](https://github.com/whirli/whirli-client/pull/278))
+- Rename the type "SubscriptionAddonPricingPlanIntervalLength" to "SubscriptionIntervalLength" ([#271](https://github.com/whirli/whirli-client/pull/271))
+- Refactored the subscriptionAddons request to the new syntax ([#268](https://github.com/whirli/whirli-client/pull/268))
+
+### 🚀 Features
+- Add subscription to the SubscriptionPricingPlan interface/transformer ([#271](https://github.com/whirli/whirli-client/pull/271))
+- Update existing interface, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
+- Add new Product, Address, Gift, Stock, Subscription, Checkout, ShippingAddon, Role & Basket related interfaces, models & transformers ([#270](https://github.com/whirli/whirli-client/pull/270))
+
+- Add subscriptions to the guest resource ([#267](https://github.com/whirli/whirli-client/pull/267))
+
+- Add "reference" to User interface ([#266](https://github.com/whirli/whirli-client/pull/266))
+
+
+- Add SubscriptionAddon Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add SubscriptionAddonPricingPlan Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add SubscriptionTier Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+- Add UserSubscription Model & Transformer ([#264](https://github.com/whirli/whirli-client/pull/264))
+
+
+- Add SubscriptionAddon interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
+- Add SubscriptionAddonPricingPlan interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
+- Add Subscription Tier interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
+- Add UserSubscription interfaces ([#263](https://github.com/whirli/whirli-client/pull/263))
+
+
+- Add WACC user subscription endpoints ([#262](https://github.com/whirli/whirli-client/pull/262))
+
 ### 🐛 Bug fixes
+- Fix unlinked WACC OrderLines endpoint ([#292](https://github.com/whirli/whirli-client/pull/292))
+
+- Fix the UserSubscription interfaces' 'activeSubscriptionTier' property to have the correct type ([#274](https://github.com/whirli/whirli-client/pull/274))
+
+- Fix Subscription interface to match the api resource ([#269](https://github.com/whirli/whirli-client/pull/269))
+
+- Fix UserSubscription interface reasonForEndId type ([#265](https://github.com/whirli/whirli-client/pull/265))
+
 - Change member redeem endpoints' path to updated version ([#236](https://github.com/whirli/whirli-client/pull/236/files))
 
 ## [0.0.37] - 2020-08-20
 ### 🚀 Features
+- Add isFirstOrder to order interface ([#260](https://github.com/whirli/whirli-client/pull/260))
+
 - Create product suggest endpoint ([#257](https://github.com/whirli/whirli-client/pull/257))
 
 ### 🐛 Bug fixes

@@ -6,4 +6,5 @@ export default class Users extends AbstractResource {
     create: Function;
     update: Function;
     delete: Function;
+    assignRole: Function;
 }
