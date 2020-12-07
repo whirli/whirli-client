@@ -24,6 +24,8 @@ export default class SubscriptionPricingPlanTransformer extends BaseTransformer 
             active: subscriptionPricingPlan.active,
             createdAt: subscriptionPricingPlan.created_at,
             updatedAt: subscriptionPricingPlan.updated_at,
+            canChange: subscriptionPricingPlan.can_change,
+            canChangeReason: subscriptionPricingPlan.can_change_reason,
         });
     }
 

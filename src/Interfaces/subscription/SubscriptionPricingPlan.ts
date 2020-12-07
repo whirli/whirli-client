@@ -13,6 +13,8 @@ export interface APISubscriptionPricingPlan {
     active?: number;
     created_at?: Date;
     updated_at?: Date;
+    can_change?: boolean;
+    can_change_reason?: string;
 }
 
 export interface SubscriptionPricingPlan {
@@ -28,4 +30,6 @@ export interface SubscriptionPricingPlan {
     active?: number;
     createdAt?: Date;
     updatedAt?: Date;
+    canChange?: boolean;
+    canChangeReason?: string;
 }
