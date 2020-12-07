@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🏡 Chore
-- Update Subscription Pricing Plan properties ([#293](https://github.com/whirli/whirli-client/pull/293))
+- Update Subscription Pricing Plan properties ([#296](https://github.com/whirli/whirli-client/pull/296))
 ## [0.0.38] - 2020-12-03
 ### Features
 - Change product recommended age type in interface to number ([#291](https://github.com/whirli/whirli-client/pull/291))
