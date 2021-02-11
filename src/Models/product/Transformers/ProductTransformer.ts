@@ -44,6 +44,7 @@ export default class ProductTransformer extends BaseTransformer {
             totalSold: product.totalSold,
             totalStockUnits: product.totalStockUnits,
             totalStockWithCustomer: product.totalStockWithCustomer,
+            gtin: product.gtin,
             // has many
             assets: this.includeAssets(product),
             productAssociations: this.includeProductAssociations(product),
