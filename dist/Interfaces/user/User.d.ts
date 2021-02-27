@@ -6,6 +6,7 @@ import Address from '../address/Address';
 import ReturnOrder from '../return/ReturnOrder';
 import PurchaseStock from '../stock/PurchaseStock';
 import ProductList from '../product/ProductList';
+import WaitSpot from '../waitspot/WaitSpot';
 import Role from '../role/Role';
 interface Meta {
     daysUntilAvailable?: number;
@@ -45,6 +46,7 @@ export default interface User {
     addresses?: Array<Address>;
     toybox?: Array<PurchaseStock>;
     lists?: Array<ProductList>;
+    waitSpots?: Array<WaitSpot>;
     returnOrders?: Array<ReturnOrder>;
     activeBasket?: Array<Basket>;
     userSubscriptions?: Array<UserSubscription>;
