@@ -30,6 +30,7 @@ export default interface Product {
     totalSold?: number;
     totalStockUnits?: number;
     totalStockWithCustomer?: number;
+    gtin?: string;
     assets?: Array<Asset>;
     productAssociations?: Array<ProductAssociation>;
     productVariants?: Array<ProductVariant>;
