@@ -26,6 +26,7 @@ export default class SubscriptionTransformer extends BaseTransformer {
             active: subscription.active,
             createdAt: subscription.created_at,
             updatedAt: subscription.updated_at,
+            waitSpots: subscription.wait_spots,
             // has many
             subscriptionPricingPlans: this.includeSubscriptionPricingPlans(subscription),
             subscriptionTiers: this.includeSubscriptionTiers(subscription),

@@ -19,6 +19,8 @@ import PurchaseStockTransformer from '../../stock/Transformers/PurchaseStockTran
 import ProductListTransformer from '../../product/Transformers/ProductListTransformer';
 import RoleInterface from '../../../Interfaces/role/Role';
 import RoleTransformer from '../../role/Transformers/RoleTransformer';
+import WaitSpotInterface from '../../../Interfaces/waitspot/WaitSpot';
+import WaitSpotTransformer from '../../waitspot/Transformers/WaitSpotTransformer';
 
 export default class UserTransformer extends BaseTransformer {
     /**
@@ -52,6 +54,7 @@ export default class UserTransformer extends BaseTransformer {
             addresses: this.includeAddresses(user),
             toybox: this.includeToybox(user),
             lists: this.includeLists(user),
+            waitSpots: this.includeWaitSpots(user),
             returnOrders: this.includeReturnOrders(user),
             activeBasket: this.includeBasket(user),
             userSubscriptions: this.includeUserSubscriptions(user),
@@ -95,6 +98,10 @@ export default class UserTransformer extends BaseTransformer {
 
     includeLists(user: UserInterface): Array<ProductListInterface> {
         return this.collection(user, 'lists', new ProductListTransformer());
+    }
+
+    includeWaitSpots(user: UserInterface): Array<WaitSpotInterface> {
+        return this.collection(user, 'waitSpots', new WaitSpotTransformer());
     }
 
     includeReturnOrders(user: UserInterface): Array<ReturnOrderInterface> {

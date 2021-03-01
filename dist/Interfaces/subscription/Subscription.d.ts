@@ -14,6 +14,7 @@ export interface APISubscription {
     active?: number;
     created_at?: Date;
     updated_at?: Date;
+    wait_spots?: number;
     subscription_pricing_plans?: Array<SubscriptionPricingPlan>;
     subscription_tiers?: Array<SubscriptionTier>;
 }
@@ -30,6 +31,7 @@ export interface Subscription {
     active?: number;
     createdAt?: Date;
     updatedAt?: Date;
+    waitSpots?: number;
     subscriptionPricingPlans?: Array<SubscriptionPricingPlan>;
     subscriptionTiers?: Array<SubscriptionTier>;
 }
