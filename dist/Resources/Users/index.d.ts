@@ -8,6 +8,7 @@ import Checkout from './Checkout';
 import Details from './Details';
 import Addresses from './Addresses';
 import ProductLists from './ProductLists';
+import WaitSpots from './WaitSpots';
 import Orders from './Orders';
 import Referral from './Referral';
 import Card from './Card';
@@ -21,6 +22,7 @@ export default class Users extends AbstractResource {
     toybox: Toybox;
     checkout: Checkout;
     productLists: ProductLists;
+    waitSpots: WaitSpots;
     orders: Orders;
     referral: Referral;
     card: Card;
