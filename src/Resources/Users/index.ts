@@ -8,6 +8,7 @@ import Checkout from './Checkout';
 import Details from './Details';
 import Addresses from './Addresses';
 import ProductLists from './ProductLists';
+import WaitSpots from './WaitSpots';
 import Orders from './Orders';
 import Referral from './Referral';
 import Card from './Card';
@@ -22,6 +23,7 @@ export default class Users extends AbstractResource {
     public toybox: Toybox;
     public checkout: Checkout;
     public productLists: ProductLists;
+    public waitSpots: WaitSpots;
     public orders: Orders;
     public referral: Referral;
     public card: Card;
@@ -39,6 +41,7 @@ export default class Users extends AbstractResource {
         this.toybox = new Toybox(api);
         this.checkout = new Checkout(api);
         this.productLists = new ProductLists(api);
+        this.waitSpots = new WaitSpots(api);
         this.orders = new Orders(api);
         this.referral = new Referral(api);
         this.card = new Card(api);
