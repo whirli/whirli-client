@@ -3,8 +3,8 @@ import WaitSpotInterface from '../../../Interfaces/waitspot/WaitSpot';
 import WaitSpot from '../WaitSpot';
 import UserInterface from '../../../Interfaces/user/User';
 import UserTransformer from '../../user/Transformers/UserTransformer';
-import ProductInterface from '../../../Interfaces/product/Product';
-import ProductTransformer from '../../product/Transformers/ProductTransformer';
+import ProductVariantInterface from '../../../Interfaces/product/ProductVariant';
+import ProductVariantTransformer from '../../product/Transformers/ProductVariantTransformer';
 
 export default class WaitSpotTransformer extends BaseTransformer {
     mapData(waitSpot: WaitSpotInterface): WaitSpot {
@@ -17,7 +17,7 @@ export default class WaitSpotTransformer extends BaseTransformer {
             notifiedAt: waitSpot.notifiedAt,
             // Belongs to
             user: this.includeUser(waitSpot) || undefined,
-            product: this.includeProduct(waitSpot) || undefined,
+            productVariant: this.includeProductVariant(waitSpot) || undefined,
         });
     }
 
@@ -25,7 +25,7 @@ export default class WaitSpotTransformer extends BaseTransformer {
         return this.item(waitSpot, 'user', new UserTransformer());
     }
 
-    includeProduct(waitSpot: WaitSpotInterface): ProductInterface | null {
-        return this.item(waitSpot, 'product', new ProductTransformer());
+    includeProductVariant(waitSpot: WaitSpotInterface): ProductVariantInterface | null {
+        return this.item(waitSpot, 'productVariant', new ProductVariantTransformer());
     }
 }
