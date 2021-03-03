@@ -1,4 +1,4 @@
-import Product from '../product/Product';
+import ProductVariant from '../product/ProductVariant';
 import User from '../user/User';
 export default interface WaitSpot {
     id?: string;
@@ -8,5 +8,5 @@ export default interface WaitSpot {
     deletedAt?: Date | string | null;
     notifiedAt?: Date | string | null;
     user?: User;
-    product?: Product;
+    productVariant?: ProductVariant;
 }
