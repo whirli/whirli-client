@@ -1,9 +1,0 @@
-{
-    "workbench.colorCustomizations": {
-        "scrollbar.shadow": "#ffffff00",
-        "widget.shadow": "#ffffff00",
-        "activityBar.background": "#F0DB4F",
-        "titleBar.activeBackground": "#F0DB4F",
-        "titleBar.activeForeground": "#323330"
-    }
-}
