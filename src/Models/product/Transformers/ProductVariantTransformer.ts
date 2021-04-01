@@ -46,6 +46,7 @@ export default class ProductVariantTransformer extends BaseTransformer {
             supplierTokenMargin: productVariant.supplierTokenMargin,
             otherHazards: productVariant.otherHazards,
             supplierName: productVariant.supplierName,
+            aggregateRating: productVariant.aggregateRating,
             // belongs to
             product: this.includeProduct(productVariant),
         });
