@@ -1,5 +1,5 @@
 import AbstractResource from '../../AbstractResource';
-export default class Waitspots extends AbstractResource {
+export default class WaitSpots extends AbstractResource {
     initialise(): void;
     create: Function;
     get: Function;
