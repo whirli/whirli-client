@@ -8,6 +8,7 @@ import PurchaseStock from '../stock/PurchaseStock';
 import ProductList from '../product/ProductList';
 import WaitSpot from '../waitspot/WaitSpot';
 import Role from '../role/Role';
+import Review from '../review/Review';
 
 interface Meta {
     daysUntilAvailable?: number;
@@ -61,6 +62,7 @@ export default interface User {
     activeReturnOrder?: ReturnOrder;
     roles?: Array<Role>;
     waccRole?: string;
+    reviews?: Array<Review>;
 
     // Accessors
     onFirstOrder?: boolean;
