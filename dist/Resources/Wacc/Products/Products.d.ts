@@ -8,4 +8,5 @@ export default class Products extends AbstractResource {
     delete: Function;
     updateRelations: Function;
     allWaitSpots: Function;
+    getProductWaitSpots: Function;
 }
