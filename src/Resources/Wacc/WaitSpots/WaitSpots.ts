@@ -2,7 +2,7 @@ import AbstractResource from '../../AbstractResource';
 
 export default class WaitSpots extends AbstractResource {
     initialise(): void {
-        this.resourcePath = '/waitspots';
+        this.resourcePath = '/wait-spots';
         this.defaultAccess = 'wacc';
     }
 
