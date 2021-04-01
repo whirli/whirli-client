@@ -35,6 +35,7 @@ export default interface ProductVariant {
     supplierTokenMargin?: number;
     otherHazards?: string;
     supplierName?: string;
+    aggregateRating?: number;
     // belongs to
     product?: Product | null;
 }
