@@ -21,6 +21,8 @@ import RoleInterface from '../../../Interfaces/role/Role';
 import RoleTransformer from '../../role/Transformers/RoleTransformer';
 import WaitSpotInterface from '../../../Interfaces/waitspot/WaitSpot';
 import WaitSpotTransformer from '../../waitspot/Transformers/WaitSpotTransformer';
+import ReviewInterface from '../../../Interfaces/review/Review';
+import ReviewTransformer from '../../review/Transformers/ReviewTransformer';
 
 export default class UserTransformer extends BaseTransformer {
     /**
@@ -64,6 +66,7 @@ export default class UserTransformer extends BaseTransformer {
             activeReturnOrder: this.includeActiveReturnOrder(user) || undefined,
             roles: this.includeRoles(user),
             waccRole: user.waccRole,
+            reviews: this.includeReviews(user),
             // Accessors
             onFirstOrder: user.onFirstOrder,
             toyboxTokens: user.toyboxTokens,
@@ -122,5 +125,9 @@ export default class UserTransformer extends BaseTransformer {
 
     includeUserSubscriptions(user: UserInterface): Array<UserSubscriptionInterface> {
         return this.collection(user, 'userSubscriptions', new UserSubscriptionTransformer());
+    }
+
+    includeReviews(user: UserInterface): Array<ReviewInterface> {
+        return this.collection(user, 'reviews', new ReviewTransformer());
     }
 }
