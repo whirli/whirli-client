@@ -36,13 +36,8 @@ export default class Products extends AbstractResource {
         path: '/{id}/relations',
     });
 
-    public allWaitSpots: Function = this.createMethodFromPartialSpec({
+    public waitSpots: Function = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/wait-spots',
-    });
-
-    public getWaitSpots: Function = this.createMethodFromPartialSpec({
-        method: 'GET',
-        path: '/{id}/wait-spots',
     });
 }
