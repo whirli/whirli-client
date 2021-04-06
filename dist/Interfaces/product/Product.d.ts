@@ -1,7 +1,6 @@
 import ProductVariant from './ProductVariant';
 import Asset from '../asset/Asset';
 import ProductAssociation from '../association/ProductAssociation';
-import WaitSpot from '../waitspot/WaitSpot';
 export default interface Product {
     id?: string;
     createdAt?: Date;
@@ -36,5 +35,4 @@ export default interface Product {
     productAssociations?: Array<ProductAssociation>;
     productVariants?: Array<ProductVariant>;
     relatedProducts?: Array<Product>;
-    waitSpots?: Array<WaitSpot>;
 }
