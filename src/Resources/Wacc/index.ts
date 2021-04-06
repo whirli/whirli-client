@@ -12,7 +12,6 @@ import WACCAssets from './Assets/Assets';
 import WACCReturnOrderLines from './ReturnOrderLines/ReturnOrderLines';
 import WACCRoles from './Roles/Roles';
 import WACCOrderLines from './OrderLines/OrderLines';
-import WACCWaitSpots from './WaitSpots/WaitSpots';
 
 export interface WaccResources {
     orders: WACCOrders;
@@ -28,7 +27,6 @@ export interface WaccResources {
     assets: WACCAssets;
     stock: WACCStock;
     roles: WACCRoles;
-    waitSpots: WACCWaitSpots;
 }
 
 export function loadWaccResources(client: Client): WaccResources {
@@ -46,6 +44,5 @@ export function loadWaccResources(client: Client): WaccResources {
         assets: new WACCAssets(client),
         stock: new WACCStock(client),
         roles: new WACCRoles(client),
-        waitSpots: new WACCWaitSpots(client),
     };
 }
