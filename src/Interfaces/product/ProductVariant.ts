@@ -36,6 +36,7 @@ export default interface ProductVariant {
     otherHazards?: string;
     supplierName?: string;
     aggregateRating?: number;
+    totalReviews?: number;
     // belongs to
     product?: Product | null;
 }
