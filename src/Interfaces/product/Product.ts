@@ -1,6 +1,7 @@
 import ProductVariant from './ProductVariant';
 import Asset from '../asset/Asset';
 import ProductAssociation from '../association/ProductAssociation';
+import WaitSpot from '../waitspot/WaitSpot';
 
 export default interface Product {
     id?: string;
@@ -29,12 +30,16 @@ export default interface Product {
     totalReturnedUndamaged?: number;
     totalSafetyStock?: number;
     totalSold?: number;
-    totalStockUnits?: number;
     totalStockWithCustomer?: number;
+    totalStockQueued?: number;
+    totalStockInReturn?: number;
+    totalStockWithCustomerOrDesignatedForReturn?: number;
+    totalStockUnits?: number;
     gtin?: string;
     // has many
     assets?: Array<Asset>;
     productAssociations?: Array<ProductAssociation>;
     productVariants?: Array<ProductVariant>;
     relatedProducts?: Array<Product>;
+    waitSpots?: Array<WaitSpot>;
 }
