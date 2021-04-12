@@ -30,8 +30,11 @@ export default interface Product {
     totalReturnedUndamaged?: number;
     totalSafetyStock?: number;
     totalSold?: number;
-    totalStockUnits?: number;
     totalStockWithCustomer?: number;
+    totalStockQueued?: number;
+    totalStockInReturn?: number;
+    totalStockWithCustomerOrDesignatedForReturn?: number;
+    totalStockUnits?: number;
     gtin?: string;
     // has many
     assets?: Array<Asset>;
