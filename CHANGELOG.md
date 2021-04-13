@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.0.47] - 2021-04-13
+### 🚀 Features
+- Update ProductVariant Interface/Model/Transformer ([#314](https://github.com/whirli/whirli-client/pull/314))
+
 ## [0.0.46] - 2021-04-12
 - Add WACC product search resource stock props
 
