@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🚀 Features
-- Add show reviews guest endpoint ([#315](https://github.com/whirli/whirli-client/pull/315))
+- Add show reviews guest endpoint ([#316](https://github.com/whirli/whirli-client/pull/316))
 
 ## [0.0.47] - 2021-04-13
 ### 🚀 Features
