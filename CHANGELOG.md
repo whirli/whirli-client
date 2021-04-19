@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🚀 Features
+- Change products waitSpots resource ([#318](https://github.com/whirli/whirli-client/pull/318))
+
 ## [0.0.48] - 2021-04-14
 ### 🚀 Features
 - Add show reviews guest endpoint ([#316](https://github.com/whirli/whirli-client/pull/316))
