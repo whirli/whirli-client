@@ -40,4 +40,9 @@ export default class Products extends AbstractResource {
         method: 'GET',
         path: '/wait-spots',
     });
+
+    public waitSpotsForProduct: Function = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/{id}/wait-spots',
+    });
 }
