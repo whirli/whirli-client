@@ -9,6 +9,7 @@ export default class AssetTransform {
     location?: string;
     filename?: string;
     url?: string;
+    transformId?: number;
     // belongs to
     asset?: Asset | null;
     transform?: Transform | null;

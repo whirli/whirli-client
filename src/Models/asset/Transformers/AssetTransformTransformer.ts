@@ -21,6 +21,7 @@ export default class AssetTransformTransformer extends BaseTransformer {
             location: assetTransform.location,
             filename: assetTransform.filename,
             url: assetTransform.url,
+            transformId: assetTransform.transformId,
             // belongs to
             asset: this.includeAsset(assetTransform),
             transform: this.includeTransform(assetTransform),
