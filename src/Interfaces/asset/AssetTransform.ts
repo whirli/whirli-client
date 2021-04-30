@@ -8,8 +8,11 @@ export default class AssetTransform {
     fileExists?: boolean;
     location?: string;
     filename?: string;
-    url?: string;
+    transformId?: number;
     // belongs to
     asset?: Asset | null;
     transform?: Transform | null;
+    // accessors
+    url?: string;
+    size?: string;
 }

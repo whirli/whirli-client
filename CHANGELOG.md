@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### 🚀 Features
 - Add status id to WaitSpot interface for Wacc ([#320](https://github.com/whirli/whirli-client/pull/320))
+- Add "transform_id" property to AssetTransform interface / transformer ([#321](https://github.com/whirli/whirli-client/pull/321))
 
 ## [0.0.49] - 2021-04-19
 ### 🚀 Features
