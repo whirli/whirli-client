@@ -20,11 +20,13 @@ export default class AssetTransformTransformer extends BaseTransformer {
             fileExists: assetTransform.fileExists,
             location: assetTransform.location,
             filename: assetTransform.filename,
-            url: assetTransform.url,
             transformId: assetTransform.transformId,
             // belongs to
             asset: this.includeAsset(assetTransform),
             transform: this.includeTransform(assetTransform),
+            // accessors
+            url: assetTransform.url,
+            size: assetTransform.size,
         });
     }
 
