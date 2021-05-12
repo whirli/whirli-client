@@ -12,6 +12,7 @@ import WaitSpots from './WaitSpots';
 import Orders from './Orders';
 import Referral from './Referral';
 import Card from './Card';
+import MyPlaytime from './MyPlaytime';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Users extends AbstractResource {
@@ -27,6 +28,7 @@ export default class Users extends AbstractResource {
     public orders: Orders;
     public referral: Referral;
     public card: Card;
+    public myPlaytime: MyPlaytime;
 
     constructor(api: Client) {
         super(api);
@@ -45,6 +47,7 @@ export default class Users extends AbstractResource {
         this.orders = new Orders(api);
         this.referral = new Referral(api);
         this.card = new Card(api);
+        this.myPlaytime = new MyPlaytime(api);
     }
 
     initialise(): void {
