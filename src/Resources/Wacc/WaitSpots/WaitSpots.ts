@@ -1,4 +1,5 @@
 import AbstractResource from '../../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../../Interfaces/HttpClient';
 
 export default class WaitSpots extends AbstractResource {
     initialise(): void {
@@ -6,17 +7,17 @@ export default class WaitSpots extends AbstractResource {
         this.defaultAccess = 'wacc';
     }
 
-    public create: Function = this.createMethodFromPartialSpec({
+    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/',
     });
 
-    public get: Function = this.createMethodFromPartialSpec({
+    public get: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/{id}',
     });
 
-    public delete: Function = this.createMethodFromPartialSpec({
+    public delete: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'DELETE',
         path: '/{id}',
     });
