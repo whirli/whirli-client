@@ -7,17 +7,17 @@ export default class Subscriptions extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public create: Function = this.createMethodFromPartialSpec({
+    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/',
     });
 
-    public update: Function = this.createMethodFromPartialSpec({
+    public update: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/{id}',
     });
 
-    public pay: Function = this.createMethodFromPartialSpec({
+    public pay: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/{id}/pay',
     });
