@@ -1,4 +1,5 @@
 import AbstractResource from '../../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../../Interfaces/HttpClient';
 
 export default class Users extends AbstractResource {
     initialise(): void {
@@ -6,32 +7,32 @@ export default class Users extends AbstractResource {
         this.defaultAccess = 'wacc';
     }
 
-    public all: Function = this.createMethodFromPartialSpec({
+    public all: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/',
     });
 
-    public get: Function = this.createMethodFromPartialSpec({
+    public get: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/{id}',
     });
 
-    public create: Function = this.createMethodFromPartialSpec({
+    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/',
     });
 
-    public update: Function = this.createMethodFromPartialSpec({
+    public update: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PUT',
         path: '/{id}',
     });
 
-    public delete: Function = this.createMethodFromPartialSpec({
+    public delete: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'DELETE',
         path: '/{id}',
     });
 
-    public assignRole: Function = this.createMethodFromPartialSpec({
+    public assignRole: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/assign-role',
     });
