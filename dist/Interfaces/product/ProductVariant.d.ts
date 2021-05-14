@@ -1,4 +1,9 @@
 import Product from './Product';
+import { BasketLine } from '../basket/BasketLine';
+import OrderLine from '../order/OrderLine';
+import Stock from '../stock/Stock';
+import Review from '../review/Review';
+import Rating from '../review/Rating';
 export default interface ProductVariant {
     id?: string;
     createdAt?: Date;
@@ -35,6 +40,18 @@ export default interface ProductVariant {
     otherHazards?: string;
     supplierName?: string;
     aggregateRating?: number;
-    totalReviews?: number;
     product?: Product | null;
+    basketLines?: Array<BasketLine>;
+    orderLines?: Array<OrderLine>;
+    stockObjects?: Array<Stock>;
+    reviews?: Array<Review>;
+    accountedForReviews?: Array<Review>;
+    totalSafetyStock?: number;
+    totalStockWithCustomer?: number;
+    totalStockUnits?: number;
+    totalOrders?: number;
+    totalReturnedDamaged?: number;
+    totalSold?: number;
+    totalReviews?: number;
+    ratings?: Rating;
 }
