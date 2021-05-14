@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change old resource endpoint syntax to the new one ([#326](https://github.com/whirli/whirli-client/pull/326))
 - Update ProductVariant Interface and Transformer ([#327](https://github.com/whirli/whirli-client/pull/327))
 
+## [0.0.51] - 2021-05-14
+### 🚀 Features
+- Add my playtime endpoint ([#328](https://github.com/whirli/whirli-client/pull/328))
+
 ## [0.0.50] - 2021-04-30
 ### 🚀 Features
 - Add status id to WaitSpot interface for Wacc ([#320](https://github.com/whirli/whirli-client/pull/320))
