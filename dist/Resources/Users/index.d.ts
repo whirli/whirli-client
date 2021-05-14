@@ -29,6 +29,6 @@ export default class Users extends AbstractResource {
     constructor(api: Client);
     initialise(): void;
     user: (...args: HttpClientConfig) => HttpClientResponse;
-    create: Function;
+    create: (...args: HttpClientConfig) => HttpClientResponse;
     claimGuestResources: (...args: HttpClientConfig) => HttpClientResponse;
 }
