@@ -5,7 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-
+### 🏡 Chore
+- Update ProductVariant Interface and Transformer ([#327](https://github.com/whirli/whirli-client/pull/327))
 ## [0.0.50] - 2021-04-30
 ### 🚀 Features
 - Add status id to WaitSpot interface for Wacc ([#320](https://github.com/whirli/whirli-client/pull/320))
