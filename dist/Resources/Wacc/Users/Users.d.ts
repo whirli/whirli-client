@@ -1,10 +1,11 @@
 import AbstractResource from '../../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../../Interfaces/HttpClient';
 export default class Users extends AbstractResource {
     initialise(): void;
-    all: Function;
-    get: Function;
-    create: Function;
-    update: Function;
-    delete: Function;
-    assignRole: Function;
+    all: (...args: HttpClientConfig) => HttpClientResponse;
+    get: (...args: HttpClientConfig) => HttpClientResponse;
+    create: (...args: HttpClientConfig) => HttpClientResponse;
+    update: (...args: HttpClientConfig) => HttpClientResponse;
+    delete: (...args: HttpClientConfig) => HttpClientResponse;
+    assignRole: (...args: HttpClientConfig) => HttpClientResponse;
 }
