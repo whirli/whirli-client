@@ -9,6 +9,7 @@ import ProductList from '../product/ProductList';
 import WaitSpot from '../waitspot/WaitSpot';
 import Role from '../role/Role';
 import Review from '../review/Review';
+import MyPlaytime from '../myPlaytime/MyPlaytime';
 
 interface Meta {
     daysUntilAvailable?: number;
@@ -52,6 +53,7 @@ export default interface User {
     addresses?: Array<Address>;
     toybox?: Array<PurchaseStock>;
     lists?: Array<ProductList>;
+    myPlaytime?: MyPlaytime;
     waitSpots?: Array<WaitSpot>;
     returnOrders?: Array<ReturnOrder>;
     activeBasket?: Array<Basket>;
