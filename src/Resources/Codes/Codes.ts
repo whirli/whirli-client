@@ -1,6 +1,5 @@
 import AbstractResource from '../AbstractResource';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
-import { GetRequest } from './CodesRequestInterfaces';
 
 export default class Codes extends AbstractResource {
     initialise(): void {
@@ -8,10 +7,7 @@ export default class Codes extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public get: (
-        { code }: GetRequest,
-        ...args: HttpClientConfig
-    ) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public get: (code: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/{name}',
     });
