@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.52] - 18-05-2021
+- Re-build
+
 ## [0.0.51] - 17-05-2021
 ### 🚀 Features
 - Add product associations index endpoint ([#329](https://github.com/whirli/whirli-client/pull/329))
