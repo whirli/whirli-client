@@ -4,10 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.51] - 17-05-2021
-- Add product associations index endpoint
-
 ## [Unreleased]
+
+## [0.0.51] - 17-05-2021
+### 🚀 Features
+- Add product associations index endpoint ([#329](https://github.com/whirli/whirli-client/pull/329))
+
 ### 🏡 Chore
 - Change old resource endpoint syntax to the new one ([#326](https://github.com/whirli/whirli-client/pull/326))
 - Update ProductVariant Interface and Transformer ([#327](https://github.com/whirli/whirli-client/pull/327))
