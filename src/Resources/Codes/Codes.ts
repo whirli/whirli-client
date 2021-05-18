@@ -7,7 +7,7 @@ export default class Codes extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public get: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public show: (name: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/{name}',
     });
