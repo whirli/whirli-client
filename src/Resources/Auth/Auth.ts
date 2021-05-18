@@ -8,7 +8,7 @@ export default class Auth extends AbstractResource {
     }
 
     public forgotPassword: (
-        {  }: ForgotPasswordRequest,
+        { email }: ForgotPasswordRequest,
         ...args: HttpClientConfig
     ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
