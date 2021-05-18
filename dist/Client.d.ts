@@ -10,6 +10,7 @@ import Gift from './Resources/Gift/Gift';
 import Products from './Resources/Products';
 import Contact from './Resources/Contact/Contact';
 import ProductLists from './Resources/ProductLists/ProductLists';
+import MyPlaytime from './Resources/Users/MyPlaytime';
 import UndeliverableDates from './Resources/UndeliverableDates/UnderliverableDates';
 export default class Client {
     auth: Auth;
@@ -23,6 +24,7 @@ export default class Client {
     contact: Contact;
     productLists: ProductLists;
     undeliverableDates: UndeliverableDates;
+    myPlaytime: MyPlaytime;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
     constructor(httpClient: HttpClient, opts?: ClientOptions);
