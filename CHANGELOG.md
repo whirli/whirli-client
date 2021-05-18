@@ -6,10 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.52] - 18-05-2021
+## [0.0.53] - 2021-05-18
+### 🚀 Features
+- Add my playtime endpoint ([#328](https://github.com/whirli/whirli-client/pull/328))
+
+## [0.0.52] - 2021-05-18
 - Re-build
 
-## [0.0.51] - 17-05-2021
+## [0.0.51] - 2021-05-17
 ### 🚀 Features
 - Add product associations index endpoint ([#329](https://github.com/whirli/whirli-client/pull/329))
 
