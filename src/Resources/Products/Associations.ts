@@ -8,6 +8,15 @@ export default class Products extends AbstractResource {
     }
 
     /**
+     * Get all product associations
+     * e.g. `/products/associations`.
+     */
+    public all: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/',
+    });
+
+    /**
      * Get a single product association
      * e.g. `/products/associations/disney`.
      */

@@ -1,4 +1,5 @@
 import AbstractResource from '../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Baskets extends AbstractResource {
     initialise(): void {
@@ -6,22 +7,22 @@ export default class Baskets extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public get: Function = this.createMethodFromPartialSpec({
+    public get: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/baskets/{id}',
     });
 
-    public addLine: Function = this.createMethodFromPartialSpec({
+    public addLine: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/basket-lines',
     });
 
-    public updateLine: Function = this.createMethodFromPartialSpec({
+    public updateLine: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PUT',
         path: '/basket-lines/{id}',
     });
 
-    public removeLine: Function = this.createMethodFromPartialSpec({
+    public removeLine: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'DELETE',
         path: '/basket-lines/{id}',
     });

@@ -1,4 +1,5 @@
 import AbstractResource from '../AbstractResource';
+import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 
 export default class Details extends AbstractResource {
     initialise(): void {
@@ -6,7 +7,7 @@ export default class Details extends AbstractResource {
         this.defaultAccess = 'member';
     }
 
-    public update: Function = this.createMethodFromPartialSpec({
+    public update: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/{id}',
     });

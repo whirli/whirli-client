@@ -3,6 +3,14 @@ import ProductVariantInterface from '../../../Interfaces/product/ProductVariant'
 import Product from '../Product';
 import ProductTransformer from '../../product/Transformers/ProductTransformer';
 import BaseTransformer from '../../../BaseTransformer';
+import { BasketLine as BasketLineInterface } from '../../../Interfaces/basket/BasketLine';
+import BasketLineTransformer from '../../basket/Transformers/BasketLineTransformer';
+import OrderLineInterface from '../../../Interfaces/order/OrderLine';
+import OrderLineTransformer from '../../order/Transformers/OrderLineTransformer';
+import StockInterface from '../../../Interfaces/stock/Stock';
+import StockTransformer from '../../stock/Transformers/StockTransformer';
+import ReviewInterface from '../../../Interfaces/review/Review';
+import ReviewTransformer from '../../review/Transformers/ReviewTransformer';
 
 export default class ProductVariantTransformer extends BaseTransformer {
     /**
@@ -47,13 +55,47 @@ export default class ProductVariantTransformer extends BaseTransformer {
             otherHazards: productVariant.otherHazards,
             supplierName: productVariant.supplierName,
             aggregateRating: productVariant.aggregateRating,
-            totalReviews: productVariant.totalReviews,
             // belongs to
             product: this.includeProduct(productVariant),
+            // has many
+            basketLines: this.includeBasketLines(productVariant),
+            orderLines: this.includeOrderLines(productVariant),
+            stockObjects: this.includeStockObjects(productVariant),
+            reviews: this.includeReviews(productVariant),
+            accountedForReviews: this.includeAccountedForReviews(productVariant),
+            // accessor
+            totalSafetyStock: productVariant.totalSafetyStock,
+            totalStockWithCustomer: productVariant.totalStockWithCustomer,
+            totalStockUnits: productVariant.totalStockUnits,
+            totalOrders: productVariant.totalOrders,
+            totalReturnedDamaged: productVariant.totalReturnedDamaged,
+            totalSold: productVariant.totalSold,
+            totalReviews: productVariant.totalReviews,
+            ratings: productVariant.ratings,
         });
     }
 
     includeProduct(productVariant: ProductVariantInterface): Product | null {
         return this.item(productVariant, 'product', new ProductTransformer());
+    }
+
+    includeBasketLines(productVariant: ProductVariantInterface): Array<BasketLineInterface> | undefined {
+        return this.collection(productVariant, 'basketLines', new BasketLineTransformer());
+    }
+
+    includeOrderLines(productVariant: ProductVariantInterface): Array<OrderLineInterface> | undefined {
+        return this.collection(productVariant, 'orderLines', new OrderLineTransformer());
+    }
+
+    includeStockObjects(productVariant: ProductVariantInterface): Array<StockInterface> | undefined {
+        return this.collection(productVariant, 'stockObjects', new StockTransformer());
+    }
+
+    includeReviews(productVariant: ProductVariantInterface): Array<ReviewInterface> | undefined {
+        return this.collection(productVariant, 'reviews', new ReviewTransformer());
+    }
+
+    includeAccountedForReviews(productVariant: ProductVariantInterface): Array<ReviewInterface> | undefined {
+        return this.collection(productVariant, 'accountedForReviews', new ReviewTransformer());
     }
 }
