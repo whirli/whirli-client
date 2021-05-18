@@ -1,6 +1,6 @@
 import AbstractResource from '../AbstractResource';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
-import { ForgotPasswordRequest, ResetPasswordRequest, ValidateTokenRequest } from './AuthInterfaces';
+import { ForgotPasswordRequest, ResetPasswordRequest, ValidateTokenRequest } from './AuthRequestInterfaces';
 
 export default class Auth extends AbstractResource {
     initialise(): void {
@@ -16,7 +16,7 @@ export default class Auth extends AbstractResource {
     });
 
     public resetPassword: (
-        { email, password, token }: ResetPasswordRequest,
+        { email, password, passwordConfirmation, token }: ResetPasswordRequest,
         ...args: HttpClientConfig
     ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
