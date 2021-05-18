@@ -1,12 +1,16 @@
 import AbstractResource from '../AbstractResource';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
+import { ForgotPasswordRequest } from './AuthInterfaces';
 
 export default class Auth extends AbstractResource {
     initialise(): void {
         this.defaultAccess = 'guest';
     }
 
-    public forgotPassword: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public forgotPassword: (
+        {  }: ForgotPasswordRequest,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/password/forgot',
     });
