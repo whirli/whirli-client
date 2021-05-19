@@ -1,4 +1,4 @@
-export default interface ContactForm {
+export interface ContactRequest {
     firstname: string;
     lastname: string;
     email: string;
