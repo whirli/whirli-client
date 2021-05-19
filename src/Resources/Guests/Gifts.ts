@@ -1,5 +1,6 @@
 import AbstractResource from '../AbstractResource';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
+import { GiftCreateRequest } from '../../Interfaces/Requests/guest/GiftRequest';
 
 export default class Gifts extends AbstractResource {
     initialise(): void {
@@ -7,7 +8,10 @@ export default class Gifts extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public create: (
+        body: GiftCreateRequest,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/gifts',
     });
