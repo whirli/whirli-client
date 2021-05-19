@@ -1,5 +1,6 @@
 import AbstractResource from '../AbstractResource';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
+import { BasketAddLineRequest, BasketUpdateLineRequest } from '../../Interfaces/Requests/guest/BasketRequest';
 
 export default class Baskets extends AbstractResource {
     initialise(): void {
@@ -7,23 +8,32 @@ export default class Baskets extends AbstractResource {
         this.defaultAccess = 'guest';
     }
 
-    public get: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public get: (id: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/baskets/{id}',
     });
 
-    public addLine: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public addLine: (
+        body: BasketAddLineRequest,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'POST',
         path: '/basket-lines',
     });
 
-    public updateLine: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public updateLine: (
+        id: string,
+        body: BasketUpdateLineRequest,
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PUT',
         path: '/basket-lines/{id}',
     });
 
-    public removeLine: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
-        method: 'DELETE',
-        path: '/basket-lines/{id}',
-    });
+    public removeLine: (id: string, ...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec(
+        {
+            method: 'DELETE',
+            path: '/basket-lines/{id}',
+        },
+    );
 }
