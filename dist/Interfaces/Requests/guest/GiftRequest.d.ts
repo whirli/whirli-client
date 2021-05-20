@@ -1,10 +1,5 @@
 export interface GiftCreateRequest {
     value?: number;
-    withBasket?: boolean;
-    productListId?: string;
-}
-export interface GiftUpdateRequest {
-    value?: number;
     toGiftRecipient: boolean | null;
     shippingFirstname: string | null;
     shippingLastname: string | null;
@@ -22,6 +17,8 @@ export interface GiftUpdateRequest {
     billingFirstname: string | null;
     billingLastname: string | null;
     billingEmail: string | null;
+}
+export interface GiftUpdateRequest extends GiftCreateRequest {
     guestToken: string;
 }
 export interface GiftPayRequest extends GiftUpdateRequest {
