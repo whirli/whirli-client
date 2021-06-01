@@ -7,8 +7,8 @@ export default class Referrals extends AbstractResource {
         this.defaultAccess = 'wacc';
     }
 
-    public create: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
-        method: 'POST',
+    public all: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'GET',
         path: '/',
     });
 
