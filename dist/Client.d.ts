@@ -12,6 +12,7 @@ import Contact from './Resources/Contact/Contact';
 import ProductLists from './Resources/ProductLists/ProductLists';
 import MyPlaytime from './Resources/Users/MyPlaytime';
 import UndeliverableDates from './Resources/UndeliverableDates/UnderliverableDates';
+import AttributionSource from './Resources/AttributionSource/AttributionSource';
 export default class Client {
     auth: Auth;
     codes: Codes;
@@ -25,6 +26,7 @@ export default class Client {
     productLists: ProductLists;
     undeliverableDates: UndeliverableDates;
     myPlaytime: MyPlaytime;
+    attributionSource: AttributionSource;
     protected httpClient: HttpClient;
     protected options: ClientAllOptions;
     constructor(httpClient: HttpClient, opts?: ClientOptions);

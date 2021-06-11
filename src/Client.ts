@@ -12,6 +12,7 @@ import Contact from './Resources/Contact/Contact';
 import ProductLists from './Resources/ProductLists/ProductLists';
 import MyPlaytime from './Resources/Users/MyPlaytime';
 import UndeliverableDates from './Resources/UndeliverableDates/UnderliverableDates';
+import AttributionSource from './Resources/AttributionSource/AttributionSource';
 
 export default class Client {
     public auth!: Auth;
@@ -26,6 +27,7 @@ export default class Client {
     public productLists!: ProductLists;
     public undeliverableDates!: UndeliverableDates;
     public myPlaytime!: MyPlaytime;
+    public attributionSource!: AttributionSource;
 
     protected httpClient: HttpClient;
     protected options: ClientAllOptions = {
@@ -60,6 +62,7 @@ export default class Client {
         this.contact = new Contact(this);
         this.productLists = new ProductLists(this);
         this.undeliverableDates = new UndeliverableDates(this);
+        this.attributionSource = new AttributionSource(this);
     }
 
     getBasePath(): string {
