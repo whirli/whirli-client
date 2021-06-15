@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+###
+
+## [0.0.54] - 2021-06-15
+### 🚀 Features
+- Add WACC referrals endpoints ([#334](https://github.com/whirli/whirli-client/pull/334))
+- Add WACC Codes endpoints & Subscription Discount Interface/Model/Transformer ([#335](https://github.com/whirli/whirli-client/pull/335))
+- Add POST /attribution-source endpoint ([#336](https://github.com/whirli/whirli-client/pull/336))
 
 ## [0.0.53] - 2021-05-18
 ### 🚀 Features
@@ -72,7 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add users assign wacc role endpoint in resource ([#287](https://github.com/whirli/whirli-client/pull/287))
 - Add update OrderLine endpoint ([#286](https://github.com/whirli/whirli-client/pull/286))
 - Add ReasonForEnd model and transformer ([#285](https://github.com/whirli/whirli-client/pull/285))
-- Update the WACC User Subscription cancel plan endpoint ([#284](https://github.com/whirli/whirli-client/pull/284)) 
+- Update the WACC User Subscription cancel plan endpoint ([#284](https://github.com/whirli/whirli-client/pull/284))
 - Add the edit Return Order Lines endpoint ([#283](https://github.com/whirli/whirli-client/pull/283))
 - Add notes property to user ([#282](https://github.com/whirli/whirli-client/pull/282))
 - Add weight property to order ([#281](https://github.com/whirli/whirli-client/pull/281))

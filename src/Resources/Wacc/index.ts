@@ -13,6 +13,8 @@ import WACCReturnOrderLines from './ReturnOrderLines/ReturnOrderLines';
 import WACCRoles from './Roles/Roles';
 import WACCOrderLines from './OrderLines/OrderLines';
 import WACCWaitSpots from './WaitSpots/WaitSpots';
+import WACCReferral from './Referral/Referrals';
+import WACCCodes from './Codes/Codes';
 
 export interface WaccResources {
     orders: WACCOrders;
@@ -29,6 +31,8 @@ export interface WaccResources {
     stock: WACCStock;
     roles: WACCRoles;
     waitSpots: WACCWaitSpots;
+    referrals: WACCReferral;
+    codes: WACCCodes;
 }
 
 export function loadWaccResources(client: Client): WaccResources {
@@ -47,5 +51,7 @@ export function loadWaccResources(client: Client): WaccResources {
         stock: new WACCStock(client),
         roles: new WACCRoles(client),
         waitSpots: new WACCWaitSpots(client),
+        referrals: new WACCReferral(client),
+        codes: new WACCCodes(client),
     };
 }
