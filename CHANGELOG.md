@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+###
+
+## [0.0.54] - 2021-06-15
 ### 🚀 Features
 - Add WACC referrals endpoints ([#334](https://github.com/whirli/whirli-client/pull/334))
 - Add WACC Codes endpoints & Subscription Discount Interface/Model/Transformer ([#335](https://github.com/whirli/whirli-client/pull/335))
