@@ -5,7 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-###
+### 🚀 Features
+- Add referrer to attribution source ([#338](https://github.com/whirli/whirli-client/pull/338))
 
 ## [0.0.54] - 2021-06-15
 ### 🚀 Features
