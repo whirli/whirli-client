@@ -9,6 +9,7 @@ export default interface AttributionSource {
     utmContent?: string;
     gclid?: string;
     tduid?: string;
+    referrer?: string;
     sourceableId?: string;
     sourceableType?: string;
 }

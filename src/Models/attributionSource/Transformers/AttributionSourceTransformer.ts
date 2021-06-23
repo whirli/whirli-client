@@ -15,6 +15,7 @@ export default class AttributionSourceTransformer extends BaseTransformer {
             utmContent: attributionSource.utmContent,
             gclid: attributionSource.gclid,
             tduid: attributionSource.tduid,
+            referrer: attributionSource.referrer,
             sourceableId: attributionSource.sourceableId,
             sourceableType: attributionSource.sourceableType,
         });
