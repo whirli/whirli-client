@@ -37,6 +37,7 @@ export default class ReturnOrderTransformer extends BaseTransformer {
             placedAt: returnOrder.placedAt,
             dispatchedAt: returnOrder.dispatchedAt,
             receivedAt: returnOrder.receivedAt,
+            processedAt: returnOrder.processedAt,
             resourceType: returnOrder.resourceType,
             // belongs to
             user: this.includeUser(returnOrder),
