@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🚀 Features
+- Add processed_at to returns ([#341](https://github.com/whirli/whirli-client/pull/341))
 
 ## [0.0.55] - 2021-06-23
 ### 🚀 Features
