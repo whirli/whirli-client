@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.56] - 2021-07-02
+### 🚀 Features
+- Add processed_at to returns ([#341](https://github.com/whirli/whirli-client/pull/341))
+
+### 🐛 Bug fixes
+- Fix type SubscriptionDiscountType values ([#342](https://github.com/whirli/whirli-client/pull/342))
+
 ## [0.0.55] - 2021-06-23
 ### 🚀 Features
 - Add referrer to attribution source ([#338](https://github.com/whirli/whirli-client/pull/338))

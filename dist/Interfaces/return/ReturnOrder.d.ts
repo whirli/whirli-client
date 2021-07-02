@@ -24,6 +24,7 @@ export default interface ReturnOrder {
     placedAt?: Date;
     dispatchedAt?: Date;
     receivedAt?: Date;
+    processedAt?: Date;
     resourceType?: string;
     user?: User | null;
     returnOrderLines?: ReturnOrderLine[];
