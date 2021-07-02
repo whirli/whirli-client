@@ -1,4 +1,4 @@
-export type SubscriptionDiscountType = 'normal' | 'greater';
+export type SubscriptionDiscountType = 'gift' | 'subscription';
 export type SubscriptionDiscountAttributionSource = 'influencers' | 'affiliates';
 export type SubscriptionDiscountFrequencies = 1 | 6 | 12;
 
