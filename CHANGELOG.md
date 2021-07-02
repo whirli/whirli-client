@@ -5,9 +5,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.0.56] - 2021-07-02
+### 🚀 Features
+- Add processed_at to returns ([#341](https://github.com/whirli/whirli-client/pull/341))
+
+### 🐛 Bug fixes
+- Fix type SubscriptionDiscountType values ([#342](https://github.com/whirli/whirli-client/pull/342))
+
+## [0.0.55] - 2021-06-23
+### 🚀 Features
+- Add referrer to attribution source ([#338](https://github.com/whirli/whirli-client/pull/338))
+
+## [0.0.54] - 2021-06-15
 ### 🚀 Features
 - Add WACC referrals endpoints ([#334](https://github.com/whirli/whirli-client/pull/334))
 - Add WACC Codes endpoints & Subscription Discount Interface/Model/Transformer ([#335](https://github.com/whirli/whirli-client/pull/335))
+- Add POST /attribution-source endpoint ([#336](https://github.com/whirli/whirli-client/pull/336))
 
 ## [0.0.53] - 2021-05-18
 ### 🚀 Features
