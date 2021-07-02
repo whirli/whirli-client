@@ -1,4 +1,4 @@
-export declare type SubscriptionDiscountType = 'normal' | 'greater';
+export declare type SubscriptionDiscountType = 'gift' | 'subscription';
 export declare type SubscriptionDiscountAttributionSource = 'influencers' | 'affiliates';
 export declare type SubscriptionDiscountFrequencies = 1 | 6 | 12;
 export default interface SubscriptionDiscount {
