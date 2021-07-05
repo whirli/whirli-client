@@ -40,4 +40,5 @@ export default interface Product {
     productVariants?: Array<ProductVariant>;
     relatedProducts?: Array<Product>;
     waitSpots?: Array<WaitSpot>;
+    discountedValue?: number;
 }

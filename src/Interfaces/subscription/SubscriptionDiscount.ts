@@ -12,7 +12,7 @@ export default interface SubscriptionDiscount {
     attributionSource?: SubscriptionDiscountAttributionSource;
     stripeCouponIds?: Array<string>;
     frequencies?: Array<SubscriptionDiscountFrequencies>;
-    status: boolean;
+    status: number;
     discount?: string;
     billingPlans?: Array<string>;
 }
@@ -26,6 +26,6 @@ export interface SubscriptionDiscountSearch {
     startDate: Date | string | null;
     endDate: Date | string | null;
     frequencies: Array<SubscriptionDiscountFrequencies>;
-    status: boolean;
+    status: number;
     discount: string | null;
 }
