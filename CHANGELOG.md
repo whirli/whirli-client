@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.57] - 2021-07-05
 ### 🚀 Features
 - Update interfaces to accommodate the Product Discounts feature, change SubscriptionDiscount status iterface ([#344](https://github.com/whirli/whirli-client/pull/344))
 
