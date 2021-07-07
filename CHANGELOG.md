@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.0.58]
+### 🏡 Chore
+- Amends some user subscription & user subscription addon types([#346](https://github.com/whirli/whirli-client/pull/346))
 
 ## [0.0.57] - 2021-07-05
 ### 🚀 Features
