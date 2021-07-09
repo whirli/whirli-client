@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.59] - 2021-07-09
+### 🏡 Features
+- add optimum age and primary skill to product, and add ProductSkill association([#349](https://github.com/whirli/whirli-client/pull/349/files))
+
 ## [0.0.58] - 2021-07-09
 ### 🏡 Chore
 - Amends some user subscription & user subscription addon types([#346](https://github.com/whirli/whirli-client/pull/346))
