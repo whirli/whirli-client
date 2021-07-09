@@ -1,6 +1,8 @@
 import ProductVariant from './ProductVariant';
 import Asset from '../asset/Asset';
 import ProductAssociation from '../association/ProductAssociation';
+import ProductAgeRange from '../association/ProductAgeRange';
+import ProductSkill from '../association/ProductSkill';
 import WaitSpot from '../waitspot/WaitSpot';
 export default interface Product {
     id?: string;
@@ -35,6 +37,10 @@ export default interface Product {
     totalStockWithCustomerOrDesignatedForReturn?: number;
     totalStockUnits?: number;
     gtin?: string;
+    optimumAgeId?: string;
+    primarySkillId?: string;
+    optimumAge?: ProductAgeRange | null;
+    primarySkill?: ProductSkill | null;
     assets?: Array<Asset>;
     productAssociations?: Array<ProductAssociation>;
     productVariants?: Array<ProductVariant>;

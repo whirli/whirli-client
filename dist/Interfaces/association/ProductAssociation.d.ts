@@ -5,6 +5,7 @@ import ProductCategory from './ProductCategory';
 import ProductCollection from './ProductCollection';
 import ProductHazard from './ProductHazard';
 import ProductManufacturer from './ProductManufacturer';
+import ProductSkill from './ProductSkill';
 export default interface ProductAssociation {
     id?: string;
     name?: string;
@@ -14,6 +15,6 @@ export default interface ProductAssociation {
     associationClass?: string;
     productsCount?: number;
     publishedAt?: Date;
-    association?: ProductBrand | ProductCollection | ProductAgeRange | ProductCategory | ProductHazard | ProductManufacturer;
+    association?: ProductBrand | ProductCollection | ProductAgeRange | ProductCategory | ProductHazard | ProductManufacturer | ProductSkill;
     products?: Array<Product>;
 }
