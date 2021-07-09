@@ -24,6 +24,7 @@ export default class ProductAgeRangeTransformer extends BaseTransformer {
             position: productAgeRange.position,
             associationClass: productAgeRange.associationClass,
             productsCount: productAgeRange.productsCount,
+            ageGroup: productAgeRange.ageGroup,
             // belongs to
             associated: this.includeAssociated(productAgeRange),
             // has many
