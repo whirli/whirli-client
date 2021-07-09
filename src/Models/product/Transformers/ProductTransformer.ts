@@ -7,6 +7,10 @@ import ProductVariantTransformer from './ProductVariantTransformer';
 import AssetTransformer from '../../asset/Transformers/AssetTransformer';
 import ProductAssociationTransformer from '../../association/Transformers/ProductAssociationTransformer';
 import BaseTransformer from '../../../BaseTransformer';
+import ProductAgeRangeTransformer from '../../association/Transformers/ProductAgeRangeTransformer';
+import ProductAgeRange from '../../association/ProductAgeRange';
+import ProductSkill from '../../association/ProductSkill';
+import ProductSkillTransformer from '../../association/Transformers/ProductSkillTransformer';
 
 export default class ProductTransformer extends BaseTransformer {
     /**
@@ -48,13 +52,26 @@ export default class ProductTransformer extends BaseTransformer {
             totalStockWithCustomerOrDesignatedForReturn: product.totalStockWithCustomerOrDesignatedForReturn,
             totalStockUnits: product.totalStockUnits,
             gtin: product.gtin,
+            optimumAgeId: product.optimumAgeId,
+            primarySkillId: product.primarySkillId,
             discountedValue: product.discountedValue,
+            // belongs to
+            optimumAge: this.includeOptimumAge(product),
+            primarySkill: this.includePrimarySkill(product),
             // has many
             assets: this.includeAssets(product),
             productAssociations: this.includeProductAssociations(product),
             productVariants: this.includeProductVariants(product),
             relatedProducts: this.includeRelatedProducts(product),
         });
+    }
+
+    includeOptimumAge(product: ProductInterface): ProductAgeRange | null {
+        return this.item(product, 'optimumAge', new ProductAgeRangeTransformer());
+    }
+
+    includePrimarySkill(product: ProductInterface): ProductSkill | null {
+        return this.item(product, 'primarySkill', new ProductSkillTransformer());
     }
 
     includeAssets(product: ProductInterface): Array<Asset> {
