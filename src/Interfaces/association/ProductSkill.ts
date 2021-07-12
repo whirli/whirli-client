@@ -10,6 +10,8 @@ export default interface ProductSkill {
     headerImage?: string;
     position?: number;
     associationClass?: string;
+    primaryDescription?: string;
+    additionalDescription?: string;
     productsCount?: number;
     skillGroup?: number;
     // belongs to
