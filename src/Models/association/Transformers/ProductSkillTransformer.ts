@@ -23,6 +23,8 @@ export default class ProductSkillTransformer extends BaseTransformer {
             headerImage: productSkill.headerImage,
             position: productSkill.position,
             associationClass: productSkill.associationClass,
+            primaryDescription: productSkill.primaryDescription,
+            additionalDescription: productSkill.additionalDescription,
             productsCount: productSkill.productsCount,
             skillGroup: productSkill.skillGroup,
             // belongs to
