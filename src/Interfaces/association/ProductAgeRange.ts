@@ -11,6 +11,7 @@ export default interface ProductAgeRange {
     position?: number;
     associationClass?: string;
     productsCount?: number;
+    ageGroup?: number;
     // belongs to
     associated?: ProductAssociation | null;
     // has many

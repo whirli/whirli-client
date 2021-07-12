@@ -1,7 +1,7 @@
 import Product from '../product/Product';
 import Asset from '../asset/Asset';
 import ProductAssociation from './ProductAssociation';
-export default interface ProductAgeRange {
+export default interface ProductSkill {
     id?: string;
     hasPage?: boolean;
     slug?: string;
@@ -10,7 +10,7 @@ export default interface ProductAgeRange {
     position?: number;
     associationClass?: string;
     productsCount?: number;
-    ageGroup?: number;
+    skillGroup?: number;
     associated?: ProductAssociation | null;
     assets?: Array<Asset>;
     products?: Array<Product>;
