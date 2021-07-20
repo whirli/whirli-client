@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.61] - 2021-07-19
+### 🏡 Features
+- Add auth resources ([#353](https://github.com/whirli/whirli-client/pull/353))
+
 ## [0.0.60] - 2021-07-12
 ### 🏡 Features
 - add primaryDescription and additionalDescription props to skill association([#349](https://github.com/whirli/whirli-client/pull/351))
