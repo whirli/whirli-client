@@ -1,5 +1,6 @@
 import { ClientOptions, ClientAllOptions, ClientFeatureOptions } from './Interfaces/ClientOptions';
 import HttpClient from './Interfaces/HttpClient';
+import Api from './Resources/Api/Auth';
 import Auth from './Resources/Auth/Auth';
 import Codes from './Resources/Codes/Codes';
 import Subscriptions from './Resources/Subscriptions';
@@ -15,6 +16,7 @@ import UndeliverableDates from './Resources/UndeliverableDates/UnderliverableDat
 import AttributionSource from './Resources/AttributionSource/AttributionSource';
 
 export default class Client {
+    public api!: Api;
     public auth!: Auth;
     public codes!: Codes;
     public products!: Products;
