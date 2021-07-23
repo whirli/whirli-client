@@ -43,7 +43,7 @@ export default class AbstractResource {
             const requestConfig: Array<object> = self.getRequestConfig(args);
 
             const method = spec.getMethod().toLowerCase();
-            const clientMethod = api.getHttpClient()[method] ? method : '$'.concat(method);
+            const clientMethod = api.getHttpClient()['$'.concat(method)] ? '$'.concat(method) : method;
 
             return api.getHttpClient()[clientMethod](requestPath, ...requestConfig);
 
