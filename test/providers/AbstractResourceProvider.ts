@@ -7,63 +7,63 @@ export const partialSpecTestCaseProvider = (): TestCase[] => [
     {
         test: { name: 'Standard GET', partialSpec: { method: 'GET', path: '/' } },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'guest',
         },
     },
     {
         test: { name: 'Standard POST', partialSpec: { method: 'POST', path: '/' } },
         result: {
-            method: '$post',
+            method: ['$post', 'post'],
             route: 'guest',
         },
     },
     {
         test: { name: 'Standard PUT', partialSpec: { method: 'PUT', path: '/' } },
         result: {
-            method: '$put',
+            method: ['$put', 'put'],
             route: 'guest',
         },
     },
     {
         test: { name: 'Standard PATCH', partialSpec: { method: 'PATCH', path: '/' } },
         result: {
-            method: '$patch',
+            method: ['$patch', 'patch'],
             route: 'guest',
         },
     },
     {
         test: { name: 'Standard DELETE', partialSpec: { method: 'DELETE', path: '/' } },
         result: {
-            method: '$delete',
+            method: ['$delete', 'delete'],
             route: 'guest',
         },
     },
     {
         test: { name: 'member access', partialSpec: { access: 'member', method: 'GET', path: '/' } },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'member',
         },
     },
     {
         test: { name: 'wacc access', partialSpec: { access: 'wacc', method: 'GET', path: '/' } },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'wacc',
         },
     },
     {
         test: { name: 'no symbols in path', partialSpec: { method: 'GET', path: '/user' } },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'guest/user',
         },
     },
     {
         test: { name: 'one symbol in path', partialSpec: { method: 'GET', path: '/{id}' }, args: ['1'] },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'guest/1',
         },
     },
@@ -74,7 +74,7 @@ export const partialSpecTestCaseProvider = (): TestCase[] => [
             args: ['1'],
         },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'guest/user/1',
         },
     },
@@ -85,7 +85,7 @@ export const partialSpecTestCaseProvider = (): TestCase[] => [
             args: ['1', '2'],
         },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'guest/user/1/2',
         },
     },
@@ -108,7 +108,7 @@ export const partialSpecTestCaseProvider = (): TestCase[] => [
             args: ['1', '2', '3', '4'],
         },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'guest/1/2/3/4',
         },
     },
@@ -122,7 +122,7 @@ export const requestTestCaseProvider = (): TestCase[] => [
             requestArguments: [],
         },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'guest',
             body: undefined,
             config: undefined,
@@ -135,7 +135,7 @@ export const requestTestCaseProvider = (): TestCase[] => [
             requestArguments: [{ params: { id: '1' } }],
         },
         result: {
-            method: '$get',
+            method: ['$get', 'get'],
             route: 'guest',
             body: { params: { id: '1' } },
             config: undefined,
@@ -148,7 +148,7 @@ export const requestTestCaseProvider = (): TestCase[] => [
             requestArguments: [{ params: { id: '1' } }, { headers: { fake: 'header' } }],
         },
         result: {
-            method: '$post',
+            method: ['$post', 'post'],
             route: 'guest',
             body: { params: { id: '1' } },
             config: { headers: { fake: 'header' } },
@@ -161,7 +161,7 @@ export const requestTestCaseProvider = (): TestCase[] => [
             requestArguments: ['1', { params: { id: '1' } }, { headers: { fake: 'header' } }],
         },
         result: {
-            method: '$post',
+            method: ['$post', 'post'],
             route: 'guest/1',
             body: { params: { id: '1' } },
             config: { headers: { fake: 'header' } },

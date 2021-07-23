@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.62] - 2021-07-23
+### 🐛 Bug fixes
+- Fix axios vs nuxt/axios method issue and add API to client.ts
+
 ## [0.0.61] - 2021-07-19
 ### 🏡 Features
 - Add auth resources ([#353](https://github.com/whirli/whirli-client/pull/353))
