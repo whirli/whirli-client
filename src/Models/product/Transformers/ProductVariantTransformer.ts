@@ -11,6 +11,8 @@ import StockInterface from '../../../Interfaces/stock/Stock';
 import StockTransformer from '../../stock/Transformers/StockTransformer';
 import ReviewInterface from '../../../Interfaces/review/Review';
 import ReviewTransformer from '../../review/Transformers/ReviewTransformer';
+import StockCheckInterface from '../../../Interfaces/stock/StockCheck';
+import StockCheckTransformer from '../../stock/Transformers/StockCheckTransformer';
 
 export default class ProductVariantTransformer extends BaseTransformer {
     /**
@@ -55,6 +57,7 @@ export default class ProductVariantTransformer extends BaseTransformer {
             otherHazards: productVariant.otherHazards,
             supplierName: productVariant.supplierName,
             aggregateRating: productVariant.aggregateRating,
+            stockCheckCounter: productVariant.stockCheckCounter,
             // belongs to
             product: this.includeProduct(productVariant),
             // has many
@@ -63,6 +66,7 @@ export default class ProductVariantTransformer extends BaseTransformer {
             stockObjects: this.includeStockObjects(productVariant),
             reviews: this.includeReviews(productVariant),
             accountedForReviews: this.includeAccountedForReviews(productVariant),
+            stockChecks: this.includeStockChecks(productVariant),
             // accessor
             totalSafetyStock: productVariant.totalSafetyStock,
             totalStockWithCustomer: productVariant.totalStockWithCustomer,
@@ -81,6 +85,10 @@ export default class ProductVariantTransformer extends BaseTransformer {
 
     includeBasketLines(productVariant: ProductVariantInterface): Array<BasketLineInterface> | undefined {
         return this.collection(productVariant, 'basketLines', new BasketLineTransformer());
+    }
+
+    includeStockChecks(productVariant: ProductVariantInterface): Array<StockCheckInterface> | undefined {
+        return this.collection(productVariant, 'stockChecks', new StockCheckTransformer());
     }
 
     includeOrderLines(productVariant: ProductVariantInterface): Array<OrderLineInterface> | undefined {
