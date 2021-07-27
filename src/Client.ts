@@ -53,6 +53,7 @@ export default class Client {
     }
 
     loadResources(): void {
+        this.api = new Api(this);
         this.auth = new Auth(this);
         this.codes = new Codes(this);
         this.products = new Products(this);
