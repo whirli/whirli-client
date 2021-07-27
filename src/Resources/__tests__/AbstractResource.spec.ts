@@ -30,7 +30,8 @@ describe('AbstractResource.ts', () => {
                 });
 
                 afterEach(() => {
-                    httpClient[result.method].mockClear();
+                    httpClient[result.method[0]].mockClear();
+                    httpClient[result.method[1]].mockClear();
                 });
 
                 it('can create a request method for a resource', () => {
@@ -39,7 +40,8 @@ describe('AbstractResource.ts', () => {
 
                     resourceRequestFn(...args, request);
 
-                    const argsReceivedByMethod = httpClient[result.method].mock.calls[0];
+                    const argsReceivedByMethod =
+                        httpClient[result.method[0]].mock.calls[0] || httpClient[result.method[1]].mock.calls[0];
                     const requestPath = argsReceivedByMethod[0];
                     const requestBody = argsReceivedByMethod[1];
 
@@ -65,13 +67,15 @@ describe('AbstractResource.ts', () => {
                 });
 
                 afterEach(() => {
-                    httpClient[result.method].mockClear();
+                    httpClient[result.method[0]].mockClear();
+                    httpClient[result.method[1]].mockClear();
                 });
 
                 it('makes the correct method call to the http client (e.g. axios)', () => {
                     resourceRequestFn(...test.requestArguments);
 
-                    const argsReceivedByMethod = httpClient[result.method].mock.calls[0];
+                    const argsReceivedByMethod =
+                        httpClient[result.method[0]].mock.calls[0] || httpClient[result.method[1]].mock.calls[0];
                     const requestPath = argsReceivedByMethod[0];
                     const requestBody = argsReceivedByMethod[1];
                     const requestConfig = argsReceivedByMethod[2];

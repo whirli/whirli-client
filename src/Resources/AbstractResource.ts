@@ -42,7 +42,10 @@ export default class AbstractResource {
             const requestPath = self.getRequestPath(spec, args);
             const requestConfig: Array<object> = self.getRequestConfig(args);
 
-            return api.getHttpClient()[`$${spec.getMethod().toLowerCase()}`](requestPath, ...requestConfig);
+            const method = spec.getMethod().toLowerCase();
+            const clientMethod = api.getHttpClient()['$'.concat(method)] ? '$'.concat(method) : method;
+
+            return api.getHttpClient()[clientMethod](requestPath, ...requestConfig);
 
             // @todo Maybe we can handle something to do with pagination here, if it's a paginated resource
         };
