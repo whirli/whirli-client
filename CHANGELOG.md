@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.64] - 2021-07-30
+### 🏡 Features
+- Add stock reassign endpoint ([#355](https://github.com/whirli/whirli-client/pull/358)
+
 ## [0.0.63] - 2021-07-23
 ### 🐛 Bug fixes
 - Fix axios vs nuxt/axios method issue and add API to client.ts ([#355](https://github.com/whirli/whirli-client/pull/355)
