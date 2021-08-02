@@ -6,7 +6,7 @@ import WACCUsers from './Users/Users';
 import WACCUserSubscriptions from './UserSubscriptions/UserSubscriptions';
 import WACCGifts from './Gifts/Gifts';
 import WACCProducts from './Products/Products';
-import WACCStockToybox from './Stock/Stock';
+import WACCStock from './Stock/Stock';
 import WACCProductAssociations from './ProductAssociations/ProductAssociations';
 import WACCAssets from './Assets/Assets';
 import WACCReturnOrderLines from './ReturnOrderLines/ReturnOrderLines';
@@ -27,7 +27,7 @@ export interface WaccResources {
     products: WACCProducts;
     productAssociations: WACCProductAssociations;
     assets: WACCAssets;
-    stock: WACCStockToybox;
+    stock: WACCStock;
     roles: WACCRoles;
     waitSpots: WACCWaitSpots;
     referrals: WACCReferral;

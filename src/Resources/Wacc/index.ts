@@ -6,7 +6,7 @@ import WACCUsers from './Users/Users';
 import WACCUserSubscriptions from './UserSubscriptions/UserSubscriptions';
 import WACCGifts from './Gifts/Gifts';
 import WACCProducts from './Products/Products';
-import WACCStockToybox from './Stock/Stock';
+import WACCStock from './Stock/Stock';
 import WACCProductAssociations from './ProductAssociations/ProductAssociations';
 import WACCAssets from './Assets/Assets';
 import WACCReturnOrderLines from './ReturnOrderLines/ReturnOrderLines';
@@ -28,7 +28,7 @@ export interface WaccResources {
     products: WACCProducts;
     productAssociations: WACCProductAssociations;
     assets: WACCAssets;
-    stock: WACCStockToybox;
+    stock: WACCStock;
     roles: WACCRoles;
     waitSpots: WACCWaitSpots;
     referrals: WACCReferral;
@@ -48,7 +48,7 @@ export function loadWaccResources(client: Client): WaccResources {
         products: new WACCProducts(client),
         productAssociations: new WACCProductAssociations(client),
         assets: new WACCAssets(client),
-        stock: new WACCStockToybox(client),
+        stock: new WACCStock(client),
         roles: new WACCRoles(client),
         waitSpots: new WACCWaitSpots(client),
         referrals: new WACCReferral(client),
