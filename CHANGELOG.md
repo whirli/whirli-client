@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🏡 Features
+- Add Stock Replenishment - Bin, Stock, StockCheck & ProductVariant updates ([#357](https://github.com/whirli/whirli-client/pull/357))
 
 ## [0.0.64] - 2021-07-30
 ### 🏡 Features
@@ -12,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.63] - 2021-07-23
 ### 🐛 Bug fixes
-- Fix axios vs nuxt/axios method issue and add API to client.ts ([#355](https://github.com/whirli/whirli-client/pull/355)
+- Fix axios vs nuxt/axios method issue and add API to client.ts ([#355](https://github.com/whirli/whirli-client/pull/355))
 
 ## [0.0.62] - 2021-07-19
 ### 🏡 Chore

@@ -4,6 +4,7 @@ import OrderLine from '../order/OrderLine';
 import Stock from '../stock/Stock';
 import Review from '../review/Review';
 import Rating from '../review/Rating';
+import StockCheck from '../stock/StockCheck';
 
 export default interface ProductVariant {
     id?: string;
@@ -41,12 +42,14 @@ export default interface ProductVariant {
     otherHazards?: string;
     supplierName?: string;
     aggregateRating?: number;
+    stockCheckCounter?: number;
     // belongs to
     product?: Product | null;
     // has many
     basketLines?: Array<BasketLine>;
     orderLines?: Array<OrderLine>;
     stockObjects?: Array<Stock>;
+    stockChecks?: Array<StockCheck>;
     reviews?: Array<Review>;
     accountedForReviews?: Array<Review>;
     // accessors
