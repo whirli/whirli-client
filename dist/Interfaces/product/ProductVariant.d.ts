@@ -4,7 +4,7 @@ import OrderLine from '../order/OrderLine';
 import Stock from '../stock/Stock';
 import Review from '../review/Review';
 import Rating from '../review/Rating';
-import StockCheck from "../stock/StockCheck";
+import StockCheck from '../stock/StockCheck';
 export default interface ProductVariant {
     id?: string;
     createdAt?: Date;

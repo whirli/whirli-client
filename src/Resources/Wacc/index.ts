@@ -6,7 +6,7 @@ import WACCUsers from './Users/Users';
 import WACCUserSubscriptions from './UserSubscriptions/UserSubscriptions';
 import WACCGifts from './Gifts/Gifts';
 import WACCProducts from './Products/Products';
-import WACCStockToybox from './Stock/Toybox';
+import WACCStockToybox from './Stock/Stock';
 import WACCStockTransition from './Stock/Transition';
 import WACCProductAssociations from './ProductAssociations/ProductAssociations';
 import WACCAssets from './Assets/Assets';
