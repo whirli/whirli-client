@@ -9,6 +9,6 @@ export default interface Stock {
     statusId?: number;
     productVariant?: ProductVariant | null;
     user?: User | null;
-    bin?: Bin | null | {};
+    bin?: Bin | null;
     returnOrderLines?: ReturnOrderLine[];
 }
