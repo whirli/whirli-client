@@ -27,8 +27,8 @@ export default interface Product {
     shortDescription?: string;
     resourceType?: string;
     totalOrders?: number;
-    totalReturnedDamaged?: number;
-    totalReturnedUndamaged?: number;
+    totalReturnedWriteOff?: number;
+    totalReturnedNotWriteOff?: number;
     totalSafetyStock?: number;
     totalSold?: number;
     totalStockWithCustomer?: number;

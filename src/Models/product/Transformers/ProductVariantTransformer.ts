@@ -72,7 +72,7 @@ export default class ProductVariantTransformer extends BaseTransformer {
             totalStockWithCustomer: productVariant.totalStockWithCustomer,
             totalStockUnits: productVariant.totalStockUnits,
             totalOrders: productVariant.totalOrders,
-            totalReturnedDamaged: productVariant.totalReturnedDamaged,
+            totalReturnedWriteOff: productVariant.totalReturnedWriteOff,
             totalSold: productVariant.totalSold,
             totalReviews: productVariant.totalReviews,
             ratings: productVariant.ratings,

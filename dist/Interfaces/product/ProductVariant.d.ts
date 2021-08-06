@@ -56,7 +56,7 @@ export default interface ProductVariant {
     totalStockWithCustomer?: number;
     totalStockUnits?: number;
     totalOrders?: number;
-    totalReturnedDamaged?: number;
+    totalReturnedWriteOff?: number;
     totalSold?: number;
     totalReviews?: number;
     ratings?: Rating;
