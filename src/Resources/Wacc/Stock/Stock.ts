@@ -21,4 +21,9 @@ export default class Stock extends AbstractResource {
         method: 'PATCH',
         path: '/transition-in-warehouse',
     });
+
+    public stockCheck: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: '/stock-check',
+    });
 }

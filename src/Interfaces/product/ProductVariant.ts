@@ -5,6 +5,8 @@ import Stock from '../stock/Stock';
 import Review from '../review/Review';
 import Rating from '../review/Rating';
 import StockCheck from '../stock/StockCheck';
+import BinStock from '../bin/BinStock';
+import Bin from '../bin/Bin';
 
 export default interface ProductVariant {
     id?: string;
@@ -52,6 +54,7 @@ export default interface ProductVariant {
     stockChecks?: Array<StockCheck>;
     reviews?: Array<Review>;
     accountedForReviews?: Array<Review>;
+    binStock?: Array<BinStock>;
     // accessors
     totalSafetyStock?: number;
     totalStockWithCustomer?: number;
@@ -61,4 +64,5 @@ export default interface ProductVariant {
     totalSold?: number;
     totalReviews?: number;
     ratings?: Rating;
+    bins?: Array<Bin>;
 }
