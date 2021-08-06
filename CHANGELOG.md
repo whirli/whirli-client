@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.0.67] - 2021-08-06
+### Features
+- rename damaged props to written off ([#362])(https://github.com/whirli/whirli-client/pull/362)
 
 ## [0.0.66] - 2021-08-06
 ### 🏡 Features
