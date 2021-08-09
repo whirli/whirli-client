@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🏡 Chore
-- Remove all references to "binStock" ([#365])(https://github.com/whirli/whirli-client/pull/362)
+- Remove all references to "binStock" ([#366])(https://github.com/whirli/whirli-client/pull/366)
 
 ## [0.0.67] - 2021-08-06
 ### Features
