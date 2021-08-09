@@ -23,7 +23,7 @@ export default class ReturnOrders extends AbstractResource {
     });
 
     public complete: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
-        method: 'PUT',
+        method: 'POST',
         path: '/{id}/complete',
     });
 }
