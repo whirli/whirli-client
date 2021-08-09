@@ -11,7 +11,7 @@ export default interface Stock {
     // belongs to
     productVariant?: ProductVariant | null;
     user?: User | null;
-    bin?: Bin | null | {};
+    bin?: Bin | null;
     // has many
     returnOrderLines?: ReturnOrderLine[];
 }

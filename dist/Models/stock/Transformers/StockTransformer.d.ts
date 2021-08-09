@@ -9,6 +9,6 @@ export default class StockTransformer extends BaseTransformer {
     mapData(stock: StockInterface): Stock;
     includeProductVariant(stock: StockInterface): ProductVariantInterface | null;
     includeUser(stock: StockInterface): UserInterface | null;
-    includeBin(stock: StockInterface): BinInterface | null | {};
+    includeBin(stock: StockInterface): BinInterface | null;
     includeReturnOrderLines(stock: StockInterface): ReturnOrderLineInterface[];
 }

@@ -5,4 +5,5 @@ export default class Stock extends AbstractResource {
     update: (...args: HttpClientConfig) => HttpClientResponse;
     reassign: (...args: HttpClientConfig) => HttpClientResponse;
     transitionInWarehouse: (...args: HttpClientConfig) => HttpClientResponse;
+    stockCheck: (...args: HttpClientConfig) => HttpClientResponse;
 }

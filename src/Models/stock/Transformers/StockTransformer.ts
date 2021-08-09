@@ -37,7 +37,7 @@ export default class StockTransformer extends BaseTransformer {
     includeUser(stock: StockInterface): UserInterface | null {
         return this.item(stock, 'user', new UserTransformer());
     }
-    includeBin(stock: StockInterface): BinInterface | null | {} {
+    includeBin(stock: StockInterface): BinInterface | null {
         return this.item(stock, 'bin', new BinTransformer());
     }
     includeReturnOrderLines(stock: StockInterface): ReturnOrderLineInterface[] {
