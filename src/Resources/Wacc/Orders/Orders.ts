@@ -46,4 +46,9 @@ export default class Orders extends AbstractResource {
         method: 'PATCH',
         path: '/assign-user/{id}',
     });
+
+    public getPriorityOrder: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/priority',
+    });
 }
