@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.69] - 2021-08-23
+### 🏡 Features
+- Add order priority end point
+
 ## [0.0.68] - 2021-08-09
 ### 🏡 Chore
 - Change method from PUT to POST for complete return endpoint ([#365])(https://github.com/whirli/whirli-client/pull/365)
