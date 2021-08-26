@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.70] - 2021-08-26
+### 🏡 Features
+- Add payment intent endpoint ([#371])(https://github.com/whirli/whirli-client/pull/371)
+
 ## [0.0.69] - 2021-08-23
 ### 🏡 Features
 - Add order priority end point ([#369])(https://github.com/whirli/whirli-client/pull/369)

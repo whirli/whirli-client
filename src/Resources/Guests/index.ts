@@ -4,6 +4,7 @@ import Gifts from './Gifts';
 import ShippingAddons from './ShippingAddons';
 import ReasonsForEnd from './ReasonsForEnd';
 import Subscriptions from './Subscriptions';
+import PaymentIntents from './PaymentIntents';
 
 export interface GuestsResources {
     baskets: Baskets;
@@ -11,6 +12,7 @@ export interface GuestsResources {
     shippingAddons: ShippingAddons;
     reasonsForEnd: ReasonsForEnd;
     subscriptions: Subscriptions;
+    paymentIntents: PaymentIntents;
 }
 
 export function loadGuestsResources(client: Client): GuestsResources {
@@ -20,5 +22,6 @@ export function loadGuestsResources(client: Client): GuestsResources {
         shippingAddons: new ShippingAddons(client),
         reasonsForEnd: new ReasonsForEnd(client),
         subscriptions: new Subscriptions(client),
+        paymentIntents: new PaymentIntents(client),
     };
 }
