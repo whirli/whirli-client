@@ -6,9 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🏡 Features
-- Add Complete Outgoing Order endpoint
-- Add Unassign Endpoint
-- Update Order and OrderLine Interfaces/Transformers with new resource fields
+- Add Complete Outgoing Order endpoint ([#374])(https://github.com/whirli/whirli-client/pull/374)
+- Add Unassign Endpoint ([#374])(https://github.com/whirli/whirli-client/pull/374)
+- Update Order and OrderLine Interfaces/Transformers with new resource fields ([#374])(https://github.com/whirli/whirli-client/pull/374)
 
 ## [0.0.70] - 2021-08-26
 ### 🏡 Features
