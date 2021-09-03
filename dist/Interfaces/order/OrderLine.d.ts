@@ -20,6 +20,10 @@ export default interface OrderLine {
     option?: string;
     deletedAt?: Date;
     meta?: string;
+    statusId?: number;
+    message?: string;
+    statusId?: number;
+    message?: string;
     order?: Order | null;
     productVariant?: ProductVariant | null;
     stock?: Array<Stock>;

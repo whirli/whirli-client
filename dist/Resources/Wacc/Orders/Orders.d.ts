@@ -10,5 +10,9 @@ export default class Orders extends AbstractResource {
     print: (...args: HttpClientConfig) => HttpClientResponse;
     getForPicking: (...args: HttpClientConfig) => HttpClientResponse;
     assignOrders: (...args: HttpClientConfig) => HttpClientResponse;
+    unassignOrder: (...args: HttpClientConfig) => HttpClientResponse;
+    unassignOrder: (...args: HttpClientConfig) => HttpClientResponse;
+    completeOutgoingOrder: (...args: HttpClientConfig) => HttpClientResponse;
     getPriorityOrder: (...args: HttpClientConfig) => HttpClientResponse;
+    completeOutgoingOrder: (...args: HttpClientConfig) => HttpClientResponse;
 }
