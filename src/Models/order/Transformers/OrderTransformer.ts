@@ -26,6 +26,8 @@ export default class OrderTransformer extends BaseTransformer {
             reference: order.reference,
             trackingNo: order.trackingNo,
             dispatchedAt: order.dispatchedAt,
+            onHoldPickingAt: order.onHoldPickingAt,
+            onHoldPackingAt: order.onHoldPackingAt,
             currency: order.currency,
             statusId: order.statusId,
             placedAt: order.placedAt,
