@@ -40,8 +40,6 @@ export default interface Order {
     dispatchedAt?: string;
     onHoldPickingAt?: string;
     onHoldPackingAt?: string;
-    onHoldPickingAt?: string;
-    onHoldPackingAt?: string;
     reference?: string;
     placedAt?: Date;
     meta?: string;

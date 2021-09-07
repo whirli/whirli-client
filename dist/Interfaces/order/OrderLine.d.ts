@@ -22,8 +22,7 @@ export default interface OrderLine {
     meta?: string;
     statusId?: number;
     message?: string;
-    statusId?: number;
-    message?: string;
+    testType?: string;
     order?: Order | null;
     productVariant?: ProductVariant | null;
     stock?: Array<Stock>;
