@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### 🏡 Features
+- Add Complete Outgoing Order endpoint ([#374])(https://github.com/whirli/whirli-client/pull/374)
+- Add Unassign Endpoint ([#374])(https://github.com/whirli/whirli-client/pull/374)
+- Update Order and OrderLine Interfaces/Transformers with new resource fields ([#374])(https://github.com/whirli/whirli-client/pull/374)
 
 ## [0.0.70] - 2021-08-26
 ### 🏡 Features

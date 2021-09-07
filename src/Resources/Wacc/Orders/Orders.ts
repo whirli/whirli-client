@@ -47,8 +47,18 @@ export default class Orders extends AbstractResource {
         path: '/assign-user/{id}',
     });
 
+    public unassignOrder: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: '/unassign-user/{assigneeId}',
+    });
+
     public getPriorityOrder: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'GET',
         path: '/priority',
+    });
+
+    public completeOutgoingOrder: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: '/complete-outgoing-process',
     });
 }
