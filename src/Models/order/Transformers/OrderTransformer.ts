@@ -26,10 +26,10 @@ export default class OrderTransformer extends BaseTransformer {
             reference: order.reference,
             trackingNo: order.trackingNo,
             dispatchedAt: order.dispatchedAt,
+            dispatchBy: order.dispatchBy,
             onHoldPickingAt: order.onHoldPickingAt,
             onHoldPackingAt: order.onHoldPackingAt,
             currency: order.currency,
-            statusId: order.statusId,
             placedAt: order.placedAt,
             notes: order.notes,
             billingPhone: order.billingPhone,
@@ -61,11 +61,6 @@ export default class OrderTransformer extends BaseTransformer {
             meta: order.meta,
             resourceType: order.resourceType,
             onFirstOrder: order.onFirstOrder,
-            isFirstOrder: order.isFirstOrder,
-            deliveryMethod: order.deliveryMethod,
-            expectedDeliveryDate: order.expectedDeliveryDate,
-            hasReusablePackagingOptIn: order.hasReusablePackagingOptIn,
-            weight: order.weight,
             shippingServiceId: order.shippingServiceId,
             // belongs to
             user: this.includeUser(order),
@@ -75,6 +70,13 @@ export default class OrderTransformer extends BaseTransformer {
             lines: this.includeOrderLines(order),
             // accessors
             isGift: order.isGift,
+            statusId: order.statusId,
+            deliveryMethod: order.deliveryMethod,
+            hasReusablePackagingOptIn: order.hasReusablePackagingOptIn,
+            tokensTotal: order.tokensTotal,
+            isFirstOrder: order.isFirstOrder,
+            expectedDeliveryDate: order.expectedDeliveryDate,
+            weight: order.weight,
         });
     }
 
