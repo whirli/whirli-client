@@ -39,6 +39,7 @@ export default interface Order {
     contactPhone?: string;
     trackingNo?: string;
     dispatchedAt?: string;
+    dispatchBy?: string;
     onHoldPickingAt?: string;
     onHoldPackingAt?: string;
     reference?: string;
