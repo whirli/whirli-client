@@ -63,4 +63,6 @@ export default interface Order {
     // accessors
     isGift?: boolean;
     tokensTotal?: number;
+    isPastDueDispatch?: boolean;
+    isPastDueDelivery?: boolean;
 }

@@ -77,6 +77,8 @@ export default class OrderTransformer extends BaseTransformer {
             isFirstOrder: order.isFirstOrder,
             expectedDeliveryDate: order.expectedDeliveryDate,
             weight: order.weight,
+            isPastDueDispatch: order.isPastDueDispatch,
+            isPastDueDelivery: order.isPastDueDelivery,
         });
     }
 

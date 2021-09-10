@@ -59,4 +59,6 @@ export default interface Order {
     lines?: OrderLine[];
     isGift?: boolean;
     tokensTotal?: number;
+    isPastDueDispatch?: boolean;
+    isPastDueDelivery?: boolean;
 }
