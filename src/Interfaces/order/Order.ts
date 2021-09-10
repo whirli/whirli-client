@@ -39,6 +39,7 @@ export default interface Order {
     contactPhone?: string;
     trackingNo?: string;
     dispatchedAt?: string;
+    dispatchBy?: string;
     onHoldPickingAt?: string;
     onHoldPackingAt?: string;
     reference?: string;
@@ -62,4 +63,6 @@ export default interface Order {
     // accessors
     isGift?: boolean;
     tokensTotal?: number;
+    isPastDueDispatch?: boolean;
+    isPastDueDelivery?: boolean;
 }
