@@ -4,11 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
 
-## [0.0.71] - 2021-09-09
+## [Unreleased]
 ### 🏡 Chore
 - Add missing property to order interface and transformer ([#376])(https://github.com/whirli/whirli-client/pull/376)
+
+### 🏡 Features
+- Add new accessors to order interface and transformer (([#378])(https://github.com/whirli/whirli-client/pull/378))
 
 ### 🏡 Features
 - Add Complete Outgoing Order endpoint ([#374])(https://github.com/whirli/whirli-client/pull/374)
