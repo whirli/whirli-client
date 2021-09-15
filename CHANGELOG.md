@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.72] - 2021-09-09
+## [0.0.72] - 2021-09-15
 - add ShippingService and ShippingManifest, and courier endpoints - https://github.com/whirli/whirli-client/pull/379
 
 ## [0.0.71] - 2021-09-09
