@@ -9,6 +9,8 @@ import OrderLineTransformer from '../../order/Transformers/OrderLineTransformer'
 import BaseTransformer from '../../../BaseTransformer';
 import AssigneeTransformer from './AssigneeTransformer';
 import BasketTransformer from '../../basket/Transformers/BasketTransformer';
+import ShippingManifestInterface from '../../../Interfaces/delivery/ShippingManifestInterface';
+import ShippingManifestTransformer from '../../delivery/Transformers/ShippingManifestTransformer';
 
 export default class OrderTransformer extends BaseTransformer {
     /**
@@ -21,17 +23,20 @@ export default class OrderTransformer extends BaseTransformer {
             id: order.id,
             createdAt: order.createdAt,
             updatedAt: order.updatedAt,
-            shippingMethod: order.shippingMethod,
-            shippingPreference: order.shippingPreference,
-            reference: order.reference,
-            trackingNo: order.trackingNo,
-            dispatchedAt: order.dispatchedAt,
-            dispatchBy: order.dispatchBy,
+            pickingAt: order.pickingAt,
+            pickedAt: order.pickedAt,
+            packingAt: order.packingAt,
+            packedAt: order.packedAt,
+            placedAt: order.placedAt,
             onHoldPickingAt: order.onHoldPickingAt,
             onHoldPackingAt: order.onHoldPackingAt,
-            currency: order.currency,
-            placedAt: order.placedAt,
+            dispatchedAt: order.dispatchedAt,
+            completedAt: order.completedAt,
+            deletedAt: order.deletedAt,
+            shippingMethod: order.shippingMethod,
+            shippingPreference: order.shippingPreference,
             notes: order.notes,
+            currency: order.currency,
             billingPhone: order.billingPhone,
             billingEmail: order.billingEmail,
             billingFirstname: order.billingFirstname,
@@ -58,24 +63,26 @@ export default class OrderTransformer extends BaseTransformer {
             shippingZip: order.shippingZip,
             contactEmail: order.contactEmail,
             contactPhone: order.contactPhone,
+            trackingNo: order.trackingNo,
+            reference: order.reference,
             meta: order.meta,
+            expectedDeliveryDate: order.expectedDeliveryDate,
+            dispatchBy: order.dispatchBy,
             resourceType: order.resourceType,
-            onFirstOrder: order.onFirstOrder,
-            shippingServiceId: order.shippingServiceId,
-            // belongs to
-            user: this.includeUser(order),
+            // relations
             basket: this.includeBasket(order),
+            user: this.includeUser(order),
             assignee: this.includeAssignee(order),
-            // has many
             lines: this.includeOrderLines(order),
+            shippingManifest: this.includeShippingManifest(order),
             // accessors
             isGift: order.isGift,
             statusId: order.statusId,
             deliveryMethod: order.deliveryMethod,
             hasReusablePackagingOptIn: order.hasReusablePackagingOptIn,
             tokensTotal: order.tokensTotal,
+            onFirstOrder: order.onFirstOrder,
             isFirstOrder: order.isFirstOrder,
-            expectedDeliveryDate: order.expectedDeliveryDate,
             weight: order.weight,
             isPastDueDispatch: order.isPastDueDispatch,
             isPastDueDelivery: order.isPastDueDelivery,
@@ -96,5 +103,9 @@ export default class OrderTransformer extends BaseTransformer {
 
     includeBasket(order: OrderInterface): BasketInterface | null {
         return this.item(order, 'basket', new BasketTransformer());
+    }
+
+    includeShippingManifest(order: OrderInterface): ShippingManifestInterface | null {
+        return this.item(order, 'shippingManifest', new ShippingManifestTransformer());
     }
 }

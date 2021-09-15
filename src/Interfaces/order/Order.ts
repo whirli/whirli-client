@@ -2,11 +2,22 @@ import User from '../user/User';
 import OrderLine from './OrderLine';
 import Assignee from './Assignee';
 import { Basket } from '../basket/Basket';
+import ShippingManifest from '../../Models/delivery/ShippingManifest';
 
 export default interface Order {
     id?: string;
-    createdAt?: Date;
-    updatedAt?: Date;
+    createdAt?: string;
+    updatedAt?: string;
+    pickingAt?: string;
+    pickedAt?: string;
+    packingAt?: string;
+    packedAt?: string;
+    placedAt?: string;
+    onHoldPickingAt?: string;
+    onHoldPackingAt?: string;
+    dispatchedAt?: string;
+    completedAt?: string;
+    deletedAt?: string;
     shippingMethod?: string;
     shippingPreference?: string;
     notes?: string;
@@ -38,31 +49,26 @@ export default interface Order {
     contactEmail?: string;
     contactPhone?: string;
     trackingNo?: string;
-    dispatchedAt?: string;
-    dispatchBy?: string;
-    onHoldPickingAt?: string;
-    onHoldPackingAt?: string;
     reference?: string;
-    placedAt?: Date;
     meta?: string;
-    statusId?: number;
-    resourceType?: string;
-    onFirstOrder?: boolean;
-    isFirstOrder?: boolean;
-    deliveryMethod?: string;
     expectedDeliveryDate?: string;
-    hasReusablePackagingOptIn?: boolean;
-    weight?: number;
-    shippingServiceId?: number;
-    // belongs to
+    dispatchBy?: string;
+    resourceType?: string;
+    // relations
+    basket?: Basket | null;
     user?: User | null;
     assignee?: Assignee | null;
-    basket?: Basket | null;
-    // has many
     lines?: OrderLine[];
+    shippingManifest?: ShippingManifest | null;
     // accessors
     isGift?: boolean;
+    statusId?: number;
+    deliveryMethod?: string;
+    hasReusablePackagingOptIn?: boolean;
     tokensTotal?: number;
+    onFirstOrder?: boolean;
+    isFirstOrder?: boolean;
+    weight?: number;
     isPastDueDispatch?: boolean;
     isPastDueDelivery?: boolean;
 }
