@@ -1,4 +1,5 @@
 import Client from '../../Client';
+import WACCCourier from './Couriers/Couriers';
 import WACCOrders from './Orders/Orders';
 import WACCReturnOrders from './ReturnOrders/ReturnOrders';
 import WACCSearch from './Search/Search';
@@ -16,6 +17,7 @@ import WACCWaitSpots from './WaitSpots/WaitSpots';
 import WACCReferral from './Referral/Referrals';
 import WACCCodes from './Codes/Codes';
 export interface WaccResources {
+    couriers: WACCCourier;
     orders: WACCOrders;
     orderLines: WACCOrderLines;
     returnOrders: WACCReturnOrders;

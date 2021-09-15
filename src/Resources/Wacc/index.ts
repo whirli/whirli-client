@@ -1,4 +1,5 @@
 import Client from '../../Client';
+import WACCCourier from './Couriers/Couriers';
 import WACCOrders from './Orders/Orders';
 import WACCReturnOrders from './ReturnOrders/ReturnOrders';
 import WACCSearch from './Search/Search';
@@ -17,6 +18,7 @@ import WACCReferral from './Referral/Referrals';
 import WACCCodes from './Codes/Codes';
 
 export interface WaccResources {
+    couriers: WACCCourier;
     orders: WACCOrders;
     orderLines: WACCOrderLines;
     returnOrders: WACCReturnOrders;
@@ -37,6 +39,7 @@ export interface WaccResources {
 
 export function loadWaccResources(client: Client): WaccResources {
     return {
+        couriers: new WACCCourier(client),
         orders: new WACCOrders(client),
         orderLines: new WACCOrderLines(client),
         returnOrders: new WACCReturnOrders(client),
