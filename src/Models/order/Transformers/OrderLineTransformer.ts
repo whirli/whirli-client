@@ -34,8 +34,6 @@ export default class OrderLineTransformer extends BaseTransformer {
             option: orderLine.option,
             deletedAt: orderLine.deletedAt,
             meta: orderLine.meta,
-            statusId: orderLine.statusId,
-            message: orderLine.message,
             // belongs to
             order: this.includeOrder(orderLine),
             productVariant: this.includeProductVariant(orderLine),

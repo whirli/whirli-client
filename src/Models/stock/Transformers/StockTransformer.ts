@@ -22,6 +22,7 @@ export default class StockTransformer extends BaseTransformer {
             createdAt: stock.createdAt,
             updatedAt: stock.updatedAt,
             statusId: stock.statusId,
+            message: stock.message,
             // belongs to
             productVariant: this.includeProductVariant(stock),
             user: this.includeUser(stock),
