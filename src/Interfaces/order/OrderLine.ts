@@ -21,8 +21,6 @@ export default interface OrderLine {
     option?: string;
     deletedAt?: Date;
     meta?: string;
-    statusId?: number;
-    message?: string;
     // belongs to
     order?: Order | null;
     productVariant?: ProductVariant | null;

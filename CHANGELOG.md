@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.73] - 2021-09-27
+### 🏡 Chore
+- Move new OrderLine properties to the Stock model instead ([#385])(https://github.com/whirli/whirli-client/pull/385)
+
 ## [0.0.72] - 2021-09-15
 - add ShippingService and ShippingManifest, and courier endpoints - https://github.com/whirli/whirli-client/pull/379
 
