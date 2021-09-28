@@ -8,7 +8,6 @@ export default interface Stock {
     createdAt?: Date;
     updatedAt?: Date;
     statusId?: number;
-    message?: string;
     // belongs to
     productVariant?: ProductVariant | null;
     user?: User | null;
