@@ -11,6 +11,8 @@ import AssigneeTransformer from './AssigneeTransformer';
 import BasketTransformer from '../../basket/Transformers/BasketTransformer';
 import ShippingManifestInterface from '../../../Interfaces/delivery/ShippingManifestInterface';
 import ShippingManifestTransformer from '../../delivery/Transformers/ShippingManifestTransformer';
+import GiftInterface from '../../../Interfaces/gift/Gift';
+import GiftTransformer from '../../gift/Transformers/GiftTransformer';
 
 export default class OrderTransformer extends BaseTransformer {
     /**
@@ -75,6 +77,7 @@ export default class OrderTransformer extends BaseTransformer {
             assignee: this.includeAssignee(order),
             lines: this.includeOrderLines(order),
             shippingManifest: this.includeShippingManifest(order),
+            gift: this.includeGift(order),
             // accessors
             isGift: order.isGift,
             statusId: order.statusId,
@@ -107,5 +110,9 @@ export default class OrderTransformer extends BaseTransformer {
 
     includeShippingManifest(order: OrderInterface): ShippingManifestInterface | null {
         return this.item(order, 'shippingManifest', new ShippingManifestTransformer());
+    }
+
+    includeGift(order: OrderInterface): GiftInterface | null {
+        return this.item(order, 'gift', new GiftTransformer());
     }
 }

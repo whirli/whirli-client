@@ -3,6 +3,7 @@ import OrderLine from './OrderLine';
 import Assignee from './Assignee';
 import { Basket } from '../basket/Basket';
 import ShippingManifest from '../../Models/delivery/ShippingManifest';
+import Gift from '../gift/Gift';
 
 export default interface Order {
     id?: string;
@@ -59,6 +60,7 @@ export default interface Order {
     user?: User | null;
     assignee?: Assignee | null;
     lines?: OrderLine[];
+    gift?: Gift | null;
     shippingManifest?: ShippingManifest | null;
     // accessors
     isGift?: boolean;
