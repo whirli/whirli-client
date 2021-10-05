@@ -59,6 +59,7 @@ export default class GiftTransformer extends BaseTransformer {
             shippingCountry: gift.shippingCountry,
             shippingZip: gift.shippingZip,
             resourceType: gift.resourceType,
+            dispatchBy: gift.dispatchBy,
             // relations
             giftBasket: this.includeGiftBasket(gift),
             order: this.includeOrder(gift),

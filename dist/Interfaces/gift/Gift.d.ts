@@ -47,6 +47,7 @@ export default interface Gift {
     shippingCountry?: string;
     shippingZip?: string;
     resourceType?: string;
+    dispatchBy?: Date | string;
     giftBasket?: GiftBasket | null;
     order?: Order | null;
     user?: User | null;
