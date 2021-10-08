@@ -10,6 +10,7 @@ import WaitSpot from '../waitspot/WaitSpot';
 import Role from '../role/Role';
 import Review from '../review/Review';
 import MyPlaytime from '../myPlaytime/MyPlaytime';
+import Gift from '../gift/Gift';
 interface Meta {
     daysUntilAvailable?: number;
     daysUntilCancel?: number;
@@ -60,6 +61,8 @@ export default interface User {
     roles?: Array<Role>;
     waccRole?: string;
     reviews?: Array<Review>;
+    assignedOrder?: Order;
+    assignedGift?: Gift;
     onFirstOrder?: boolean;
     toyboxTokens?: number;
     additionalTokens?: number;
@@ -72,5 +75,6 @@ export default interface User {
     changeSubscriptionStatus?: ChangeSubscriptionStatus;
     cancelSubscriptionStatus?: CancelSubscriptionStatus;
     notes?: string;
+    assignedItem?: Order | Gift;
 }
 export {};

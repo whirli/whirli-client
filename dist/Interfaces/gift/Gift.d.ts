@@ -47,11 +47,15 @@ export default interface Gift {
     shippingCountry?: string;
     shippingZip?: string;
     resourceType?: string;
+    dispatchBy?: Date | string;
+    assigneeId?: number;
+    reference?: string;
     giftBasket?: GiftBasket | null;
     order?: Order | null;
     user?: User | null;
     redeemedBy?: User | null;
     shippingAddons?: Array<ShippingAddon>;
+    assignee?: User | null;
     statusId?: number;
     deliveryMethod?: string;
     hasReusablePackagingOptIn?: boolean;

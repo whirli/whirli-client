@@ -12,6 +12,7 @@ import UserSubscriptionInterface from '../../../Interfaces/user/UserSubscription
 import RoleInterface from '../../../Interfaces/role/Role';
 import WaitSpotInterface from '../../../Interfaces/waitspot/WaitSpot';
 import ReviewInterface from '../../../Interfaces/review/Review';
+import GiftInterface from '../../../Interfaces/gift/Gift';
 export default class UserTransformer extends BaseTransformer {
     mapData(user: UserInterface): User;
     includeOrders(user: UserInterface): Array<OrderInterface>;
@@ -26,4 +27,6 @@ export default class UserTransformer extends BaseTransformer {
     includeBasket(user: UserInterface): Array<BasketInterface>;
     includeUserSubscriptions(user: UserInterface): Array<UserSubscriptionInterface>;
     includeReviews(user: UserInterface): Array<ReviewInterface>;
+    includeAssignedOrder(user: UserInterface): OrderInterface | null;
+    includeAssignedGift(user: UserInterface): GiftInterface | null;
 }
