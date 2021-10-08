@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🏡 Features
 - Add gift relationship to order interface ([#389])(https://github.com/whirli/whirli-client/pull/389)
 - Add dispatch_by property to gift interface/transformer ([#390])(https://github.com/whirli/whirli-client/pull/390)
+- Add assignee and reference to gift interface/transformer & assigned relations to the user interface/transformer ([#391])(https://github.com/whirli/whirli-client/pull/391)
 
 ## [0.0.74] - 2021-09-28
 ### 🏡 Chore

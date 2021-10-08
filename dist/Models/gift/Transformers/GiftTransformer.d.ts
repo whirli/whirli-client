@@ -9,4 +9,5 @@ export default class GiftTransformer extends BaseTransformer {
     includeUser(gift: GiftInterface): UserInterface | null;
     includeOrder(gift: GiftInterface): OrderInterface | null;
     includeGiftBasket(gift: GiftInterface): GiftBasketInterface | null;
+    includeAssignee(gift: GiftInterface): UserInterface | null;
 }
