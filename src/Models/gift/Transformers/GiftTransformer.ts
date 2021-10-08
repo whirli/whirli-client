@@ -59,11 +59,14 @@ export default class GiftTransformer extends BaseTransformer {
             shippingCountry: gift.shippingCountry,
             shippingZip: gift.shippingZip,
             resourceType: gift.resourceType,
+            dispatchBy: gift.dispatchBy,
+            assigneeId: gift.assigneeId,
             // relations
             giftBasket: this.includeGiftBasket(gift),
             order: this.includeOrder(gift),
             user: this.includeUser(gift),
             redeemedBy: this.includeUser(gift),
+            assignee: this.includeAssignee(gift),
             // accessors
             statusId: gift.statusId,
             deliveryMethod: gift.deliveryMethod,
@@ -92,5 +95,9 @@ export default class GiftTransformer extends BaseTransformer {
 
     includeGiftBasket(gift: GiftInterface): GiftBasketInterface | null {
         return this.item(gift, 'giftBasket', new BasketTransformer());
+    }
+
+    includeAssignee(gift: GiftInterface): UserInterface | null {
+        return this.item(gift, 'assignee', new UserTransformer());
     }
 }
