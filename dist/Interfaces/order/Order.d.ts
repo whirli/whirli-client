@@ -70,4 +70,7 @@ export default interface Order {
     weight?: number;
     isPastDueDispatch?: boolean;
     isPastDueDelivery?: boolean;
+    shippingReference?: string;
+    shippingValue?: number;
+    shippingWeight?: number;
 }
