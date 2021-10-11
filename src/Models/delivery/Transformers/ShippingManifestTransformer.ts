@@ -18,6 +18,7 @@ export default class ShippingManifestTransformer extends BaseTransformer {
             barcode: shippingManifest.barcode,
             parcels: shippingManifest.parcels,
             oversized: shippingManifest.oversized,
+            weight: shippingManifest.weight,
             shippingService: this.includeShippingService(shippingManifest) || undefined,
         });
     }
