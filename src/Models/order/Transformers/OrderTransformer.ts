@@ -89,6 +89,9 @@ export default class OrderTransformer extends BaseTransformer {
             weight: order.weight,
             isPastDueDispatch: order.isPastDueDispatch,
             isPastDueDelivery: order.isPastDueDelivery,
+            shippingReference: order.shippingReference,
+            shippingValue: order.shippingValue,
+            shippingWeight: order.shippingWeight,
         });
     }
 

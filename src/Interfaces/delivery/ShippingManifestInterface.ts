@@ -7,5 +7,6 @@ export default interface ShippingManifestInterface {
     barcode?: string;
     parcels?: number;
     oversized?: boolean;
+    weight?: number;
     shippingService?: ShippingServiceInterface | null;
 }

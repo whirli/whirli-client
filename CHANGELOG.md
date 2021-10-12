@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.76] - 2021-10-11
+### 🏡 Features
+- add weight to shipping manifest and shipping data to order ([#387])(https://github.com/whirli/whirli-client/pull/392)
+
 ## [0.0.75] - 2021-10-08
 ### 🏡 Features
 - Add gift relationship to order interface ([#389])(https://github.com/whirli/whirli-client/pull/389)
