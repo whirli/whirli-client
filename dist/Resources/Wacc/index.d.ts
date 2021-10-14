@@ -16,6 +16,7 @@ import WACCOrderLines from './OrderLines/OrderLines';
 import WACCWaitSpots from './WaitSpots/WaitSpots';
 import WACCReferral from './Referral/Referrals';
 import WACCCodes from './Codes/Codes';
+import WACCCountTrack from './CountTrack/CountTrack';
 export interface WaccResources {
     couriers: WACCCourier;
     orders: WACCOrders;
@@ -34,5 +35,6 @@ export interface WaccResources {
     waitSpots: WACCWaitSpots;
     referrals: WACCReferral;
     codes: WACCCodes;
+    countTrack: WACCCountTrack;
 }
 export declare function loadWaccResources(client: Client): WaccResources;
