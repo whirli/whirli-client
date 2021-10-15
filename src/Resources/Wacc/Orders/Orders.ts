@@ -61,4 +61,11 @@ export default class Orders extends AbstractResource {
         method: 'PATCH',
         path: '/complete-outgoing-process',
     });
+
+    public getOutstandingOrderCount: (
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'GET',
+        path: '/outstanding-order-count',
+    });
 }
