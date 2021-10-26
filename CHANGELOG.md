@@ -7,9 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.77] - 2021-10-26
+## [0.0.79] - 2021-10-26
 ### 🏡 Features
 - add visible and category to asset ([#398])(https://github.com/whirli/whirli-client/pull/398)
+
+## [0.0.78] - 2021-10-19
+### 🏡 Chore
+- Reset version number ([#396])(https://github.com/whirli/whirli-client/pull/396)
+
+## [0.0.77] - 2021-10-15
+### 🏡 Features
+- Add getOutstandingOrderCount endpoint ([#394])(https://github.com/whirli/whirli-client/pull/394)
 
 ## [0.0.76] - 2021-10-11
 ### 🏡 Features
