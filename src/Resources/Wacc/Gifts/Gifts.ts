@@ -42,12 +42,12 @@ export default class Gifts extends AbstractResource {
         path: '/pick',
     });
 
-    public assignOrders: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public assignGifts: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/assign-user/{id}',
     });
 
-    public unassignOrder: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
+    public unassignGift: (...args: HttpClientConfig) => HttpClientResponse = this.createMethodFromPartialSpec({
         method: 'PATCH',
         path: '/unassign-user/{assigneeId}',
     });
