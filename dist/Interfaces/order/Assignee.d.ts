@@ -1,4 +1,4 @@
-export default interface Order {
+export default interface Assignee {
     id?: string;
     createdAt?: Date;
     updatedAt?: Date;
