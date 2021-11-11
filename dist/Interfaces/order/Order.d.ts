@@ -73,4 +73,5 @@ export default interface Order {
     shippingReference?: string;
     shippingValue?: number;
     shippingWeight?: number;
+    shippingNotificationEmail?: string;
 }

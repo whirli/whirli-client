@@ -69,4 +69,5 @@ export default interface Gift {
     contactEmail?: string;
     contactPhone?: string;
     meta?: string;
+    shippingNotificationEmail?: string;
 }

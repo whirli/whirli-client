@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.81] - 2021-11-11
+### 🏡 Features
+- add shippingNotificationEmail to gift and order ([#400])(https://github.com/whirli/whirli-client/pull/402)
+
 ## [0.0.80] - 2021-11-08
 ### 🏡 Features
 - add assign and unassign gift endpoints ([#400])(https://github.com/whirli/whirli-client/pull/400)
