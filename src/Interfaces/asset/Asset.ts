@@ -21,6 +21,8 @@ export default class Asset {
     extension?: string;
     filename?: string;
     url?: string;
+    visible?: boolean;
+    category?: number;
     // belongs to
     source?: AssetSource | null;
     thumbnail?: AssetTransform | null;

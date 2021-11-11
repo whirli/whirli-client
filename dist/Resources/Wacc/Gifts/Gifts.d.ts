@@ -9,4 +9,6 @@ export default class Gifts extends AbstractResource {
     delete: (...args: HttpClientConfig) => HttpClientResponse;
     print: (...args: HttpClientConfig) => HttpClientResponse;
     getForPicking: (...args: HttpClientConfig) => HttpClientResponse;
+    assignGifts: (...args: HttpClientConfig) => HttpClientResponse;
+    unassignGift: (...args: HttpClientConfig) => HttpClientResponse;
 }

@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.80] - 2021-11-08
+### 🏡 Features
+- add assign and unassign gift endpoints ([#400])(https://github.com/whirli/whirli-client/pull/400)
+
+## [0.0.79] - 2021-10-26
+### 🏡 Features
+- add visible and category to asset ([#398])(https://github.com/whirli/whirli-client/pull/398)
+
 ## [0.0.78] - 2021-10-19
 ### 🏡 Chore
 - Reset version number ([#396])(https://github.com/whirli/whirli-client/pull/396)

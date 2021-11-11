@@ -20,6 +20,8 @@ export default class Asset {
     extension?: string;
     filename?: string;
     url?: string;
+    visible?: boolean;
+    category?: number;
     source?: AssetSource | null;
     thumbnail?: AssetTransform | null;
     products?: Array<Product>;

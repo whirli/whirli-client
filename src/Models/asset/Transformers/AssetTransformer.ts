@@ -33,6 +33,8 @@ export default class AssetTransformer extends BaseTransformer {
             external: asset.external,
             extension: asset.extension,
             filename: asset.filename,
+            visible: asset.visible,
+            category: asset.category,
             url: asset.url,
             // belongs to
             source: this.includeSource(asset),
