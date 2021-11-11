@@ -82,6 +82,7 @@ export default class GiftTransformer extends BaseTransformer {
             contactEmail: gift.contactEmail,
             contactPhone: gift.contactPhone,
             meta: gift.meta,
+            shippingNotificationEmail: gift.shippingNotificationEmail,
         });
     }
 

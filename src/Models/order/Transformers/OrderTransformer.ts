@@ -92,6 +92,7 @@ export default class OrderTransformer extends BaseTransformer {
             shippingReference: order.shippingReference,
             shippingValue: order.shippingValue,
             shippingWeight: order.shippingWeight,
+            shippingNotificationEmail: order.shippingNotificationEmail,
         });
     }
 
