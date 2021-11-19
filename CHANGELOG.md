@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### 🏡 Features
+- Add binLocation property to order interface and transformer ([#403](https://github.com/whirli/whirli-client/pull/403))
 
 ## [0.0.81] - 2021-11-11
 ### 🏡 Features
