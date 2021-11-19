@@ -71,6 +71,7 @@ export default class OrderTransformer extends BaseTransformer {
             expectedDeliveryDate: order.expectedDeliveryDate,
             dispatchBy: order.dispatchBy,
             resourceType: order.resourceType,
+            binLocation: order.binLocation,
             // relations
             basket: this.includeBasket(order),
             user: this.includeUser(order),
