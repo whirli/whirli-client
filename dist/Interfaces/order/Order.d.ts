@@ -54,6 +54,7 @@ export default interface Order {
     expectedDeliveryDate?: Date | string;
     dispatchBy?: Date | string;
     resourceType?: string;
+    binLocation?: string;
     basket?: Basket | null;
     user?: User | null;
     assignee?: Assignee | null;
@@ -73,4 +74,5 @@ export default interface Order {
     shippingReference?: string;
     shippingValue?: number;
     shippingWeight?: number;
+    shippingNotificationEmail?: string;
 }

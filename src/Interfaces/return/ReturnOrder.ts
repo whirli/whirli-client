@@ -1,5 +1,6 @@
 import User from '../user/User';
 import ReturnOrderLine from './ReturnOrderLine';
+import ShippingAddon from '../delivery/ShippingAddon';
 
 export default interface ReturnOrder {
     id?: string;
@@ -29,6 +30,8 @@ export default interface ReturnOrder {
     resourceType?: string;
     // belongs to
     user?: User | null;
+    // belongs to many
+    shippingAddons?: ShippingAddon[];
     // has many
     returnOrderLines?: ReturnOrderLine[];
 }

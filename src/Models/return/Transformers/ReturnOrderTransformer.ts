@@ -5,6 +5,8 @@ import UserInterface from '../../../Interfaces/user/User';
 import UserTransformer from '../../user/Transformers/UserTransformer';
 import ReturnOrderLineTransformer from '../../return/Transformers/ReturnOrderLineTransformer';
 import BaseTransformer from '../../../BaseTransformer';
+import ShippingAddonInterface from '../../../Interfaces/delivery/ShippingAddon';
+import ShippingAddonTransformer from '../../delivery/Transformers/ShippingAddonTransformer';
 
 export default class ReturnOrderTransformer extends BaseTransformer {
     /**
@@ -41,6 +43,8 @@ export default class ReturnOrderTransformer extends BaseTransformer {
             resourceType: returnOrder.resourceType,
             // belongs to
             user: this.includeUser(returnOrder),
+            // belongs to many
+            shippingAddons: this.includeShippingAddons(returnOrder),
             // has many
             returnOrderLines: this.includeOrderLines(returnOrder),
         });
@@ -52,5 +56,9 @@ export default class ReturnOrderTransformer extends BaseTransformer {
 
     includeOrderLines(returnOrder: ReturnOrderInterface): ReturnOrderLineInterface[] {
         return this.collection(returnOrder, 'returnOrderLines', new ReturnOrderLineTransformer());
+    }
+
+    includeShippingAddons(returnOrder: ReturnOrderInterface): ShippingAddonInterface[] {
+        return this.collection(returnOrder, 'shippingAddons', new ShippingAddonTransformer());
     }
 }
