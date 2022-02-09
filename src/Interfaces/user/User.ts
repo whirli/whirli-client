@@ -84,6 +84,7 @@ export default interface User {
     notes?: string;
     assignedItem?: Order | Gift;
     oldestUserSubscription?: UserSubscription | null;
+    oldestUserSubscriptionStart?: Date | string | null;
     currentActiveUserSubscriptionPeriodStart?: Date | string | null;
     currentActiveUserSubscriptionPeriodEnd?: Date | string | null;
 }
