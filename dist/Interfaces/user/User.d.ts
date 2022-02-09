@@ -76,6 +76,7 @@ export default interface User {
     cancelSubscriptionStatus?: CancelSubscriptionStatus;
     notes?: string;
     assignedItem?: Order | Gift;
+    canDowngradeFrom?: Date | string | null;
     oldestUserSubscription?: UserSubscription | null;
     oldestUserSubscriptionStart?: Date | string | null;
     currentActiveUserSubscriptionPeriodStart?: Date | string | null;
