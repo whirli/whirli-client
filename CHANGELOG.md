@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### 🏡 Features
-- Add New user subscription timestamps to the user resource ([#406](https://github.com/whirli/whirli-client/pull/406))
+- Add New user subscription timestamps to the user resource ([#407](https://github.com/whirli/whirli-client/pull/407))
 
 ## [0.0.82] - 2021-11-19
 ### 🏡 Features
