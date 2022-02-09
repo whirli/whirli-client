@@ -86,6 +86,7 @@ export default class UserTransformer extends BaseTransformer {
             cancelSubscriptionStatus: user.cancelSubscriptionStatus,
             notes: user.notes,
             oldestUserSubscription: user.oldestUserSubscription,
+            oldestUserSubscriptionStart: user.oldestUserSubscriptionStart,
             currentActiveUserSubscriptionPeriodStart: user.currentActiveUserSubscriptionPeriodStart,
             currentActiveUserSubscriptionPeriodEnd: user.currentActiveUserSubscriptionPeriodEnd,
         });
