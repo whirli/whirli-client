@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.82] - 2021-11-19
+## [0.0.83] - 2022-02-09
+### 🏡 Features
+- Add New user subscription timestamps to the user resource ([#407](https://github.com/whirli/whirli-client/pull/407))
+
+## [0.0.82] - 2022-02-08
 ### 🏡 Features
 - Add binLocation property to order interface and transformer ([#403](https://github.com/whirli/whirli-client/pull/403))
-- - Add shippingAddons to ReturnOrder ([#403](https://github.com/whirli/whirli-client/pull/405))
+- - Add shippingAddons to ReturnOrder ([#405](https://github.com/whirli/whirli-client/pull/405))
 
 ## [0.0.81] - 2021-11-11
 ### 🏡 Features
