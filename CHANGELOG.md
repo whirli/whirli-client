@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.84] - 2022-02-21
 ### 🏡 Features
-- Add New user subscription timestamps to the user resource ([#410](https://github.com/whirli/whirli-client/pull/410))
+- Add extraData to shipping manifest resource ([#410](https://github.com/whirli/whirli-client/pull/410))
 
 ## [0.0.83] - 2022-02-09
 ### 🏡 Features
