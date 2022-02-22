@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### 🏡 Features
+- Add User types history resource items ([]())
 
 ## [0.0.84] - 2022-02-21
 ### 🏡 Features
