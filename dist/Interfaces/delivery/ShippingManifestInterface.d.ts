@@ -8,4 +8,5 @@ export default interface ShippingManifestInterface {
     oversized?: boolean;
     weight?: number;
     shippingService?: ShippingServiceInterface | null;
+    extraData?: Record<string, string>;
 }
