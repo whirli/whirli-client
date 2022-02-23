@@ -1,6 +1,7 @@
 import User from '../user/User';
 import ReturnOrderLine from './ReturnOrderLine';
 import ShippingAddon from '../delivery/ShippingAddon';
+import ShippingManifest from '../../Models/delivery/ShippingManifest';
 export default interface ReturnOrder {
     id?: string;
     createdAt?: Date;
@@ -28,6 +29,7 @@ export default interface ReturnOrder {
     processedAt?: Date;
     resourceType?: string;
     user?: User | null;
+    shippingManifest?: ShippingManifest | null;
     shippingAddons?: ShippingAddon[];
     returnOrderLines?: ReturnOrderLine[];
 }
