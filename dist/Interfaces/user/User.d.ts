@@ -11,6 +11,7 @@ import Role from '../role/Role';
 import Review from '../review/Review';
 import MyPlaytime from '../myPlaytime/MyPlaytime';
 import Gift from '../gift/Gift';
+import UserTypesHistory from './UserTypesHistory';
 interface Meta {
     daysUntilAvailable?: number;
     daysUntilCancel?: number;
@@ -61,6 +62,7 @@ export default interface User {
     roles?: Array<Role>;
     waccRole?: string;
     reviews?: Array<Review>;
+    typeHistory?: Array<UserTypesHistory>;
     assignedOrder?: Order;
     assignedGift?: Gift;
     onFirstOrder?: boolean;
@@ -81,5 +83,6 @@ export default interface User {
     oldestUserSubscriptionStart?: Date | string | null;
     currentActiveUserSubscriptionPeriodStart?: Date | string | null;
     currentActiveUserSubscriptionPeriodEnd?: Date | string | null;
+    typeId?: number;
 }
 export {};

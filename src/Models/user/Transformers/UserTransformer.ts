@@ -25,6 +25,8 @@ import ReviewInterface from '../../../Interfaces/review/Review';
 import ReviewTransformer from '../../review/Transformers/ReviewTransformer';
 import GiftInterface from '../../../Interfaces/gift/Gift';
 import GiftTransformer from '../../gift/Transformers/GiftTransformer';
+import UserTypesHistoryInterface from '../../../Interfaces/user/UserTypesHistory';
+import UserTypesHistoryTransformer from './UserTypesHistoryTransformer';
 
 export default class UserTransformer extends BaseTransformer {
     /**
@@ -69,6 +71,7 @@ export default class UserTransformer extends BaseTransformer {
             roles: this.includeRoles(user),
             waccRole: user.waccRole,
             reviews: this.includeReviews(user),
+            typeHistory: this.includeTypeHistory(user) || undefined,
             // Has one
             assignedOrder: this.includeAssignedOrder(user) || undefined,
             assignedGift: this.includeAssignedGift(user) || undefined,
@@ -90,6 +93,7 @@ export default class UserTransformer extends BaseTransformer {
             oldestUserSubscriptionStart: user.oldestUserSubscriptionStart,
             currentActiveUserSubscriptionPeriodStart: user.currentActiveUserSubscriptionPeriodStart,
             currentActiveUserSubscriptionPeriodEnd: user.currentActiveUserSubscriptionPeriodEnd,
+            typeId: user.typeId,
         });
     }
 
@@ -147,5 +151,9 @@ export default class UserTransformer extends BaseTransformer {
 
     includeAssignedGift(user: UserInterface): GiftInterface | null {
         return this.item(user, 'assignedGift', new GiftTransformer());
+    }
+
+    includeTypeHistory(user: UserInterface): Array<UserTypesHistoryInterface> {
+        return this.collection(user, 'typeHistory', new UserTypesHistoryTransformer());
     }
 }
