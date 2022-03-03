@@ -8,6 +8,8 @@ export default interface ShippingManifestInterface {
     parcels?: number;
     oversized?: boolean;
     weight?: number;
+    collectionDate?: string;
+    statusId?: number;
     shippingService?: ShippingServiceInterface | null;
     extraData?: Record<string, string>;
 }

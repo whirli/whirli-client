@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🏡 Features
 - Add User types history resource items ([#412](https://github.com/whirli/whirli-client/pull/412))
 
+
+## [0.0.86] - 2022-03-03
+### Features
+- add return collection and shipping manifest endpoints ([#415](https://github.com/whirli/whirli-client/pull/415))
+
 ## [0.0.85] - 2022-02-21
 ### 🏡 Features
 - Add shipping manifest to return order ([#413](https://github.com/whirli/whirli-client/pull/413))
