@@ -94,6 +94,8 @@ export default class UserTransformer extends BaseTransformer {
             currentActiveUserSubscriptionPeriodStart: user.currentActiveUserSubscriptionPeriodStart,
             currentActiveUserSubscriptionPeriodEnd: user.currentActiveUserSubscriptionPeriodEnd,
             typeId: user.typeId,
+            referringCode: user.referringCode,
+            referredUsers: user.referredUsers,
         });
     }
 
