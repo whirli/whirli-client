@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [0.0.87] - 2022-03-11
 ### 🏡 Features
 - Add User types history resource items ([#412](https://github.com/whirli/whirli-client/pull/412))
 - Add user referral properties to user interface ([#417](https://github.com/whirli/whirli-client/pull/417))
