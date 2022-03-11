@@ -2,6 +2,7 @@ import Client from '../../Client';
 import WACCCourier from './Couriers/Couriers';
 import WACCOrders from './Orders/Orders';
 import WACCReturnOrders from './ReturnOrders/ReturnOrders';
+import WACCReturnOrderCollections from './ReturnOrders/ReturnOrderCollections';
 import WACCSearch from './Search/Search';
 import WACCUsers from './Users/Users';
 import WACCUserSubscriptions from './UserSubscriptions/UserSubscriptions';
@@ -16,12 +17,14 @@ import WACCOrderLines from './OrderLines/OrderLines';
 import WACCWaitSpots from './WaitSpots/WaitSpots';
 import WACCReferral from './Referral/Referrals';
 import WACCCodes from './Codes/Codes';
+import WaccShippingManifests from './Delivery/ShippingManifests';
 
 export interface WaccResources {
     couriers: WACCCourier;
     orders: WACCOrders;
     orderLines: WACCOrderLines;
     returnOrders: WACCReturnOrders;
+    returnOrderCollections: WACCReturnOrderCollections;
     returnOrderLines: WACCReturnOrderLines;
     search: WACCSearch;
     users: WACCUsers;
@@ -35,6 +38,7 @@ export interface WaccResources {
     waitSpots: WACCWaitSpots;
     referrals: WACCReferral;
     codes: WACCCodes;
+    shippingManifests: WaccShippingManifests;
 }
 
 export function loadWaccResources(client: Client): WaccResources {
@@ -43,6 +47,7 @@ export function loadWaccResources(client: Client): WaccResources {
         orders: new WACCOrders(client),
         orderLines: new WACCOrderLines(client),
         returnOrders: new WACCReturnOrders(client),
+        returnOrderCollections: new WACCReturnOrderCollections(client),
         returnOrderLines: new WACCReturnOrderLines(client),
         search: new WACCSearch(client),
         users: new WACCUsers(client),
@@ -56,5 +61,6 @@ export function loadWaccResources(client: Client): WaccResources {
         waitSpots: new WACCWaitSpots(client),
         referrals: new WACCReferral(client),
         codes: new WACCCodes(client),
+        shippingManifests: new WaccShippingManifests(client),
     };
 }

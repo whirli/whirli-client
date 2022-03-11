@@ -84,5 +84,10 @@ export default interface User {
     currentActiveUserSubscriptionPeriodStart?: Date | string | null;
     currentActiveUserSubscriptionPeriodEnd?: Date | string | null;
     typeId?: number;
+    referredUsers?: Array<ReferredUsersInterface>;
+    referringCode?: string | null;
+}
+export interface ReferredUsersInterface extends User {
+    creditEarned?: number;
 }
 export {};
