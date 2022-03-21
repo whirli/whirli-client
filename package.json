@@ -69,5 +69,8 @@
     "standard-version": "^7.1.0",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@babel/helper-compilation-targets": "^7.17.7"
   }
 }

@@ -5,11 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Asset = function Asset() {
+var Asset = /*#__PURE__*/_createClass(function Asset() {
   _classCallCheck(this, Asset);
 
   _defineProperty(this, "id", void 0);
@@ -59,7 +63,7 @@ var Asset = function Asset() {
   _defineProperty(this, "products", void 0);
 
   _defineProperty(this, "transforms", void 0);
-};
+});
 
 exports["default"] = Asset;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9JbnRlcmZhY2VzL2Fzc2V0L0Fzc2V0LnRzIl0sIm5hbWVzIjpbIkFzc2V0Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztJQUlxQkEsSyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBBc3NldFNvdXJjZSBmcm9tICcuL0Fzc2V0U291cmNlJztcbmltcG9ydCBBc3NldFRyYW5zZm9ybSBmcm9tICcuL0Fzc2V0VHJhbnNmb3JtJztcbmltcG9ydCBQcm9kdWN0IGZyb20gJy4uL3Byb2R1Y3QvUHJvZHVjdCc7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEFzc2V0IHtcbiAgICBpZD86IHN0cmluZztcbiAgICBjcmVhdGVkQXQ/OiBEYXRlO1xuICAgIHVwZGF0ZWRBdD86IERhdGU7XG4gICAgcG9zaXRpb24/OiBudW1iZXI7XG4gICAgbG9jYXRpb24/OiBzdHJpbmc7XG4gICAgcHJpbWFyeT86IGJvb2xlYW47XG4gICAga2luZD86IHN0cmluZztcbiAgICBzdWJLaW5kPzogc3RyaW5nO1xuICAgIHdpZHRoPzogbnVtYmVyO1xuICAgIGhlaWdodD86IG51bWJlcjtcbiAgICB0aXRsZT86IHN0cmluZztcbiAgICBvcmlnaW5hbEZpbGVuYW1lPzogc3RyaW5nO1xuICAgIGNhcHRpb24/OiBzdHJpbmc7XG4gICAgc2l6ZT86IG51bWJlcjtcbiAgICBleHRlcm5hbD86IGJvb2xlYW47XG4gICAgZXh0ZW5zaW9uPzogc3RyaW5nO1xuICAgIGZpbGVuYW1lPzogc3RyaW5nO1xuICAgIHVybD86IHN0cmluZztcbiAgICB2aXNpYmxlPzogYm9vbGVhbjtcbiAgICBjYXRlZ29yeT86IG51bWJlcjtcbiAgICAvLyBiZWxvbmdzIHRvXG4gICAgc291cmNlPzogQXNzZXRTb3VyY2UgfCBudWxsO1xuICAgIHRodW1ibmFpbD86IEFzc2V0VHJhbnNmb3JtIHwgbnVsbDtcbiAgICAvLyBoYXMgbWFueVxuICAgIHByb2R1Y3RzPzogQXJyYXk8UHJvZHVjdD47XG4gICAgdHJhbnNmb3Jtcz86IEFycmF5PEFzc2V0VHJhbnNmb3JtPjtcbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9JbnRlcmZhY2VzL2Fzc2V0L0Fzc2V0LnRzIl0sIm5hbWVzIjpbIkFzc2V0Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7SUFJcUJBLEsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQXNzZXRTb3VyY2UgZnJvbSAnLi9Bc3NldFNvdXJjZSc7XG5pbXBvcnQgQXNzZXRUcmFuc2Zvcm0gZnJvbSAnLi9Bc3NldFRyYW5zZm9ybSc7XG5pbXBvcnQgUHJvZHVjdCBmcm9tICcuLi9wcm9kdWN0L1Byb2R1Y3QnO1xuXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBBc3NldCB7XG4gICAgaWQ/OiBzdHJpbmc7XG4gICAgY3JlYXRlZEF0PzogRGF0ZTtcbiAgICB1cGRhdGVkQXQ/OiBEYXRlO1xuICAgIHBvc2l0aW9uPzogbnVtYmVyO1xuICAgIGxvY2F0aW9uPzogc3RyaW5nO1xuICAgIHByaW1hcnk/OiBib29sZWFuO1xuICAgIGtpbmQ/OiBzdHJpbmc7XG4gICAgc3ViS2luZD86IHN0cmluZztcbiAgICB3aWR0aD86IG51bWJlcjtcbiAgICBoZWlnaHQ/OiBudW1iZXI7XG4gICAgdGl0bGU/OiBzdHJpbmc7XG4gICAgb3JpZ2luYWxGaWxlbmFtZT86IHN0cmluZztcbiAgICBjYXB0aW9uPzogc3RyaW5nO1xuICAgIHNpemU/OiBudW1iZXI7XG4gICAgZXh0ZXJuYWw/OiBib29sZWFuO1xuICAgIGV4dGVuc2lvbj86IHN0cmluZztcbiAgICBmaWxlbmFtZT86IHN0cmluZztcbiAgICB1cmw/OiBzdHJpbmc7XG4gICAgdmlzaWJsZT86IGJvb2xlYW47XG4gICAgY2F0ZWdvcnk/OiBudW1iZXI7XG4gICAgLy8gYmVsb25ncyB0b1xuICAgIHNvdXJjZT86IEFzc2V0U291cmNlIHwgbnVsbDtcbiAgICB0aHVtYm5haWw/OiBBc3NldFRyYW5zZm9ybSB8IG51bGw7XG4gICAgLy8gaGFzIG1hbnlcbiAgICBwcm9kdWN0cz86IEFycmF5PFByb2R1Y3Q+O1xuICAgIHRyYW5zZm9ybXM/OiBBcnJheTxBc3NldFRyYW5zZm9ybT47XG59XG4iXX0=
