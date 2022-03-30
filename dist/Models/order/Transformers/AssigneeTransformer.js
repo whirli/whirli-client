@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -11,44 +13,46 @@ var _BaseTransformer2 = _interopRequireDefault(require("../../../BaseTransformer
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var AssigneeTransformer =
-/*#__PURE__*/
-function (_BaseTransformer) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var AssigneeTransformer = /*#__PURE__*/function (_BaseTransformer) {
   _inherits(AssigneeTransformer, _BaseTransformer);
+
+  var _super = _createSuper(AssigneeTransformer);
 
   function AssigneeTransformer() {
     _classCallCheck(this, AssigneeTransformer);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(AssigneeTransformer).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _createClass(AssigneeTransformer, [{
     key: "mapData",
-
+    value:
     /**
      * Map an order response
      *
      * @param assignee
      */
-    value: function mapData(assignee) {
+    function mapData(assignee) {
       return new _Assignee["default"]({
         id: assignee.id,
         createdAt: assignee.createdAt,
@@ -67,4 +71,4 @@ function (_BaseTransformer) {
 }(_BaseTransformer2["default"]);
 
 exports["default"] = AssigneeTransformer;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9Nb2RlbHMvb3JkZXIvVHJhbnNmb3JtZXJzL0Fzc2lnbmVlVHJhbnNmb3JtZXIudHMiXSwibmFtZXMiOlsiQXNzaWduZWVUcmFuc2Zvcm1lciIsImFzc2lnbmVlIiwiQXNzaWduZWUiLCJpZCIsImNyZWF0ZWRBdCIsInVwZGF0ZWRBdCIsImZpcnN0bmFtZSIsImxhc3RuYW1lIiwiZW1haWwiLCJyZWZlcmVuY2UiLCJyZXNvdXJjZVR5cGUiLCJjb2xvciIsIkJhc2VUcmFuc2Zvcm1lciJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOztBQUVBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBRXFCQSxtQjs7Ozs7Ozs7Ozs7Ozs7QUFDakI7Ozs7OzRCQUtRQyxRLEVBQXVDO0FBQzNDLGFBQU8sSUFBSUMsb0JBQUosQ0FBYTtBQUNoQkMsUUFBQUEsRUFBRSxFQUFFRixRQUFRLENBQUNFLEVBREc7QUFFaEJDLFFBQUFBLFNBQVMsRUFBRUgsUUFBUSxDQUFDRyxTQUZKO0FBR2hCQyxRQUFBQSxTQUFTLEVBQUVKLFFBQVEsQ0FBQ0ksU0FISjtBQUloQkMsUUFBQUEsU0FBUyxFQUFFTCxRQUFRLENBQUNLLFNBSko7QUFLaEJDLFFBQUFBLFFBQVEsRUFBRU4sUUFBUSxDQUFDTSxRQUxIO0FBTWhCQyxRQUFBQSxLQUFLLEVBQUVQLFFBQVEsQ0FBQ08sS0FOQTtBQU9oQkMsUUFBQUEsU0FBUyxFQUFFUixRQUFRLENBQUNRLFNBUEo7QUFRaEJDLFFBQUFBLFlBQVksRUFBRVQsUUFBUSxDQUFDUyxZQVJQO0FBU2hCQyxRQUFBQSxLQUFLLEVBQUVWLFFBQVEsQ0FBQ1U7QUFUQSxPQUFiLENBQVA7QUFXSDs7OztFQWxCNENDLDRCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFzc2lnbmVlIGZyb20gJy4uL0Fzc2lnbmVlJztcbmltcG9ydCBBc3NpZ25lZUludGVyZmFjZSBmcm9tICcuLi8uLi8uLi9JbnRlcmZhY2VzL29yZGVyL0Fzc2lnbmVlJztcbmltcG9ydCBCYXNlVHJhbnNmb3JtZXIgZnJvbSAnLi4vLi4vLi4vQmFzZVRyYW5zZm9ybWVyJztcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgQXNzaWduZWVUcmFuc2Zvcm1lciBleHRlbmRzIEJhc2VUcmFuc2Zvcm1lciB7XG4gICAgLyoqXG4gICAgICogTWFwIGFuIG9yZGVyIHJlc3BvbnNlXG4gICAgICpcbiAgICAgKiBAcGFyYW0gYXNzaWduZWVcbiAgICAgKi9cbiAgICBtYXBEYXRhKGFzc2lnbmVlOiBBc3NpZ25lZUludGVyZmFjZSk6IEFzc2lnbmVlIHtcbiAgICAgICAgcmV0dXJuIG5ldyBBc3NpZ25lZSh7XG4gICAgICAgICAgICBpZDogYXNzaWduZWUuaWQsXG4gICAgICAgICAgICBjcmVhdGVkQXQ6IGFzc2lnbmVlLmNyZWF0ZWRBdCxcbiAgICAgICAgICAgIHVwZGF0ZWRBdDogYXNzaWduZWUudXBkYXRlZEF0LFxuICAgICAgICAgICAgZmlyc3RuYW1lOiBhc3NpZ25lZS5maXJzdG5hbWUsXG4gICAgICAgICAgICBsYXN0bmFtZTogYXNzaWduZWUubGFzdG5hbWUsXG4gICAgICAgICAgICBlbWFpbDogYXNzaWduZWUuZW1haWwsXG4gICAgICAgICAgICByZWZlcmVuY2U6IGFzc2lnbmVlLnJlZmVyZW5jZSxcbiAgICAgICAgICAgIHJlc291cmNlVHlwZTogYXNzaWduZWUucmVzb3VyY2VUeXBlLFxuICAgICAgICAgICAgY29sb3I6IGFzc2lnbmVlLmNvbG9yLFxuICAgICAgICB9KTtcbiAgICB9XG59XG4iXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9Nb2RlbHMvb3JkZXIvVHJhbnNmb3JtZXJzL0Fzc2lnbmVlVHJhbnNmb3JtZXIudHMiXSwibmFtZXMiOlsiQXNzaWduZWVUcmFuc2Zvcm1lciIsImFzc2lnbmVlIiwiQXNzaWduZWUiLCJpZCIsImNyZWF0ZWRBdCIsInVwZGF0ZWRBdCIsImZpcnN0bmFtZSIsImxhc3RuYW1lIiwiZW1haWwiLCJyZWZlcmVuY2UiLCJyZXNvdXJjZVR5cGUiLCJjb2xvciIsIkJhc2VUcmFuc2Zvcm1lciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7O0FBRUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQUVxQkEsbUI7Ozs7Ozs7Ozs7Ozs7O0FBQ2pCO0FBQ0o7QUFDQTtBQUNBO0FBQ0E7QUFDSSxxQkFBUUMsUUFBUixFQUErQztBQUMzQyxhQUFPLElBQUlDLG9CQUFKLENBQWE7QUFDaEJDLFFBQUFBLEVBQUUsRUFBRUYsUUFBUSxDQUFDRSxFQURHO0FBRWhCQyxRQUFBQSxTQUFTLEVBQUVILFFBQVEsQ0FBQ0csU0FGSjtBQUdoQkMsUUFBQUEsU0FBUyxFQUFFSixRQUFRLENBQUNJLFNBSEo7QUFJaEJDLFFBQUFBLFNBQVMsRUFBRUwsUUFBUSxDQUFDSyxTQUpKO0FBS2hCQyxRQUFBQSxRQUFRLEVBQUVOLFFBQVEsQ0FBQ00sUUFMSDtBQU1oQkMsUUFBQUEsS0FBSyxFQUFFUCxRQUFRLENBQUNPLEtBTkE7QUFPaEJDLFFBQUFBLFNBQVMsRUFBRVIsUUFBUSxDQUFDUSxTQVBKO0FBUWhCQyxRQUFBQSxZQUFZLEVBQUVULFFBQVEsQ0FBQ1MsWUFSUDtBQVNoQkMsUUFBQUEsS0FBSyxFQUFFVixRQUFRLENBQUNVO0FBVEEsT0FBYixDQUFQO0FBV0g7Ozs7RUFsQjRDQyw0QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBBc3NpZ25lZSBmcm9tICcuLi9Bc3NpZ25lZSc7XG5pbXBvcnQgQXNzaWduZWVJbnRlcmZhY2UgZnJvbSAnLi4vLi4vLi4vSW50ZXJmYWNlcy9vcmRlci9Bc3NpZ25lZSc7XG5pbXBvcnQgQmFzZVRyYW5zZm9ybWVyIGZyb20gJy4uLy4uLy4uL0Jhc2VUcmFuc2Zvcm1lcic7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEFzc2lnbmVlVHJhbnNmb3JtZXIgZXh0ZW5kcyBCYXNlVHJhbnNmb3JtZXIge1xuICAgIC8qKlxuICAgICAqIE1hcCBhbiBvcmRlciByZXNwb25zZVxuICAgICAqXG4gICAgICogQHBhcmFtIGFzc2lnbmVlXG4gICAgICovXG4gICAgbWFwRGF0YShhc3NpZ25lZTogQXNzaWduZWVJbnRlcmZhY2UpOiBBc3NpZ25lZSB7XG4gICAgICAgIHJldHVybiBuZXcgQXNzaWduZWUoe1xuICAgICAgICAgICAgaWQ6IGFzc2lnbmVlLmlkLFxuICAgICAgICAgICAgY3JlYXRlZEF0OiBhc3NpZ25lZS5jcmVhdGVkQXQsXG4gICAgICAgICAgICB1cGRhdGVkQXQ6IGFzc2lnbmVlLnVwZGF0ZWRBdCxcbiAgICAgICAgICAgIGZpcnN0bmFtZTogYXNzaWduZWUuZmlyc3RuYW1lLFxuICAgICAgICAgICAgbGFzdG5hbWU6IGFzc2lnbmVlLmxhc3RuYW1lLFxuICAgICAgICAgICAgZW1haWw6IGFzc2lnbmVlLmVtYWlsLFxuICAgICAgICAgICAgcmVmZXJlbmNlOiBhc3NpZ25lZS5yZWZlcmVuY2UsXG4gICAgICAgICAgICByZXNvdXJjZVR5cGU6IGFzc2lnbmVlLnJlc291cmNlVHlwZSxcbiAgICAgICAgICAgIGNvbG9yOiBhc3NpZ25lZS5jb2xvcixcbiAgICAgICAgfSk7XG4gICAgfVxufVxuIl19

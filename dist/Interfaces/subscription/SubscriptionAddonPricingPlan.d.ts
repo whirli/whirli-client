@@ -6,6 +6,7 @@ export default interface SubscriptionAddonPricingPlan {
     name?: string;
     stripeId?: string;
     cost?: number;
+    quantity?: number;
     intervalLength?: SubscriptionIntervalLength;
     intervalUnit?: string;
     archivedAt?: Date | string | null;
