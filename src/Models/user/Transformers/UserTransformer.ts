@@ -27,6 +27,8 @@ import GiftInterface from '../../../Interfaces/gift/Gift';
 import GiftTransformer from '../../gift/Transformers/GiftTransformer';
 import UserTypesHistoryInterface from '../../../Interfaces/user/UserTypesHistory';
 import UserTypesHistoryTransformer from './UserTypesHistoryTransformer';
+import ChildProfileInterface from '../../../Interfaces/user/ChildProfile';
+import ChildProfileTransformer from './ChildProfileTransformer';
 
 export default class UserTransformer extends BaseTransformer {
     /**
@@ -72,6 +74,7 @@ export default class UserTransformer extends BaseTransformer {
             waccRole: user.waccRole,
             reviews: this.includeReviews(user),
             typeHistory: this.includeTypeHistory(user) || undefined,
+            childProfiles: this.includeChildProfiles(user),
             // Has one
             assignedOrder: this.includeAssignedOrder(user) || undefined,
             assignedGift: this.includeAssignedGift(user) || undefined,
@@ -157,5 +160,9 @@ export default class UserTransformer extends BaseTransformer {
 
     includeTypeHistory(user: UserInterface): Array<UserTypesHistoryInterface> {
         return this.collection(user, 'typeHistory', new UserTypesHistoryTransformer());
+    }
+
+    includeChildProfiles(user: UserInterface): Array<ChildProfileInterface> {
+        return this.collection(user, 'childProfile', new ChildProfileTransformer());
     }
 }
