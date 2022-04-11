@@ -14,6 +14,7 @@ import WaitSpotInterface from '../../../Interfaces/waitspot/WaitSpot';
 import ReviewInterface from '../../../Interfaces/review/Review';
 import GiftInterface from '../../../Interfaces/gift/Gift';
 import UserTypesHistoryInterface from '../../../Interfaces/user/UserTypesHistory';
+import ChildProfileInterface from '../../../Interfaces/user/ChildProfile';
 export default class UserTransformer extends BaseTransformer {
     mapData(user: UserInterface): User;
     includeOrders(user: UserInterface): Array<OrderInterface>;
@@ -31,4 +32,5 @@ export default class UserTransformer extends BaseTransformer {
     includeAssignedOrder(user: UserInterface): OrderInterface | null;
     includeAssignedGift(user: UserInterface): GiftInterface | null;
     includeTypeHistory(user: UserInterface): Array<UserTypesHistoryInterface>;
+    includeChildProfiles(user: UserInterface): Array<ChildProfileInterface>;
 }
