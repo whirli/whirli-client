@@ -13,6 +13,7 @@ import Orders from './Orders';
 import Referral from './Referral';
 import Card from './Card';
 import MyPlaytime from './MyPlaytime';
+import ChildProfiles from './ChildProfiles';
 import { HttpClientConfig, HttpClientResponse } from '../../Interfaces/HttpClient';
 export default class Users extends AbstractResource {
     addresses: Addresses;
@@ -28,6 +29,7 @@ export default class Users extends AbstractResource {
     referral: Referral;
     card: Card;
     myPlaytime: MyPlaytime;
+    childProfiles: ChildProfiles;
     constructor(api: Client);
     initialise(): void;
     user: (...args: HttpClientConfig) => HttpClientResponse;
