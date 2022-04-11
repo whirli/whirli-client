@@ -12,6 +12,7 @@ import Review from '../review/Review';
 import MyPlaytime from '../myPlaytime/MyPlaytime';
 import Gift from '../gift/Gift';
 import UserTypesHistory from './UserTypesHistory';
+import ChildProfile from './ChildProfile';
 interface Meta {
     daysUntilAvailable?: number;
     daysUntilCancel?: number;
@@ -63,6 +64,7 @@ export default interface User {
     waccRole?: string;
     reviews?: Array<Review>;
     typeHistory?: Array<UserTypesHistory>;
+    childProfiles?: Array<ChildProfile>;
     assignedOrder?: Order;
     assignedGift?: Gift;
     onFirstOrder?: boolean;
