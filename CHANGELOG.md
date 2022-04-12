@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+## [0.0.89] - 2022-04-12
+### 🏡 Features
+- Add child profiles to users resource index ([#422](https://github.com/whirli/whirli-client/pull/422))
+
 ## [0.0.88] - 2022-04-11
 ### 🏡 Features
 - Add child profile member & wacc resources ([#420](https://github.com/whirli/whirli-client/pull/420))
