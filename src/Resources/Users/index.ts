@@ -74,4 +74,11 @@ export default class Users extends AbstractResource {
         method: 'PATCH',
         path: 'users/claim',
     });
+
+    public buyBoltOnGuestResources: (
+        ...args: HttpClientConfig
+    ) => HttpClientResponse = this.createMethodFromPartialSpec({
+        method: 'PATCH',
+        path: 'users/buy-bolt-on',
+    });
 }

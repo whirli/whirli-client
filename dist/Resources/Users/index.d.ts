@@ -35,4 +35,5 @@ export default class Users extends AbstractResource {
     user: (...args: HttpClientConfig) => HttpClientResponse;
     create: (...args: HttpClientConfig) => HttpClientResponse;
     claimGuestResources: (...args: HttpClientConfig) => HttpClientResponse;
+    buyBoltOnGuestResources: (...args: HttpClientConfig) => HttpClientResponse;
 }
